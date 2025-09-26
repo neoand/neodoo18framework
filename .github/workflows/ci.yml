@@ -1,0 +1,85 @@
+name: Neodoo18Framework CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-framework:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, '3.10', 3.11, 3.12]
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pytest-cov
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
+    - name: Make scripts executable
+      run: |
+        chmod +x quick-start.sh
+        chmod +x framework/validator.py
+    
+    - name: Test framework validator
+      run: |
+        python framework/validator.py demo_project/
+    
+    - name: Test project generator
+      run: |
+        python generator/create_project.py test_project
+        ls -la test_project/
+    
+    - name: Validate generated project
+      run: |
+        python framework/validator.py test_project/
+
+  test-quick-start:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+    
+    - name: Test quick-start script
+      run: |
+        chmod +x quick-start.sh
+        ./quick-start.sh ci_test_project
+        python framework/validator.py ci_test_project/
+
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+    
+    - name: Install quality tools
+      run: |
+        pip install black flake8 isort
+    
+    - name: Check code formatting
+      run: |
+        black --check --diff framework/ generator/
+        isort --check-only --diff framework/ generator/
+    
+    - name: Lint code
+      run: |
+        flake8 framework/ generator/ --max-line-length=88 --extend-ignore=E203,W503

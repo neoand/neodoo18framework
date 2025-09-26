@@ -1,13 +1,29 @@
-# Neodoo18Framework
+# 🚀 Neodoo18Framework
 
 > **The Ultimate Odoo 18+ Development Framework for LLMs and Developers**
 
-## 🚀 Quick Start
+## 🌍 **MULTILINGUAL DOCUMENTATION**
+
+� **[Complete Guides Available](./guides/README.md)**
+- 🇧🇷 **[Português](./guides/pt/GUIA_COMPLETO.md)** - Guia completo em português
+- 🇺🇸 **[English](./guides/en/COMPLETE_GUIDE.md)** - Complete guide in English  
+- 🇪🇸 **[Español](./guides/es/GUIA_COMPLETA.md)** - Guía completa en español
+
+💡 **[Practical Examples](./examples/README.md)** - Real-world use cases and templates
+
+## ⚡ **Quick Start**
 
 ```bash
-git clone https://github.com/yourusername/neodoo18framework.git
+# Clone framework
+git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
+
+# Create your first project
 ./quick-start.sh my_project
+
+# Validate compliance  
+python3 framework/validator.py my_project/
+# Expected: 100% compliance ✅
 ```
 
 ## 🎯 What is Neodoo18Framework?

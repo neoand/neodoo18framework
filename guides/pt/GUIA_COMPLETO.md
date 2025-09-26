@@ -17,40 +17,102 @@
 
 ## 🚀 **INSTALAÇÃO RÁPIDA**
 
-### Método 1: Git Clone (Recomendado)
+### 🐍 Método 1: Setup Completo com Ambiente Python (RECOMENDADO)
 ```bash
 # 1. Clone o framework
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
 
-# 2. Torne executável
-chmod +x quick-start.sh
+# 2. Setup automático do ambiente Python
+./setup-env.sh
+# ✅ Cria virtual environment (.venv/)
+# ✅ Instala todas as dependências Odoo 18+
+# ✅ Configura ferramentas de desenvolvimento
 
-# 3. Pronto para usar!
-./quick-start.sh --help
+# 3. Criar primeiro projeto
+./activate-env.sh
+./quick-start.sh meu_primeiro_projeto
+
+# 4. Validar qualidade
+python3 framework/validator.py meu_primeiro_projeto/
+# Expected: 100% compliance ✅
 ```
 
-### Método 2: Download Direto
+### ⚡ Método 2: Projeto com Ambiente Automático
 ```bash
-wget https://github.com/neoand/neodoo18framework/archive/refs/heads/main.zip
-unzip main.zip
-cd neodoo18framework-main
-chmod +x quick-start.sh
+# Clone + projeto + ambiente em uma sequência
+git clone https://github.com/neoand/neodoo18framework.git
+cd neodoo18framework
+./quick-start.sh meu_projeto --full-setup
+```
+
+### 📦 Método 3: Apenas Framework (Sem Ambiente)
+```bash
+# Setup básico sem ambiente Python
+git clone https://github.com/neoand/neodoo18framework.git
+cd neodoo18framework
+chmod +x *.sh
+./quick-start.sh meu_projeto
+```
+
+### 🔧 Opções de Ambiente Python:
+```bash
+# Setup completo do ambiente
+./setup-env.sh
+
+# Projeto com virtual environment
+./quick-start.sh projeto --setup-venv
+
+# Projeto com dependências Odoo
+./quick-start.sh projeto --install-deps
+
+# Projeto com setup completo
+./quick-start.sh projeto --full-setup
 ```
 
 ### Verificar Instalação:
 ```bash
+# Framework
 python3 framework/validator.py --version
 # Expected: Neodoo18Framework Validator v1.0.0
+
+# Ambiente Python (se configurado)
+source .venv/bin/activate
+python --version
+# Expected: Python 3.8+
 ```
 
 ---
 
 ## 🏗️ **PRIMEIRO PROJETO**
 
-### Criar Projeto em 10 Segundos:
+### 🚀 Criar Projeto Básico em 10 Segundos:
 ```bash
 ./quick-start.sh meu_primeiro_modulo
+```
+
+### 🐍 Criar Projeto com Ambiente Python:
+```bash
+# Com virtual environment
+./quick-start.sh meu_projeto --setup-venv
+
+# Com dependências Odoo instaladas
+./quick-start.sh meu_projeto --install-deps
+
+# Setup completo (venv + dependências)
+./quick-start.sh meu_projeto --full-setup
+```
+
+### 🔧 Gerenciar Ambiente Python:
+```bash
+# Ativar ambiente
+./activate-env.sh
+
+# Verificar status
+source .venv/bin/activate && python -c "import odoo; print('✅ Odoo OK')"
+
+# Desativar
+./deactivate-env.sh
 ```
 
 ### O que Foi Criado:

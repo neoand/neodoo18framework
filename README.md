@@ -13,17 +13,45 @@
 
 ## ⚡ **Quick Start**
 
+### 🚀 **Method 1: Complete Setup (Recommended)**
 ```bash
 # Clone framework
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
 
-# Create your first project
-./quick-start.sh my_project
+# Setup Python environment + Create project
+./setup-env.sh                           # Setup venv + dependencies  
+./quick-start.sh my_project --full-setup # Create project + environment
 
 # Validate compliance  
 python3 framework/validator.py my_project/
 # Expected: 100% compliance ✅
+```
+
+### ⚡ **Method 2: Quick Project Only**
+```bash
+# Clone and create project immediately
+git clone https://github.com/neoand/neodoo18framework.git
+cd neodoo18framework
+./quick-start.sh my_project
+
+# Validate
+python3 framework/validator.py my_project/
+```
+
+### 🐍 **Environment Options**
+```bash
+# Full environment setup
+./setup-env.sh
+
+# Quick project with environment  
+./quick-start.sh my_project --full-setup
+
+# Project with venv only
+./quick-start.sh my_project --setup-venv
+
+# Project with dependencies
+./quick-start.sh my_project --install-deps
 ```
 
 ## 🎯 What is Neodoo18Framework?

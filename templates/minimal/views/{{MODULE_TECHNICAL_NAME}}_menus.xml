@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_{{MODULE_TECHNICAL_NAME}}_root" name="{{MODULE_NAME}}" sequence="10"/>
+    <menuitem id="menu_{{MODULE_TECHNICAL_NAME}}_{{MODEL_NAME}}" name="{{MODULE_NAME}}" parent="menu_{{MODULE_TECHNICAL_NAME}}_root" action="action_{{MODULE_TECHNICAL_NAME}}_{{MODEL_NAME}}" sequence="10"/>
+</odoo>

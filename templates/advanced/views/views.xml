@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Template Model Tree/List View -->
+    <record id="view_template_model_list" model="ir.ui.view">
+        <field name="name">template.model.list</field>
+        <field name="model">template.model</field>
+        <field name="arch" type="xml">
+            <list string="Template Records">
+                <field name="name"/>
+                <field name="reference"/>
+                <field name="partner_id"/>
+                <field name="date"/>
+                <field name="state" widget="badge"/>
+                <field name="active" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Template Model Form View -->
+    <record id="view_template_model_form" model="ir.ui.view">
+        <field name="name">template.model.form</field>
+        <field name="model">template.model</field>
+        <field name="arch" type="xml">
+            <form string="Template Record">
+                <header>
+                    <button name="action_confirm" string="Confirm" type="object" 
+                            states="draft" class="btn-primary"/>
+                    <button name="action_done" string="Mark Done" type="object" 
+                            states="confirmed" class="btn-primary"/>
+                    <button name="action_draft" string="Reset to Draft" type="object" 
+                            states="confirmed,done" class="btn-secondary"/>
+                    <field name="state" widget="statusbar" options="{'clickable': '0'}" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" 
+                                icon="fa-archive" attrs="{'invisible': [('active', '=', True)]}">
+                            <field name="active" widget="boolean_button"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="reference" class="text-muted" readonly="1" attrs="{'invisible': [('reference', '=', False)]}"/>
+                        </h1>
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <!-- Additional fields can be added here -->
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description" placeholder="Add a description here..."/>
+                        </page>
+                        <!-- Additional pages can be added here -->
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Template Model Search View -->
+    <record id="view_template_model_search" model="ir.ui.view">
+        <field name="name">template.model.search</field>
+        <field name="model">template.model</field>
+        <field name="arch" type="xml">
+            <search string="Search Template Records">
+                <field name="name"/>
+                <field name="reference"/>
+                <field name="partner_id"/>
+                <filter string="Draft" name="state_draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="Confirmed" name="state_confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <filter string="Done" name="state_done" domain="[('state', '=', 'done')]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Partner" name="partner" domain="[]" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Status" name="status" domain="[]" context="{'group_by': 'state'}"/>
+                    <filter string="Date" name="date" domain="[]" context="{'group_by': 'date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Template Model Action Window -->
+    <record id="action_template_model" model="ir.actions.act_window">
+        <field name="name">Template Records</field>
+        <field name="res_model">template.model</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_template_model_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first template record!
+            </p>
+            <p>
+                This is where you can manage your template records.
+            </p>
+        </field>
+    </record>
+</odoo>

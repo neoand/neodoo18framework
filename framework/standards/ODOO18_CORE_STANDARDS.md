@@ -247,3 +247,47 @@ Before any deployment:
 ---
 
 **Remember**: These standards are non-negotiable for Odoo 18+ development. Following them ensures compatibility, performance, and maintainability.
+ 
+## ✅ Regras Não-Negociáveis Adicionais (Odoo 18+)
+
+1) Manifesto disciplinado
+- version: deve começar com 18.0. e seguir 18.0.x.y.z
+- chaves obrigatórias: name, version, depends, data, license
+- depends: obrigatoriamente list/array; installable/application: booleanos
+- ordem de carregamento: security (security/*.xml, security/ir.model.access.csv) antes de views/*.xml
+- todos os arquivos listados em data devem existir no módulo
+
+2) Nomenclatura consistente
+- nome técnico do módulo = nome do diretório, em snake_case começando por letra
+- models: _name deve usar prefixo do módulo, ex.: my_module.model
+- XML ids (record/menu/view/action): prefixo do módulo para evitar colisões
+
+3) Padrões de segurança
+- ir.model.access.csv com cabeçalho exato:
+    id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+- cada modelo “usável” deve ter regra(s) de acesso adequadas
+- evitar sudo salvo quando indispensável e documentado
+
+4) Padrões Python adicionais
+- métodos de ação (def action_...): chamar self.ensure_one() quando operar em um registro
+- criar registros com @api.model_create_multi quando aplicável
+- evitar print; usar _logger com níveis adequados (info/warning/error)
+- usar _sql_constraints e index=True para unicidade/performance quando fizer sentido
+
+5) Padrões XML adicionais
+- quando existir view form, as ações relacionadas devem incluir form em view_mode (ex.: list,form)
+- search views com filtros e group_by para usabilidade (quando aplicável)
+
+6) Estrutura e carregamento
+- models/__init__.py deve importar todos os .py existentes em models/
+- nomes de arquivos coerentes: views/<module>_views.xml, <module>_menu.xml, security/<module>_security.xml
+
+7) Internacionalização mínima
+- mensagens ao usuário e erros devem usar _(…) para i18n
+
+## 📋 Checklist adicional
+- [ ] Manifesto com 18.0.*, chaves obrigatórias, tipos corretos e ordem de data (security antes de views)
+- [ ] access.csv presente, cabeçalho correto e citado no manifesto
+- [ ] models/__init__.py importa todos os arquivos do diretório
+- [ ] Sem prints; ações com ensure_one quando aplicável
+- [ ] IDs XML com prefixo do módulo (evitar colisões)

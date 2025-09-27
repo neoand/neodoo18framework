@@ -1,0 +1,70 @@
+name: OCA Watch (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      bootstrap:
+        description: "Bootstrap first run (capture a few items even when initializing)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: oca-watch
+  cancel-in-progress: true
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps (dev)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run watcher (update)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OCA_BOOTSTRAP: ${{ inputs.bootstrap }}
+        run: |
+          python scripts/oca_watch.py --update
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(oca-digests): refresh OCA digests"
+          title: "chore(oca-digests): refresh OCA digests ($(date +'%Y-%m-%d'))"
+          body: |
+            Automated update of OCA digests and state.
+            
+            - Source: .neodoo/oca_watch.yml
+            - Updated digests under docs/oca-digests/
+            - State updated in .neodoo/oca_state.json
+            
+            This PR was created by the OCA Watch workflow.
+          branch: chore/oca-digest-update
+          base: main
+          add-paths: |
+            .neodoo/oca_state.json
+            docs/oca-digests/**
+
+      - name: PR info
+        if: steps.cpr.outputs.pull-request-number
+        run: |
+          echo "PR #${{ steps.cpr.outputs.pull-request-number }} created: ${{ steps.cpr.outputs.pull-request-url }}"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_template_root"
+        name="Template"
+        sequence="10"/>
+
+    <!-- Template Records Menu -->
+    <menuitem id="menu_template_main"
+        name="Template Records"
+        parent="menu_template_root"
+        sequence="1"/>
+
+    <!-- Template Records Action Menu -->
+    <menuitem id="menu_template_model_records"
+        name="Records"
+        parent="menu_template_main"
+        action="action_template_model"
+        sequence="1"/>
+
+    <!-- Configuration Menu -->
+    <menuitem id="menu_template_config"
+        name="Configuration"
+        parent="menu_template_root"
+        sequence="99"/>
+</odoo>

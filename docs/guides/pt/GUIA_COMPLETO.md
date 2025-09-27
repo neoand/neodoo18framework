@@ -349,4 +349,18 @@ python3 framework/validator.py amazing_project/
 
 ---
 
+## 🔎 OCA Watch & Rollups Semanais
+
+Fique por dentro do ecossistema OCA direto deste repositório:
+
+- Digests diários: o workflow “OCA Watch” monitora repositórios OCA selecionados e grava resumos em `docs/oca-digests/`. Quando há novidades, abre um PR com labels/assignee automáticos e auto‑merge habilitado.
+- Rollups semanais: toda segunda (03:00 UTC), o workflow “OCA Weekly Rollup” consolida os últimos 7 dias em `docs/oca-digests/rollups/YYYY-Www.md`.
+
+Execução manual:
+- Na aba Actions do GitHub, rode “OCA Watch” (opcionalmente com bootstrap na primeira execução) ou “OCA Weekly Rollup”.
+
+Saiba mais: consulte `docs/oca-digests/README.md`.
+
+---
+
 **Happy Coding! 🎯**

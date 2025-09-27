@@ -122,7 +122,21 @@ python framework/validator/validate.py templates/minimal --template-mode --auto-
 
 ---
 
-## 📏 Estándares Odoo 18+ obligatorios
+## � OCA Watch y Rollups Semanales
+
+Mantente al día con el ecosistema OCA directamente desde este repo:
+
+- Digests diarios: el workflow “OCA Watch” monitorea repos OCA seleccionados y escribe resúmenes en `docs/oca-digests/`. Cuando hay novedades, abre un PR con etiquetas/asignación automáticas y auto‑merge habilitado.
+- Rollups semanales: cada lunes (03:00 UTC), el workflow “OCA Weekly Rollup” agrega los últimos 7 días en `docs/oca-digests/rollups/YYYY-Www.md`.
+
+Ejecución manual:
+- En la pestaña Actions de GitHub, ejecuta “OCA Watch” (opcionalmente con bootstrap en la primera ejecución) o “OCA Weekly Rollup”.
+
+Más info: ver `docs/oca-digests/README.md`.
+
+---
+
+## �📏 Estándares Odoo 18+ obligatorios
 
 > [!warning]
 > Nunca uses <tree>. Usa siempre <list>. Las acciones deben declarar view_mode="list,form".

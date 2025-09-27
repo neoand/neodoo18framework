@@ -27,7 +27,7 @@ jobs:
 
       - name: Generate weekly rollup
         run: |
-          python neodoo18framework/scripts/oca_rollup.py --days 7
+          python scripts/oca_rollup.py --days 7
 
       - name: Get week key
         id: week
@@ -51,7 +51,7 @@ jobs:
           assignees: neoand
           signoff: false
           add-paths: |
-            neodoo18framework/docs/oca-digests/rollups/**
+            docs/oca-digests/rollups/**
 
       - name: Enable auto-merge (squash)
         env:

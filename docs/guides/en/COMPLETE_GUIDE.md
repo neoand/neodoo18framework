@@ -244,6 +244,20 @@ Notes:
 
 ---
 
+## 🔎 OCA Watch & Weekly Rollups
+
+Stay up-to-date with the OCA ecosystem directly from this repo:
+
+- Daily digests: The “OCA Watch” workflow monitors selected OCA repositories and writes concise digests under `docs/oca-digests/`. When changes are detected, it opens a PR labeled and assigned automatically, with auto-merge enabled.
+- Weekly rollups: Every Monday (03:00 UTC), the “OCA Weekly Rollup” workflow aggregates the last 7 days into `docs/oca-digests/rollups/YYYY-Www.md`.
+
+Manual triggers:
+- From the GitHub Actions tab, run “OCA Watch” (optionally with bootstrap on the first run) or “OCA Weekly Rollup”.
+
+Learn more: see `docs/oca-digests/README.md`.
+
+---
+
 ## �🧯 Troubleshooting
 
 > [!failure] Invalid view mode 'tree'

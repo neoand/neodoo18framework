@@ -88,3 +88,28 @@ graph TD
     H -->|Não| C
     H -->|Sim| I[Merge]
 ```
+
+---
+
+## Automação: OCA Watch & Weekly Rollup
+
+### OCA Watch (Diário)
+- Monitora repositórios OCA configurados em `.neodoo/oca_watch.yml`.
+- Gera/atualiza digests em `docs/oca-digests/` e abre PR automaticamente com labels/assignee e auto‑merge.
+- Agendado para rodar diariamente (02:00 UTC) e disponível via `workflow_dispatch`.
+
+Como executar manualmente:
+1. Acesse a aba Actions do GitHub
+2. Selecione “OCA Watch”
+3. Opcional: marque `bootstrap=true` na primeira execução
+4. Dispare e acompanhe o PR criado
+
+### Weekly Rollup (Semanal)
+- Consolida os últimos 7 dias de digests em `docs/oca-digests/rollups/YYYY-Www.md`.
+- Abre PR com labels (`oca-digests`, `automation`, `weekly-rollup`), assignee `@neoand` e auto‑merge habilitado.
+- Agendamento: segundas às 03:00 UTC. Também disponível via `workflow_dispatch`.
+
+Execução manual:
+1. Acesse a aba Actions do GitHub
+2. Selecione “OCA Weekly Rollup”
+3. Execute e verifique o PR gerado

@@ -31,6 +31,7 @@ Neodoo18Framework is a **LLM-first** development framework for Odoo 18+ that pro
 - **🔄 Modern Standards**: Enforces latest Odoo 18+ best practices- [[../CONTRIBUTING|Guia de Contribuição]] - Como contribuir para o projeto
 
 - [[contributing-to-docs|Contribuir para Documentação]] - Como melhorar esta documentação
+- [[oca-digests/README|OCA Digests & Rollups]] - Resumos diários e consolidação semanal de mudanças OCA
 
 ## 🚀 Quick Start- [[../CHANGELOG|Histórico de Mudanças]] - Registro de alterações no projeto
 
@@ -163,6 +164,12 @@ neodoo18framework/- [[../framework/roles/OWL_SPECIALIST|OWL Specialist]] - Espec
 - `./setup.sh` - Interactive full setup- [[guides/es/GUIA_COMPLETA|Guía Completa (Español)]] - Guia completo em espanhol
 
 - `./create_odoo_project.sh` - Complete Odoo environment
+
+## 🔎 Automação: OCA Watch & Rollups
+
+- OCA Watch: monitoramento dos repositórios OCA configurados e geração de digests em `docs/oca-digests/` com PRs automáticos e auto-merge.
+- Weekly Rollup: consolidação semanal (segunda 03:00 UTC) em `docs/oca-digests/rollups/YYYY-Www.md`.
+- Execução manual na aba Actions: “OCA Watch” e “OCA Weekly Rollup”.
 
 ## 📋 Templates de Projetos
 

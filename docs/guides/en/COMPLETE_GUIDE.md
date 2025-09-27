@@ -212,7 +212,39 @@ Then run: python framework/validator/validate.py <path> --strict --auto-fix
 
 ---
 
-## 🧯 Troubleshooting
+## � CI & Sanity Checks
+
+This repository includes automated checks to keep the developer experience solid:
+
+- Fast checks (CI, on push/PR):
+  - Lists generator templates
+  - Generates a minimal module (offline)
+  - Validates the generated module with the validator in strict mode
+
+- Smoke test (manual):
+  - Trigger the "CI" workflow with "Run workflow" (workflow_dispatch)
+  - Runs `scripts/dev/quick_sanity.sh` which performs a full end-to-end flow (clones Odoo and OCA/web)
+
+Local quick sanity run:
+
+```bash
+# From repo root
+bash scripts/dev/quick_sanity.sh
+
+# Or step-by-step
+python3 framework/generator/create_project.py --name tmp --list-templates
+./neodoo create --name sanity_proj --base-dir /tmp/neodoo_sanity --module sanity_mod --template minimal --no-venv
+./neodoo doctor --path /tmp/neodoo_sanity/sanity_proj
+python3 framework/validator/validate.py /tmp/neodoo_sanity/sanity_proj/custom_addons/sanity_mod --strict --auto-fix
+```
+
+Notes:
+- The "minimal" template generates a module that passes strict validation by default.
+- Filenames containing placeholders are automatically renamed during generation.
+
+---
+
+## �🧯 Troubleshooting
 
 > [!failure] Invalid view mode 'tree'
 ```bash

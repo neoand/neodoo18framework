@@ -9,6 +9,8 @@ on:
         default: "false"
         type: choice
         options: ["false", "true"]
+  schedule:
+    - cron: "0 2 * * *" # nightly at 02:00 UTC
 
 permissions:
   contents: write
@@ -44,12 +46,16 @@ jobs:
         run: |
           python scripts/oca_watch.py --update
 
+      - name: Get date
+        id: today
+        run: echo "today=$(date +%F)" >> "$GITHUB_OUTPUT"
+
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore(oca-digests): refresh OCA digests"
-          title: "chore(oca-digests): refresh OCA digests ($(date +'%Y-%m-%d'))"
+          title: "chore(oca-digests): refresh OCA digests (${{ steps.today.outputs.today }})"
           body: |
             Automated update of OCA digests and state.
             
@@ -58,11 +64,25 @@ jobs:
             - State updated in .neodoo/oca_state.json
             
             This PR was created by the OCA Watch workflow.
+          labels: |
+            oca-digests
+            automation
+          assignees: |
+            neoand
           branch: chore/oca-digest-update
           base: main
           add-paths: |
             .neodoo/oca_state.json
             docs/oca-digests/**
+
+      - name: Enable auto-merge
+        if: steps.cpr.outputs.pull-request-number
+        continue-on-error: true
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
 
       - name: PR info
         if: steps.cpr.outputs.pull-request-number

@@ -1,5 +1,5 @@
 # Neodoo18Framework - Odoo 18+ Development Dependencies
-# Generated automatically by setup-env.sh
+# Generated automatically by env.sh setup
 
 # Core Odoo Dependencies
 psycopg2-binary>=2.9.0

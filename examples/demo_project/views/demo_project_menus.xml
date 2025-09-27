@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_demo_project_root" name="Demo Project" sequence="10"/>
+    <menuitem id="menu_demo_project_template_model" name="Template Model" parent="menu_demo_project_root" action="action_template_model" sequence="10"/>
+</odoo>

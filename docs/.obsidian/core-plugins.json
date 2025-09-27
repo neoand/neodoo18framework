@@ -1,0 +1,34 @@
+{
+  "baseFontSize": 16,
+  "theme": "obsidian",
+  "translucency": false,
+  "enabledPlugins": [
+    "file-explorer",
+    "global-search",
+    "switcher",
+    "graph",
+    "backlink",
+    "page-preview",
+    "note-composer",
+    "command-palette",
+    "markdown-format",
+    "word-count",
+    "open-with-default-app",
+    "file-recovery"
+  ],
+  "newFileLocation": "folder",
+  "newFileFolderPath": ".",
+  "attachmentFolderPath": "assets",
+  "userIgnoreFilters": [
+    "node_modules/",
+    ".git/"
+  ],
+  "enabledCssSnippets": [],
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "defaultViewMode": "preview"
+}

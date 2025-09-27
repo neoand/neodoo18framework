@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_{{MODULE_TECHNICAL_NAME}}_{{MODEL_NAME}},access_{{MODULE_TECHNICAL_NAME}}_{{MODEL_NAME}},model_{{MODULE_TECHNICAL_NAME}}_{{MODEL_NAME}},base.group_user,1,1,1,1

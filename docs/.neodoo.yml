@@ -1,0 +1,8 @@
+# Example Neodoo project configuration
+version: 1
+name: my_odoo18_project
+base_dir: ~/odoo_projects
+module: my_module
+template: minimal
+venv: true
+odoo_branch: 18.0

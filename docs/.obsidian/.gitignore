@@ -1,0 +1,5 @@
+# .gitignore para pasta .obsidian
+.obsidian/workspace*
+.obsidian/cache
+.obsidian/plugins
+.trash/

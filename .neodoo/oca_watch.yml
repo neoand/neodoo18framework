@@ -1,0 +1,152 @@
+version: 1
+defaults:
+  monitor: commits
+  risk_threshold:
+    max_files: 30
+    max_loc: 1200
+  labels: ["OCA", "sync/proposal"]
+
+repos:
+  - repo: OCA/odoorpc
+    branch: main
+    monitor: releases
+    areas: [integration, docs]
+    labels: ["OCA", "odoorpc", "integration"]
+
+  - repo: OCA/l10n-brazil
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "l10n-brazil", "templates"]
+
+  - repo: OCA/project
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "project", "templates"]
+
+  - repo: OCA/sale-workflow
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "sale-workflow", "templates"]
+
+  - repo: OCA/rest-framework
+    branch: main
+    monitor: commits
+    areas: [integration, docs]
+    labels: ["OCA", "rest", "integration"]
+
+  - repo: OCA/oca-port
+    branch: main
+    monitor: commits
+    areas: [standards, docs]
+    labels: ["OCA", "oca-port", "standards"]
+
+  - repo: OCA/connector
+    branch: 18.0
+    monitor: commits
+    areas: [integration, templates]
+    labels: ["OCA", "connector", "integration"]
+
+  - repo: OCA/account-financial-tools
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "account-financial-tools", "finance"]
+
+  - repo: OCA/reporting-engine
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "reporting-engine", "templates"]
+
+  - repo: OCA/server-tools
+    branch: 18.0
+    monitor: commits
+    areas: [standards, validator]
+    labels: ["OCA", "server-tools", "standards"]
+
+  - repo: OCA/OpenUpgrade
+    branch: 18.0
+    monitor: commits
+    areas: [docs, data-migration]
+    labels: ["OCA", "OpenUpgrade", "migration"]
+
+  - repo: OCA/web
+    branch: 18.0
+    monitor: commits
+    include_paths:
+      - "web_remember_tree_column_width/**"
+    areas: [templates, docs, ui]
+    labels: ["OCA", "web", "ui"]
+
+  - repo: OCA/partner-contact
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "partner-contact", "templates"]
+
+  - repo: OCA/queue
+    branch: 18.0
+    monitor: commits
+    areas: [integration, standards]
+    labels: ["OCA", "queue", "integration"]
+
+  - repo: OCA/management-system
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "management-system", "templates"]
+
+  - repo: OCA/product-attribute
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "product-attribute", "templates"]
+
+  - repo: OCA/calendar
+    branch: 18.0
+    monitor: commits
+    include_paths:
+      - "resource_booking/**"
+    areas: [templates, docs]
+    labels: ["OCA", "calendar", "templates"]
+
+  - repo: OCA/bank-statement-import
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs, finance]
+    labels: ["OCA", "bank-statement-import", "finance"]
+
+  - repo: OCA/multi-company
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs]
+    labels: ["OCA", "multi-company", "templates"]
+
+  - repo: OCA/knowledge
+    branch: 18.0
+    monitor: commits
+    areas: [docs, web]
+    labels: ["OCA", "knowledge", "docs"]
+
+  - repo: OCA/account-reconcile
+    branch: 18.0
+    monitor: commits
+    areas: [templates, docs, finance]
+    labels: ["OCA", "account-reconcile", "finance"]
+
+  - repo: OCA/connector-telephony
+    branch: 18.0
+    monitor: commits
+    include_paths:
+      - "voip_oca/**"
+    areas: [integration, templates]
+    labels: ["OCA", "connector-telephony", "integration"]
+
+  - repo: OCA/spreadsheet
+    branch: 18.0
+    monitor: commits
+    areas: [docs, web]
+    labels: ["OCA", "spreadsheet", "web"]

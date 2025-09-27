@@ -7,6 +7,10 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: oca-watch
+  cancel-in-progress: true
+
 jobs:
   watch:
     runs-on: ubuntu-latest
@@ -48,7 +52,6 @@ jobs:
             This PR was created by the OCA Watch workflow.
           branch: chore/oca-digest-update
           base: main
-          labels: automation, oca, digest
           add-paths: |
             .neodoo/oca_state.json
             docs/oca-digests/**

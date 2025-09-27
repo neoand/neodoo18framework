@@ -1,7 +1,14 @@
 name: OCA Watch (manual)
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      bootstrap:
+        description: "Bootstrap first run (capture a few items even when initializing)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
 
 permissions:
   contents: write
@@ -33,6 +40,7 @@ jobs:
       - name: Run watcher (update)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OCA_BOOTSTRAP: ${{ inputs.bootstrap }}
         run: |
           python scripts/oca_watch.py --update
 

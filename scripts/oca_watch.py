@@ -131,7 +131,7 @@ def append_digest(repo: str, lines: List[str]) -> None:
     df.write_text(new_text, encoding="utf-8")
 
 
-def run_update(data: Dict[str, Any], state: Dict[str, Any], token: Optional[str]) -> bool:
+def run_update(data: Dict[str, Any], state: Dict[str, Any], token: Optional[str], bootstrap: bool = False) -> bool:
     changed = False
     repos = data.get("repos", [])
     defaults = data.get("defaults", {})
@@ -153,8 +153,24 @@ def run_update(data: Dict[str, Any], state: Dict[str, Any], token: Optional[str]
             latest_id = str(latest.get("id"))
             if not last:
                 state.setdefault("keys", {})[key] = latest_id
-                print("  Initialized at latest release")
-                changed_here = False
+                if bootstrap:
+                    new = items[:3]
+                    if new:
+                        lines = []
+                        for it in reversed(new):
+                            name = it.get("name") or it.get("tag_name")
+                            url = it.get("html_url")
+                            ts = it.get("published_at") or it.get("created_at")
+                            lines.append(f"- Release {name} ({ts}) → {url}")
+                        append_digest(repo, lines)
+                        changed_here = True
+                        print(f"  Bootstrapped {len(new)} release(s)")
+                    else:
+                        changed_here = False
+                        print("  Initialized at latest release (no bootstrap items)")
+                else:
+                    print("  Initialized at latest release")
+                    changed_here = False
             else:
                 new = []
                 for it in items:
@@ -183,8 +199,32 @@ def run_update(data: Dict[str, Any], state: Dict[str, Any], token: Optional[str]
             latest_sha = items[0].get("sha")
             if not last:
                 state.setdefault("keys", {})[key] = latest_sha
-                print("  Initialized at tip commit")
-                changed_here = False
+                if bootstrap:
+                    to_check = items[:5]
+                    lines = []
+                    kept = 0
+                    for it in reversed(to_check):
+                        sha = it.get("sha")
+                        msg = (it.get("commit", {}) or {}).get("message", "").split("\n")[0]
+                        url = it.get("html_url")
+                        ok = True
+                        if include_paths:
+                            detail = get_commit(repo, sha, token)
+                            ok = bool(detail and filter_commit_by_paths(detail, include_paths))
+                            time.sleep(0.2)
+                        if ok:
+                            kept += 1
+                            lines.append(f"- Commit {sha[:7]}: {msg} → {url}")
+                    if lines:
+                        append_digest(repo, lines)
+                        changed_here = True
+                        print(f"  Bootstrapped {kept} commit(s)")
+                    else:
+                        changed_here = False
+                        print("  Initialized at tip commit (no bootstrap items)")
+                else:
+                    print("  Initialized at tip commit")
+                    changed_here = False
             else:
                 new = []
                 for it in items:
@@ -252,12 +292,13 @@ def main() -> int:
         if not token:
             print("GITHUB_TOKEN not found; cannot query GitHub API.")
             return 3
+        bootstrap = "--bootstrap" in sys.argv or os.getenv("OCA_BOOTSTRAP") == "true"
         state = load_state(STATE)
-        changed = run_update(data, state, token)
+        changed = run_update(data, state, token, bootstrap=bootstrap)
         print("Digest/state updated." if changed else "No changes found (state updated if initialized).")
         return 0
 
-    print("Usage: oca_watch.py [--update]")
+    print("Usage: oca_watch.py [--update] [--bootstrap]")
     return 0
 
 

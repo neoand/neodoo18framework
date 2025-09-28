@@ -31,7 +31,7 @@
 ### Method 1: Direct Generation
 ```bash
 # Generate from templates
-./quick-start.sh library_system
+./neodoo create --name library_system --template minimal
 cd library_system
 
 # Copy example code
@@ -44,7 +44,7 @@ python3 ../framework/validator.py .
 ### Method 2: AI Development
 ```bash
 # Create base project
-./quick-start.sh my_restaurant
+./neodoo create --name my_restaurant --template advanced
 
 # Use examples as reference for AI
 cat examples/restaurant_pos/README.md
@@ -77,7 +77,7 @@ cd neodoo18framework
 ls examples/
 
 # Generate project based on example
-./quick-start.sh --template=library_system my_library
+./neodoo create --name my_library --template minimal
 
 # Or copy manually
 cp -r examples/library_system ./my_library

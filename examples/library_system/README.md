@@ -44,7 +44,7 @@ This example demonstrates a complete library management system using Neodoo18Fra
 ### Using Framework Generator:
 ```bash
 # Create project
-./quick-start.sh my_library
+./neodoo create --name my_library --template minimal
 
 # Copy example files
 cp -r examples/library_system/* my_library/

@@ -1,0 +1,6 @@
+# CODEOWNERS routes reviews automatically for specific paths
+# Documentation: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Route OCA digest updates and weekly rollups to the maintainer
+/docs/oca-digests/** @neoand
+/docs/oca-digests/rollups/** @neoand

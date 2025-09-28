@@ -361,7 +361,7 @@ python3 generator/create_wizard.py --name="ImportProductos"
 ```bash
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework  
-./quick-start.sh proyecto_increible
+./neodoo create --name proyecto_increible
 python3 framework/validator.py proyecto_increible/
 # 100% = ¡Listo para producción! 🎉
 ```

@@ -31,7 +31,7 @@ cd neodoo18framework
 
 # 3. Criar primeiro projeto
 ./env.sh activate
-./quick-start.sh meu_primeiro_projeto
+./neodoo create  # e seguir o assistente
 
 # 4. Validar qualidade
 python3 framework/validator.py meu_primeiro_projeto/
@@ -344,7 +344,7 @@ O **Neodoo18Framework** transforma desenvolvimento Odoo de **semanas em minutos*
 ```bash
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework  
-./quick-start.sh amazing_project
+./neodoo create --name amazing_project
 python3 framework/validator.py amazing_project/
 # 100% = Ready for production! 🎉
 ```

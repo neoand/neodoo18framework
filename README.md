@@ -12,9 +12,6 @@ git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
 ./neodoo create  # interactive wizard (recommended)
 
-# Or use legacy quick start defaults
-./quick-start.sh
-
 # ✅ Complete Odoo 18+ source code
 # ✅ OCA modules (web_responsive included)
 # ✅ Virtual environment configured
@@ -57,11 +54,6 @@ This framework creates **complete Odoo development environments**, not just modu
 ./neodoo create --from-config /path/to/.neodoo.yml  # Reproduce from config (non-interactive)
 ./neodoo list             # List all projects
 ./neodoo delete           # Delete a project
-
-# Legacy scripts (still available)
-./quick-start.sh          # Create with defaults
-./setup.sh create         # Legacy interactive creation
-./setup.sh                # Legacy guided setup
 ```
 
 ## 🧪 Try it
@@ -96,14 +88,11 @@ Then run:
 # With the new CLI
 ./neodoo list
 ./neodoo delete
+./neodoo run                       # Run project in current directory
+./neodoo run --path /my/project    # Run specific project
 ./neodoo doctor                    # Check environment (python, git, ports)
 ./neodoo doctor --path /my/project # Check a specific project structure/venv
 ./neodoo update --path /my/project # Update Odoo/OCA repos and venv deps
-
-# Legacy
-./setup.sh list
-./setup.sh delete
-./setup.sh help
 ```
 - Estrutura personalizada
 

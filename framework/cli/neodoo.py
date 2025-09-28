@@ -71,7 +71,22 @@ def create_run_sh(project_dir, venv):
         PROJECT_DIR="$(cd "$(dirname "${{BASH_SOURCE[0]}}")" && pwd)"
         cd "$PROJECT_DIR"
         set -e
-        echo "Starting Odoo..."
+        
+        # Ler configuração
+        PORT=$(grep xmlrpc_port odoo.conf | cut -d'=' -f2 | tr -d ' ' || echo "8069")
+        DB_NAME=$(grep db_name odoo.conf | cut -d'=' -f2 | tr -d ' ' || echo "odoo")
+        
+        echo "🚀 Iniciando Odoo..."
+        echo "📁 Projeto: $(basename "$PWD")"
+        echo "🗄️  Database: $DB_NAME"
+        echo "🌐 URL: http://localhost:$PORT"
+        echo "📝 Logs: $PWD/logs/odoo.log"
+        echo ""
+        echo "✅ Odoo está iniciando..."
+        echo "📋 Para parar: Ctrl+C"
+        echo "" 
+        echo "$(date): Odoo starting..." >> logs/startup.log
+        
         {'source .venv/bin/activate' if venv else ''}
         python odoo_source/odoo-bin -c odoo.conf
         """
@@ -378,6 +393,60 @@ def cmd_update(args):
             print("venv nao encontrada ou requirements ausente; pulando deps.")
 
 
+def cmd_run(args):
+    """Execute um projeto Odoo com feedback detalhado"""
+    project_path = Path(args.path) if args.path else Path.cwd()
+    
+    if not project_path.exists():
+        print(f"❌ Diretorio nao encontrado: {project_path}")
+        sys.exit(1)
+    
+    # Verificar se é um projeto Odoo válido
+    run_sh = project_path / "run.sh"
+    odoo_conf = project_path / "odoo.conf"
+    odoo_bin = project_path / "odoo_source" / "odoo-bin"
+    
+    if not run_sh.exists():
+        print(f"❌ Arquivo run.sh nao encontrado em: {project_path}")
+        print("💡 Execute 'neodoo create' para criar um projeto Odoo")
+        sys.exit(1)
+    
+    if not odoo_bin.exists():
+        print(f"❌ Odoo nao encontrado em: {project_path / 'odoo_source'}")
+        print("💡 Execute 'neodoo create' para criar um projeto completo")
+        sys.exit(1)
+    
+    # Ler configuração para mostrar detalhes
+    port = "8069"  # default
+    db_name = "odoo"
+    if odoo_conf.exists():
+        try:
+            conf_content = odoo_conf.read_text()
+            for line in conf_content.split('\n'):
+                if 'xmlrpc_port' in line and '=' in line:
+                    port = line.split('=')[1].strip()
+                elif 'db_name' in line and '=' in line:
+                    db_name = line.split('=')[1].strip()
+        except Exception:
+            pass
+    
+    print(f"\n🚀 Iniciando projeto Odoo...")
+    print(f"📁 Projeto: {project_path.name}")
+    print(f"🗄️  Database: {db_name}")
+    print(f"🌐 URL: http://localhost:{port}")
+    print(f"📝 Logs: {project_path}/logs/odoo.log")
+    print("\n⏳ Carregando Odoo (isso pode demorar alguns segundos...)")
+    print("\n" + "="*60)
+    
+    # Executar o run.sh
+    try:
+        os.chdir(project_path)
+        os.execv("/bin/bash", ["bash", str(run_sh)])
+    except Exception as e:
+        print(f"❌ Erro ao executar projeto: {e}")
+        sys.exit(1)
+
+
 def build_parser():
     p = argparse.ArgumentParser(prog="neodoo", description="Neodoo18Framework - CLI")
     sub = p.add_subparsers(dest="cmd")
@@ -410,6 +479,10 @@ def build_parser():
     up.add_argument("--path", required=True, help="Diretorio do projeto")
     up.add_argument("--no-deps", action="store_true", help="Nao atualizar dependencias da venv")
     up.set_defaults(func=cmd_update)
+    
+    r = sub.add_parser("run", help="Executar projeto Odoo")
+    r.add_argument("--path", help="Diretorio do projeto (default: diretorio atual)")
+    r.set_defaults(func=cmd_run)
 
     return p
 

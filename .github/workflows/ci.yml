@@ -21,16 +21,16 @@ jobs:
 
       - name: Verify generator lists templates
         run: |
-          python3 neodoo18framework/framework/generator/create_project.py --name tmp --list-templates
+          python3 framework/generator/create_project.py --name tmp --list-templates
 
       - name: Generate minimal module (no network)
         run: |
           mkdir -p /tmp/neodoo_ci
-          python3 neodoo18framework/framework/generator/create_project.py --name ci_mod --type minimal --output /tmp
+          python3 framework/generator/create_project.py --name ci_mod --type minimal --output /tmp
 
       - name: Validate generated module (strict)
         run: |
-          python3 neodoo18framework/framework/validator/validate.py /tmp/ci_mod --strict --auto-fix
+          python3 framework/validator/validate.py /tmp/ci_mod --strict --auto-fix
 
   smoke-test:
     runs-on: ubuntu-latest
@@ -46,4 +46,4 @@ jobs:
 
       - name: Run quick sanity script (heavier, uses network)
         run: |
-          bash neodoo18framework/scripts/dev/quick_sanity.sh
+          bash scripts/dev/quick_sanity.sh

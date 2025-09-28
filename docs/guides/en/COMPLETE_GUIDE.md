@@ -94,6 +94,8 @@ Manage
 ```bash
 ./neodoo list
 ./neodoo delete
+./neodoo run                       # run project in current directory
+./neodoo run --path /path/to/project  # run specific project
 ./neodoo doctor                    # check env (python, git, ports)
 ./neodoo doctor --path /path/to/project
 ./neodoo update --path /path/to/project  # pull repos + update deps

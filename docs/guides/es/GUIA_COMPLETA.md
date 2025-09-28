@@ -1,8 +1,13 @@
 # 🚀 Guía Completa: Neodoo18Framework
 
-> **Framework Universal para Desarrollo Odoo 18+ con Sistema SOIL**
-
-## 📚 **ÍNDICE**
+> **Framework Universal para Desarrollo Odoo 18+ con Sistema SOIL**Gestionar
+```bash
+./neodoo list
+./neodoo delete
+./neodoo run                            # ejecutar proyecto en directorio actual
+./neodoo run --path /ruta/del/proyecto  # ejecutar proyecto especifico
+./neodoo doctor                         # revisar env (python, git, puertos)
+./neodoo doctor --path /ruta/del/proyecto **ÍNDICE**
 
 1. [Instalación Rápida](#instalación-rápida)
 2. [Primer Proyecto](#primer-proyecto)  

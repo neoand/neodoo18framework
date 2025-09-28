@@ -137,6 +137,8 @@ Gerenciar
 ```bash
 ./neodoo list
 ./neodoo delete
+./neodoo run                            # executa projeto no diretorio atual
+./neodoo run --path /caminho/do/projeto # executa projeto especifico
 ./neodoo doctor                         # checa env (python, git, portas)
 ./neodoo doctor --path /caminho/do/projeto
 ./neodoo update --path /caminho/do/projeto  # puxa repos + atualiza deps

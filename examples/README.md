@@ -28,22 +28,37 @@
 
 ## 💡 **HOW TO USE EXAMPLES**
 
-### Method 1: Direct Generation
+### Method 1: Visual Interface (Recommended)
 ```bash
-# Generate from templates
-./neodoo create --name library_system --template minimal
-cd library_system
+# Use the interactive menu
+./neodoo                          # Select "Create new project"
+# 1. Choose template based on your example
+# 2. Follow visual wizard
+# 3. Copy example code to your project
 
 # Copy example code
-cp ../examples/library_system/* .
+cp examples/library_system/* ~/odoo_projects/your_project/custom_addons/
 
-# Validate
-python3 ../framework/validator.py .
+# Validate using menu
+./neodoo                          # Select "Environment check"
 ```
 
-### Method 2: AI Development
+### Method 2: Direct Generation
 ```bash
-# Create base project
+# Generate from templates with visual feedback
+./neodoo create --name library_system --template minimal
+cd ~/odoo_projects/library_system
+
+# Copy example code
+cp examples/library_system/* custom_addons/
+
+# Validate
+python3 framework/validator.py custom_addons/
+```
+
+### Method 3: AI Development
+```bash
+# Create base project with visual interface
 ./neodoo create --name my_restaurant --template advanced
 
 # Use examples as reference for AI

@@ -4,15 +4,43 @@ Este guia fornece exemplos práticos e atalhos para acelerar o desenvolvimento c
 
 ## 🚀 Criação de Projetos
 
+### 🎨 Interface Visual (Método Recomendado)
+
+```bash
+# Menu interativo com interface visual
+./neodoo                          # Selecione "Criar novo projeto"
+```
+
 ### Criação de um Módulo Mínimo
 
 ```bash
-# Criação rápida com setup.sh
-./setup.sh
-# Selecione 'minimal' quando solicitado o tipo de projeto
+# Método visual interativo (recomendado)
+./neodoo create
+# 1. Selecione template 'minimal'
+# 2. Configure nome e diretório
+# 3. Escolha porta automaticamente
 
-# Alternativa: Usando o gerador diretamente
+# Método direto
+./neodoo create --name=meu_modulo --template=minimal --base-dir=~/odoo_projects
+
+# Alternativa: Usando o gerador diretamente (método legado)
 python framework/generator/create_project.py --name=meu_modulo --type=minimal
+```
+
+### Comandos Úteis para Desenvolvimento
+
+```bash
+# Menu visual completo
+./neodoo                          # Interface completa
+
+# Verificar ambiente antes de começar
+./neodoo doctor                   # Verificação com feedback visual
+
+# Executar projeto em desenvolvimento
+./neodoo run                      # Execução com informações detalhadas
+
+# Atualizar dependências durante desenvolvimento
+./neodoo update --path ~/odoo_projects/meu_projeto
 ```
 
 ## 📋 Templates Prontos para Uso

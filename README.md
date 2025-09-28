@@ -6,18 +6,36 @@
 
 ## ⚡ **QUICK START - 30 SECONDS TO ODOO**
 
+### � **Linux/macOS**
 ```bash
 # Clone and create complete Odoo project
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
 ./neodoo create  # interactive wizard (recommended)
-
-# ✅ Complete Odoo 18+ source code
-# ✅ OCA modules (web_responsive included)
-# ✅ Virtual environment configured
-# ✅ Database ready
-# ✅ Browser opens automatically at http://localhost:8069
 ```
+
+### 🪟 **Windows**
+```batch
+# Clone and create complete Odoo project
+git clone https://github.com/neoand/neodoo18framework.git
+cd neodoo18framework
+
+# Option 1: Command Prompt/PowerShell
+neodoo.bat create      # interactive wizard
+
+# Option 2: PowerShell
+.\neodoo.ps1 create    # interactive wizard
+
+# Option 3: Direct Python (if above don't work)
+python framework\cli\neodoo.py create
+```
+
+**What you get:**
+- ✅ Complete Odoo 18+ source code
+- ✅ OCA modules (web_responsive included)
+- ✅ Virtual environment configured
+- ✅ Database ready
+- ✅ Browser opens automatically at http://localhost:8069
 
 ## 🎯 **WHAT YOU GET**
 
@@ -43,17 +61,66 @@ This framework creates **complete Odoo development environments**, not just modu
 - 🇧🇷 [Guia em Português](./docs/guides/pt/GUIA_COMPLETO.md)
 - 🇪🇸 [Guía en Español](./docs/guides/es/GUIA_COMPLETA.md)
 
+### Platform-Specific:
+- 🪟 **[Windows Setup Guide](./WINDOWS.md)** - Complete Windows installation and usage guide
+
 💡 **[Practical Examples](./examples/README.md)** - Real-world use cases and templates
 
 ## 🛠️ **COMPLETE PROJECT MANAGEMENT**
 
-### Create Projects
+### 🎨 **New Visual CLI Interface**
+
+#### 🐧 **Linux/macOS**
 ```bash
-# New single-command CLI (recommended)
+./neodoo                  # Interactive menu with visual interface (recommended!)
+```
+
+#### 🪟 **Windows**
+```batch
+# Command Prompt/PowerShell
+neodoo.bat                # Interactive menu with visual interface
+
+# PowerShell
+.\neodoo.ps1              # Interactive menu with visual interface
+
+# Direct Python (fallback)
+python framework\cli\neodoo.py    # Interactive menu
+```
+
+**Menu Options:**
+- 🚀 **Create new project** - Interactive wizard with template selection
+- 📋 **List projects** - Visual project overview with details  
+- ▶️ **Run project** - Start Odoo with real-time status info
+- 🗑️ **Delete project** - Safe project removal with confirmation
+- 🔧 **Environment check** - System health verification
+- 🔄 **Update project** - Update Odoo source and dependencies
+- ❓ **Help** - Detailed usage information
+
+### Direct Commands (Alternative)
+
+#### 🐧 **Linux/macOS**
+```bash
 ./neodoo create           # Create new complete project (wizard)
-./neodoo create --from-config /path/to/.neodoo.yml  # Reproduce from config (non-interactive)
 ./neodoo list             # List all projects
-./neodoo delete           # Delete a project
+./neodoo run              # Run project with visual feedback
+./neodoo delete           # Delete a project safely
+./neodoo doctor           # Check environment health
+./neodoo update           # Update project components
+```
+
+#### 🪟 **Windows**
+```batch
+# Command Prompt/PowerShell
+neodoo.bat create         # Create new complete project (wizard)
+neodoo.bat list           # List all projects
+neodoo.bat run            # Run project with visual feedback
+neodoo.bat delete         # Delete a project safely
+neodoo.bat doctor         # Check environment health
+neodoo.bat update         # Update project components
+
+# PowerShell (alternative)
+.\neodoo.ps1 create       # Create new complete project (wizard)
+.\neodoo.ps1 list         # List all projects
 ```
 
 ## 🧪 Try it
@@ -83,17 +150,27 @@ Then run:
 ./neodoo create --from-config ./docs/.neodoo.yml
 ```
 
-### Manage Projects
+### Visual Project Management
 ```bash
-# With the new CLI
-./neodoo list
-./neodoo delete
-./neodoo run                       # Run project in current directory
-./neodoo run --path /my/project    # Run specific project
-./neodoo doctor                    # Check environment (python, git, ports)
-./neodoo doctor --path /my/project # Check a specific project structure/venv
-./neodoo update --path /my/project # Update Odoo/OCA repos and venv deps
+# Interactive menu (recommended)
+./neodoo                           # Beautiful visual menu interface
+
+# Direct commands with enhanced visual feedback
+./neodoo list                      # Enhanced project list with colors
+./neodoo delete                    # Safe deletion with confirmation dialog
+./neodoo run                       # Run with detailed startup information
+./neodoo run --path /my/project    # Run specific project with status
+./neodoo doctor                    # Environment check with visual results
+./neodoo doctor --path /my/project # Project-specific health check
+./neodoo update --path /my/project # Update with progress indicators
 ```
+
+**Enhanced Features:**
+- 🎨 **Colorful output** with emoji indicators
+- 📊 **Progress indicators** for long operations  
+- 🛡️ **Safe confirmations** for destructive actions
+- 📱 **Responsive interface** adapts to terminal size
+- 🎯 **Smart port detection** automatically finds available ports
 - Estrutura personalizada
 
 ## 🧠 **Projetado para LLMs e Desenvolvedores**

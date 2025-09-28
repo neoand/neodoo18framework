@@ -35,7 +35,7 @@ cd neodoo18framework
 
 ```bash
 # Criar um novo projeto
-./quick_start.sh my_project
+./neodoo create --name my_project
 ```
 
 ## 4. Deploy em Ambientes de Desenvolvimento

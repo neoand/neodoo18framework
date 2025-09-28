@@ -17,7 +17,17 @@ import shutil
 import subprocess
 from pathlib import Path
 import socket
+import time
 from textwrap import dedent
+import threading
+
+# Import colorama for colored output
+try:
+    from colorama import init, Fore, Back, Style
+    init(autoreset=True)
+    COLORAMA_AVAILABLE = True
+except ImportError:
+    COLORAMA_AVAILABLE = False
 
 # Constants
 REPO_ROOT = Path(__file__).resolve().parents[2]  # neodoo18framework/
@@ -27,22 +37,192 @@ ODOO_REPO = "https://github.com/odoo/odoo.git"
 OCA_WEB_REPO = "https://github.com/OCA/web.git"
 ODOO_BRANCH = "18.0"
 
+# Visual Interface Functions
+
+def show_banner():
+    """Mostra banner bonito do Neodoo Framework"""
+    banner = """
+[36m╔═══════════════════════════════════════════════════════════════════════════════╗
+║                          🚀 NEODOO18 FRAMEWORK                               ║
+║                    [1mOdoo 18+ Development Made Easy & Beautiful[0m[36m                ║
+║                                                                               ║
+║                        [35mBy NeoAnd for you with ❤️[36m                         ║
+╚═══════════════════════════════════════════════════════════════════════════════╝[0m
+    """
+    print(banner)
+
+def print_colored(text, color='white', bold=False):
+    """Print text with color using colorama if available"""
+    if COLORAMA_AVAILABLE:
+        colors = {
+            'red': Fore.RED,
+            'green': Fore.GREEN,
+            'yellow': Fore.YELLOW,
+            'blue': Fore.BLUE,
+            'purple': Fore.MAGENTA,
+            'cyan': Fore.CYAN,
+            'white': Fore.WHITE,
+            'gray': Fore.LIGHTBLACK_EX
+        }
+        
+        style = Style.BRIGHT if bold else Style.NORMAL
+        color_code = colors.get(color, Fore.WHITE)
+        
+        print(f"{style}{color_code}{text}{Style.RESET_ALL}")
+    else:
+        # Fallback to plain text if colorama is not available
+        print(text)
+
+
+def print_success(text):
+    """Print success message in green"""
+    print_colored(text, 'green', bold=True)
+
+
+def print_error(text):
+    """Print error message in red"""
+    print_colored(text, 'red', bold=True)
+
+
+def print_warning(text):
+    """Print warning message in yellow"""
+    print_colored(text, 'yellow', bold=True)
+
+
+def print_info(text):
+    """Print info message in blue"""
+    print_colored(text, 'blue')
+
+
+def show_progress(message, seconds):
+    """Show progress message with dots animation"""
+    print_colored(f"🔄 {message}", 'cyan', bold=True)
+    for i in range(seconds):
+        time.sleep(1)
+        print(".", end="", flush=True)
+    print(" ✓")
+    time.sleep(0.5)
+
+def print_success(text):
+    print_colored(f"✅ {text}", 'green', bold=True)
+
+def print_info(text):
+    print_colored(f"ℹ️  {text}", 'cyan')
+
+def print_warning(text):
+    print_colored(f"⚠️  {text}", 'yellow')
+
+def print_error(text):
+    print_colored(f"❌ {text}", 'red', bold=True)
+
+def print_step(text):
+    print_colored(f"🔄 {text}", 'blue')
+
+def show_progress(text, duration=2):
+    """Mostra progresso animado"""
+    chars = "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"
+    end_time = time.time() + duration
+    
+    while time.time() < end_time:
+        for char in chars:
+            if time.time() >= end_time:
+                break
+            print(f"\r\033[96m{char} {text}\033[0m", end="", flush=True)
+            time.sleep(0.1)
+    
+    print(f"\r\033[92m✅ {text} - Concluído!\033[0m")
+
+def show_main_menu():
+    """Mostra menu principal interativo"""
+    while True:
+        show_banner()
+        print_colored("\n🎯 O que você deseja fazer hoje?", 'cyan', bold=True)
+        print()
+        
+        menu_options = [
+            ("🚀 Criar novo projeto Odoo", "Cria um projeto completo com Odoo 18+"),
+            ("📋 Listar projetos existentes", "Mostra todos os projetos criados"),
+            ("▶️  Executar projeto", "Inicia um projeto Odoo existente"),
+            ("🗑️  Deletar projeto", "Remove um projeto existente"),
+            ("🔧 Verificar ambiente", "Checa se tudo está funcionando"),
+            ("🔄 Atualizar projeto", "Atualiza Odoo e dependências"),
+            ("❓ Ajuda", "Mostra informações detalhadas"),
+            ("🚪 Sair", "Encerra o programa")
+        ]
+        
+        for i, (title, desc) in enumerate(menu_options, 1):
+            print_colored(f"  {i}. {title}", 'white', bold=True)
+            print_colored(f"     {desc}", 'gray')
+            print()
+        
+        print_colored("\n" + "─" * 79, 'gray')
+        choice = input("\n\033[1m\033[96m👉 Digite o número da opção desejada: \033[0m").strip()
+        
+        if choice == '1':
+            return 'create'
+        elif choice == '2':
+            return 'list'
+        elif choice == '3':
+            return 'run'
+        elif choice == '4':
+            return 'delete'
+        elif choice == '5':
+            return 'doctor'
+        elif choice == '6':
+            return 'update'
+        elif choice == '7':
+            return 'help'
+        elif choice == '8':
+            print_colored("\n👋 Obrigado por usar o Neodoo Framework!", 'purple', bold=True)
+            print_colored("   By NeoAnd for you with ❤️\n", 'purple')
+            sys.exit(0)
+        else:
+            print_error("\nOpção inválida! Por favor, escolha um número de 1 a 8.")
+            input("\nPressione Enter para continuar...")
+            os.system('clear' if os.name != 'nt' else 'cls')
+
 # Helpers
 
 def _print(step):
-    print(step, flush=True)
+    print_step(step)
 
 
-def prompt(question, default=None, validator=None):
+def prompt(question, default=None, validator=None, color='cyan'):
+    """Prompt melhorado com cores e validação"""
     suffix = f" [{default}]" if default is not None else ""
     while True:
-        ans = input(f"{question}{suffix}: ").strip()
+        print_colored(f"🤔 {question}{suffix}: ", color, bold=True)
+        ans = input("   ").strip()
         if ans == "" and default is not None:
             ans = default
         if validator and not validator(ans):
-            print("  -> Valor invalido, tente novamente.")
+            print_error("   Valor inválido, tente novamente.")
             continue
         return ans
+
+def prompt_port(question, default_port, check_conflicts=True):
+    """Prompt específico para portas com verificação de conflitos"""
+    while True:
+        port = prompt(question, str(default_port), lambda x: x.isdigit() and 1024 <= int(x) <= 65535)
+        port = int(port)
+        
+        if check_conflicts and not _port_free(port):
+            print_warning(f"   Porta {port} já está em uso!")
+            
+            # Encontrar próxima porta disponível
+            suggested_port = port + 1
+            while not _port_free(suggested_port) and suggested_port < 65535:
+                suggested_port += 1
+            
+            if suggested_port < 65535:
+                use_suggested = input(f"   🎯 Usar porta {suggested_port}? (s/N): ").strip().lower()
+                if use_suggested == 's':
+                    return suggested_port
+            
+            print_info("   Tente uma porta diferente.")
+            continue
+        
+        return port
 
 
 def is_snake(s):
@@ -95,7 +275,7 @@ def create_run_sh(project_dir, venv):
     os.chmod(project_dir / "run.sh", 0o755)
 
 
-def create_odoo_conf(project_dir, db_name, addons):
+def create_odoo_conf(project_dir, db_name, addons, odoo_port=8069, websocket_port=8072):
     addons_path = ",".join(addons)
     conf = dedent(
         f"""
@@ -105,8 +285,8 @@ def create_odoo_conf(project_dir, db_name, addons):
         db_user = odoo
         db_password = odoo
         db_name = {db_name}
-        xmlrpc_port = 8069
-        longpolling_port = 8072
+        xmlrpc_port = {odoo_port}
+        longpolling_port = {websocket_port}
         addons_path = {addons_path}
         logfile = logs/odoo.log
         log_level = info
@@ -188,17 +368,18 @@ def clone_repo(url, branch, dest):
 
 def create_virtualenv(project_dir):
     venv_dir = project_dir / ".venv"
-    _print("Criando virtualenv...")
+    show_progress("Criando ambiente virtual Python", 2)
     run([sys.executable, "-m", "venv", str(venv_dir)])
     pip = venv_dir / "bin" / "pip"
     try:
+        show_progress("Atualizando pip", 1)
         run([str(pip), "install", "--upgrade", "pip"])
         req = project_dir / "odoo_source" / "requirements.txt"
         if req.exists():
-            _print("Instalando dependencias do Odoo (isso pode demorar)...")
+            show_progress("Instalando dependências do Odoo (pode demorar vários minutos)", 5)
             run([str(pip), "install", "-r", str(req)])
     except subprocess.CalledProcessError:
-        _print("Falha ao instalar dependencias. Voce pode tentar manualmente depois.")
+        print_warning("Falha ao instalar dependências. Você pode tentar manualmente depois.")
 
 
 def _check_cmd_exists(cmd):
@@ -228,14 +409,52 @@ def _load_from_config(config_path):
 def cmd_create(args):
     interactive = not any([args.name])
     if interactive:
-        _print("Wizard interativo - Criar projeto Odoo 18+")
-        name = prompt("Nome do projeto (snake_case)", validator=is_snake)
-        base_dir = Path(prompt("Diretorio base", str(DEFAULT_BASE_DIR)))
-        module_name = prompt("Nome tecnico do modulo inicial", name)
-        template = prompt("Template [minimal|advanced|ecommerce]", "minimal")
-        author = prompt("Autor", "Your Company")
-        description = prompt("Descricao", f"Modulo {module_name} gerado pelo Neodoo")
-        use_venv = prompt("Usar virtualenv local? [y/N]", "y").lower() in ("y", "yes")
+        os.system('clear' if os.name != 'nt' else 'cls')
+        show_banner()
+        print_colored("\n🎯 Vamos criar seu projeto Odoo 18+ incrível!", 'green', bold=True)
+        print_colored("   Responda algumas perguntas e tudo será configurado automaticamente.\n", 'gray')
+        
+        # Nome do projeto
+        name = prompt("Como você quer chamar seu projeto? (use snake_case)", validator=is_snake, color='cyan')
+        
+        # Diretório base
+        base_dir = Path(prompt("Onde salvar o projeto?", str(DEFAULT_BASE_DIR), color='cyan'))
+        
+        # Template com explicação visual
+        print_colored("\n📦 Escolha o tipo de projeto:", 'purple', bold=True)
+        templates = [
+            ("minimal", "📋 Projeto Simples", "Estrutura básica para módulos personalizados"),
+            ("advanced", "🏢 Projeto Empresarial", "Inclui relatórios, wizards e recursos avançados"),  
+            ("ecommerce", "🛒 E-commerce", "Sistema completo para loja online")
+        ]
+        
+        for i, (key, title, desc) in enumerate(templates, 1):
+            print_colored(f"  {i}. {title}", 'white', bold=True)
+            print_colored(f"     {desc}", 'gray')
+        
+        while True:
+            choice = input(f"\n🎯 Escolha o template (1-{len(templates)}): ").strip()
+            if choice.isdigit() and 1 <= int(choice) <= len(templates):
+                template = templates[int(choice)-1][0]
+                break
+            print_error("Escolha inválida! Digite um número de 1 a 3.")
+        
+        # Configuração de rede
+        print_colored(f"\n🌐 Configuração de Rede:", 'blue', bold=True)
+        odoo_port = prompt_port("Porta para acessar o Odoo", 8069)
+        websocket_port = prompt_port("Porta para WebSocket/Chat", 8072)
+        
+        # Informações do desenvolvedor
+        print_colored(f"\n👤 Informações do Desenvolvedor:", 'yellow', bold=True)
+        author = prompt("Seu nome ou empresa", "Your Company", color='yellow')
+        
+        # Nome técnico do módulo
+        module_name = prompt("Nome técnico do módulo inicial", name, color='cyan')
+        description = prompt("Descrição do projeto", f"Projeto {name} criado com Neodoo Framework", color='cyan')
+        
+        # Virtual environment
+        print_colored(f"\n🐍 Ambiente Python:", 'green', bold=True)
+        use_venv = prompt("Criar ambiente virtual Python? (Recomendado)", "s", color='green').lower() in ("s", "sim", "y", "yes")
     else:
         if args.from_config:
             cfg = _load_from_config(Path(args.from_config))
@@ -251,6 +470,8 @@ def cmd_create(args):
             else:
                 vcfg_bool = str(vcfg).strip().lower() in ("1", "true", "yes", "y")
             use_venv = vcfg_bool and (not args.no_venv)
+            odoo_port = 8069  # Default para config
+            websocket_port = 8072
         else:
             name = args.name
             base_dir = Path(args.base_dir or DEFAULT_BASE_DIR)
@@ -259,35 +480,40 @@ def cmd_create(args):
             author = args.author
             description = args.description or f"Modulo {module_name} gerado pelo Neodoo"
             use_venv = not args.no_venv
+            odoo_port = 8069  # Default para modo não-interativo
+            websocket_port = 8072
 
     project_dir = base_dir / name
     if project_dir.exists():
         print(f"Diretorio ja existe: {project_dir}")
         sys.exit(1)
 
-    _print(f"Criando projeto em: {project_dir}")
+    print_colored(f"\n\n🚀 Iniciando criação do projeto...", 'green', bold=True)
+    print_info(f"📁 Local: {project_dir}")
+    
     ensure_dir(project_dir)
-
+    
+    show_progress("Criando estrutura de diretórios", 1)
     for d in ("custom_addons", "community_addons", "logs", "filestore"):
         ensure_dir(project_dir / d)
 
-    _print("Baixando Odoo 18+ (shallow clone)...")
+    show_progress("Baixando Odoo 18+ (pode demorar alguns minutos)", 3)
     clone_repo(ODOO_REPO, ODOO_BRANCH, project_dir / "odoo_source")
 
-    _print("Baixando OCA/web (inclui web_responsive)...")
+    show_progress("Baixando módulos OCA (web_responsive incluído)", 2)
     clone_repo(OCA_WEB_REPO, ODOO_BRANCH, project_dir / "community_addons" / "web")
 
     if use_venv:
         create_virtualenv(project_dir)
 
-    _print(f"Gerando modulo inicial: {module_name} ({template})")
+    show_progress(f"Gerando módulo inicial: {module_name} ({template})", 2)
     call_generator(module_name, template, project_dir / "custom_addons", author, description)
 
     create_odoo_conf(project_dir, db_name=name, addons=[
-        "odoo_source/addons",
+        "odoo_source/addons", 
         "custom_addons",
         "community_addons/web",
-    ])
+    ], odoo_port=odoo_port if interactive else 8069, websocket_port=websocket_port if interactive else 8072)
     create_run_sh(project_dir, venv=use_venv)
 
     write_neodoo_yaml(project_dir, {
@@ -300,105 +526,285 @@ def cmd_create(args):
         "oca_web": True,
     })
 
-    _print("Projeto criado com sucesso!")
-    _print(f"Para iniciar: cd {project_dir} && ./run.sh")
+    print_success("\n🎉 Projeto criado com sucesso!")
+    print_colored("\n📋 Para iniciar seu projeto:", 'cyan', bold=True)
+    print_colored(f"   cd {project_dir}", 'white')
+    print_colored(f"   ./run.sh", 'white')
+    print_colored(f"\n🌐 Seu Odoo estará disponível em:", 'blue', bold=True)
+    print_colored(f"   http://localhost:{odoo_port if interactive else 8069}", 'white')
+    print_colored("\n" + "By NeoAnd for you with ❤️", 'purple')
+    
+    input("\nPressione Enter para voltar ao menu principal...")
 
 
 def cmd_list(_args):
+    os.system('clear' if os.name != 'nt' else 'cls')
+    show_banner()
+    
     base = Path(_args.base_dir or DEFAULT_BASE_DIR)
+    print_colored(f"\n📋 Projetos em: {base}\n", 'cyan', bold=True)
+    
     if not base.exists():
-        print(f"(vazio) {base}")
+        print_warning(f"Diretório não encontrado: {base}")
+        input("\nPressione Enter para continuar...")
         return
+        
     items = [p for p in base.iterdir() if p.is_dir()]
     if not items:
-        print(f"(vazio) {base}")
-        return
-    for i, p in enumerate(sorted(items), start=1):
-        print(f"{i}. {p.name} - {p}")
+        print_info("📋 Nenhum projeto encontrado")
+        print_colored("\n🚀 Crie seu primeiro projeto com a opção 'Criar novo projeto'!", 'yellow')
+    else:
+        for i, p in enumerate(sorted(items), start=1):
+            # Verificar se tem odoo.conf para mostrar porta
+            odoo_conf = p / "odoo.conf"
+            port_info = ""
+            if odoo_conf.exists():
+                try:
+                    conf_content = odoo_conf.read_text()
+                    for line in conf_content.split('\n'):
+                        if 'xmlrpc_port' in line and '=' in line:
+                            port = line.split('=')[1].strip()
+                            port_info = f" 🌐 :{port}"
+                            break
+                except:
+                    pass
+                    
+            print_colored(f"  {i}. 📁 {p.name}{port_info}", 'white', bold=True)
+            print_colored(f"     📂 {p}", 'gray')
+            
+    print_colored("\n" + "By NeoAnd for you with ❤️", 'purple')
+    input("\nPressione Enter para continuar...")
 
 
 def cmd_delete(args):
+    os.system('clear' if os.name != 'nt' else 'cls')
+    show_banner()
+    
     base = Path(args.base_dir or DEFAULT_BASE_DIR)
-    name = args.name or prompt("Nome do projeto a excluir")
+    
+    # Listar projetos disponíveis
+    items = [p for p in base.iterdir() if p.is_dir() and p.exists()]
+    if not items:
+        print_warning("📋 Nenhum projeto encontrado para deletar")
+        input("\nPressione Enter para continuar...")
+        return
+    
+    if not args.name:
+        print_colored("\n🗚️ Projetos disponíveis para deletar:\n", 'red', bold=True)
+        for i, p in enumerate(sorted(items), start=1):
+            print_colored(f"  {i}. {p.name}", 'white')
+        
+        while True:
+            choice = input(f"\n👉 Escolha o projeto para deletar (1-{len(items)}) ou 'cancelar': ").strip()
+            if choice.lower() == 'cancelar':
+                print_info("Operação cancelada")
+                input("\nPressione Enter para continuar...")
+                return
+            if choice.isdigit() and 1 <= int(choice) <= len(items):
+                name = sorted(items)[int(choice)-1].name
+                break
+            print_error("Escolha inválida!")
+    else:
+        name = args.name
+    
     path = base / name
     if not path.exists():
-        print(f"Nao encontrado: {path}")
-        sys.exit(1)
-    conf = prompt(f"Tem certeza que deseja remover '{name}'? (DELETE para confirmar)")
-    if conf != "DELETE":
-        print("Cancelado.")
+        print_error(f"Projeto não encontrado: {path}")
+        input("\nPressione Enter para continuar...")
         return
-    shutil.rmtree(path)
-    print("Removido com sucesso.")
+        
+    print_colored(f"\n⚠️  ATENÇÃO: Você está prestes a deletar:", 'yellow', bold=True)
+    print_colored(f"   📁 Projeto: {name}", 'white')
+    print_colored(f"   📂 Local: {path}", 'gray')
+    print_colored(f"\n🗑️ Esta ação não pode ser desfeita!", 'red', bold=True)
+    
+    conf = input("\n🔐 Digite 'DELETE' (maiúsculas) para confirmar: ").strip()
+    if conf != "DELETE":
+        print_info("Operação cancelada por segurança")
+    else:
+        show_progress(f"Removendo projeto {name}", 2)
+        shutil.rmtree(path)
+        print_success(f"Projeto '{name}' removido com sucesso!")
+        print_colored("\nBy NeoAnd for you with ❤️", 'purple')
+    
+    input("\nPressione Enter para continuar...")
 
 
 def cmd_doctor(args):
-    print("neodoo doctor - verificando ambiente...")
+    os.system('clear' if os.name != 'nt' else 'cls')
+    show_banner()
+    
+    print_colored("\n🔧 Verificando ambiente de desenvolvimento...\n", 'blue', bold=True)
+    
     ok = True
+    
+    # Verificar ferramentas essenciais
+    print_colored("🔍 Ferramentas essenciais:", 'cyan', bold=True)
     for label, cmdname in [("python3", Path(sys.executable).name), ("git", "git"), ("psql", "psql"), ("docker", "docker")]:
         exists = _check_cmd_exists(cmdname)
-        print(f" - {label}: {'OK' if exists else 'NAO ENCONTRADO'}")
-        if label in ("python3", "git") and not exists:
-            ok = False
+        if exists:
+            print_success(f"   {label}: Encontrado")
+        else:
+            print_error(f"   {label}: Não encontrado")
+            if label in ("python3", "git"):
+                ok = False
+    
+    # Verificar portas
+    print_colored("\n🌐 Portas de rede:", 'cyan', bold=True)
     for port in (8069, 8072):
         free = _port_free(port)
-        print(f" - porta {port}: {'livre' if free else 'ocupada'}")
+        if free:
+            print_success(f"   Porta {port}: Livre")
+        else:
+            print_warning(f"   Porta {port}: Em uso")
+    
+    # Verificar projeto específico se informado
     if getattr(args, "path", None):
         p = Path(args.path)
-        print(f" - checando projeto em: {p}")
+        print_colored(f"\n📁 Verificando projeto: {p.name}", 'cyan', bold=True)
+        
         if not p.exists():
-            print("   diretorio nao existe")
+            print_error("   Diretório não existe")
             ok = False
         else:
-            for sub in ("odoo_source", "custom_addons", "community_addons", "odoo.conf"):
-                present = (p / sub).exists()
-                print(f"   - {sub}: {'OK' if present else 'faltando'}")
-                if not present:
+            components = [
+                ("odoo_source", "Código fonte do Odoo"),
+                ("custom_addons", "Módulos customizados"),
+                ("community_addons", "Módulos da comunidade"),
+                ("odoo.conf", "Arquivo de configuração"),
+                ("run.sh", "Script de execução")
+            ]
+            
+            for component, desc in components:
+                present = (p / component).exists()
+                if present:
+                    print_success(f"   {desc}: OK")
+                else:
+                    print_error(f"   {desc}: Não encontrado")
                     ok = False
+            
+            # Verificar ambiente virtual
             venv_ok = (p / ".venv" / "bin" / "python").exists()
-            print(f"   - venv: {'OK' if venv_ok else 'ausente'}")
-    if not ok:
-        print("Problemas detectados")
-        sys.exit(1)
-    print("Ambiente saudavel")
+            if venv_ok:
+                print_success("   Ambiente virtual Python: OK")
+            else:
+                print_warning("   Ambiente virtual Python: Não encontrado")
+    
+    print_colored("\n" + "─" * 50, 'gray')
+    
+    if ok:
+        print_success("\n✅ Ambiente saudável! Tudo pronto para desenvolvimento.")
+    else:
+        print_error("\n❌ Problemas detectados no ambiente.")
+        print_info("💡 Execute 'neodoo create' para criar um projeto completo.")
+    
+    print_colored("\nBy NeoAnd for you with ❤️", 'purple')
+    input("\nPressione Enter para continuar...")
 
 
 def _git_pull(path):
     if not (path / ".git").exists():
+        print_warning(f"   {path.name}: Não é um repositório Git")
         return
     try:
         run(["git", "pull", "--rebase"], cwd=path)
+        print_success(f"   {path.name}: Atualizado")
     except subprocess.CalledProcessError:
-        print(f"git pull falhou em {path}")
+        print_error(f"   {path.name}: Falha no git pull")
 
 
 def cmd_update(args):
+    os.system('clear' if os.name != 'nt' else 'cls')
+    show_banner()
+    
     p = Path(args.path)
     if not p.exists():
-        print(f"Diretorio nao encontrado: {p}")
-        sys.exit(1)
-    print("Atualizando repositorios...")
+        print_error(f"Diretório não encontrado: {p}")
+        input("\nPressione Enter para continuar...")
+        return
+    
+    print_colored(f"\n🔄 Atualizando projeto: {p.name}\n", 'blue', bold=True)
+    
+    # Atualizar repositórios
+    show_progress("Atualizando código fonte do Odoo", 2)
     _git_pull(p / "odoo_source")
+    
+    show_progress("Atualizando módulos OCA", 2)
     _git_pull(p / "community_addons" / "web")
+    
+    # Atualizar dependências Python
     if not args.no_deps:
         pip_bin = p / ".venv" / "bin" / "pip"
         req = p / "odoo_source" / "requirements.txt"
+        
         if pip_bin.exists() and req.exists():
             try:
+                show_progress("Atualizando pip", 1)
                 run([str(pip_bin), "install", "--upgrade", "pip"])
+                
+                show_progress("Atualizando dependências Python (pode demorar)", 4)
                 run([str(pip_bin), "install", "-r", str(req)])
+                
+                print_success("Dependências atualizadas com sucesso!")
             except subprocess.CalledProcessError:
-                print("Falha ao atualizar dependencias.")
+                print_warning("Falha ao atualizar dependências Python.")
         else:
-            print("venv nao encontrada ou requirements ausente; pulando deps.")
+            print_warning("Ambiente virtual ou requirements.txt não encontrado.")
+            print_info("💡 Pulando atualização de dependências Python.")
+    
+    print_success("\n✅ Projeto atualizado com sucesso!")
+    print_colored("\nBy NeoAnd for you with ❤️", 'purple')
+    input("\nPressione Enter para continuar...")
 
 
 def cmd_run(args):
     """Execute um projeto Odoo com feedback detalhado"""
-    project_path = Path(args.path) if args.path else Path.cwd()
+    
+    if not args.path:
+        # Se não especificou path, listar projetos disponíveis
+        base = Path(DEFAULT_BASE_DIR)
+        if base.exists():
+            items = [p for p in base.iterdir() if p.is_dir() and (p / "run.sh").exists()]
+            if items:
+                os.system('clear' if os.name != 'nt' else 'cls')
+                show_banner()
+                print_colored("\n▶️  Escolha o projeto para executar:\n", 'green', bold=True)
+                
+                for i, p in enumerate(sorted(items), start=1):
+                    # Mostrar porta do projeto
+                    port_info = ""
+                    odoo_conf = p / "odoo.conf"
+                    if odoo_conf.exists():
+                        try:
+                            conf_content = odoo_conf.read_text()
+                            for line in conf_content.split('\n'):
+                                if 'xmlrpc_port' in line and '=' in line:
+                                    port = line.split('=')[1].strip()
+                                    port_info = f" 🌐 :{port}"
+                                    break
+                        except:
+                            pass
+                    print_colored(f"  {i}. {p.name}{port_info}", 'white', bold=True)
+                
+                while True:
+                    choice = input(f"\n👉 Escolha o projeto (1-{len(items)}) ou 'cancelar': ").strip()
+                    if choice.lower() == 'cancelar':
+                        return
+                    if choice.isdigit() and 1 <= int(choice) <= len(items):
+                        project_path = sorted(items)[int(choice)-1]
+                        break
+                    print_error("Escolha inválida!")
+            else:
+                print_warning("Nenhum projeto Odoo encontrado")
+                input("\nPressione Enter para continuar...")
+                return
+        else:
+            project_path = Path.cwd()
+    else:
+        project_path = Path(args.path)
     
     if not project_path.exists():
-        print(f"❌ Diretorio nao encontrado: {project_path}")
+        print_error(f"Diretório não encontrado: {project_path}")
         sys.exit(1)
     
     # Verificar se é um projeto Odoo válido
@@ -407,18 +813,22 @@ def cmd_run(args):
     odoo_bin = project_path / "odoo_source" / "odoo-bin"
     
     if not run_sh.exists():
-        print(f"❌ Arquivo run.sh nao encontrado em: {project_path}")
-        print("💡 Execute 'neodoo create' para criar um projeto Odoo")
-        sys.exit(1)
+        print_error(f"Arquivo run.sh não encontrado em: {project_path}")
+        print_info("💡 Execute 'neodoo create' para criar um projeto Odoo")
+        input("\nPressione Enter para continuar...")
+        return
     
     if not odoo_bin.exists():
-        print(f"❌ Odoo nao encontrado em: {project_path / 'odoo_source'}")
-        print("💡 Execute 'neodoo create' para criar um projeto completo")
-        sys.exit(1)
+        print_error(f"Odoo não encontrado em: {project_path / 'odoo_source'}")
+        print_info("💡 Execute 'neodoo create' para criar um projeto completo")
+        input("\nPressione Enter para continuar...")
+        return
     
     # Ler configuração para mostrar detalhes
     port = "8069"  # default
     db_name = "odoo"
+    websocket_port = "8072"
+    
     if odoo_conf.exists():
         try:
             conf_content = odoo_conf.read_text()
@@ -427,24 +837,32 @@ def cmd_run(args):
                     port = line.split('=')[1].strip()
                 elif 'db_name' in line and '=' in line:
                     db_name = line.split('=')[1].strip()
+                elif 'longpolling_port' in line and '=' in line:
+                    websocket_port = line.split('=')[1].strip()
         except Exception:
             pass
     
-    print(f"\n🚀 Iniciando projeto Odoo...")
-    print(f"📁 Projeto: {project_path.name}")
-    print(f"🗄️  Database: {db_name}")
-    print(f"🌐 URL: http://localhost:{port}")
-    print(f"📝 Logs: {project_path}/logs/odoo.log")
-    print("\n⏳ Carregando Odoo (isso pode demorar alguns segundos...)")
-    print("\n" + "="*60)
+    os.system('clear' if os.name != 'nt' else 'cls')
+    show_banner()
+    
+    print_colored(f"\n🚀 Iniciando projeto Odoo...", 'green', bold=True)
+    print_colored(f"📁 Projeto: {project_path.name}", 'cyan')
+    print_colored(f"🗄️  Database: {db_name}", 'cyan')
+    print_colored(f"🌐 URL: http://localhost:{port}", 'blue', bold=True)
+    print_colored(f"📱 WebSocket: :{websocket_port}", 'blue')
+    print_colored(f"📝 Logs: {project_path}/logs/odoo.log", 'gray')
+    print_colored(f"\n⏳ Carregando Odoo (isso pode demorar alguns segundos...)", 'yellow')
+    print_colored(f"\n🛹️  Para parar o servidor: Ctrl+C", 'purple')
+    print_colored(f"\nBy NeoAnd for you with ❤️\n", 'purple')
+    print_colored("\n" + "═"*79, 'gray')
     
     # Executar o run.sh
     try:
         os.chdir(project_path)
         os.execv("/bin/bash", ["bash", str(run_sh)])
     except Exception as e:
-        print(f"❌ Erro ao executar projeto: {e}")
-        sys.exit(1)
+        print_error(f"Erro ao executar projeto: {e}")
+        input("\nPressione Enter para continuar...")
 
 
 def build_parser():
@@ -490,14 +908,56 @@ def build_parser():
 def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
+    
+    # Se não há comando especificado, mostra menu principal
     if not getattr(args, "cmd", None):
-        args = parser.parse_args(["create"])  # type: ignore
-    try:
-        args.func(args)
-    except subprocess.CalledProcessError as e:
-        cmd_str = e.cmd if isinstance(e.cmd, list) else [str(e.cmd)]
-        print(f"Erro em comando externo (exit {e.returncode}): {' '.join(cmd_str)}")
-        sys.exit(e.returncode)
+        os.system('clear' if os.name != 'nt' else 'cls')
+        while True:
+            try:
+                chosen_cmd = show_main_menu()
+                # Simular argumentos para o comando escolhido
+                if chosen_cmd == 'help':
+                    parser.print_help()
+                    input("\nPressione Enter para continuar...")
+                    os.system('clear' if os.name != 'nt' else 'cls')
+                    continue
+                elif chosen_cmd == 'create':
+                    fake_args = parser.parse_args(['create'])
+                elif chosen_cmd == 'list':
+                    fake_args = parser.parse_args(['list'])
+                elif chosen_cmd == 'run':
+                    fake_args = parser.parse_args(['run'])
+                elif chosen_cmd == 'delete':
+                    fake_args = parser.parse_args(['delete'])
+                elif chosen_cmd == 'doctor':
+                    fake_args = parser.parse_args(['doctor'])
+                elif chosen_cmd == 'update':
+                    # Para update precisamos pedir o path
+                    project_path = prompt("Caminho do projeto para atualizar", str(DEFAULT_BASE_DIR))
+                    fake_args = parser.parse_args(['update', '--path', project_path])
+                else:
+                    continue
+                
+                fake_args.func(fake_args)
+                
+                if chosen_cmd != 'run':  # run executa o Odoo, não volta ao menu
+                    os.system('clear' if os.name != 'nt' else 'cls')
+                    
+            except KeyboardInterrupt:
+                print_colored("\n\n👋 Até logo! By NeoAnd for you with ❤️\n", 'purple', bold=True)
+                sys.exit(0)
+            except Exception as e:
+                print_error(f"Erro inesperado: {e}")
+                input("Pressione Enter para continuar...")
+                os.system('clear' if os.name != 'nt' else 'cls')
+    else:
+        # Modo comando direto (CLI tradicional)
+        try:
+            args.func(args)
+        except subprocess.CalledProcessError as e:
+            cmd_str = e.cmd if isinstance(e.cmd, list) else [str(e.cmd)]
+            print_error(f"Erro em comando externo (exit {e.returncode}): {' '.join(cmd_str)}")
+            sys.exit(e.returncode)
 
 
 if __name__ == "__main__":

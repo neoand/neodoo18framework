@@ -1,53 +1,66 @@
 # 🚀 Guía Completa: Neodoo18Framework
 
-> **Framework Universal para Desarrollo Odoo 18+ con Sistema SOIL**Gestionar
-```bash
-./neodoo list
-./neodoo delete
-./neodoo run                            # ejecutar proyecto en directorio actual
-./neodoo run --path /ruta/del/proyecto  # ejecutar proyecto especifico
-./neodoo doctor                         # revisar env (python, git, puertos)
-./neodoo doctor --path /ruta/del/proyecto **ÍNDICE**
-
-1. [Instalación Rápida](#instalación-rápida)
-2. [Primer Proyecto](#primer-proyecto)  
-3. [Desarrollo con IA](#desarrollo-con-ia)
-4. [Estándares Obligatorios](#estándares-obligatorios)
-5. [Validación Automática](#validación-automática)
-6. [Ejemplos Prácticos](#ejemplos-prácticos)
-7. [Integración con Odoo](#integración-con-odoo)
-8. [Solución de Problemas](#solución-de-problemas)
-# 🚀 Guía Completa: Neodoo18Framework
-
 > Framework universal para Odoo 18+ con SOIL y un CLI de un solo comando.
 
 ## 📚 Índice
 
 1. Inicio Rápido (recomendado)
-2. Anatomía del Proyecto
-3. Flujos Clave (crear, gestionar, validar)
-4. Estándares Odoo 18+ obligatorios
-5. Modos del Validador: strict y template-mode
-6. Desarrollo con IA (LLM)
-7. Update y Doctor
-8. Troubleshooting y Checklist
+2. Interfaz Visual CLI 🆕
+3. Anatomía del Proyecto
+4. Flujos Clave (crear, gestionar, validar)
+5. Estándares Odoo 18+ obligatorios
+6. Modos del Validador: strict y template-mode
+7. Desarrollo con IA (LLM)
+8. Update y Doctor
+9. Troubleshooting y Checklist
 
 ---
 
 ## ⚡ Inicio Rápido (30s)
 
 > [!tip]
-> El nuevo CLI es el camino más rápido. Los scripts heredados existen, pero el CLI ofrece la mejor DX.
+> ¡La nueva interfaz visual CLI ofrece la mejor experiencia! Ejecuta `./neodoo` para un menú interactivo con interfaz hermosa.
 
 ```bash
 # 1) Clonar
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
 
-# 2) Crear un proyecto Odoo 18+ completo (asistente)
+# 2) Abrir menú visual y seleccionar "Crear nuevo proyecto"
+./neodoo                           # Menú interactivo visual (¡recomendado!)
+
+# O comando directo: Crear un proyecto Odoo 18+ completo (asistente)
 ./neodoo create
 
-# 3) Ejecutar
+# 3) Ejecutar (o usar opción del menú "Ejecutar proyecto")
+cd ~/odoo_projects/<tu_proyecto>
+./run.sh
+```
+
+## 🎨 Interfaz Visual CLI
+
+La nueva interfaz CLI ofrece una experiencia visual completa con colores, emojis y menús interactivos:
+
+```bash
+./neodoo                           # Menú principal interactivo
+```
+
+**Opciones del Menú:**
+- 🚀 **Crear nuevo proyecto** - Asistente visual con selección de plantilla
+- 📋 **Listar proyectos** - Visualización mejorada con detalles coloridos  
+- ▶️ **Ejecutar proyecto** - Ejecución inteligente con información de estado
+- �️ **Eliminar proyecto** - Eliminación segura con diálogos de confirmación
+- � **Verificar ambiente** - Verificación de salud con feedback visual
+- 🔄 **Actualizar proyecto** - Actualizaciones con indicadores de progreso
+- ❓ **Ayuda** - Información detallada de uso
+- 🚪 **Salir** - Terminación limpia del programa
+
+**Características Visuales:**
+- 🎨 **Salida colorida** con indicadores emoji
+- 📊 **Indicadores de progreso** para operaciones largas  
+- 🛡️ **Confirmaciones seguras** para acciones destructivas
+- 📱 **Interfaz responsive** que se adapta al tamaño del terminal
+- 🎯 **Detección inteligente de puerto** encuentra automáticamente puertos disponibles
 cd ~/odoo_projects/<tu_proyecto>
 ./run.sh
 ```

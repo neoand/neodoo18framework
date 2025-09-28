@@ -5,13 +5,14 @@
 ## 📚 **ÍNDICE**
 
 1. [Instalação Rápida](#instalação-rápida)
-2. [Primeiro Projeto](#primeiro-projeto)  
-3. [Desenvolvimento com IA](#desenvolvimento-com-ia)
-4. [Padrões Obrigatórios](#padrões-obrigatórios)
-5. [Validação Automática](#validação-automática)
-6. [Exemplos Práticos](#exemplos-práticos)
-7. [Integração com Odoo](#integração-com-odoo)
-8. [Troubleshooting](#troubleshooting)
+2. [Interface Visual CLI](#interface-visual-cli) 🆕
+3. [Primeiro Projeto](#primeiro-projeto)  
+4. [Desenvolvimento com IA](#desenvolvimento-com-ia)
+5. [Padrões Obrigatórios](#padrões-obrigatórios)
+6. [Validação Automática](#validação-automática)
+7. [Exemplos Práticos](#exemplos-práticos)
+8. [Integração com Odoo](#integração-com-odoo)
+9. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -29,9 +30,11 @@ cd neodoo18framework
 # ✅ Instala todas as dependências Odoo 18+
 # ✅ Configura ferramentas de desenvolvimento
 
-# 3. Criar primeiro projeto
+# 3. Criar primeiro projeto com interface visual
 ./env.sh activate
-./neodoo create  # e seguir o assistente
+./neodoo                    # Menu interativo visual (recomendado!)
+# OU comando direto:
+./neodoo create            # Assistente de criação
 
 # 4. Validar qualidade
 python3 framework/validator.py meu_primeiro_projeto/
@@ -61,20 +64,48 @@ python3 framework/validator.py meu_primeiro_projeto/
 ## ⚡ Início Rápido (30s)
 
 > [!tip]
-> O novo CLI é o caminho mais rápido. Scripts legados existem, mas o CLI oferece a melhor DX.
+> A nova interface visual CLI oferece a melhor experiência! Execute `./neodoo` para um menu interativo com interface linda.
 
 ```bash
 # 1) Clonar
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
 
-# 2) Criar um projeto Odoo 18+ completo (assistente)
+# 2) Abrir menu visual e selecionar "Criar novo projeto"
+./neodoo                           # Menu interativo visual (recomendado!)
+
+# OU comando direto: Criar um projeto Odoo 18+ completo (assistente)
 ./neodoo create
 
-# 3) Executar
+# 3) Executar (ou usar opção do menu "Executar projeto")
 cd ~/odoo_projects/<seu_projeto>
 ./run.sh
 ```
+
+## 🎨 Interface Visual CLI
+
+A nova interface CLI oferece uma experiência visual completa com cores, emojis e menus interativos:
+
+```bash
+./neodoo                           # Menu principal interativo
+```
+
+**Opções do Menu:**
+- 🚀 **Criar novo projeto** - Assistente visual com seleção de template
+- 📋 **Listar projetos** - Visualização aprimorada com detalhes coloridos  
+- ▶️ **Executar projeto** - Execução inteligente com informações de status
+- 🗑️ **Deletar projeto** - Remoção segura com diálogos de confirmação
+- 🔧 **Verificar ambiente** - Verificação de saúde com feedback visual
+- 🔄 **Atualizar projeto** - Atualizações com indicadores de progresso
+- ❓ **Ajuda** - Informações detalhadas de uso
+- 🚪 **Sair** - Encerramento limpo do programa
+
+**Recursos Visuais:**
+- 🎨 **Saída colorida** com indicadores emoji
+- 📊 **Indicadores de progresso** para operações longas  
+- 🛡️ **Confirmações seguras** para ações destrutivas
+- 📱 **Interface responsiva** que se adapta ao tamanho do terminal
+- 🎯 **Detecção inteligente de porta** encontra automaticamente portas disponíveis
 
 Não interativo (reprodutível) via config:
 ```bash

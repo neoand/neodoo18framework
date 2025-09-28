@@ -27,13 +27,22 @@ cd neodoo18framework
 ./env.sh activate
 ```
 
-Para configuração completa com projeto:
+### Como usar a nova interface visual?
+A maneira mais fácil de começar é usar o menu interativo:
 ```bash
-./setup.sh
+./neodoo                          # Menu visual com todas as opções
+```
+
+Para comandos diretos:
+```bash
+./neodoo create                   # Criar projeto com assistente visual
+./neodoo list                     # Listar projetos com cores
+./neodoo run                      # Executar projeto com feedback
+./neodoo doctor                   # Verificar ambiente
 ```
 
 ### Posso usar o framework com Docker?
-Sim, o script `setup.sh` oferece opção para configuração com Docker, facilitando a criação de ambientes isolados e consistentes.
+Sim, o novo CLI `./neodoo` oferece opções avançadas de configuração, facilitando a criação de ambientes isolados e consistentes.
 
 ## Desenvolvimento
 
@@ -87,8 +96,11 @@ Os papéis são definidos em arquivos markdown detalhados na pasta `framework/ro
 
 ### Qual a diferença entre os scripts disponíveis?
 - `env.sh` - Gerenciamento unificado do ambiente Python (setup/activate/deactivate)
-- `quick_start.sh` - Criação rápida de projetos (`./quick_start.sh my_project`)
-- `setup.sh` - Assistente interativo completo para ambiente e projeto
+- `./neodoo` - Interface visual interativa (recomendado)
+- `./neodoo create` - Criação rápida de projetos com assistente visual
+- `./neodoo list` - Listagem de projetos com cores
+- `./neodoo run` - Execução de projetos com feedback visual
+- `./neodoo doctor` - Verificação de ambiente com resultado visual
 - `create_odoo_project.sh` - Criação de projetos Odoo completos com ambiente
 
 ### Como usar o gerenciamento de ambiente?

@@ -32,17 +32,38 @@ cd neodoo18framework
 
 ## Comandos Principais
 
+### 🎨 Nova Interface Visual (Recomendado)
+
+```bash
+# Menu interativo com interface linda
+./neodoo                          # Interface visual completa (recomendado!)
+```
+
 ### Criar um Novo Projeto
 
 ```bash
-# Método rápido
-./quick_start.sh my_project
+# Método visual interativo (recomendado)
+./neodoo create                   # Assistente visual com seleção de template
 
-# Método interativo completo
-./setup.sh
+# Método direto
+./neodoo create --name my_project --template minimal --base-dir ~/odoo_projects
 
-# Gerador direto
+# Gerador direto (método legado)
 python framework/generator/create_project.py --name=my_project --type=minimal
+```
+
+### Gerenciar Projetos
+
+```bash
+# Interface visual (recomendado)
+./neodoo                          # Menu com todas as opções
+
+# Comandos diretos
+./neodoo list                     # Listar projetos com cores
+./neodoo run                      # Executar projeto atual
+./neodoo delete                   # Deletar projeto com confirmação
+./neodoo doctor                   # Verificar ambiente
+./neodoo update --path /projeto   # Atualizar projeto
 ```
 
 ### Validar Código

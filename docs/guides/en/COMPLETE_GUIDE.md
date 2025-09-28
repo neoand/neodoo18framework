@@ -18,17 +18,20 @@
 ## ⚡ Quick Start (30 seconds)
 
 > [!tip]
-> The new CLI is the fastest way. Legacy scripts still exist, but the CLI gives you the best UX.
+> The new visual CLI provides the best experience! Simply run `./neodoo` for an interactive menu with beautiful interface.
 
 ```bash
 # 1) Clone
 git clone https://github.com/neoand/neodoo18framework.git
 cd neodoo18framework
 
-# 2) Create a full Odoo 18+ project (wizard)
+# 2) Open visual menu and select "Create new project"
+./neodoo                           # Interactive visual menu (recommended!)
+
+# OR direct command: Create a full Odoo 18+ project (wizard)
 ./neodoo create
 
-# 3) Start it
+# 3) Start it (or use menu option "Run project")
 cd ~/odoo_projects/<your_project>
 ./run.sh
 ```
@@ -84,21 +87,37 @@ You can also use the shared example directly:
 
 ## 🔁 Core Workflows
 
+### 🎨 **Visual Interface (Recommended)**
+```bash
+./neodoo                           # Interactive menu with beautiful visual interface
+```
+
+**Interactive Menu Features:**
+- 🚀 **Create new project** - Visual wizard with template selection and port detection
+- 📋 **List projects** - Enhanced display with colors and project details
+- ▶️ **Run project** - Smart execution with detailed startup information
+- 🗑️ **Delete project** - Safe removal with confirmation dialogs
+- 🔧 **Environment check** - Comprehensive health verification with visual feedback
+- 🔄 **Update project** - Repository updates with progress indicators
+- ❓ **Help** - Detailed usage information
+- 🚪 **Exit** - Clean program termination
+
+### Direct Commands (Alternative)
 Create
 ```bash
-./neodoo create                    # wizard
-./neodoo create --from-config .neodoo.yml  # reproducible
+./neodoo create                    # Visual creation wizard
+./neodoo create --from-config .neodoo.yml  # Reproducible from config
 ```
 
 Manage
 ```bash
-./neodoo list
-./neodoo delete
-./neodoo run                       # run project in current directory
-./neodoo run --path /path/to/project  # run specific project
-./neodoo doctor                    # check env (python, git, ports)
-./neodoo doctor --path /path/to/project
-./neodoo update --path /path/to/project  # pull repos + update deps
+./neodoo list                      # Enhanced project listing with colors
+./neodoo delete                    # Safe deletion with visual confirmation
+./neodoo run                       # Smart execution with startup details
+./neodoo run --path /path/to/project  # Run specific project with status
+./neodoo doctor                    # Environment check with visual results
+./neodoo doctor --path /path/to/project   # Project-specific health check
+./neodoo update --path /path/to/project   # Updates with progress indicators
 ```
 
 Validate (Odoo 18+ compliance)

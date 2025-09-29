@@ -4,15 +4,15 @@
 > **The Ultimate Complete Odoo 18+ Development Environment**
 
 ---
-> ⚠️ **ATENÇÃO:**
-> Para executar o Neodoo18Framework, é OBRIGATÓRIO ter o **Python 3.8+** e o **PostgreSQL 12+** instalados e disponíveis no PATH do sistema.
-> 
-> Se algum deles não estiver instalado, o sistema exibirá um alerta e não irá prosseguir.
-> 
-> - [Como instalar Python](https://www.python.org/downloads/)
-> - [Como instalar PostgreSQL](https://www.postgresql.org/download/)
-> 
-> *Recomendado: Instale ambos antes de iniciar o framework!*
+> ⚠️ **ATTENTION:**
+> To run Neodoo18Framework, you MUST have **Python 3.8+** and **PostgreSQL 12+** installed and available in your system PATH.
+>
+> If either is missing, the system will show an alert and will not proceed.
+>
+> - [How to install Python](https://www.python.org/downloads/)
+> - [How to install PostgreSQL](https://www.postgresql.org/download/)
+>
+> *Recommended: Install both before starting the framework!*
 ---
 
 **Create production-ready Odoo 18+ projects with a single command!**

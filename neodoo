@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
+
 set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PY="python3"
+
+# Check Python
+if ! command -v $PY >/dev/null 2>&1; then
+	echo "\033[1;31m[ERROR]\033[0m Python 3 não está instalado ou não está no PATH. Instale Python 3.8+ antes de continuar."
+	exit 1
+fi
+
+# Check PostgreSQL
+if ! command -v psql >/dev/null 2>&1; then
+	echo "\033[1;31m[ERROR]\033[0m PostgreSQL não está instalado ou não está no PATH. Instale PostgreSQL 12+ antes de continuar."
+	exit 1
+fi
+
 exec "$PY" "$SCRIPT_DIR/framework/cli/neodoo.py" "$@"

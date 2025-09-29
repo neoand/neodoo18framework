@@ -4,7 +4,7 @@ Esta pasta contém a documentação sobre os diferentes papéis especializados n
 
 ## Papéis Disponíveis
 
-Cada arquivo neste diretório detalha as responsabilidades, fluxos de trabalho e ferramentas para um papel específico no desenvolvimento Odoo 18+.
+Para consultar as especificações detalhadas de cada papel, veja o diretório `framework/roles/`.
 
 ## Integração com LLMs
 

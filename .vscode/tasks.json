@@ -135,6 +135,21 @@
         "panel": "shared",
         "clear": true
       }
+    },
+    {
+      "label": "Neodoo: Export Agent Brief",
+      "type": "shell",
+      "command": "./scripts/dev/export_agent_brief.sh ${input:agentProjectPath}",
+      "windows": {
+        "command": "bash ./scripts/dev/export_agent_brief.sh ${input:agentProjectPath}"
+      },
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
     }
   ],
   "inputs": [
@@ -166,7 +181,11 @@
       "id": "migrationFromVersion",
       "type": "pickString",
       "description": "Source version for migration analysis",
-      "options": ["15", "16", "17"],
+      "options": [
+        "15",
+        "16",
+        "17"
+      ],
       "default": "17"
     },
     {
@@ -178,8 +197,14 @@
     {
       "id": "projectsDir",
       "type": "promptString",
-      "description": "Diretório onde criar o projeto",
+      "description": "Diret\u00f3rio onde criar o projeto",
       "default": "~/odoo_projects"
+    },
+    {
+      "id": "agentProjectPath",
+      "type": "promptString",
+      "description": "Caminho completo do projeto para gerar o agent brief",
+      "default": "~/odoo_projects/semprereal"
     }
   ]
 }

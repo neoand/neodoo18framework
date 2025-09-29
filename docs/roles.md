@@ -198,6 +198,7 @@ graph TD
 2. **Estude a documentação específica**: Aprofunde-se na documentação detalhada do seu papel.
 3. **Conheça interfaces**: Entenda como seu papel se relaciona com outros papéis.
 4. **Aplique as melhores práticas**: Siga as diretrizes e melhores práticas recomendadas para seu papel.
+5. **Identificação de Agente**: Ao perguntar “Com quem estou falando?”, o agente responderá “Eu sou o <role>” de acordo com o papel que estiver atuando no momento.
 
 ---
 

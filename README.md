@@ -315,25 +315,25 @@ See our [Deployment Guide](./DEPLOYMENT.md) for production deployment of created
 - **Contributions**: Welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 - **Issues**: Use GitHub Issues for bugs and feature requests
 
-## � **Por Que Usar?**
+## 💡 Why Use Neodoo18Framework?
 
-- **Desenvolvedores**: Configure ambientes Odoo em minutos, não horas
-- **Empresas**: Garanta consistência entre projetos e desenvolvedores
-- **LLMs**: Receba orientação clara para desenvolvimento Odoo 18+
+- **Developers**: Set up Odoo environments in minutes, not hours
+- **Companies**: Ensure consistency across projects and teams
+- **LLMs**: Get clear guidance for Odoo 18+ development
 
-## 🛡️ **Padrões Rigorosos**
+## 🛡️ Strict Standards
 
-- Conformidade Odoo 18+ (sem padrões legados)
-- Práticas modernas de Python
-- Estrutura amigável para LLMs
-- Padrões de segurança empresarial
+- Odoo 18+ compliance (no legacy patterns)
+- Modern Python practices
+- LLM-friendly structure
+- Enterprise-grade security standards
 
-## 🤝 **Comunidade**
+## 🤝 Community
 
-- **Licença**: MIT (máxima liberdade para desenvolvedores)
-- **Contribuições**: Bem-vindas! Veja CONTRIBUTING.md
-- **Issues**: Use GitHub Issues para bugs e solicitações de recursos
+- **License**: MIT (maximum freedom for developers)
+- **Contributions**: Welcome! See CONTRIBUTING.md
+- **Issues**: Use GitHub Issues for bugs and feature requests
 
 ---
 
-**Construído com experiência real. Testado em produção.**
+**Built with real experience. Tested in production.**

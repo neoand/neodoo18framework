@@ -1,0 +1,185 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Neodoo: Open Interactive Menu",
+      "type": "shell",
+      "command": "./neodoo",
+      "windows": {
+        "command": "neodoo.bat"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Neodoo: Doctor",
+      "type": "shell",
+      "command": "./neodoo doctor",
+      "windows": {
+        "command": "neodoo.bat doctor"
+      },
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
+    },
+    {
+      "label": "Neodoo: Strict Validator",
+      "type": "shell",
+      "command": "python framework/validator/validate.py ${input:validatorTarget} --strict --auto-fix",
+      "windows": {
+        "command": "python framework/validator/validate.py ${input:validatorTarget} --strict --auto-fix"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Neodoo: Dry-run Module Generator",
+      "type": "shell",
+      "command": "python framework/generator/create_project.py --name ${input:moduleName} --type ${input:templateType} --dry-run --no-all-placeholders",
+      "windows": {
+        "command": "python framework/generator/create_project.py --name ${input:moduleName} --type ${input:templateType} --dry-run --no-all-placeholders"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": false
+      }
+    },
+    {
+      "label": "Neodoo: Migration Analyzer",
+      "type": "shell",
+      "command": "./neodoo migrate ${input:migrationTarget} --from-version ${input:migrationFromVersion}",
+      "windows": {
+        "command": "neodoo.bat migrate ${input:migrationTarget} --from-version ${input:migrationFromVersion}"
+      },
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
+    },
+    {
+      "label": "Neodoo: Corporate Validator (AcmeCorp)",
+      "type": "shell",
+      "command": "python framework/validator/validate.py ${input:validatorTarget} --plugins-dir corporate_plugins --verbose",
+      "windows": {
+        "command": "python framework/validator/validate.py ${input:validatorTarget} --plugins-dir corporate_plugins --verbose"
+      },
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
+    },
+    {
+      "label": "Neodoo: Quick Project Creation",
+      "type": "shell",
+      "command": "./neodoo create --name ${input:projectName} --template ${input:templateType} --base-dir ${input:projectsDir}",
+      "windows": {
+        "command": "neodoo.bat create --name ${input:projectName} --template ${input:templateType} --base-dir ${input:projectsDir}"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Neodoo: Development Workflow Complete",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Neodoo: Doctor",
+        "Neodoo: Strict Validator",
+        "Neodoo: Corporate Validator (AcmeCorp)"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Neodoo: List All Plugins",
+      "type": "shell",
+      "command": "python framework/validator/validate.py --list-plugins && echo '\n--- Corporate Plugins ---' && python framework/validator/validate.py --plugins-dir corporate_plugins --list-plugins",
+      "windows": {
+        "command": "python framework/validator/validate.py --list-plugins && echo --- Corporate Plugins --- && python framework/validator/validate.py --plugins-dir corporate_plugins --list-plugins"
+      },
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "validatorTarget",
+      "type": "promptString",
+      "description": "Relative path to the module or project root to validate",
+      "default": "examples/library_system/custom_addons/library_app"
+    },
+    {
+      "id": "moduleName",
+      "type": "promptString",
+      "description": "Technical name for the new module/project",
+      "default": "awesome_module"
+    },
+    {
+      "id": "templateType",
+      "type": "promptString",
+      "description": "Template type (run ./neodoo create --list-templates to see options)",
+      "default": "minimal"
+    },
+    {
+      "id": "migrationTarget",
+      "type": "promptString",
+      "description": "Path to the module/project you want to analyze",
+      "default": "examples/demo_project"
+    },
+    {
+      "id": "migrationFromVersion",
+      "type": "pickString",
+      "description": "Source version for migration analysis",
+      "options": ["15", "16", "17"],
+      "default": "17"
+    },
+    {
+      "id": "projectName",
+      "type": "promptString",
+      "description": "Nome do projeto a ser criado",
+      "default": "my_awesome_project"
+    },
+    {
+      "id": "projectsDir",
+      "type": "promptString",
+      "description": "Diretório onde criar o projeto",
+      "default": "~/odoo_projects"
+    }
+  ]
+}

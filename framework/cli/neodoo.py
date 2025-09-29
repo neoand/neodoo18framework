@@ -21,6 +21,11 @@ import time
 from textwrap import dedent
 import threading
 
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from framework.migration import MigrationAnalyzer
+
 # Import colorama for colored output
 try:
     from colorama import init, Fore, Back, Style
@@ -132,6 +137,16 @@ def show_progress(text, duration=2):
     
     print(f"\r\033[92m✅ {text} - Concluído!\033[0m")
 
+
+def maybe_pause(message="\nPressione Enter para continuar...", skip=False):
+    """Waits for Enter unless running in non-interactive mode"""
+    if skip or os.environ.get("NEODOO_SKIP_PAUSE", "").lower() in {"1", "true", "yes"}:
+        return
+    try:
+        input(message)
+    except EOFError:
+        pass
+
 def show_main_menu():
     """Mostra menu principal interativo"""
     while True:
@@ -146,6 +161,7 @@ def show_main_menu():
             ("🗑️  Deletar projeto", "Remove um projeto existente"),
             ("🔧 Verificar ambiente", "Checa se tudo está funcionando"),
             ("🔄 Atualizar projeto", "Atualiza Odoo e dependências"),
+            ("🧭 Assistente de Migração", "Analisa código para atualização 15/16/17 → 18"),
             ("❓ Ajuda", "Mostra informações detalhadas"),
             ("🚪 Sair", "Encerra o programa")
         ]
@@ -171,13 +187,15 @@ def show_main_menu():
         elif choice == '6':
             return 'update'
         elif choice == '7':
-            return 'help'
+            return 'migrate'
         elif choice == '8':
+            return 'help'
+        elif choice == '9':
             print_colored("\n👋 Obrigado por usar o Neodoo Framework!", 'purple', bold=True)
             print_colored("   By NeoAnd for you with ❤️\n", 'purple')
             sys.exit(0)
         else:
-            print_error("\nOpção inválida! Por favor, escolha um número de 1 a 8.")
+            print_error("\nOpção inválida! Por favor, escolha um número de 1 a 9.")
             input("\nPressione Enter para continuar...")
             os.system('clear' if os.name != 'nt' else 'cls')
 
@@ -631,7 +649,8 @@ def cmd_delete(args):
 
 
 def cmd_doctor(args):
-    os.system('clear' if os.name != 'nt' else 'cls')
+    if sys.stdout.isatty():
+        os.system('clear' if os.name != 'nt' else 'cls')
     show_banner()
     
     print_colored("\n🔧 Verificando ambiente de desenvolvimento...\n", 'blue', bold=True)
@@ -699,7 +718,50 @@ def cmd_doctor(args):
         print_info("💡 Execute 'neodoo create' para criar um projeto completo.")
     
     print_colored("\nBy NeoAnd for you with ❤️", 'purple')
-    input("\nPressione Enter para continuar...")
+    maybe_pause("\nPressione Enter para continuar...", skip=getattr(args, "no_input", False))
+
+
+def cmd_migrate(args):
+    os.system('clear' if os.name != 'nt' else 'cls')
+    show_banner()
+
+    target_path = Path(args.path)
+    analyzer = MigrationAnalyzer(args.from_version, auto_fix=args.auto_fix)
+    report = analyzer.analyze(target_path)
+
+    counts = report.counts()
+
+    print_colored(f"\n🧭 Assistente de Migração — {report.root}", 'cyan', bold=True)
+    print_colored(f"   Migrando de Odoo {report.from_version} para {report.to_version}", 'gray')
+    print_colored(f"\nResumo:", 'white', bold=True)
+    print_colored(f"   ❌ Erros:   {counts['errors']}", 'red' if counts['errors'] else 'green')
+    print_colored(f"   ⚠️  Alertas: {counts['warnings']}", 'yellow')
+    print_colored(f"   ℹ️  Infos:   {counts['info']}", 'blue')
+
+    if report.issues:
+        print_colored("\nDetalhes:", 'white', bold=True)
+        for issue in report.issues:
+            location = f" ({issue.path})" if issue.path else ""
+            color = 'red' if issue.severity == 'error' else 'yellow' if issue.severity == 'warning' else 'blue'
+            print_colored(f"[{issue.severity.upper()}] {issue.message}{location}", color)
+            if issue.hint:
+                print_colored(f"      ↳ {issue.hint}", 'gray')
+    else:
+        print_colored("\n✅ Nenhum problema detectado pelos heurísticos de migração", 'green')
+
+    print_colored("\nPróximos passos sugeridos:", 'white', bold=True)
+    for category, tasks in report.recommended_tasks.items():
+        if not tasks:
+            continue
+        print_colored(f"   • {category.title()}:", 'purple')
+        for task in tasks:
+            print_colored(f"      - {task}", 'gray')
+
+    if getattr(args, 'json', False):
+        json_output = analyzer.to_json(report)
+        print("\nJSON Report:\n" + json_output)
+
+    maybe_pause("\nPressione Enter para continuar...", skip=getattr(args, "no_input", False))
 
 
 def _git_pull(path):
@@ -891,6 +953,7 @@ def build_parser():
 
     dr = sub.add_parser("doctor", help="Checar ambiente e/ou projeto")
     dr.add_argument("--path", help="Diretorio do projeto para checagens especificas")
+    dr.add_argument("--no-input", action="store_true", help="Nao aguardar Enter ao finalizar (modo CI)")
     dr.set_defaults(func=cmd_doctor)
 
     up = sub.add_parser("update", help="Atualizar Odoo/OCA e deps da venv")
@@ -901,6 +964,14 @@ def build_parser():
     r = sub.add_parser("run", help="Executar projeto Odoo")
     r.add_argument("--path", help="Diretorio do projeto (default: diretorio atual)")
     r.set_defaults(func=cmd_run)
+
+    mg = sub.add_parser("migrate", help="Analisar modulo para migração ao Odoo 18")
+    mg.add_argument("path", help="Diretorio do modulo ou arquivo a ser analisado")
+    mg.add_argument("--from-version", choices=["15", "16", "17"], required=True, help="Versao de origem (15/16/17)")
+    mg.add_argument("--auto-fix", action="store_true", help="Executar auto-fixes seguros quando disponiveis")
+    mg.add_argument("--json", action="store_true", help="Mostrar relatorio em formato JSON")
+    mg.add_argument("--no-input", action="store_true", help="Nao aguardar Enter ao finalizar")
+    mg.set_defaults(func=cmd_migrate)
 
     return p
 
@@ -935,6 +1006,16 @@ def main(argv=None):
                     # Para update precisamos pedir o path
                     project_path = prompt("Caminho do projeto para atualizar", str(DEFAULT_BASE_DIR))
                     fake_args = parser.parse_args(['update', '--path', project_path])
+                elif chosen_cmd == 'migrate':
+                    module_path = prompt("Caminho do módulo/projeto para analisar", str(DEFAULT_BASE_DIR))
+                    def _valid_version(value: str) -> bool:
+                        return value in {"15", "16", "17"}
+                    from_version = prompt("Versão de origem (15/16/17)", "17", validator=_valid_version)
+                    auto_fix_answer = prompt("Aplicar auto-fixes do validador? (s/N)", "n").lower()
+                    args_list = ['migrate', module_path, '--from-version', from_version]
+                    if auto_fix_answer in {"s", "sim", "y", "yes"}:
+                        args_list.append('--auto-fix')
+                    fake_args = parser.parse_args(args_list)
                 else:
                     continue
                 

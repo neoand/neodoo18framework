@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "redhat.vscode-yaml",
+    "redhat.vscode-xml",
+    "ms-azuretools.vscode-docker",
+    "tamasfe.even-better-toml",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

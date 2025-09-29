@@ -19,6 +19,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Run Neodoo doctor (non-interactive)
+        run: |
+          python3 framework/cli/neodoo.py doctor --no-input
+
+      - name: Run migration analyzer on demo project
+        run: |
+          python3 framework/migration/cli.py examples/demo_project --from-version 17 --json
+
       - name: Verify generator lists templates
         run: |
           python3 framework/generator/create_project.py --name tmp --list-templates

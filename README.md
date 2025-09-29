@@ -60,6 +60,9 @@ This framework creates **complete Odoo development environments**, not just modu
 - 🇺🇸 [English Guide](./docs/guides/en/COMPLETE_GUIDE.md)
 - 🇧🇷 [Guia em Português](./docs/guides/pt/GUIA_COMPLETO.md)
 - 🇪🇸 [Guía en Español](./docs/guides/es/GUIA_COMPLETA.md)
+- 🧠 [VSCode Agent Playbook](./docs/guides/en/VSCODE_AGENT_PLAYBOOK.md) - Use VSCode as the multi-role command center
+- 🧩 [Validator Plugin Guide](./docs/guides/en/VALIDATOR_PLUGINS.md) - Extend the validator with custom checks
+- 🧭 [Migration Guide](./docs/guides/en/MIGRATION_GUIDE.md) - Plan upgrades from 15/16/17 to 18
 
 ### Platform-Specific:
 - 🪟 **[Windows Setup Guide](./WINDOWS.md)** - Complete Windows installation and usage guide
@@ -106,6 +109,7 @@ python framework\cli\neodoo.py    # Interactive menu
 ./neodoo delete           # Delete a project safely
 ./neodoo doctor           # Check environment health
 ./neodoo update           # Update project components
+./neodoo migrate path/to/module --from-version 17  # Migration assistant report
 ```
 
 #### 🪟 **Windows**
@@ -117,6 +121,7 @@ neodoo.bat run            # Run project with visual feedback
 neodoo.bat delete         # Delete a project safely
 neodoo.bat doctor         # Check environment health
 neodoo.bat update         # Update project components
+neodoo.bat migrate path\to\module --from-version 17  # Migration assistant report
 
 # PowerShell (alternative)
 .\neodoo.ps1 create       # Create new complete project (wizard)
@@ -163,6 +168,7 @@ Then run:
 ./neodoo doctor                    # Environment check with visual results
 ./neodoo doctor --path /my/project # Project-specific health check
 ./neodoo update --path /my/project # Update with progress indicators
+./neodoo migrate /my/module --from-version 17 # Migration assistant report
 ```
 
 **Enhanced Features:**
@@ -181,6 +187,9 @@ Este framework elimina confusão e impõe os padrões mais modernos do Odoo 18+:
 - **Validadores Inteligentes**: Verificação e correção automática
 - **Templates Testados**: Estruturas prontas para diversos casos de uso
 - **Configuração Zero**: Projeto funcionando em minutos
+- **VSCode Agent Workspace**: Tasks, launchers e extensões recomendadas para cada papel definido no framework
+- **Plataforma de Plugins de Validação**: Arquitetura extensível para checks internos e de comunidade
+- **Assistente de Migração**: Scanner interativo para migrar código 15/16/17 → 18 com relatório em JSON
 
 ## 📦 **Componentes Principais**
 
@@ -266,6 +275,7 @@ python framework/generator/create_project.py --name my_module --type minimal --n
 ## ✅ QA / Status
 
 - CLI help, doctor, list, create, and update verified on macOS.
+- GitHub Actions CI runs `neodoo doctor --no-input` and the strict validator on every push/pull request.
 - Generator lists templates and creates modules from the minimal template that pass the validator in strict mode.
 - Filenames with placeholders are auto-renamed during generation (e.g., views/{{MODULE_TECHNICAL_NAME}}_views.xml → views/<module>_views.xml).
 
@@ -279,7 +289,7 @@ python3 framework/generator/create_project.py --name tmp --list-templates
 ./neodoo create --name sanity_proj --base-dir /tmp/neodoo_sanity --module sanity_mod --template minimal --no-venv
 
 # 3) Run doctor and validator (strict)
-./neodoo doctor --path /tmp/neodoo_sanity/sanity_proj
+./neodoo doctor --path /tmp/neodoo_sanity/sanity_proj --no-input  # drop --no-input for interactive mode
 python3 framework/validator/validate.py /tmp/neodoo_sanity/sanity_proj/custom_addons/sanity_mod --strict --auto-fix
 ```
 

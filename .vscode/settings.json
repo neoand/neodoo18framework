@@ -1,0 +1,24 @@
+{
+  "terminal.integrated.env.osx": {
+    "NEODOO_FRAMEWORK_ROOT": "${workspaceFolder}"
+  },
+  "terminal.integrated.env.linux": {
+    "NEODOO_FRAMEWORK_ROOT": "${workspaceFolder}"
+  },
+  "terminal.integrated.env.windows": {
+    "NEODOO_FRAMEWORK_ROOT": "${workspaceFolder}"
+  },
+  "files.associations": {
+    "odoo.conf": "ini",
+    "*.neodoo.yml": "yaml",
+    "*.odoo.yml": "yaml"
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.testing.pytestEnabled": false,
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "markdown.preview.breaks": false,
+  "markdown.previewFrontMatter": "hide"
+}

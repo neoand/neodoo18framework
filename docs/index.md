@@ -176,6 +176,8 @@ neodoo18framework/- [[../framework/roles/OWL_SPECIALIST|OWL Specialist]] - Espec
 ### Validation & Quality
 
 - `python framework/validator/validate.py path/` - Validate codeTemplates prontos para criar novos projetos:
+- [[guides/en/VALIDATOR_PLUGINS|Validator Plugin Guide]] - Extend the validator with custom rules
+- [[guides/en/MIGRATION_GUIDE|Migration Guide 15/16/17 → 18]] - Upgrade playbook and analyzer usage
 
 - `python framework/generator/create_project.py --name=project --type=minimal` - Generate project
 

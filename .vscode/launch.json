@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Neodoo CLI: Interactive menu",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/framework/cli/neodoo.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NEODOO_FRAMEWORK_ROOT": "${workspaceFolder}"
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "Neodoo CLI: Create from docs/.neodoo.yml",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/framework/cli/neodoo.py",
+      "args": [
+        "create",
+        "--from-config",
+        "${workspaceFolder}/docs/.neodoo.yml"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NEODOO_FRAMEWORK_ROOT": "${workspaceFolder}"
+      },
+      "justMyCode": false
+    }
+  ]
+}

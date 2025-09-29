@@ -1,10 +1,10 @@
 # Lista de TODOs para Implementação
 
 ## 1. Estrutura de Validação Extensível
-- [ ] Implementar sistema de plugins para validadores
-- [ ] Criar API para desenvolvimento de validadores personalizados
-- [ ] Adicionar documentação para extensão de validadores
-- [ ] Implementar validação baseada em módulos
+- [x] Implementar sistema de plugins para validadores
+- [x] Criar API para desenvolvimento de validadores personalizados
+- [x] Adicionar documentação para extensão de validadores
+- [x] Implementar validação baseada em módulos
 
 ## 2. Documentação Técnica Aprofundada
 - [ ] Expandir documentação técnica com diagramas de arquitetura
@@ -19,10 +19,10 @@
 - [ ] Adicionar documentação sobre i18n em projetos Odoo
 
 ## 4. Ferramentas de Migração
-- [ ] Desenvolver ferramentas para migração de Odoo 15-17 para Odoo 18
-- [ ] Implementar análise estática para identificar código depreciado
-- [ ] Criar assistentes de migração interativos
-- [ ] Adicionar suporte para migração de dados
+- [ ] Desenvolver ferramentas para migração de Odoo 15-17 para Odoo 18 *(revisitar heurísticas de XML e cobertura de testes)*
+- [ ] Implementar análise estática para identificar código depreciado *(ajustar falso-positivo em `<tree>` e expandir regras críticas)*
+- [ ] Criar assistentes de migração interativos *(CLI pronta, mas pendente de validações finais antes de marcar como concluído)*
+- [ ] Adicionar suporte para migração de dados *(finalizar pipeline e expor fluxo executável)*
 
 ## 5. Integração com CI/CD
 - [ ] Adicionar templates para GitHub Actions

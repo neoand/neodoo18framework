@@ -1,0 +1,8 @@
+# OCA Digest for OCA/partner-contact
+
+## 2025-10-01
+
+- Commit 76c667c: [IMP] crm_partner_company_group: show company_group_id on list and form view → https://github.com/OCA/partner-contact/commit/76c667c08444a47abc3a40addef8dde31b25621e
+- Commit 20a8d31: Merge PR #2147 into 18.0 → https://github.com/OCA/partner-contact/commit/20a8d318f17d78e044201b78159aac49e7e95a9a
+- Commit 600e93a: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/600e93a3ff41def5bdd7f37125385780c06dccc8
+

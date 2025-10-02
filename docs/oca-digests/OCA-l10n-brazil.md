@@ -8,3 +8,9 @@
 - Commit 8aed6a4: [UPD] Update l10n_br_hr_contract.pot → https://github.com/OCA/l10n-brazil/commit/8aed6a45fd25f2b2b2e32301f1c5b48f8074ab81
 - Commit a41c14c: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/a41c14c8937cab1fe4f6616a8c8792bc08950838
 
+## 2025-10-02
+
+- Commit 9860b0f: [REF] l10n_br_nfse: hide meths from RPC → https://github.com/OCA/l10n-brazil/commit/9860b0f4f0cb2b6e25cbbfee85136fe404c884a7
+- Commit 84419df: Merge PR #4120 into 18.0 → https://github.com/OCA/l10n-brazil/commit/84419df5993c6cab04013d8230beabb71a27d8a8
+- Commit d5afda1: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/d5afda1e90ec146605d7891b82c83655b69fe658
+

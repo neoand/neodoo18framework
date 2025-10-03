@@ -16,3 +16,7 @@
 - Commit ccbb2db: Update translation files → https://github.com/OCA/server-tools/commit/ccbb2db2a3d928631995b6856f231821d6dae2ac
 - Commit e45fa38: Update translation files → https://github.com/OCA/server-tools/commit/e45fa3851616f0a44cebe2cd7c45ab1708bf2384
 
+## 2025-10-03
+
+- Commit 5829afd: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/5829afd1e83447953e707b86aba7d97cbb2788ca
+

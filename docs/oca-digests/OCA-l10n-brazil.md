@@ -14,3 +14,10 @@
 - Commit 84419df: Merge PR #4120 into 18.0 → https://github.com/OCA/l10n-brazil/commit/84419df5993c6cab04013d8230beabb71a27d8a8
 - Commit d5afda1: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/d5afda1e90ec146605d7891b82c83655b69fe658
 
+## 2025-10-03
+
+- Commit 1a9bd8a: Merge PR #4118 into 18.0 → https://github.com/OCA/l10n-brazil/commit/1a9bd8a8f51b144a1a3af7012956ca9a9f2b9349
+- Commit ce0a2a0: [UPD] Update l10n_br_fiscal.pot → https://github.com/OCA/l10n-brazil/commit/ce0a2a0213238f98c311e5e3aa8fa6b5c9e78123
+- Commit 0d660a8: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/0d660a885c8a14f5178f442bb855726891075220
+- Commit 138d77b: Update translation files → https://github.com/OCA/l10n-brazil/commit/138d77ba3c8e245767da7357e1f9f93a0291e3c9
+

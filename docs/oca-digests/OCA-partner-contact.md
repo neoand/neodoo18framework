@@ -6,3 +6,7 @@
 - Commit 20a8d31: Merge PR #2147 into 18.0 → https://github.com/OCA/partner-contact/commit/20a8d318f17d78e044201b78159aac49e7e95a9a
 - Commit 600e93a: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/600e93a3ff41def5bdd7f37125385780c06dccc8
 
+## 2025-10-03
+
+- Commit 924bb0d: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/924bb0d03006f879a68f33286ac2bf665efcf411
+

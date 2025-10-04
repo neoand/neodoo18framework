@@ -20,3 +20,9 @@
 
 - Commit 5829afd: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/5829afd1e83447953e707b86aba7d97cbb2788ca
 
+## 2025-10-04
+
+- Commit fdb2929: [IMP] attachment_synchronize : add migration script because of tree view id renaming → https://github.com/OCA/server-tools/commit/fdb2929da57279a78a4f486cfdd761d77b3124d1
+- Commit 72d7bcc: Merge PR #3406 into 18.0 → https://github.com/OCA/server-tools/commit/72d7bcc48dd3cf2613286450a9e6a9f56675ffbb
+- Commit 5b73f82: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/5b73f82453469878cbc0819287f35bbeac80bf09
+

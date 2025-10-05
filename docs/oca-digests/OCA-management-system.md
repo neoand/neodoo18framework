@@ -15,3 +15,11 @@
 - Commit 90300f3: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/90300f36efc6cfc518195d238e02903529450158
 - Commit 30725cd: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/30725cd737cd889d71533a4000d0b1fc70700670
 
+## 2025-10-05
+
+- Commit 5daa77e: [UPD] Update mgmtsystem_objective.pot → https://github.com/OCA/management-system/commit/5daa77e0b72ddf34d78a54d49eac5e2844c92d72
+- Commit 09d9544: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/09d95440527a171eeafd8532c22d79eb244fb17a
+- Commit 9b0cb19: Update translation files → https://github.com/OCA/management-system/commit/9b0cb1980abdf7c56cd88c5e53def287add632bc
+- Commit a23d1a1: Merge PR #749 into 18.0 → https://github.com/OCA/management-system/commit/a23d1a1fdb745dd9e02a54d1172c3186a9a7903f
+- Commit b80e0ba: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/b80e0ba246027fc86e6cdf2a3667de035b4101ce
+

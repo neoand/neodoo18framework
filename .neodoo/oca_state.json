@@ -13,7 +13,7 @@
     "OCA/web@18.0::commits": "90fdad2c9ff9935bc1c278f3edd1ad60a4993095",
     "OCA/partner-contact@18.0::commits": "924bb0d03006f879a68f33286ac2bf665efcf411",
     "OCA/queue@18.0::commits": "edc21e4c4ef11a1ef746ca5ac641e9227602a35d",
-    "OCA/management-system@18.0::commits": "30725cd737cd889d71533a4000d0b1fc70700670",
+    "OCA/management-system@18.0::commits": "b80e0ba246027fc86e6cdf2a3667de035b4101ce",
     "OCA/product-attribute@18.0::commits": "37fb901b5fc97ed2e673239a9c18235bb9dd78ae",
     "OCA/calendar@18.0::commits": "8c733f17f502331095e67e7a45eecbfa56678c39",
     "OCA/bank-statement-import@18.0::commits": "edd445d847885887d088a8323ba7f2c8c804d68e",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "6f46e5fff22555b4427699a817ec9bf85810f026",
     "OCA/spreadsheet@18.0::commits": "7e8ef27f3e2871e37bf45b4ba31edf803424a08c"
   },
-  "updated_at": "2025-10-04T02:43:29.555247+00:00"
+  "updated_at": "2025-10-05T03:01:38.040928+00:00"
 }

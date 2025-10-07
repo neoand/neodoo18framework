@@ -10,3 +10,8 @@
 
 - Commit 924bb0d: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/924bb0d03006f879a68f33286ac2bf665efcf411
 
+## 2025-10-07
+
+- Commit bcb8157: Added translation using Weblate (Croatian) → https://github.com/OCA/partner-contact/commit/bcb8157e5f623702d71f53e96b02cc39d2b7245b
+- Commit f322b56: Translated using Weblate (Croatian) → https://github.com/OCA/partner-contact/commit/f322b569d246debfefe9316ad49e94562433a5d1
+

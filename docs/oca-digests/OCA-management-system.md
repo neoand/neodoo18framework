@@ -23,3 +23,7 @@
 - Commit a23d1a1: Merge PR #749 into 18.0 → https://github.com/OCA/management-system/commit/a23d1a1fdb745dd9e02a54d1172c3186a9a7903f
 - Commit b80e0ba: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/b80e0ba246027fc86e6cdf2a3667de035b4101ce
 
+## 2025-10-07
+
+- Commit 2967184: Added translation using Weblate (Italian) → https://github.com/OCA/management-system/commit/296718425453e036f1310898ae674c31e40b041d
+

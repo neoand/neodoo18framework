@@ -21,3 +21,9 @@
 - Commit 0d660a8: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/0d660a885c8a14f5178f442bb855726891075220
 - Commit 138d77b: Update translation files → https://github.com/OCA/l10n-brazil/commit/138d77ba3c8e245767da7357e1f9f93a0291e3c9
 
+## 2025-10-07
+
+- Commit 80649f2: l10n_br_fiscal: Adicionado o tipo de documento fiscal Nota Fiscal da Água e Saneamento Eletrônica → https://github.com/OCA/l10n-brazil/commit/80649f2e8778ef718b2c4604796cb1e613908a87
+- Commit e9938a0: Merge PR #4128 into 18.0 → https://github.com/OCA/l10n-brazil/commit/e9938a0a7a912b3b3c621fa4874f9e919873915a
+- Commit 0a1b2ae: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/0a1b2ae3c7fb77f393697d51698b2b35abfff56d
+

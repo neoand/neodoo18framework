@@ -1,19 +1,19 @@
 {
   "keys": {
     "OCA/odoorpc@main::releases": "14180460",
-    "OCA/l10n-brazil@18.0::commits": "138d77ba3c8e245767da7357e1f9f93a0291e3c9",
+    "OCA/l10n-brazil@18.0::commits": "0a1b2ae3c7fb77f393697d51698b2b35abfff56d",
     "OCA/project@18.0::commits": "c0a9adaf912e6758bd38e30d74a0bd5493f80cda",
-    "OCA/sale-workflow@18.0::commits": "3a3bddc0adbf245634576f7c7cde2c4dedec9cc7",
+    "OCA/sale-workflow@18.0::commits": "e6cf2857b9fac63b60b9e1fc43eb2187b44aeff7",
     "OCA/oca-port@main::commits": "d31a660a9cae242e86b0382028987a3e8c3bd8b7",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
-    "OCA/account-financial-tools@18.0::commits": "036c6c35b038e39f5e32f91976349c666a36de84",
+    "OCA/account-financial-tools@18.0::commits": "86449b65724372f1563569a7652845c5bef3febb",
     "OCA/reporting-engine@18.0::commits": "32cc44d15ac86a72442536e69535ad270705ba63",
     "OCA/server-tools@18.0::commits": "5b73f82453469878cbc0819287f35bbeac80bf09",
-    "OCA/OpenUpgrade@18.0::commits": "7807e481d49b12267762f3d97a51a6a4167fe9fd",
+    "OCA/OpenUpgrade@18.0::commits": "ea3df04712323d5023a22186752bcd379f8294be",
     "OCA/web@18.0::commits": "90fdad2c9ff9935bc1c278f3edd1ad60a4993095",
-    "OCA/partner-contact@18.0::commits": "924bb0d03006f879a68f33286ac2bf665efcf411",
+    "OCA/partner-contact@18.0::commits": "f322b569d246debfefe9316ad49e94562433a5d1",
     "OCA/queue@18.0::commits": "edc21e4c4ef11a1ef746ca5ac641e9227602a35d",
-    "OCA/management-system@18.0::commits": "b80e0ba246027fc86e6cdf2a3667de035b4101ce",
+    "OCA/management-system@18.0::commits": "296718425453e036f1310898ae674c31e40b041d",
     "OCA/product-attribute@18.0::commits": "37fb901b5fc97ed2e673239a9c18235bb9dd78ae",
     "OCA/calendar@18.0::commits": "8c733f17f502331095e67e7a45eecbfa56678c39",
     "OCA/bank-statement-import@18.0::commits": "edd445d847885887d088a8323ba7f2c8c804d68e",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "6f46e5fff22555b4427699a817ec9bf85810f026",
     "OCA/spreadsheet@18.0::commits": "7e8ef27f3e2871e37bf45b4ba31edf803424a08c"
   },
-  "updated_at": "2025-10-06T02:56:19.537834+00:00"
+  "updated_at": "2025-10-07T02:52:44.378757+00:00"
 }

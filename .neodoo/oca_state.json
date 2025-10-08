@@ -2,26 +2,26 @@
   "keys": {
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "0a1b2ae3c7fb77f393697d51698b2b35abfff56d",
-    "OCA/project@18.0::commits": "c0a9adaf912e6758bd38e30d74a0bd5493f80cda",
-    "OCA/sale-workflow@18.0::commits": "e6cf2857b9fac63b60b9e1fc43eb2187b44aeff7",
+    "OCA/project@18.0::commits": "48101aa63a05aad3d84fc6d7fb5db54257dea9e2",
+    "OCA/sale-workflow@18.0::commits": "a6df6175e3d9da3c1ef1daf24ca61bf4c5ce30c7",
     "OCA/oca-port@main::commits": "d31a660a9cae242e86b0382028987a3e8c3bd8b7",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
     "OCA/account-financial-tools@18.0::commits": "86449b65724372f1563569a7652845c5bef3febb",
     "OCA/reporting-engine@18.0::commits": "32cc44d15ac86a72442536e69535ad270705ba63",
     "OCA/server-tools@18.0::commits": "5b73f82453469878cbc0819287f35bbeac80bf09",
     "OCA/OpenUpgrade@18.0::commits": "ea3df04712323d5023a22186752bcd379f8294be",
-    "OCA/web@18.0::commits": "90fdad2c9ff9935bc1c278f3edd1ad60a4993095",
+    "OCA/web@18.0::commits": "0817b6505c64220f62c86ff277a05c4029750fa6",
     "OCA/partner-contact@18.0::commits": "f322b569d246debfefe9316ad49e94562433a5d1",
     "OCA/queue@18.0::commits": "edc21e4c4ef11a1ef746ca5ac641e9227602a35d",
     "OCA/management-system@18.0::commits": "296718425453e036f1310898ae674c31e40b041d",
     "OCA/product-attribute@18.0::commits": "37fb901b5fc97ed2e673239a9c18235bb9dd78ae",
     "OCA/calendar@18.0::commits": "8c733f17f502331095e67e7a45eecbfa56678c39",
-    "OCA/bank-statement-import@18.0::commits": "edd445d847885887d088a8323ba7f2c8c804d68e",
+    "OCA/bank-statement-import@18.0::commits": "6fe422247e2d11834e1f25cb8ad9c8ae3bfdbf12",
     "OCA/multi-company@18.0::commits": "e11a9b38441eb989bbfbe55036960ceb2da4c86b",
     "OCA/knowledge@18.0::commits": "b5313aca87182680bee966da5ec8db94911d00b5",
     "OCA/account-reconcile@18.0::commits": "ca3bcfd1a399374a2459c568fa7a472160e4db24",
     "OCA/connector-telephony@18.0::commits": "6f46e5fff22555b4427699a817ec9bf85810f026",
     "OCA/spreadsheet@18.0::commits": "7e8ef27f3e2871e37bf45b4ba31edf803424a08c"
   },
-  "updated_at": "2025-10-07T02:52:44.378757+00:00"
+  "updated_at": "2025-10-08T02:52:45.326449+00:00"
 }

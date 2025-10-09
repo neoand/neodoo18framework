@@ -26,3 +26,9 @@
 - Commit 72d7bcc: Merge PR #3406 into 18.0 → https://github.com/OCA/server-tools/commit/72d7bcc48dd3cf2613286450a9e6a9f56675ffbb
 - Commit 5b73f82: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/5b73f82453469878cbc0819287f35bbeac80bf09
 
+## 2025-10-09
+
+- Commit 2c75742: [FIX] auditlog: swap out tocompute in ThrowAwayCache as well → https://github.com/OCA/server-tools/commit/2c75742b9991d9364799e3fe58294646f8edffa0
+- Commit 3ace41f: Merge PR #3407 into 18.0 → https://github.com/OCA/server-tools/commit/3ace41febd721fb42d5d72f9626bd72647b0f543
+- Commit c4c2b24: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/c4c2b24c6afe58e2c8b2debae368c6e829901089
+

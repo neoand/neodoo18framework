@@ -6,3 +6,11 @@
 - Commit 824202b: Merge pull request #5384 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/824202bb4a24c0124f48852c15abc102bcde6763
 - Commit ea3df04: [FIX] hr_timesheet: correct filename path → https://github.com/OCA/OpenUpgrade/commit/ea3df04712323d5023a22186752bcd379f8294be
 
+## 2025-10-09
+
+- Commit 3767346: Merge pull request #5396 from lefilament/18.0-ou-fix-hr_holidays → https://github.com/OCA/OpenUpgrade/commit/37673468936e9122054f5a36d9056cb34b678ad5
+- Commit 3e035a4: [OU-FIX] account: drop account_root view → https://github.com/OCA/OpenUpgrade/commit/3e035a4c9d9a952ff636b88d1aef6ba15cc8fcd1
+- Commit bf6e7e0: [OU-FIX] hr_holidays: remove if employee is inactive → https://github.com/OCA/OpenUpgrade/commit/bf6e7e03c5b9d509feda1c2a67badf578f2fc339
+- Commit 02efdf2: Merge pull request #5397 from lefilament/18.0-ou-fix-account → https://github.com/OCA/OpenUpgrade/commit/02efdf2934b2cdc45e678fdf530b14eac002333d
+- Commit d36aaaa: Merge pull request #5398 from ForgeFlow/fix-holidays-better → https://github.com/OCA/OpenUpgrade/commit/d36aaaa302d877576b7b2742d529dc2b0fc78d6a
+

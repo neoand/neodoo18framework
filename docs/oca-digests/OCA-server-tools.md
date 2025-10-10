@@ -32,3 +32,11 @@
 - Commit 3ace41f: Merge PR #3407 into 18.0 → https://github.com/OCA/server-tools/commit/3ace41febd721fb42d5d72f9626bd72647b0f543
 - Commit c4c2b24: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/c4c2b24c6afe58e2c8b2debae368c6e829901089
 
+## 2025-10-10
+
+- Commit 7645f89: [UPD] Update base_name_search_improved.pot → https://github.com/OCA/server-tools/commit/7645f89669651a89dbcf3216f90e97a5fbd81c4f
+- Commit 6d6caa7: [UPD] Update iap_alternative_provider.pot → https://github.com/OCA/server-tools/commit/6d6caa71a15e63bb6c47870857053f7359c8dfab
+- Commit c0040d5: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/c0040d5816c406f047c97076d6cb66c64110bdd0
+- Commit c2d2a7c: Update translation files → https://github.com/OCA/server-tools/commit/c2d2a7cf4f9060ff28132ab66bde9fe16359697d
+- Commit 5eabab8: Update translation files → https://github.com/OCA/server-tools/commit/5eabab8f18bbe445b5ed4eb0c2efbb9960c9c4ca
+

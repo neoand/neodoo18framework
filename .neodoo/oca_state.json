@@ -1,16 +1,16 @@
 {
   "keys": {
     "OCA/odoorpc@main::releases": "14180460",
-    "OCA/l10n-brazil@18.0::commits": "0a1b2ae3c7fb77f393697d51698b2b35abfff56d",
+    "OCA/l10n-brazil@18.0::commits": "03f528b637536304a4ee3b562e1c53cadf26d25b",
     "OCA/project@18.0::commits": "48101aa63a05aad3d84fc6d7fb5db54257dea9e2",
-    "OCA/sale-workflow@18.0::commits": "a6df6175e3d9da3c1ef1daf24ca61bf4c5ce30c7",
+    "OCA/sale-workflow@18.0::commits": "54a7cf2f809e33ba4ada42a3fae140be4e475817",
     "OCA/oca-port@main::commits": "d31a660a9cae242e86b0382028987a3e8c3bd8b7",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
-    "OCA/account-financial-tools@18.0::commits": "86449b65724372f1563569a7652845c5bef3febb",
-    "OCA/reporting-engine@18.0::commits": "32cc44d15ac86a72442536e69535ad270705ba63",
-    "OCA/server-tools@18.0::commits": "c4c2b24c6afe58e2c8b2debae368c6e829901089",
+    "OCA/account-financial-tools@18.0::commits": "c9cd0787636577ab64bdc547d3a60005f5542f62",
+    "OCA/reporting-engine@18.0::commits": "48cc1af1d7cb45a49f92bcc4362ba661811eb1bd",
+    "OCA/server-tools@18.0::commits": "5eabab8f18bbe445b5ed4eb0c2efbb9960c9c4ca",
     "OCA/OpenUpgrade@18.0::commits": "d36aaaa302d877576b7b2742d529dc2b0fc78d6a",
-    "OCA/web@18.0::commits": "0817b6505c64220f62c86ff277a05c4029750fa6",
+    "OCA/web@18.0::commits": "53b5ca621f27fee0cd3692770634ae41720c5e8b",
     "OCA/partner-contact@18.0::commits": "f322b569d246debfefe9316ad49e94562433a5d1",
     "OCA/queue@18.0::commits": "edc21e4c4ef11a1ef746ca5ac641e9227602a35d",
     "OCA/management-system@18.0::commits": "296718425453e036f1310898ae674c31e40b041d",
@@ -21,7 +21,7 @@
     "OCA/knowledge@18.0::commits": "b5313aca87182680bee966da5ec8db94911d00b5",
     "OCA/account-reconcile@18.0::commits": "ca3bcfd1a399374a2459c568fa7a472160e4db24",
     "OCA/connector-telephony@18.0::commits": "6f46e5fff22555b4427699a817ec9bf85810f026",
-    "OCA/spreadsheet@18.0::commits": "7e8ef27f3e2871e37bf45b4ba31edf803424a08c"
+    "OCA/spreadsheet@18.0::commits": "1695ecf7dea2cf12dca6f7b8a9c832d41abb274c"
   },
-  "updated_at": "2025-10-09T02:54:57.208197+00:00"
+  "updated_at": "2025-10-10T02:55:34.208130+00:00"
 }

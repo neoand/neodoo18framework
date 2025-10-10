@@ -27,3 +27,11 @@
 - Commit e9938a0: Merge PR #4128 into 18.0 → https://github.com/OCA/l10n-brazil/commit/e9938a0a7a912b3b3c621fa4874f9e919873915a
 - Commit 0a1b2ae: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/0a1b2ae3c7fb77f393697d51698b2b35abfff56d
 
+## 2025-10-10
+
+- Commit efb2056: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/efb20564c822d51e03b69727316ae6fb8b3fc151
+- Commit d2a8ecd: [MIG] l10n_br_currency_rate_update: Migration to 18.0 → https://github.com/OCA/l10n-brazil/commit/d2a8ecdb7b76349b55aaf1bc4f53f79e4b5448bc
+- Commit 541acbd: Merge PR #4138 into 18.0 → https://github.com/OCA/l10n-brazil/commit/541acbdd6b2be1a475fd0df02bbf0535feef352c
+- Commit a04a5c7: [UPD] Update l10n_br_currency_rate_update.pot → https://github.com/OCA/l10n-brazil/commit/a04a5c780a8c42dbabc7b7850f672d5fc5478388
+- Commit 03f528b: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/03f528b637536304a4ee3b562e1c53cadf26d25b
+

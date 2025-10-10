@@ -25,3 +25,11 @@
 - Commit db18421: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/db18421d4897aa51718316bc65267f9b0ca5436b
 - Commit a6df617: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/a6df6175e3d9da3c1ef1daf24ca61bf4c5ce30c7
 
+## 2025-10-10
+
+- Commit 502ef24: Merge PR #3937 into 18.0 → https://github.com/OCA/sale-workflow/commit/502ef24b815d5947578c0238695f971726645d8d
+- Commit 4949d05: [UPD] Update sale_invoice_split_payment.pot → https://github.com/OCA/sale-workflow/commit/4949d05fddeca71ffe5a1d322d72330bb6f1022c
+- Commit 65414f0: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/65414f054cb1156bbcf80a50bd735d90119bd3f7
+- Commit 8dae9cf: Merge PR #3935 into 18.0 → https://github.com/OCA/sale-workflow/commit/8dae9cfe068d8626a5e97106c9280b6592407fb3
+- Commit 54a7cf2: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/54a7cf2f809e33ba4ada42a3fae140be4e475817
+

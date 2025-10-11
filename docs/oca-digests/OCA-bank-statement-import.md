@@ -6,3 +6,11 @@
 - Commit ce61f9b: Merge PR #841 into 18.0 → https://github.com/OCA/bank-statement-import/commit/ce61f9b0faa2978828176a5cdc62d4f32d5e8acb
 - Commit 6fe4222: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/6fe422247e2d11834e1f25cb8ad9c8ae3bfdbf12
 
+## 2025-10-11
+
+- Commit b35a0f7: [FIX] account_statement_import_online_stripe: Hide Stripe configuration if different provider → https://github.com/OCA/bank-statement-import/commit/b35a0f7bcf58a4bc09a8e4a7a63d5d3f2a58567c
+- Commit 03fc958: [MIG] account_statement_import_online_stripe: Migration to 18.0 → https://github.com/OCA/bank-statement-import/commit/03fc958f23294f8338cae41187b95321a772d542
+- Commit acb1636: Merge PR #840 into 18.0 → https://github.com/OCA/bank-statement-import/commit/acb1636f8caa99453cec0e1b50a428c307235f92
+- Commit ec2edab: [UPD] Update account_statement_import_online_stripe.pot → https://github.com/OCA/bank-statement-import/commit/ec2edab74b3fd28cca3fb9dd3670f92e8df17e23
+- Commit 7a5f6f6: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/7a5f6f682c8ba3228e0ae1d2857c00c9f1487f89
+

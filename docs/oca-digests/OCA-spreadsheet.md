@@ -8,3 +8,9 @@
 - Commit 4e54080: [UPD] Update spreadsheet_dashboard_oca.pot → https://github.com/OCA/spreadsheet/commit/4e540802e0138fdb939c7480cd72f94bba5a2cb1
 - Commit 1695ecf: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/1695ecf7dea2cf12dca6f7b8a9c832d41abb274c
 
+## 2025-10-11
+
+- Commit 19f8b41: [FIX] spreadsheet_oca: Crash when editing and leaving spreadsheet quickly → https://github.com/OCA/spreadsheet/commit/19f8b41027afc5e210edb1f3fb5ac054d56a8735
+- Commit 07d22bd: Merge PR #77 into 18.0 → https://github.com/OCA/spreadsheet/commit/07d22bde11f81e52c0e1ba607551cc45c8168afa
+- Commit f31daf7: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/f31daf743df5c5b32ebc98fead0bd726b7dd3c44
+

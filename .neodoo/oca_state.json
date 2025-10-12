@@ -1,7 +1,7 @@
 {
   "keys": {
     "OCA/odoorpc@main::releases": "14180460",
-    "OCA/l10n-brazil@18.0::commits": "03f528b637536304a4ee3b562e1c53cadf26d25b",
+    "OCA/l10n-brazil@18.0::commits": "755e38b7a89364e0aa1017f4b7d63a48bb26b3db",
     "OCA/project@18.0::commits": "48101aa63a05aad3d84fc6d7fb5db54257dea9e2",
     "OCA/sale-workflow@18.0::commits": "54a7cf2f809e33ba4ada42a3fae140be4e475817",
     "OCA/oca-port@main::commits": "d31a660a9cae242e86b0382028987a3e8c3bd8b7",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "6f46e5fff22555b4427699a817ec9bf85810f026",
     "OCA/spreadsheet@18.0::commits": "f31daf743df5c5b32ebc98fead0bd726b7dd3c44"
   },
-  "updated_at": "2025-10-11T02:45:36.344339+00:00"
+  "updated_at": "2025-10-12T02:56:46.643159+00:00"
 }

@@ -35,3 +35,9 @@
 - Commit a04a5c7: [UPD] Update l10n_br_currency_rate_update.pot → https://github.com/OCA/l10n-brazil/commit/a04a5c780a8c42dbabc7b7850f672d5fc5478388
 - Commit 03f528b: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/03f528b637536304a4ee3b562e1c53cadf26d25b
 
+## 2025-10-12
+
+- Commit cf02186: [FIX] l10n_br_fiscal: fix DIFAL calculation for return operations → https://github.com/OCA/l10n-brazil/commit/cf021860ae386cf436b624012ad4114fcccc4603
+- Commit 48cf462: Merge PR #4144 into 18.0 → https://github.com/OCA/l10n-brazil/commit/48cf4628da74b771310a3edd332c5f13ec70ad93
+- Commit 755e38b: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/755e38b7a89364e0aa1017f4b7d63a48bb26b3db
+

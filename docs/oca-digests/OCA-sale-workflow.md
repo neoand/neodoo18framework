@@ -33,3 +33,10 @@
 - Commit 8dae9cf: Merge PR #3935 into 18.0 → https://github.com/OCA/sale-workflow/commit/8dae9cfe068d8626a5e97106c9280b6592407fb3
 - Commit 54a7cf2: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/54a7cf2f809e33ba4ada42a3fae140be4e475817
 
+## 2025-10-14
+
+- Commit 891c40a: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/891c40abc24a39533dddde79903bd9c8d477bcfa
+- Commit c879739: Merge PR #3590 into 18.0 → https://github.com/OCA/sale-workflow/commit/c8797394e0369521041d5d3468f209869162faa0
+- Commit ba75c34: [UPD] Update sale_order_line_chained_move.pot → https://github.com/OCA/sale-workflow/commit/ba75c348d4fd778a5d29df03a65f59e2b3e05c2b
+- Commit ff10356: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/ff10356bdf4cf061f2e76ea964dba1227df6677d
+

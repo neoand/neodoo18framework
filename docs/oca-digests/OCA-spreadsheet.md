@@ -14,3 +14,7 @@
 - Commit 07d22bd: Merge PR #77 into 18.0 → https://github.com/OCA/spreadsheet/commit/07d22bde11f81e52c0e1ba607551cc45c8168afa
 - Commit f31daf7: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/f31daf743df5c5b32ebc98fead0bd726b7dd3c44
 
+## 2025-10-14
+
+- Commit 840cb5b: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/840cb5b5cd0de071d2ce2934506855a7a69ad1e6
+

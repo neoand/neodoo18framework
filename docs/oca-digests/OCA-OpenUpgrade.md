@@ -14,3 +14,11 @@
 - Commit 02efdf2: Merge pull request #5397 from lefilament/18.0-ou-fix-account → https://github.com/OCA/OpenUpgrade/commit/02efdf2934b2cdc45e678fdf530b14eac002333d
 - Commit d36aaaa: Merge pull request #5398 from ForgeFlow/fix-holidays-better → https://github.com/OCA/OpenUpgrade/commit/d36aaaa302d877576b7b2742d529dc2b0fc78d6a
 
+## 2025-10-15
+
+- Commit 7dde1b9: [OU-ADD] stock_delivery: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/7dde1b92d4c02380276702647bad0556d7d4671b
+- Commit 536dfca: [OU-ADD] mrp_landed_costs: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/536dfcae0e8fa818c34e02bf324507238a674170
+- Commit 2a8b046: Merge pull request #5400 from Tecnativa/18.0-ou_fix-purchase_stock → https://github.com/OCA/OpenUpgrade/commit/2a8b0463a900152b74a78e49fbc6952cb3814868
+- Commit 0adfcd4: Merge pull request #5401 from Tecnativa/18.0-ou_add-stock_delivery → https://github.com/OCA/OpenUpgrade/commit/0adfcd48cf53b8e706dbcd55af72b65e035c65e3
+- Commit 750f60c: Merge pull request #5402 from Tecnativa/18.0-ou_add-mrp_landed_costs → https://github.com/OCA/OpenUpgrade/commit/750f60c9f19da25858267fe0df5466aba5b4bce6
+

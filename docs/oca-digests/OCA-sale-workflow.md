@@ -40,3 +40,7 @@
 - Commit ba75c34: [UPD] Update sale_order_line_chained_move.pot → https://github.com/OCA/sale-workflow/commit/ba75c348d4fd778a5d29df03a65f59e2b3e05c2b
 - Commit ff10356: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/ff10356bdf4cf061f2e76ea964dba1227df6677d
 
+## 2025-10-15
+
+- Commit 8acfc12: Added translation using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/8acfc12337b85048e4da9673572979f7a2a6f718
+

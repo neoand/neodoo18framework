@@ -15,3 +15,9 @@
 - Commit bcb8157: Added translation using Weblate (Croatian) → https://github.com/OCA/partner-contact/commit/bcb8157e5f623702d71f53e96b02cc39d2b7245b
 - Commit f322b56: Translated using Weblate (Croatian) → https://github.com/OCA/partner-contact/commit/f322b569d246debfefe9316ad49e94562433a5d1
 
+## 2025-10-15
+
+- Commit 3398ac6: Merge PR #2166 into 18.0 → https://github.com/OCA/partner-contact/commit/3398ac63ae7d0bd566cc2b655ad8b91677d03fac
+- Commit d318d87: [UPD] Update partner_property.pot → https://github.com/OCA/partner-contact/commit/d318d8763f6c2f12cf84225ceab62ab5b93cf4aa
+- Commit 054cfab: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/054cfab9cf31b6a955112eeb2a1a8406abfb9bbd
+

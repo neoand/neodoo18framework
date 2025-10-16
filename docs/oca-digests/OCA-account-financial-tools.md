@@ -16,3 +16,7 @@
 - Commit d70955d: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/d70955d570ef4037a6331a59158e8f837604e569
 - Commit 2b8f99e: Update translation files → https://github.com/OCA/account-financial-tools/commit/2b8f99ea4e2da4d43d6d3806a5ef5124f4bec9e2
 
+## 2025-10-16
+
+- Commit b861df0: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/b861df07d7c23d32eafb7af77550cccdab140e22
+

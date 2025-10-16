@@ -14,3 +14,11 @@
 - Commit ec2edab: [UPD] Update account_statement_import_online_stripe.pot → https://github.com/OCA/bank-statement-import/commit/ec2edab74b3fd28cca3fb9dd3670f92e8df17e23
 - Commit 7a5f6f6: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/7a5f6f682c8ba3228e0ae1d2857c00c9f1487f89
 
+## 2025-10-16
+
+- Commit 11b82d3: [IMP] account_statement_import_online_gocardless pre-commit auto fixes → https://github.com/OCA/bank-statement-import/commit/11b82d3ffca5528eda2d457317a9078046e47f71
+- Commit 0ece21d: [MIG] account_statement_import_online_gocardless: Migration to version 18.0 → https://github.com/OCA/bank-statement-import/commit/0ece21d93706fe2216a8c972f578b61f4b1819d8
+- Commit c4a69af: Merge PR #845 into 18.0 → https://github.com/OCA/bank-statement-import/commit/c4a69af2f69c63afe0e643b44e178871ee1335e9
+- Commit 61a6874: [UPD] Update account_statement_import_online_gocardless.pot → https://github.com/OCA/bank-statement-import/commit/61a68744bd17e865a394e1d62c08da7208d0062d
+- Commit 65682ce: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/65682ce7fa7eb4a057d25b4ac28ed2dcfb5d9398
+

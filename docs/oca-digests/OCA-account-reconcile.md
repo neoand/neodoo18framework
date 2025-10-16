@@ -8,3 +8,7 @@
 - Commit 2d2adbd: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/2d2adbd483a3f12e5d452c3c44378f7ec01a9e3f
 - Commit 720e55b: Update translation files → https://github.com/OCA/account-reconcile/commit/720e55b880d976a13e5574b83135b65fd9e99f00
 
+## 2025-10-16
+
+- Commit 1b13106: Translated using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/1b1310647bbc8054e9b5fdf739a4f57e378ec5a3
+

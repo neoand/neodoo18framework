@@ -18,3 +18,9 @@
 
 - Commit 840cb5b: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/840cb5b5cd0de071d2ce2934506855a7a69ad1e6
 
+## 2025-10-16
+
+- Commit ea408fa: [IMP] spreadsheet_oca: Add "Odoo 18"-like icon → https://github.com/OCA/spreadsheet/commit/ea408fa8dfa7bdb1510e402a9456dee6d430d72d
+- Commit f805a46: Merge PR #81 into 18.0 → https://github.com/OCA/spreadsheet/commit/f805a4650d82bc2f25da6419f78bbeb6b7086fdf
+- Commit 230c417: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/230c417f366dac852affb92ae889215633f3089d
+

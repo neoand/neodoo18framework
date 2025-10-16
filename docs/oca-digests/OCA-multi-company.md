@@ -8,3 +8,9 @@
 - Commit 3f879dc: [UPD] Update product_tax_multicompany_default.pot → https://github.com/OCA/multi-company/commit/3f879dc030a2ca54ba56c2cac54ffca5d5c03cec
 - Commit e11a9b3: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/e11a9b38441eb989bbfbe55036960ceb2da4c86b
 
+## 2025-10-16
+
+- Commit 05505ed: [FIX] product_multi_company_stock: typo in manifest → https://github.com/OCA/multi-company/commit/05505ed9435fff7ad4ee6f4a98c59595cc26f62b
+- Commit 26c93e5: Merge PR #890 into 18.0 → https://github.com/OCA/multi-company/commit/26c93e5af877a163da60169eb6b0339818a53637
+- Commit 437b185: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/437b185ffcc4c3e55c1e4bc4a39b9940c1794885
+

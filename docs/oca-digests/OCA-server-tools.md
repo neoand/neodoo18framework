@@ -40,3 +40,11 @@
 - Commit c2d2a7c: Update translation files → https://github.com/OCA/server-tools/commit/c2d2a7cf4f9060ff28132ab66bde9fe16359697d
 - Commit 5eabab8: Update translation files → https://github.com/OCA/server-tools/commit/5eabab8f18bbe445b5ed4eb0c2efbb9960c9c4ca
 
+## 2025-10-17
+
+- Commit 11a1024: [UPD] Update autovacuum_message_attachment.pot → https://github.com/OCA/server-tools/commit/11a10247e9c5361e701c486ecc306ec748f7d6ea
+- Commit 34ff89d: [UPD] Update base_name_search_improved.pot → https://github.com/OCA/server-tools/commit/34ff89d4ca5251c96be8210a80bb8284b41c0026
+- Commit 8e1a19e: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/8e1a19ef5a19b5792a29539860469c0f4f959dc3
+- Commit 29bc935: Update translation files → https://github.com/OCA/server-tools/commit/29bc9357ee93093e740c82a688fb0a7f3483aed1
+- Commit a844903: Update translation files → https://github.com/OCA/server-tools/commit/a844903c494af97926314284dd31506ef52cc51a
+

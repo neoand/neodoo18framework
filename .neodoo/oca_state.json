@@ -6,22 +6,22 @@
     "OCA/sale-workflow@18.0::commits": "8acfc12337b85048e4da9673572979f7a2a6f718",
     "OCA/oca-port@main::commits": "d31a660a9cae242e86b0382028987a3e8c3bd8b7",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
-    "OCA/account-financial-tools@18.0::commits": "b861df07d7c23d32eafb7af77550cccdab140e22",
+    "OCA/account-financial-tools@18.0::commits": "adeca0de879bd201a6802570590cac87de4e82aa",
     "OCA/reporting-engine@18.0::commits": "49b755b280345c2d18b4d14e5ca308b43443d05b",
-    "OCA/server-tools@18.0::commits": "5eabab8f18bbe445b5ed4eb0c2efbb9960c9c4ca",
-    "OCA/OpenUpgrade@18.0::commits": "750f60c9f19da25858267fe0df5466aba5b4bce6",
-    "OCA/web@18.0::commits": "ac4500d0a04b118881bda451d1cbf3b65e5285af",
+    "OCA/server-tools@18.0::commits": "a844903c494af97926314284dd31506ef52cc51a",
+    "OCA/OpenUpgrade@18.0::commits": "edb78c84734441586b3beecedbb4427575aaac42",
+    "OCA/web@18.0::commits": "9d1498e3a5b3ed062f1d4df3951691f99b77163a",
     "OCA/partner-contact@18.0::commits": "054cfab9cf31b6a955112eeb2a1a8406abfb9bbd",
     "OCA/queue@18.0::commits": "edc21e4c4ef11a1ef746ca5ac641e9227602a35d",
     "OCA/management-system@18.0::commits": "296718425453e036f1310898ae674c31e40b041d",
     "OCA/product-attribute@18.0::commits": "37fb901b5fc97ed2e673239a9c18235bb9dd78ae",
     "OCA/calendar@18.0::commits": "af59193ae6e19d462f928cbc6e94129e67bf5384",
-    "OCA/bank-statement-import@18.0::commits": "65682ce7fa7eb4a057d25b4ac28ed2dcfb5d9398",
+    "OCA/bank-statement-import@18.0::commits": "c3192e20a217b9405da7819d4820084bbb2e6589",
     "OCA/multi-company@18.0::commits": "437b185ffcc4c3e55c1e4bc4a39b9940c1794885",
     "OCA/knowledge@18.0::commits": "6a2eff36dbc3a79cebfed1ce0addcb162ede87d4",
     "OCA/account-reconcile@18.0::commits": "1b1310647bbc8054e9b5fdf739a4f57e378ec5a3",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
-    "OCA/spreadsheet@18.0::commits": "230c417f366dac852affb92ae889215633f3089d"
+    "OCA/spreadsheet@18.0::commits": "b55e6ff0a4171518db9cedd6c07ef1807029ddf0"
   },
-  "updated_at": "2025-10-16T02:58:17.620387+00:00"
+  "updated_at": "2025-10-17T02:56:16.061108+00:00"
 }

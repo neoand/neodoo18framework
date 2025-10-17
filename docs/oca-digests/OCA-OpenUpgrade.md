@@ -22,3 +22,7 @@
 - Commit 0adfcd4: Merge pull request #5401 from Tecnativa/18.0-ou_add-stock_delivery → https://github.com/OCA/OpenUpgrade/commit/0adfcd48cf53b8e706dbcd55af72b65e035c65e3
 - Commit 750f60c: Merge pull request #5402 from Tecnativa/18.0-ou_add-mrp_landed_costs → https://github.com/OCA/OpenUpgrade/commit/750f60c9f19da25858267fe0df5466aba5b4bce6
 
+## 2025-10-17
+
+- Commit edb78c8: Merge pull request #5399 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/edb78c84734441586b3beecedbb4427575aaac42
+

@@ -11,6 +11,8 @@
 
 **Create production-ready Odoo 18+ projects with a single command!**
 
+### 🤖 For AI Assistants & LLMs: **[START HERE](LLM_START_HERE.md)** | 🗺️ [Navigation Map](NAVIGATION_MAP.md) | 📚 [Canonical Sources](CANONICAL_SOURCES.md)
+
 </div>
 
 ---

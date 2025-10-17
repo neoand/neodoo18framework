@@ -24,3 +24,9 @@
 - Commit f805a46: Merge PR #81 into 18.0 → https://github.com/OCA/spreadsheet/commit/f805a4650d82bc2f25da6419f78bbeb6b7086fdf
 - Commit 230c417: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/230c417f366dac852affb92ae889215633f3089d
 
+## 2025-10-17
+
+- Commit 0498df5: [IMP] spreadsheet_oca: Change hotkey to add spreadsheet → https://github.com/OCA/spreadsheet/commit/0498df56f5a62f72674b652fceadb9dc41d8a86e
+- Commit 55a5a10: Merge PR #82 into 18.0 → https://github.com/OCA/spreadsheet/commit/55a5a10d8f09083c2a6210439cd06cdada456fa6
+- Commit b55e6ff: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/b55e6ff0a4171518db9cedd6c07ef1807029ddf0
+

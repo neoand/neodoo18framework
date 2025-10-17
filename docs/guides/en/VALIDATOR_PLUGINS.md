@@ -78,6 +78,51 @@ def register():
     return [SamplePlugin(), AnotherPlugin()]
 ```
 
+## Plugin Loading Behavior
+
+**Important:** When using `--plugins-dir`, the validator loads **ALL** `.py` files in that directory, not just specific plugins. There is currently no filtering by plugin name.
+
+### Isolating Corporate Plugins
+
+If you have multiple corporate plugins (e.g., `acme_corporate_rules.py`, `neo_sempre_rules.py`) and want to apply only specific ones:
+
+**Option 1: Dedicated Directories**
+```bash
+# Create separate directories for each plugin set
+mkdir -p corporate_plugins/acme
+mkdir -p corporate_plugins/neo_sempre
+
+# Move plugins to their respective directories
+mv corporate_plugins/acme_corporate_rules.py corporate_plugins/acme/
+mv corporate_plugins/neo_sempre_rules.py corporate_plugins/neo_sempre/
+
+# Run validator with specific plugin set
+python framework/validator/validate.py my_module --plugins-dir corporate_plugins/neo_sempre
+```
+
+**Option 2: Rename/Move Unused Plugins**
+```bash
+# Temporarily disable a plugin by renaming it
+mv corporate_plugins/acme_corporate_rules.py corporate_plugins/_acme_corporate_rules.py.disabled
+
+# Re-enable by removing the underscore prefix
+mv corporate_plugins/_acme_corporate_rules.py.disabled corporate_plugins/acme_corporate_rules.py
+```
+
+**Option 3: Environment Variables**
+```bash
+# Set up project-specific plugin paths
+export NEODOO_VALIDATOR_PLUGINS="$PWD/corporate_plugins/neo_sempre"
+python framework/validator/validate.py my_module
+```
+
+### Best Practices
+
+1. **One Plugin Directory Per Project**: Keep corporate plugins separate from generic community plugins
+2. **Naming Conventions**: Use descriptive prefixes (e.g., `company_name_rules.py`) to identify plugin ownership
+3. **Documentation**: Document which plugins apply to which projects in your team's standards guide
+4. **CI/CD Integration**: Configure your pipeline to use the appropriate `--plugins-dir` for each project
+
 ## Sharing Plugins with Agents
 
 - Store reusable plugins under `.neodoo/plugins/validator/` and set the `NEODOO_VALIDATOR_PLUGINS` environment variable globally.

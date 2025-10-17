@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    =============================================
+    LIST/TREE VIEW EXAMPLES - ODOO 18
+    =============================================
+
+    List views (also called tree views) display records in a table format.
+
+    IMPORTANT CHANGES IN ODOO 18:
+    - Use <list> tag (not <tree>) for list views
+    - <tree> tag is deprecated but still works
+    - Editable list views: editable="top" or editable="bottom"
+    - New widgets and features available
+
+    Common Attributes:
+    - string: View title
+    - create: Enable/disable create button (default: true)
+    - edit: Enable/disable edit (default: true)
+    - delete: Enable/disable delete (default: true)
+    - editable: "top" or "bottom" for inline editing
+    - default_order: Default sorting (e.g., "name asc, id desc")
+    - decoration-*: Conditional row styling
+    - multi_edit: Enable multi-record editing (default: true)
+    - limit: Default number of records per page (default: 80)
+
+    =============================================
+    -->
+
+    <data>
+
+        <!-- =============================================
+             BASIC LIST VIEW
+             ============================================= -->
+
+        <!-- Simple list view with basic fields -->
+        <record id="complete_model_example_view_list_basic" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.basic</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="date_start"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             COMPLETE LIST VIEW WITH ALL FEATURES
+             ============================================= -->
+
+        <record id="complete_model_example_view_list" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects"
+                      default_order="priority desc, date_start desc"
+                      multi_edit="1"
+                      sample="1"
+                      decoration-info="state == 'draft'"
+                      decoration-muted="state == 'cancelled'"
+                      decoration-success="state == 'done'"
+                      decoration-warning="state == 'planning'"
+                      decoration-danger="is_overdue == True"
+                      decoration-bf="priority == '3'">
+
+                    <!-- Optional fields (hidden but used in decorations) -->
+                    <field name="is_overdue" column_invisible="1"/>
+
+                    <!-- Main fields -->
+                    <field name="priority" widget="priority" nolabel="1"/>
+                    <field name="name" string="Project Name"/>
+                    <field name="partner_id" optional="show"/>
+                    <field name="user_id" widget="many2one_avatar_user" optional="show"/>
+                    <field name="date_start" optional="show"/>
+                    <field name="date_end" optional="show"/>
+                    <field name="progress" widget="progressbar" optional="hide"/>
+                    <field name="task_count" string="Tasks" optional="hide"/>
+
+                    <!-- Computed/Related fields -->
+                    <field name="total_hours" sum="Total Hours" optional="hide"/>
+                    <field name="budget" widget="monetary" optional="hide" sum="Total Budget"/>
+                    <field name="currency_id" column_invisible="1"/>
+
+                    <!-- State field with badge widget -->
+                    <field name="state"
+                           widget="badge"
+                           decoration-info="state == 'draft'"
+                           decoration-warning="state == 'planning'"
+                           decoration-primary="state == 'in_progress'"
+                           decoration-success="state == 'done'"
+                           decoration-muted="state == 'cancelled'"/>
+
+                    <!-- Tags field -->
+                    <field name="tag_ids" widget="many2many_tags" optional="hide"/>
+
+                    <!-- Activity widget -->
+                    <field name="activity_ids" widget="list_activity" optional="show"/>
+
+                    <!-- Actions buttons (inline) -->
+                    <button name="action_start"
+                            type="object"
+                            string="Start"
+                            icon="fa-play"
+                            invisible="state not in ('draft', 'planning')"
+                            class="btn-primary"/>
+                    <button name="action_complete"
+                            type="object"
+                            string="Complete"
+                            icon="fa-check"
+                            invisible="state != 'in_progress'"
+                            class="btn-success"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             EDITABLE LIST VIEW (INLINE EDITING)
+             ============================================= -->
+
+        <record id="complete_model_task_view_list_editable" model="ir.ui.view">
+            <field name="name">complete.model.task.view.list.editable</field>
+            <field name="model">complete.model.task</field>
+            <field name="arch" type="xml">
+                <!-- editable="top": New records appear at top -->
+                <!-- editable="bottom": New records appear at bottom -->
+                <list string="Tasks"
+                      editable="bottom"
+                      default_order="sequence, id">
+
+                    <!-- Handle for drag and drop reordering -->
+                    <field name="sequence" widget="handle"/>
+
+                    <field name="name" required="1"/>
+                    <field name="project_id"
+                           required="1"
+                           options="{'no_create': True, 'no_open': True}"/>
+                    <field name="user_id"
+                           widget="many2one_avatar_user"
+                           options="{'no_quick_create': True}"/>
+                    <field name="date_deadline"/>
+                    <field name="planned_hours" sum="Total Hours"/>
+                    <field name="stage_id" options="{'no_create_edit': True}"/>
+
+                    <!-- Checkbox for completion -->
+                    <field name="is_completed" widget="boolean_toggle"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW WITH GROUPING
+             ============================================= -->
+
+        <record id="complete_model_example_view_list_grouped" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.grouped</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects by State"
+                      expand="1"
+                      default_group_by="state">
+
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="date_start"/>
+                    <field name="budget" sum="Total Budget"/>
+                    <field name="state" column_invisible="1"/>
+
+                    <!-- Group buttons appear when grouped -->
+                    <groupby name="state">
+                        <button name="action_start_all"
+                                type="object"
+                                string="Start All"
+                                icon="fa-play"/>
+                    </groupby>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW WITH LIMITED ACTIONS
+             ============================================= -->
+
+        <!-- Read-only list (no create/edit/delete) -->
+        <record id="complete_model_example_view_list_readonly" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.readonly</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects (Read Only)"
+                      create="false"
+                      edit="false"
+                      delete="false">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW WITH CUSTOM WIDGETS
+             ============================================= -->
+
+        <record id="complete_model_example_view_list_widgets" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.widgets</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects with Widgets">
+
+                    <!-- Text widgets -->
+                    <field name="name" widget="char"/>  <!-- Default -->
+                    <field name="description" widget="text"/>
+                    <field name="notes_html" widget="html"/>
+
+                    <!-- Numeric widgets -->
+                    <field name="progress" widget="progressbar"/>
+                    <field name="percentage" widget="percentage"/>
+                    <field name="budget" widget="monetary"/>
+                    <field name="currency_id" column_invisible="1"/>
+
+                    <!-- Date/Time widgets -->
+                    <field name="date_start" widget="date"/>
+                    <field name="date_end" widget="remaining_days"/>
+
+                    <!-- Relational widgets -->
+                    <field name="user_id" widget="many2one_avatar_user"/>
+                    <field name="partner_id" widget="many2one_avatar"/>
+                    <field name="tag_ids" widget="many2many_tags" color_field="color"/>
+
+                    <!-- Boolean widgets -->
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="is_favorite" widget="boolean_favorite"/>
+
+                    <!-- Selection widgets -->
+                    <field name="state" widget="badge"/>
+                    <field name="priority" widget="priority"/>
+
+                    <!-- Special widgets -->
+                    <field name="attachment_ids" widget="many2many_binary"/>
+                    <field name="activity_ids" widget="list_activity"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW WITH CONTROL PANEL BUTTONS
+             ============================================= -->
+
+        <record id="complete_model_example_view_list_buttons" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.buttons</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects">
+                    <!-- Control panel buttons (appear at top) -->
+                    <control>
+                        <create string="New Project"/>
+                        <button name="action_import_projects"
+                                type="object"
+                                string="Import"/>
+                        <button name="action_export_report"
+                                type="object"
+                                string="Export Report"/>
+                    </control>
+
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW - ONE2MANY/MANY2MANY SUBLIST
+             ============================================= -->
+
+        <!-- Simplified list for use inside form views (one2many/many2many) -->
+        <record id="complete_model_task_view_list_sublist" model="ir.ui.view">
+            <field name="name">complete.model.task.view.list.sublist</field>
+            <field name="model">complete.model.task</field>
+            <field name="arch" type="xml">
+                <list string="Tasks" editable="bottom">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="user_id" widget="many2one_avatar_user"/>
+                    <field name="date_deadline"/>
+                    <field name="planned_hours" sum="Total"/>
+                    <field name="is_completed" widget="boolean_toggle"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW WITH SAMPLE DATA
+             ============================================= -->
+
+        <!-- Shows sample data when list is empty (Odoo 18+) -->
+        <record id="complete_model_example_view_list_sample" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.sample</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects" sample="1">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="date_start"/>
+                    <field name="state" widget="badge"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW - CONFIGURATION OPTIONS
+             ============================================= -->
+
+        <record id="complete_model_example_view_list_configured" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.configured</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <list string="Projects"
+                      create="true"
+                      edit="true"
+                      delete="true"
+                      import="true"
+                      export_xlsx="true"
+                      duplicate="false"
+                      editable="bottom"
+                      multi_edit="true"
+                      default_order="name"
+                      limit="40"
+                      groups_limit="10"
+                      expand="false"
+                      sample="1">
+
+                    <field name="name"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- =============================================
+             LIST VIEW WITH DECORATION EXAMPLES
+             ============================================= -->
+
+        <record id="complete_model_example_view_list_decorations" model="ir.ui.view">
+            <field name="name">complete.model.example.view.list.decorations</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <!--
+                Decoration classes available:
+                - decoration-bf: bold
+                - decoration-it: italic
+                - decoration-danger: red text
+                - decoration-warning: orange text
+                - decoration-success: green text
+                - decoration-info: blue text
+                - decoration-muted: gray text
+                - decoration-primary: primary color
+                -->
+                <list string="Projects with Decorations"
+                      decoration-bf="priority == '3'"
+                      decoration-it="state == 'draft'"
+                      decoration-danger="is_overdue and state in ('planning', 'in_progress')"
+                      decoration-warning="state == 'planning'"
+                      decoration-success="state == 'done'"
+                      decoration-info="state == 'draft'"
+                      decoration-muted="state == 'cancelled'">
+
+                    <field name="is_overdue" column_invisible="1"/>
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="priority" widget="priority"/>
+                    <field name="date_end"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+
+    <!--
+    =============================================
+    FIELD ATTRIBUTES REFERENCE
+    =============================================
+
+    Common field attributes in list views:
+
+    - string: Label for the field
+    - optional: "show" (visible by default), "hide" (hidden by default)
+    - column_invisible: "1" or domain (always hidden, but available for logic)
+    - readonly: "1" or domain (field is read-only)
+    - required: "1" or domain (field is required in editable list)
+    - widget: Display widget (see widgets list below)
+    - sum: String to show in sum footer (e.g., sum="Total")
+    - avg: String to show in average footer
+    - groups: Group IDs that can see this field
+    - decoration-*: Conditional styling based on field values
+    - nolabel: "1" to hide column header
+    - width: Column width (e.g., "100px" or "0.5")
+
+    =============================================
+    AVAILABLE WIDGETS FOR LIST VIEW
+    =============================================
+
+    Text/String:
+    - char (default)
+    - text
+    - html
+    - email
+    - phone
+    - url
+
+    Numbers:
+    - integer
+    - float
+    - monetary (requires currency_id field)
+    - percentage
+    - progressbar
+
+    Dates:
+    - date
+    - datetime
+    - remaining_days
+
+    Boolean:
+    - boolean (checkbox)
+    - boolean_toggle (toggle switch)
+    - boolean_favorite (star icon)
+
+    Selection:
+    - selection (default dropdown in edit mode)
+    - badge (colored badge)
+    - priority (stars)
+
+    Relational:
+    - many2one
+    - many2one_avatar
+    - many2one_avatar_user
+    - many2many_tags
+    - many2many_binary
+    - one2many
+
+    Special:
+    - handle (drag & drop icon for sequence)
+    - list_activity (activity widget)
+    - image (shows image preview)
+    - binary (file download)
+    - statinfo (for statistics)
+
+    =============================================
+    LIST VIEW BEST PRACTICES
+    =============================================
+
+    1. Field Order:
+       - Most important fields first
+       - Actions/buttons last
+       - Hidden fields (column_invisible) at start
+
+    2. Performance:
+       - Limit number of visible fields (max 8-10)
+       - Use optional="hide" for less important fields
+       - Avoid computed fields without store=True
+
+    3. User Experience:
+       - Use decorations for visual feedback
+       - Add sum/avg for numeric fields
+       - Use appropriate widgets
+       - Set meaningful default_order
+
+    4. Editable Lists:
+       - Use for simple data entry
+       - Add required validation
+       - Use options to control create/edit behavior
+       - Consider using sequence with handle widget
+
+    5. Actions:
+       - Add inline buttons for common actions
+       - Use invisible conditions to show/hide buttons
+       - Keep button count minimal (max 2-3)
+
+    =============================================
+    COMMON PATTERNS
+    =============================================
+
+    # Pattern 1: Master-Detail List
+    - Show minimal fields in list
+    - Click to open form for details
+    - Use badges for state/status
+
+    # Pattern 2: Editable Grid
+    - Use editable="bottom"
+    - Add handle for reordering
+    - Include boolean_toggle for quick updates
+
+    # Pattern 3: Dashboard List
+    - Use decorations for visual impact
+    - Add sum/avg for KPIs
+    - Include progressbar widgets
+    - Set sample="1" for demo
+
+    # Pattern 4: Readonly Report
+    - Set create/edit/delete to false
+    - Use monetary widgets
+    - Add sum footer
+    - Export enabled
+
+    =============================================
+    -->
+
+</odoo>

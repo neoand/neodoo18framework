@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- =============================================
+             TEMPLATE: ComponentBasicExample
+             ============================================= -->
+        <template id="ComponentBasicExample" name="Component Basic Example">
+            <div class="component-basic-example p-3">
+                <!-- Header -->
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">
+                            <i class="fa fa-cube me-2"/>
+                            <t t-esc="displayTitle"/>
+                        </h3>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div t-if="state.loading" class="card-body text-center py-5">
+                        <i class="fa fa-spinner fa-spin fa-3x text-primary mb-3"/>
+                        <p class="text-muted">Carregando...</p>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div t-else="" class="card-body">
+                        <!-- Progress Bar -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Progresso</span>
+                                <span>
+                                    <t t-esc="progressPercentage.toFixed(0)"/>%
+                                </span>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-success"
+                                     role="progressbar"
+                                     t-att-style="'width: ' + progressPercentage + '%'"
+                                     t-att-aria-valuenow="progressPercentage"
+                                     aria-valuemin="0"
+                                     aria-valuemax="100">
+                                    <t t-esc="currentCount"/>
+                                    / <t t-esc="props.maxCount || 100"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Counter Display -->
+                        <div class="text-center mb-4">
+                            <h1 class="display-3 mb-3">
+                                <span t-att-class="state.isActive ? 'text-success' : 'text-muted'">
+                                    <t t-esc="currentCount"/>
+                                </span>
+                            </h1>
+
+                            <div class="btn-group" role="group">
+                                <button type="button"
+                                        class="btn btn-outline-danger"
+                                        t-on-click="onDecrement"
+                                        t-att-disabled="state.counter &lt;= 0">
+                                    <i class="fa fa-minus"/> Decrementar
+                                </button>
+
+                                <button type="button"
+                                        class="btn btn-outline-secondary"
+                                        t-on-click="onReset">
+                                    <i class="fa fa-refresh"/> Reset
+                                </button>
+
+                                <button type="button"
+                                        class="btn btn-outline-success"
+                                        t-on-click="onIncrement"
+                                        t-att-disabled="!canIncrement">
+                                    <i class="fa fa-plus"/> Incrementar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Status Toggle -->
+                        <div class="text-center mb-4">
+                            <button type="button"
+                                    class="btn"
+                                    t-att-class="state.isActive ? 'btn-success' : 'btn-secondary'"
+                                    t-on-click="onToggleActive">
+                                <i t-att-class="state.isActive ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"/>
+                                <t t-if="state.isActive">Ativo</t>
+                                <t t-else="">Inativo</t>
+                            </button>
+                        </div>
+
+                        <!-- Form -->
+                        <form t-on-submit="onSubmit" class="border-top pt-4">
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">Nome do Usuário</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="userName"
+                                       id="userName"
+                                       placeholder="Digite seu nome"
+                                       t-model="state.userName"
+                                       t-on-input="onInputChange"/>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-save"/> Salvar
+                                </button>
+
+                                <button type="button"
+                                        class="btn btn-info"
+                                        t-on-click="onAddItem">
+                                    <i class="fa fa-plus"/> Adicionar à Lista
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Items List -->
+                        <div t-if="state.items.length > 0" class="mt-4 border-top pt-4">
+                            <h5 class="mb-3">
+                                <i class="fa fa-list"/> Items
+                                (<t t-esc="state.items.length"/>)
+                            </h5>
+
+                            <div class="list-group">
+                                <t t-foreach="state.items" t-as="item" t-key="item.id">
+                                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong><t t-esc="item.name"/></strong>
+                                            <br/>
+                                            <small class="text-muted">
+                                                Count: <t t-esc="item.count"/> |
+                                                <t t-esc="item.timestamp"/>
+                                            </small>
+                                        </div>
+                                        <button type="button"
+                                                class="btn btn-sm btn-danger"
+                                                t-on-click="() => this.onRemoveItem(item.id)">
+                                            <i class="fa fa-trash"/>
+                                        </button>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- =============================================
+             TEMPLATE: ComponentAdvancedExample
+             ============================================= -->
+        <template id="ComponentAdvancedExample" name="Component Advanced Example">
+            <div class="component-advanced-example">
+                <!-- Header with Actions -->
+                <div class="d-flex justify-content-between align-items-center mb-3 p-3 bg-light">
+                    <h2><t t-esc="props.resModel"/> Manager</h2>
+
+                    <div class="btn-group">
+                        <button t-if="canCreate"
+                                type="button"
+                                class="btn btn-primary"
+                                t-on-click="() => this.createRecord({})">
+                            <i class="fa fa-plus"/> Novo
+                        </button>
+
+                        <button type="button"
+                                class="btn btn-secondary"
+                                t-on-click="() => this._loadRecords()">
+                            <i class="fa fa-refresh"/> Recarregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Search & Filters -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <!-- Search Input -->
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-search"/>
+                                    </span>
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Buscar..."
+                                           t-ref="searchInput"
+                                           t-model="state.searchTerm"
+                                           t-on-input="onSearchInput"/>
+                                    <button t-if="state.searchTerm"
+                                            type="button"
+                                            class="btn btn-outline-secondary"
+                                            t-on-click="onClearSearch">
+                                        <i class="fa fa-times"/>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Category Filter -->
+                            <div class="col-md-3">
+                                <select class="form-select"
+                                        t-on-change="onCategoryChange">
+                                    <option value="">Todas Categorias</option>
+                                    <option t-foreach="state.filters.categories || []"
+                                            t-as="cat"
+                                            t-key="cat.id"
+                                            t-att-value="cat.id">
+                                        <t t-esc="cat.name"/>
+                                    </option>
+                                </select>
+                            </div>
+
+                            <!-- Active Toggle -->
+                            <div class="col-md-3">
+                                <button type="button"
+                                        class="btn w-100"
+                                        t-att-class="state.filters.active ? 'btn-success' : 'btn-outline-secondary'"
+                                        t-on-click="onToggleActive">
+                                    <i class="fa fa-filter"/>
+                                    <t t-if="state.filters.active">Apenas Ativos</t>
+                                    <t t-else="">Todos</t>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="text-muted">Total</h5>
+                                <h2 class="mb-0"><t t-esc="state.stats.total"/></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="text-muted">Ativos</h5>
+                                <h2 class="mb-0 text-success">
+                                    <t t-esc="state.stats.active"/>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="text-muted">Inativos</h5>
+                                <h2 class="mb-0 text-danger">
+                                    <t t-esc="state.stats.inactive"/>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div t-if="state.loading" class="text-center py-5">
+                    <i class="fa fa-spinner fa-spin fa-3x text-primary mb-3"/>
+                    <p class="text-muted">Carregando dados...</p>
+                </div>
+
+                <!-- Error State -->
+                <div t-elif="state.error" class="alert alert-danger" role="alert">
+                    <i class="fa fa-exclamation-triangle me-2"/>
+                    <t t-esc="state.error"/>
+                </div>
+
+                <!-- Records List -->
+                <div t-else="" class="card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>
+                                Registros (<t t-esc="state.totalRecords"/>)
+                            </span>
+                            <span class="text-muted">
+                                Página <t t-esc="state.page"/>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="list-group list-group-flush">
+                        <t t-if="state.records.length === 0">
+                            <div class="list-group-item text-center text-muted py-5">
+                                <i class="fa fa-inbox fa-3x mb-3 d-block"/>
+                                Nenhum registro encontrado
+                            </div>
+                        </t>
+
+                        <t t-else="">
+                            <t t-foreach="paginatedRecords" t-as="record" t-key="record.id">
+                                <div class="list-group-item list-group-item-action"
+                                     t-on-click="() => this.onSelectRecord(record)">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mb-1">
+                                                <t t-esc="record.name"/>
+                                            </h5>
+                                            <p t-if="record.description"
+                                               class="mb-1 text-muted">
+                                                <t t-esc="record.description"/>
+                                            </p>
+                                            <small class="text-muted">
+                                                ID: <t t-esc="record.id"/>
+                                            </small>
+                                        </div>
+
+                                        <div class="btn-group btn-group-sm">
+                                            <button t-if="canEdit"
+                                                    type="button"
+                                                    class="btn btn-outline-primary"
+                                                    t-on-click.stop="() => this.onEditRecord(record.id)">
+                                                <i class="fa fa-edit"/>
+                                            </button>
+
+                                            <button t-if="canDelete"
+                                                    type="button"
+                                                    class="btn btn-outline-danger"
+                                                    t-on-click.stop="() => this.onDeleteRecord(record.id)">
+                                                <i class="fa fa-trash"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </t>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div t-if="totalPages > 1" class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-secondary"
+                                    t-att-disabled="!hasPreviousPage"
+                                    t-on-click="onPreviousPage">
+                                <i class="fa fa-chevron-left"/> Anterior
+                            </button>
+
+                            <span class="text-muted">
+                                Página <t t-esc="state.page"/> de <t t-esc="totalPages"/>
+                            </span>
+
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-secondary"
+                                    t-att-disabled="!hasNextPage"
+                                    t-on-click="onNextPage">
+                                Próxima <i class="fa fa-chevron-right"/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Container (exemplo) -->
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <i class="fa fa-chart-bar me-2"/> Gráficos
+                    </div>
+                    <div class="card-body">
+                        <canvas t-ref="chartContainer" height="100"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- =============================================
+             TEMPLATE: ComponentListDashboard
+             ============================================= -->
+        <template id="ComponentListDashboard" name="Component List Dashboard">
+            <div class="component-list-dashboard p-3">
+                <!-- Dashboard Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>
+                        <i class="fa fa-dashboard me-2"/>
+                        <t t-esc="dashboardTitle"/>
+                    </h1>
+
+                    <div class="btn-group">
+                        <button type="button"
+                                class="btn btn-primary"
+                                t-on-click="onCreateRecord">
+                            <i class="fa fa-plus"/> Novo
+                        </button>
+
+                        <button type="button"
+                                class="btn btn-secondary"
+                                t-on-click="onRefresh">
+                            <i class="fa fa-refresh"/> Atualizar
+                        </button>
+
+                        <button type="button"
+                                class="btn btn-info"
+                                t-on-click="onExport">
+                            <i class="fa fa-download"/> Exportar
+                        </button>
+
+                        <button type="button"
+                                t-att-class="state.autoRefresh ? 'btn btn-success active' : 'btn btn-outline-secondary'"
+                                t-on-click="onToggleAutoRefresh">
+                            <i class="fa fa-sync"/> Auto
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Statistics Cards -->
+                <div t-if="showStatistics" class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white cursor-pointer"
+                             t-on-click="() => this.onStatisticClick('total')">
+                            <div class="card-body text-center">
+                                <h6 class="card-subtitle mb-2">Total</h6>
+                                <h2 class="card-title mb-0">
+                                    <t t-esc="state.statistics.total"/>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white cursor-pointer"
+                             t-on-click="() => this.onStatisticClick('today')">
+                            <div class="card-body text-center">
+                                <h6 class="card-subtitle mb-2">Hoje</h6>
+                                <h2 class="card-title mb-0">
+                                    <t t-esc="state.statistics.today"/>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white cursor-pointer"
+                             t-on-click="() => this.onStatisticClick('thisWeek')">
+                            <div class="card-body text-center">
+                                <h6 class="card-subtitle mb-2">Esta Semana</h6>
+                                <h2 class="card-title mb-0">
+                                    <t t-esc="state.statistics.thisWeek"/>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-white cursor-pointer"
+                             t-on-click="() => this.onStatisticClick('thisMonth')">
+                            <div class="card-body text-center">
+                                <h6 class="card-subtitle mb-2">Este Mês</h6>
+                                <h2 class="card-title mb-0">
+                                    <t t-esc="state.statistics.thisMonth"/>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div t-if="showCharts" class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Por Categoria</div>
+                            <div class="card-body">
+                                <canvas t-ref="chartCategory" height="200"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Últimos 6 Meses</div>
+                            <div class="card-body">
+                                <canvas t-ref="chartMonth" height="200"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Por Status</div>
+                            <div class="card-body">
+                                <canvas t-ref="chartStatus" height="200"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters Section -->
+                <div t-if="showFilters" class="card mb-3">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><i class="fa fa-filter me-2"/> Filtros</span>
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-secondary"
+                                    t-on-click="onClearFilters">
+                                <i class="fa fa-times"/> Limpar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <!-- Search -->
+                            <div class="col-md-4">
+                                <label class="form-label">Buscar</label>
+                                <div class="input-group">
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Nome, descrição..."
+                                           t-ref="searchInput"
+                                           t-model="state.filters.searchTerm"
+                                           t-on-input="onSearchInput"/>
+                                    <button t-if="state.filters.searchTerm"
+                                            type="button"
+                                            class="btn btn-outline-secondary"
+                                            t-on-click="onClearSearch">
+                                        <i class="fa fa-times"/>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Category -->
+                            <div class="col-md-2">
+                                <label class="form-label">Categoria</label>
+                                <select class="form-select"
+                                        t-model="state.filters.category_id"
+                                        t-on-change="onCategoryChange">
+                                    <option value="">Todas</option>
+                                    <option t-foreach="state.categories"
+                                            t-as="category"
+                                            t-key="category.id"
+                                            t-att-value="category.id">
+                                        <t t-esc="category.name"/>
+                                    </option>
+                                </select>
+                            </div>
+
+                            <!-- Partner -->
+                            <div class="col-md-2">
+                                <label class="form-label">Parceiro</label>
+                                <select class="form-select"
+                                        t-model="state.filters.partner_id"
+                                        t-on-change="onPartnerChange">
+                                    <option value="">Todos</option>
+                                    <option t-foreach="state.partners"
+                                            t-as="partner"
+                                            t-key="partner.id"
+                                            t-att-value="partner.id">
+                                        <t t-esc="partner.name"/>
+                                    </option>
+                                </select>
+                            </div>
+
+                            <!-- Date From -->
+                            <div class="col-md-2">
+                                <label class="form-label">Data Inicial</label>
+                                <input type="date"
+                                       class="form-control"
+                                       t-model="state.filters.date_from"
+                                       t-on-change="onDateFromChange"/>
+                            </div>
+
+                            <!-- Date To -->
+                            <div class="col-md-2">
+                                <label class="form-label">Data Final</label>
+                                <input type="date"
+                                       class="form-control"
+                                       t-model="state.filters.date_to"
+                                       t-on-change="onDateToChange"/>
+                            </div>
+                        </div>
+
+                        <!-- State Filters (Pills) -->
+                        <div class="mt-3">
+                            <label class="form-label d-block">Status</label>
+                            <div class="btn-group" role="group">
+                                <button type="button"
+                                        t-att-class="state.filters.state === 'all' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+                                        t-on-click="() => this.onStateChange('all')">
+                                    Todos
+                                </button>
+                                <button type="button"
+                                        t-att-class="state.filters.state === 'draft' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+                                        t-on-click="() => this.onStateChange('draft')">
+                                    Rascunho
+                                </button>
+                                <button type="button"
+                                        t-att-class="state.filters.state === 'done' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+                                        t-on-click="() => this.onStateChange('done')">
+                                    Concluído
+                                </button>
+                                <button type="button"
+                                        t-att-class="state.filters.state === 'cancelled' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+                                        t-on-click="() => this.onStateChange('cancelled')">
+                                    Cancelado
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View Switcher & Sort -->
+                <div class="card mb-3">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- View Mode -->
+                            <div class="btn-group" role="group">
+                                <button type="button"
+                                        t-att-class="state.selectedView === 'cards' ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline-primary'"
+                                        t-on-click="() => this.onViewChange('cards')">
+                                    <i class="fa fa-th"/> Cards
+                                </button>
+                                <button type="button"
+                                        t-att-class="state.selectedView === 'list' ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline-primary'"
+                                        t-on-click="() => this.onViewChange('list')">
+                                    <i class="fa fa-list"/> Lista
+                                </button>
+                                <button type="button"
+                                        t-att-class="state.selectedView === 'kanban' ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline-primary'"
+                                        t-on-click="() => this.onViewChange('kanban')">
+                                    <i class="fa fa-columns"/> Kanban
+                                </button>
+                            </div>
+
+                            <!-- Sort Controls -->
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="text-muted">Ordenar por:</span>
+                                <select class="form-select form-select-sm"
+                                        style="width: auto;"
+                                        t-model="state.sortBy"
+                                        t-on-change="() => this.onSortChange(state.sortBy)">
+                                    <option value="date">Data</option>
+                                    <option value="name">Nome</option>
+                                    <option value="amount">Valor</option>
+                                </select>
+                                <button type="button"
+                                        class="btn btn-sm btn-outline-secondary"
+                                        t-on-click="() => this.onSortChange(state.sortBy)">
+                                    <i t-att-class="state.sortOrder === 'asc' ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div t-if="state.loading" class="text-center py-5">
+                    <i class="fa fa-spinner fa-spin fa-3x text-primary mb-3"/>
+                    <p class="text-muted">Carregando registros...</p>
+                </div>
+
+                <!-- Records Display (Cards View) -->
+                <div t-elif="state.selectedView === 'cards'" class="row">
+                    <t t-if="paginatedRecords.length === 0">
+                        <div class="col-12">
+                            <div class="alert alert-info text-center">
+                                <i class="fa fa-info-circle me-2"/>
+                                Nenhum registro encontrado
+                            </div>
+                        </div>
+                    </t>
+
+                    <t t-else="">
+                        <t t-foreach="paginatedRecords" t-as="record" t-key="record.id">
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100 cursor-pointer hover-shadow"
+                                     t-on-click="() => this.onRecordClick(record)">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <t t-esc="record.name"/>
+                                        </h5>
+                                        <p t-if="record.description" class="card-text text-muted">
+                                            <t t-esc="record.description"/>
+                                        </p>
+                                        <div class="mt-3">
+                                            <small class="text-muted d-block">
+                                                <i class="fa fa-calendar me-1"/>
+                                                <t t-esc="formatDate(record.date)"/>
+                                            </small>
+                                            <small t-if="record.amount" class="text-muted d-block">
+                                                <i class="fa fa-dollar me-1"/>
+                                                <t t-esc="formatCurrency(record.amount)"/>
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="badge"
+                                              t-att-class="'bg-' + (record.state === 'done' ? 'success' : record.state === 'draft' ? 'warning' : 'secondary')">
+                                            <t t-esc="record.state"/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+
+                <!-- Records Display (List View) -->
+                <div t-elif="state.selectedView === 'list'" class="card">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Data</th>
+                                    <th>Valor</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-if="paginatedRecords.length === 0">
+                                    <tr>
+                                        <td colspan="6" class="text-center text-muted py-4">
+                                            Nenhum registro encontrado
+                                        </td>
+                                    </tr>
+                                </t>
+                                <t t-else="">
+                                    <t t-foreach="paginatedRecords" t-as="record" t-key="record.id">
+                                        <tr class="cursor-pointer"
+                                            t-on-click="() => this.onRecordClick(record)">
+                                            <td><t t-esc="record.id"/></td>
+                                            <td><strong><t t-esc="record.name"/></strong></td>
+                                            <td><t t-esc="formatDate(record.date)"/></td>
+                                            <td><t t-esc="formatCurrency(record.amount)"/></td>
+                                            <td>
+                                                <span class="badge"
+                                                      t-att-class="'bg-' + (record.state === 'done' ? 'success' : record.state === 'draft' ? 'warning' : 'secondary')">
+                                                    <t t-esc="record.state"/>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <button type="button"
+                                                        class="btn btn-sm btn-outline-primary"
+                                                        t-on-click.stop="() => this.openRecordForm(record.id)">
+                                                    <i class="fa fa-eye"/>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div t-if="totalPages > 1" class="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                        <select class="form-select form-select-sm"
+                                style="width: auto;"
+                                t-model="state.pageSize"
+                                t-on-change="onPageSizeChange">
+                            <option value="12">12 por página</option>
+                            <option value="24">24 por página</option>
+                            <option value="48">48 por página</option>
+                            <option value="100">100 por página</option>
+                        </select>
+                    </div>
+
+                    <nav>
+                        <ul class="pagination mb-0">
+                            <li t-att-class="state.page === 1 ? 'page-item disabled' : 'page-item'">
+                                <button type="button"
+                                        class="page-link"
+                                        t-on-click="onPreviousPage">
+                                    Anterior
+                                </button>
+                            </li>
+
+                            <t t-foreach="Array.from({length: totalPages}, (_, i) => i + 1)"
+                               t-as="pageNum"
+                               t-key="pageNum">
+                                <li t-if="pageNum === 1 || pageNum === totalPages || (pageNum >= state.page - 2 and pageNum &lt;= state.page + 2)"
+                                    t-att-class="state.page === pageNum ? 'page-item active' : 'page-item'">
+                                    <button type="button"
+                                            class="page-link"
+                                            t-on-click="() => this.onPageChange(pageNum)">
+                                        <t t-esc="pageNum"/>
+                                    </button>
+                                </li>
+                            </t>
+
+                            <li t-att-class="state.page === totalPages ? 'page-item disabled' : 'page-item'">
+                                <button type="button"
+                                        class="page-link"
+                                        t-on-click="onNextPage">
+                                    Próxima
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="text-muted">
+                        Mostrando <t t-esc="(state.page - 1) * state.pageSize + 1"/> a
+                        <t t-esc="Math.min(state.page * state.pageSize, filteredRecords.length)"/>
+                        de <t t-esc="filteredRecords.length"/> registros
+                    </div>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

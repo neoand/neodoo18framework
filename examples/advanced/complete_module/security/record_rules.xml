@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    =============================================
+    RECORD RULES (ir.rule)
+    =============================================
+
+    Record rules control which RECORDS users can access
+    Access rights (ir.model.access) control which MODELS users can access
+
+    Rule Attributes:
+    - name: Rule description
+    - model_id: Model this rule applies to
+    - domain_force: Domain filter for accessible records
+    - groups: Groups this rule applies to (empty = global rule)
+    - global: If True, applies to all users regardless of groups
+    - perm_read, perm_write, perm_create, perm_unlink: Which operations this rule controls
+
+    Multiple Rules:
+    - Rules for SAME group are combined with OR
+    - Rules for DIFFERENT groups are combined with AND
+    - Global rules are combined with AND with group rules
+
+    Domain Syntax:
+    - Use 'user' variable for current user
+    - Use 'company_ids' for multi-company (tuple of accessible company IDs)
+    - Use 'company_id' for single company (ID)
+
+    =============================================
+    -->
+
+    <data noupdate="1">
+
+        <!-- =============================================
+             PROJECT RULES (complete.model.example)
+             ============================================= -->
+
+        <!-- GLOBAL RULE: Multi-Company -->
+        <record id="complete_model_example_company_rule" model="ir.rule">
+            <field name="name">Complete Model: Multi-Company</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[
+                '|',
+                    ('company_id', '=', False),
+                    ('company_id', 'in', company_ids)
+            ]</field>
+            <!-- No groups = applies to everyone -->
+        </record>
+
+        <!-- USER RULE: Own Projects and Team Projects -->
+        <record id="complete_model_example_user_rule" model="ir.rule">
+            <field name="name">Complete Model: User Own and Team Projects</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="domain_force">[
+                '|', '|',
+                    ('user_id', '=', user.id),
+                    ('team_member_ids', 'in', [user.id]),
+                    ('create_uid', '=', user.id)
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>  <!-- Cannot delete -->
+        </record>
+
+        <!-- MANAGER RULE: All Projects -->
+        <record id="complete_model_example_manager_rule" model="ir.rule">
+            <field name="name">Complete Model: Manager All Access</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="domain_force">[(1, '=', 1)]</field>  <!-- All records -->
+            <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- PORTAL RULE: Customer Own Projects (Read Only) -->
+        <record id="complete_model_example_portal_rule" model="ir.rule">
+            <field name="name">Complete Model: Portal User Own Projects</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="domain_force">[
+                ('partner_id', 'child_of', [user.partner_id.commercial_partner_id.id])
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- WRITE RESTRICTION: Users can only write draft/planning projects -->
+        <record id="complete_model_example_user_write_rule" model="ir.rule">
+            <field name="name">Complete Model: User Write Only Draft/Planning</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="domain_force">[
+                ('state', 'in', ['draft', 'planning'])
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="False"/>  <!-- Don't limit read -->
+            <field name="perm_write" eval="True"/>  <!-- Limit write -->
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- =============================================
+             TASK RULES (complete.model.task)
+             ============================================= -->
+
+        <!-- USER RULE: Tasks in accessible projects -->
+        <record id="complete_model_task_user_rule" model="ir.rule">
+            <field name="name">Complete Model Task: User Access via Project</field>
+            <field name="model_id" ref="model_complete_model_task"/>
+            <field name="domain_force">[
+                '|', '|', '|',
+                    ('user_id', '=', user.id),
+                    ('project_id.user_id', '=', user.id),
+                    ('project_id.team_member_ids', 'in', [user.id]),
+                    ('create_uid', '=', user.id)
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- MANAGER RULE: All Tasks -->
+        <record id="complete_model_task_manager_rule" model="ir.rule">
+            <field name="name">Complete Model Task: Manager All Access</field>
+            <field name="model_id" ref="model_complete_model_task"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+        </record>
+
+        <!-- PORTAL RULE: Tasks in customer projects -->
+        <record id="complete_model_task_portal_rule" model="ir.rule">
+            <field name="name">Complete Model Task: Portal User via Project</field>
+            <field name="model_id" ref="model_complete_model_task"/>
+            <field name="domain_force">[
+                ('project_id.partner_id', 'child_of', [user.partner_id.commercial_partner_id.id])
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- =============================================
+             TIMESHEET RULES (complete.model.timesheet)
+             ============================================= -->
+
+        <!-- USER RULE: Own timesheets and team timesheets -->
+        <record id="complete_model_timesheet_user_rule" model="ir.rule">
+            <field name="name">Complete Model Timesheet: User Own and Team</field>
+            <field name="model_id" ref="model_complete_model_timesheet"/>
+            <field name="domain_force">[
+                '|',
+                    ('user_id', '=', user.id),
+                    ('project_id.team_member_ids', 'in', [user.id])
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- USER WRITE RULE: Can only edit own timesheets -->
+        <record id="complete_model_timesheet_user_write_rule" model="ir.rule">
+            <field name="name">Complete Model Timesheet: User Write Own Only</field>
+            <field name="model_id" ref="model_complete_model_timesheet"/>
+            <field name="domain_force">[
+                ('user_id', '=', user.id)
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- MANAGER RULE: All timesheets -->
+        <record id="complete_model_timesheet_manager_rule" model="ir.rule">
+            <field name="name">Complete Model Timesheet: Manager All</field>
+            <field name="model_id" ref="model_complete_model_timesheet"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+        </record>
+
+        <!-- =============================================
+             ADVANCED EXAMPLES
+             ============================================= -->
+
+        <!-- EXAMPLE: Time-based access (projects visible after start date) -->
+        <!--
+        <record id="complete_model_example_time_rule" model="ir.rule">
+            <field name="name">Complete Model: Time-based Visibility</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="domain_force">[
+                '|',
+                    ('date_start', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                    ('date_start', '=', False)
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        </record>
+        -->
+
+        <!-- EXAMPLE: Department-based access -->
+        <!--
+        <record id="complete_model_example_department_rule" model="ir.rule">
+            <field name="name">Complete Model: Department Access</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="domain_force">[
+                ('user_id.department_id', '=', user.department_id.id)
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        -->
+
+        <!-- EXAMPLE: State-based restrictions -->
+        <!--
+        <record id="complete_model_example_state_delete_rule" model="ir.rule">
+            <field name="name">Complete Model: Delete Only Draft</field>
+            <field name="model_id" ref="model_complete_model_example"/>
+            <field name="domain_force">[
+                ('state', 'in', ['draft', 'cancelled'])
+            ]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        -->
+
+        <!-- EXAMPLE: Field-based access (amount visibility) -->
+        <!--
+        Note: Field-level security is done in model definition with groups parameter:
+
+        amount = fields.Monetary(
+            groups='base.group_system'  # Only managers can see
+        )
+        -->
+
+        <!-- =============================================
+             TESTING RECORD RULES
+             ============================================= -->
+        <!--
+        To test record rules:
+
+        1. In Python shell:
+           records = env['model'].with_user(user_id).search([])
+           # Will only return records accessible to that user
+
+        2. Check specific access:
+           record.check_access_rights('read')  # Raises AccessError if denied
+           record.check_access_rule('write')   # Raises AccessError if denied
+
+        3. Bypass rules (use with caution):
+           records = env['model'].sudo().search([])
+
+        4. Debug domains:
+           env['model']._apply_ir_rules(env['model']._where_calc([]), 'read')
+        -->
+
+        <!-- =============================================
+             COMMON PATTERNS
+             ============================================= -->
+        <!--
+        PATTERN 1: User sees own + manager sees all
+        - User rule: [('user_id', '=', user.id)]
+        - Manager rule: [(1, '=', 1)]
+
+        PATTERN 2: Team-based access
+        - [('team_id.member_ids', 'in', [user.id])]
+
+        PATTERN 3: Hierarchical access (child records)
+        - [('parent_id', 'child_of', [accessible_ids])]
+
+        PATTERN 4: Multi-company
+        - ['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]
+
+        PATTERN 5: State-based
+        - [('state', 'in', ['draft', 'open'])]
+
+        PATTERN 6: Date-based
+        - [('date', '>=', datetime.now())]
+
+        PATTERN 7: Portal (customer)
+        - [('partner_id', 'child_of', [user.partner_id.commercial_partner_id.id])]
+
+        PATTERN 8: Creator only
+        - [('create_uid', '=', user.id)]
+        -->
+
+    </data>
+</odoo>

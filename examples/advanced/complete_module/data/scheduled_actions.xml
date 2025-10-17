@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ========================================================================
+             SCHEDULED ACTIONS (ir.cron) - ODOO 18
+             ========================================================================
+
+             Scheduled Actions (Cron Jobs) são tarefas automatizadas que são
+             executadas em intervalos regulares.
+
+             Campos principais:
+             - name: Nome da tarefa
+             - model_id: Modelo relacionado
+             - state: Tipo de ação (code, object_create, object_write, etc)
+             - code: Código Python a ser executado
+             - interval_number: Número de intervalos
+             - interval_type: Tipo de intervalo (minutes, hours, days, weeks, months)
+             - numbercall: Número de vezes a executar (-1 = ilimitado)
+             - doall: Se True, executa todas as chamadas perdidas
+             - active: Se está ativo ou não
+             - priority: Prioridade (menor número = maior prioridade)
+             - user_id: Usuário que executa o cron
+
+             Variáveis disponíveis no código:
+             - env: ambiente Odoo
+             - model: model do cron
+             - time, datetime, dateutil, timezone: bibliotecas de data/hora
+             - log: função para logging
+        ======================================================================== -->
+
+        <!-- ====================================================================
+             1. DAILY TASK - Executar diariamente à meia-noite
+             ==================================================================== -->
+        <record id="cron_daily_backup_reminders" model="ir.cron">
+            <field name="name">Daily: Send Backup Reminders</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="state">code</field>
+
+            <!-- Executar todo dia à 00:00 (meia-noite) -->
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+
+            <!-- Executar indefinidamente -->
+            <field name="numbercall">-1</field>
+
+            <!-- Não executar chamadas perdidas -->
+            <field name="doall" eval="False"/>
+
+            <!-- Prioridade normal -->
+            <field name="priority">5</field>
+
+            <!-- Usuário administrador -->
+            <field name="user_id" ref="base.user_admin"/>
+
+            <!-- Ativo -->
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Enviar lembretes de backup diários
+log("Starting daily backup reminder task")
+
+# Buscar todos os administradores
+admin_users = env['res.users'].search([
+    ('groups_id', 'in', [env.ref('base.group_system').id]),
+    ('active', '=', True),
+])
+
+# Verificar último backup
+IrConfigParam = env['ir.config_parameter'].sudo()
+last_backup_date = IrConfigParam.get_param('database.backup.last_date', default=False)
+
+if last_backup_date:
+    last_backup = fields.Date.from_string(last_backup_date)
+    days_since_backup = (fields.Date.today() - last_backup).days
+else:
+    days_since_backup = 999  # Sem backup registrado
+
+# Se faz mais de 7 dias sem backup, enviar alerta
+if days_since_backup >= 7:
+    for admin in admin_users:
+        env['mail.activity'].create({
+            'res_model': 'res.users',
+            'res_id': admin.id,
+            'activity_type_id': env.ref('mail.mail_activity_data_warning').id,
+            'summary': 'URGENTE: Backup do banco de dados atrasado',
+            'note': '''
+                &lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;Não há backup há %d dias.&lt;/p&gt;
+                &lt;p&gt;Por favor, realize um backup imediatamente.&lt;/p&gt;
+            ''' % days_since_backup,
+            'user_id': admin.id,
+            'date_deadline': fields.Date.today(),
+        })
+
+    log("Backup reminder sent to %d administrators (last backup: %d days ago)" %
+        (len(admin_users), days_since_backup))
+else:
+    log("Backup is up to date (last backup: %d days ago)" % days_since_backup)
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             2. HOURLY TASK - Executar a cada hora
+             ==================================================================== -->
+        <record id="cron_hourly_sync_inventory" model="ir.cron">
+            <field name="name">Hourly: Synchronize Inventory Levels</field>
+            <field name="model_id" ref="product.model_product_product"/>
+            <field name="state">code</field>
+
+            <!-- Executar a cada 1 hora -->
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">10</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Sincronizar níveis de estoque com sistema externo
+log("Starting hourly inventory synchronization")
+
+# Buscar produtos que precisam sincronização
+products = env['product.product'].search([
+    ('active', '=', True),
+    ('type', '=', 'product'),  # Apenas produtos estocáveis
+    ('detailed_type', '=', 'product'),
+])
+
+sync_count = 0
+error_count = 0
+
+for product in products:
+    try:
+        # Obter quantidades atuais
+        quants = env['stock.quant'].search([
+            ('product_id', '=', product.id),
+            ('location_id.usage', '=', 'internal'),
+        ])
+
+        total_qty = sum(quants.mapped('quantity'))
+        available_qty = sum(quants.mapped('available_quantity'))
+
+        # Aqui você integraria com sistema externo
+        # external_api.update_stock(product.default_code, available_qty)
+
+        # Verificar níveis mínimos
+        if hasattr(product, 'reordering_min_qty'):
+            if available_qty <= product.reordering_min_qty:
+                # Criar alerta de reabastecimento
+                procurement_group = env['procurement.group'].create({
+                    'name': 'Reabastecimento Automático - %s' % product.name,
+                })
+
+                log("Low stock alert for product %s (qty: %.2f, min: %.2f)" %
+                    (product.name, available_qty, product.reordering_min_qty))
+
+        sync_count += 1
+
+        # Commit a cada 100 produtos para evitar timeout
+        if sync_count % 100 == 0:
+            env.cr.commit()
+            log("Synced %d products..." % sync_count)
+
+    except Exception as e:
+        error_count += 1
+        log("Error syncing product %s: %s" % (product.name, str(e)), level='error')
+        continue
+
+log("Inventory sync completed: %d products synced, %d errors" % (sync_count, error_count))
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             3. WEEKLY TASK - Executar semanalmente (segunda-feira)
+             ==================================================================== -->
+        <record id="cron_weekly_sales_report" model="ir.cron">
+            <field name="name">Weekly: Send Sales Report</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+
+            <!-- Executar a cada 7 dias (1 semana) -->
+            <field name="interval_number">7</field>
+            <field name="interval_type">days</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">5</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Enviar relatório semanal de vendas
+from datetime import timedelta
+
+log("Starting weekly sales report generation")
+
+# Calcular período (última semana)
+today = fields.Date.today()
+week_start = today - timedelta(days=7)
+week_end = today
+
+# Buscar pedidos da semana
+orders = env['sale.order'].search([
+    ('date_order', '>=', week_start),
+    ('date_order', '&lt;=', week_end),
+    ('state', 'in', ['sale', 'done']),
+])
+
+# Calcular estatísticas
+total_orders = len(orders)
+total_amount = sum(orders.mapped('amount_total'))
+avg_order = total_amount / total_orders if total_orders > 0 else 0
+
+# Agrupar por vendedor
+sales_by_user = {}
+for order in orders:
+    user = order.user_id.name if order.user_id else 'Sem vendedor'
+    if user not in sales_by_user:
+        sales_by_user[user] = {'count': 0, 'amount': 0}
+    sales_by_user[user]['count'] += 1
+    sales_by_user[user]['amount'] += order.amount_total
+
+# Gerar relatório HTML
+report_html = """
+    &lt;h2&gt;Relatório Semanal de Vendas&lt;/h2&gt;
+    &lt;p&gt;&lt;strong&gt;Período:&lt;/strong&gt; %s a %s&lt;/p&gt;
+
+    &lt;h3&gt;Resumo Geral&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;strong&gt;Total de Pedidos:&lt;/strong&gt; %d&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;Valor Total:&lt;/strong&gt; %s&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;Ticket Médio:&lt;/strong&gt; %s&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Por Vendedor&lt;/h3&gt;
+    &lt;table border="1" cellpadding="5" cellspacing="0"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Vendedor&lt;/th&gt;
+            &lt;th&gt;Pedidos&lt;/th&gt;
+            &lt;th&gt;Valor Total&lt;/th&gt;
+            &lt;th&gt;Ticket Médio&lt;/th&gt;
+        &lt;/tr&gt;
+""" % (
+    week_start.strftime('%d/%m/%Y'),
+    week_end.strftime('%d/%m/%Y'),
+    total_orders,
+    '{:,.2f}'.format(total_amount),
+    '{:,.2f}'.format(avg_order),
+)
+
+# Adicionar linha para cada vendedor
+for user, data in sorted(sales_by_user.items(), key=lambda x: x[1]['amount'], reverse=True):
+    avg = data['amount'] / data['count'] if data['count'] > 0 else 0
+    report_html += """
+        &lt;tr&gt;
+            &lt;td&gt;%s&lt;/td&gt;
+            &lt;td&gt;%d&lt;/td&gt;
+            &lt;td&gt;%s&lt;/td&gt;
+            &lt;td&gt;%s&lt;/td&gt;
+        &lt;/tr&gt;
+    """ % (user, data['count'], '{:,.2f}'.format(data['amount']), '{:,.2f}'.format(avg))
+
+report_html += """
+    &lt;/table&gt;
+"""
+
+# Enviar email para gerentes de vendas
+sales_managers = env['res.users'].search([
+    ('groups_id', 'in', [env.ref('sales_team.group_sale_manager').id]),
+    ('active', '=', True),
+])
+
+for manager in sales_managers:
+    env['mail.mail'].create({
+        'subject': 'Relatório Semanal de Vendas - %s a %s' % (
+            week_start.strftime('%d/%m/%Y'),
+            week_end.strftime('%d/%m/%Y')
+        ),
+        'body_html': report_html,
+        'email_to': manager.email,
+        'auto_delete': True,
+    }).send()
+
+log("Weekly sales report sent to %d managers (orders: %d, amount: %.2f)" %
+    (len(sales_managers), total_orders, total_amount))
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             4. MONTHLY TASK - Executar mensalmente (dia 1)
+             ==================================================================== -->
+        <record id="cron_monthly_cleanup" model="ir.cron">
+            <field name="name">Monthly: Database Cleanup</field>
+            <field name="model_id" ref="base.model_ir_logging"/>
+            <field name="state">code</field>
+
+            <!-- Executar mensalmente (30 dias) -->
+            <field name="interval_number">30</field>
+            <field name="interval_type">days</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">20</field>  <!-- Baixa prioridade -->
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Limpeza mensal do banco de dados
+from datetime import timedelta
+
+log("Starting monthly database cleanup")
+
+cleanup_stats = {
+    'logs_deleted': 0,
+    'activities_deleted': 0,
+    'attachments_deleted': 0,
+    'emails_deleted': 0,
+}
+
+# 1. Limpar logs antigos (mais de 3 meses)
+three_months_ago = fields.Datetime.now() - timedelta(days=90)
+
+old_logs = env['ir.logging'].search([
+    ('create_date', '&lt;', three_months_ago),
+])
+cleanup_stats['logs_deleted'] = len(old_logs)
+old_logs.unlink()
+log("Deleted %d old log entries" % cleanup_stats['logs_deleted'])
+
+# 2. Limpar atividades concluídas antigas (mais de 6 meses)
+six_months_ago = fields.Datetime.now() - timedelta(days=180)
+
+old_activities = env['mail.activity'].search([
+    ('date_done', '!=', False),
+    ('date_done', '&lt;', six_months_ago),
+])
+cleanup_stats['activities_deleted'] = len(old_activities)
+old_activities.unlink()
+log("Deleted %d old activities" % cleanup_stats['activities_deleted'])
+
+# 3. Limpar anexos órfãos (sem res_id)
+orphan_attachments = env['ir.attachment'].search([
+    ('res_model', '!=', False),
+    ('res_id', '=', 0),
+    ('create_date', '&lt;', three_months_ago),
+])
+cleanup_stats['attachments_deleted'] = len(orphan_attachments)
+orphan_attachments.unlink()
+log("Deleted %d orphan attachments" % cleanup_stats['attachments_deleted'])
+
+# 4. Limpar emails enviados antigos (mais de 1 ano)
+one_year_ago = fields.Datetime.now() - timedelta(days=365)
+
+old_emails = env['mail.mail'].search([
+    ('state', 'in', ['sent', 'exception', 'cancel']),
+    ('date', '&lt;', one_year_ago),
+])
+cleanup_stats['emails_deleted'] = len(old_emails)
+old_emails.unlink()
+log("Deleted %d old emails" % cleanup_stats['emails_deleted'])
+
+# 5. Vacuum do banco de dados (PostgreSQL)
+try:
+    env.cr.execute("VACUUM ANALYZE;")
+    log("Database vacuum completed")
+except Exception as e:
+    log("Error during vacuum: %s" % str(e), level='warning')
+
+# Enviar relatório de limpeza
+admin_user = env.ref('base.user_admin')
+report = """
+    &lt;h3&gt;Relatório de Limpeza Mensal&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Logs deletados: %d&lt;/li&gt;
+        &lt;li&gt;Atividades deletadas: %d&lt;/li&gt;
+        &lt;li&gt;Anexos deletados: %d&lt;/li&gt;
+        &lt;li&gt;Emails deletados: %d&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Total de espaço liberado: estimado&lt;/p&gt;
+""" % (
+    cleanup_stats['logs_deleted'],
+    cleanup_stats['activities_deleted'],
+    cleanup_stats['attachments_deleted'],
+    cleanup_stats['emails_deleted'],
+)
+
+env['mail.activity'].create({
+    'res_model': 'res.users',
+    'res_id': admin_user.id,
+    'activity_type_id': env.ref('mail.mail_activity_data_todo').id,
+    'summary': 'Limpeza mensal do banco de dados concluída',
+    'note': report,
+    'user_id': admin_user.id,
+})
+
+log("Monthly cleanup completed: %s" % str(cleanup_stats))
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             5. CUSTOM INTERVAL - Executar a cada 30 minutos
+             ==================================================================== -->
+        <record id="cron_30min_process_queue" model="ir.cron">
+            <field name="name">Every 30 Minutes: Process Queue</field>
+            <field name="model_id" ref="mail.model_mail_mail"/>
+            <field name="state">code</field>
+
+            <!-- Executar a cada 30 minutos -->
+            <field name="interval_number">30</field>
+            <field name="interval_type">minutes</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">1</field>  <!-- Alta prioridade -->
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Processar fila de emails pendentes
+log("Starting queue processing")
+
+# Buscar emails pendentes
+pending_emails = env['mail.mail'].search([
+    ('state', '=', 'outgoing'),
+], limit=50, order='date asc')
+
+success_count = 0
+error_count = 0
+
+for email in pending_emails:
+    try:
+        # Tentar enviar
+        email.send()
+        success_count += 1
+
+    except Exception as e:
+        error_count += 1
+        log("Error sending email %s: %s" % (email.id, str(e)), level='error')
+
+        # Marcar como exceção após 3 tentativas
+        if not hasattr(email, 'failure_count'):
+            email.failure_count = 0
+        email.failure_count += 1
+
+        if email.failure_count >= 3:
+            email.state = 'exception'
+            email.failure_reason = str(e)[:500]
+
+log("Queue processing completed: %d sent, %d errors (from %d pending)" %
+    (success_count, error_count, len(pending_emails)))
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             6. WITH ERROR HANDLING - Tratamento robusto de erros
+             ==================================================================== -->
+        <record id="cron_daily_data_validation" model="ir.cron">
+            <field name="name">Daily: Data Validation and Integrity Check</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">5</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Validação diária de integridade dos dados
+import traceback
+
+log("Starting daily data validation")
+
+validation_results = {
+    'partners_checked': 0,
+    'partners_fixed': 0,
+    'errors': [],
+}
+
+try:
+    # 1. Validar parceiros sem país
+    partners_no_country = env['res.partner'].search([
+        ('customer_rank', '>', 0),
+        ('country_id', '=', False),
+        ('parent_id', '=', False),  # Apenas contatos principais
+    ])
+
+    for partner in partners_no_country:
+        try:
+            # Tentar inferir país do estado/cidade
+            if partner.state_id and partner.state_id.country_id:
+                partner.country_id = partner.state_id.country_id
+                validation_results['partners_fixed'] += 1
+                log("Fixed country for partner %s" % partner.name)
+
+        except Exception as e:
+            validation_results['errors'].append(
+                "Error fixing partner %s: %s" % (partner.name, str(e))
+            )
+
+    validation_results['partners_checked'] += len(partners_no_country)
+
+    # 2. Validar duplicatas de email
+    partners_with_email = env['res.partner'].search([
+        ('email', '!=', False),
+        ('customer_rank', '>', 0),
+    ])
+
+    email_dict = {}
+    for partner in partners_with_email:
+        email_lower = partner.email.lower().strip()
+        if email_lower in email_dict:
+            # Duplicata encontrada
+            log("Duplicate email found: %s (partners: %s, %s)" %
+                (email_lower, email_dict[email_lower].name, partner.name))
+
+            validation_results['errors'].append(
+                "Duplicate email %s: %s and %s" %
+                (email_lower, email_dict[email_lower].name, partner.name)
+            )
+        else:
+            email_dict[email_lower] = partner
+
+    # 3. Commit das correções
+    env.cr.commit()
+
+    # 4. Gerar relatório
+    report = """
+        &lt;h3&gt;Relatório de Validação Diária&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Parceiros verificados: %d&lt;/li&gt;
+            &lt;li&gt;Parceiros corrigidos: %d&lt;/li&gt;
+            &lt;li&gt;Erros encontrados: %d&lt;/li&gt;
+        &lt;/ul&gt;
+    """ % (
+        validation_results['partners_checked'],
+        validation_results['partners_fixed'],
+        len(validation_results['errors']),
+    )
+
+    if validation_results['errors']:
+        report += "&lt;h4&gt;Erros:&lt;/h4&gt;&lt;ul&gt;"
+        for error in validation_results['errors'][:20]:  # Limitar a 20
+            report += "&lt;li&gt;%s&lt;/li&gt;" % error
+        if len(validation_results['errors']) > 20:
+            report += "&lt;li&gt;... e mais %d erros&lt;/li&gt;" % (len(validation_results['errors']) - 20)
+        report += "&lt;/ul&gt;"
+
+    # 5. Notificar administrador
+    admin_user = env.ref('base.user_admin')
+    env['mail.activity'].create({
+        'res_model': 'res.users',
+        'res_id': admin_user.id,
+        'activity_type_id': env.ref('mail.mail_activity_data_todo').id,
+        'summary': 'Validação diária de dados concluída',
+        'note': report,
+        'user_id': admin_user.id,
+    })
+
+    log("Data validation completed: %s" % str(validation_results))
+
+except Exception as e:
+    # Capturar erro geral
+    error_msg = "Critical error during data validation: %s\n%s" % (str(e), traceback.format_exc())
+    log(error_msg, level='error')
+
+    # Notificar administrador sobre erro crítico
+    admin_user = env.ref('base.user_admin')
+    env['mail.activity'].create({
+        'res_model': 'res.users',
+        'res_id': admin_user.id,
+        'activity_type_id': env.ref('mail.mail_activity_data_warning').id,
+        'summary': 'ERRO na validação diária de dados',
+        'note': '&lt;p&gt;&lt;strong&gt;Erro crítico:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;%s&lt;/pre&gt;' % error_msg,
+        'user_id': admin_user.id,
+        'date_deadline': fields.Date.today(),
+    })
+
+    # Re-raise para registrar no log do Odoo
+    raise
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             7. MULTI-COMPANY SUPPORT - Executar por empresa
+             ==================================================================== -->
+        <record id="cron_daily_company_reports" model="ir.cron">
+            <field name="name">Daily: Generate Company Reports</field>
+            <field name="model_id" ref="res.model_res_company"/>
+            <field name="state">code</field>
+
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">5</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Gerar relatórios por empresa (multi-company)
+log("Starting multi-company report generation")
+
+# Buscar todas as empresas ativas
+companies = env['res.company'].search([('active', '=', True)])
+
+for company in companies:
+    try:
+        log("Processing company: %s" % company.name)
+
+        # Executar dentro do contexto da empresa
+        env_company = env(context=dict(env.context, allowed_company_ids=[company.id]))
+
+        # Buscar dados da empresa
+        yesterday = fields.Date.subtract(fields.Date.today(), days=1)
+
+        # Pedidos de ontem
+        orders = env_company['sale.order'].search([
+            ('date_order', '&gt;=', yesterday),
+            ('date_order', '&lt;', fields.Date.today()),
+            ('company_id', '=', company.id),
+        ])
+
+        # Faturas de ontem
+        invoices = env_company['account.move'].search([
+            ('invoice_date', '=', yesterday),
+            ('move_type', '=', 'out_invoice'),
+            ('company_id', '=', company.id),
+        ])
+
+        # Calcular totais
+        total_orders = len(orders)
+        total_orders_amount = sum(orders.mapped('amount_total'))
+        total_invoices = len(invoices)
+        total_invoices_amount = sum(invoices.mapped('amount_total'))
+
+        # Gerar relatório
+        report = """
+            &lt;h3&gt;Relatório Diário - %s&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Data:&lt;/strong&gt; %s&lt;/p&gt;
+
+            &lt;h4&gt;Pedidos de Venda&lt;/h4&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Total de pedidos: %d&lt;/li&gt;
+                &lt;li&gt;Valor total: %s&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;h4&gt;Faturas&lt;/h4&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Total de faturas: %d&lt;/li&gt;
+                &lt;li&gt;Valor total: %s&lt;/li&gt;
+            &lt;/ul&gt;
+        """ % (
+            company.name,
+            yesterday.strftime('%d/%m/%Y'),
+            total_orders,
+            '{:,.2f}'.format(total_orders_amount),
+            total_invoices,
+            '{:,.2f}'.format(total_invoices_amount),
+        )
+
+        # Enviar relatório para o CEO/Manager da empresa
+        if company.partner_id.email:
+            env_company['mail.mail'].create({
+                'subject': 'Relatório Diário - %s' % yesterday.strftime('%d/%m/%Y'),
+                'body_html': report,
+                'email_to': company.partner_id.email,
+                'auto_delete': True,
+            }).send()
+
+        log("Report generated for company %s: %d orders, %d invoices" %
+            (company.name, total_orders, total_invoices))
+
+    except Exception as e:
+        log("Error processing company %s: %s" % (company.name, str(e)), level='error')
+        continue
+
+log("Multi-company report generation completed for %d companies" % len(companies))
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             8. CONDITIONAL EXECUTION - Executar apenas em condições específicas
+             ==================================================================== -->
+        <record id="cron_conditional_invoice_reminder" model="ir.cron">
+            <field name="name">Daily: Send Invoice Reminders (Business Days Only)</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="state">code</field>
+
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">5</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Enviar lembretes de fatura apenas em dias úteis
+from datetime import datetime
+
+log("Starting invoice reminder task")
+
+# Verificar se é dia útil (segunda a sexta)
+today = datetime.now()
+if today.weekday() >= 5:  # 5=Sábado, 6=Domingo
+    log("Skipping: today is weekend")
+    raise Exception("Skipping execution: weekend")
+
+# Verificar se é feriado (simplificado)
+# Em produção, integrar com calendario de feriados
+holidays = ['2025-01-01', '2025-12-25']  # Exemplo
+if today.strftime('%Y-%m-%d') in holidays:
+    log("Skipping: today is holiday")
+    raise Exception("Skipping execution: holiday")
+
+# Buscar faturas vencidas há 7, 14, 21 dias (lembretes semanais)
+from datetime import timedelta
+
+reminder_days = [7, 14, 21, 30]
+invoices_to_remind = env['account.move']
+
+for days in reminder_days:
+    due_date = fields.Date.subtract(fields.Date.today(), days=days)
+
+    invoices = env['account.move'].search([
+        ('move_type', '=', 'out_invoice'),
+        ('state', '=', 'posted'),
+        ('payment_state', 'in', ['not_paid', 'partial']),
+        ('invoice_date_due', '=', due_date),
+    ])
+
+    invoices_to_remind |= invoices
+
+# Enviar lembretes
+template = env.ref('account.email_template_edi_invoice', raise_if_not_found=False)
+sent_count = 0
+
+for invoice in invoices_to_remind:
+    if invoice.partner_id.email and template:
+        # Calcular dias em atraso
+        days_overdue = (fields.Date.today() - invoice.invoice_date_due).days
+
+        # Customizar template com dias de atraso
+        context = {
+            'days_overdue': days_overdue,
+        }
+
+        template.with_context(context).send_mail(invoice.id, force_send=True)
+        sent_count += 1
+
+        # Log no chatter
+        invoice.message_post(
+            body="&lt;p&gt;Lembrete de pagamento enviado (%d dias de atraso).&lt;/p&gt;" % days_overdue,
+            subject="Lembrete Enviado",
+            subtype_xmlid='mail.mt_note',
+        )
+
+log("Invoice reminders sent: %d invoices" % sent_count)
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             9. PERFORMANCE OPTIMIZED - Processamento otimizado em lotes
+             ==================================================================== -->
+        <record id="cron_optimized_batch_update" model="ir.cron">
+            <field name="name">Nightly: Batch Update Product Costs</field>
+            <field name="model_id" ref="product.model_product_template"/>
+            <field name="state">code</field>
+
+            <!-- Executar à noite (menos carga no sistema) -->
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">20</field>  <!-- Baixa prioridade -->
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="active" eval="True"/>
+
+            <field name="code">
+# Atualização em lote otimizada
+log("Starting optimized batch update")
+
+# Configurações de performance
+BATCH_SIZE = 500
+COMMIT_EVERY = 100
+
+# Buscar produtos que precisam atualização
+products = env['product.product'].search([
+    ('active', '=', True),
+    ('type', '=', 'product'),
+])
+
+total_products = len(products)
+processed = 0
+updated = 0
+
+log("Found %d products to process" % total_products)
+
+# Processar em lotes
+for i in range(0, total_products, BATCH_SIZE):
+    batch = products[i:i+BATCH_SIZE]
+
+    # Usar SQL direto para melhor performance (quando possível)
+    for product in batch:
+        try:
+            # Calcular custo médio das últimas compras
+            # (Exemplo simplificado)
+            old_cost = product.standard_price
+
+            # Nova lógica de custo
+            # new_cost = calculate_average_cost(product)
+            # product.standard_price = new_cost
+
+            processed += 1
+            # if old_cost != new_cost:
+            #     updated += 1
+
+            # Commit periódico para evitar locks longos
+            if processed % COMMIT_EVERY == 0:
+                env.cr.commit()
+                log("Progress: %d/%d products processed..." % (processed, total_products))
+
+        except Exception as e:
+            log("Error processing product %s: %s" % (product.name, str(e)), level='error')
+            continue
+
+# Commit final
+env.cr.commit()
+
+log("Batch update completed: %d products processed, %d updated" % (processed, updated))
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             10. INACTIVE CRON - Template para futuro uso
+             ==================================================================== -->
+        <record id="cron_template_future_use" model="ir.cron">
+            <field name="name">Template: Future Scheduled Task</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="state">code</field>
+
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="priority">5</field>
+            <field name="user_id" ref="base.user_admin"/>
+
+            <!-- INATIVO - Ativar quando necessário -->
+            <field name="active" eval="False"/>
+
+            <field name="code">
+# Template para futura tarefa agendada
+log("This is a template for future use")
+
+# Seu código aqui...
+pass
+            </field>
+        </record>
+
+    </data>
+</odoo>

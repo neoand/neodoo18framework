@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    =============================================
+    CHATTER USAGE EXAMPLES
+    =============================================
+
+    The chatter (mail thread) allows tracking messages, activities, and followers.
+
+    Requirements:
+    - Model must inherit 'mail.thread' and/or 'mail.activity.mixin'
+    - Add chatter widget in form view using <chatter/> tag
+
+    Available features:
+    - Messages and comments
+    - Activities (scheduled tasks)
+    - Followers (users to notify)
+    - Email integration
+    - Attachments
+
+    =============================================
+    -->
+
+    <data>
+
+        <!-- =============================================
+             BASIC CHATTER USAGE
+             ============================================= -->
+
+        <!-- Basic chatter with default configuration -->
+        <record id="view_basic_chatter_form" model="ir.ui.view">
+            <field name="name">basic.chatter.form</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <form string="Project">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                    <!-- Basic chatter - shows messages, activities, followers -->
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- =============================================
+             CUSTOMIZED CHATTER
+             ============================================= -->
+
+        <!-- Chatter with custom widget attributes -->
+        <record id="view_customized_chatter_form" model="ir.ui.view">
+            <field name="name">customized.chatter.form</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <form string="Project">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_tasks" type="object" class="oe_stat_button" icon="fa-tasks">
+                                <field name="task_count" widget="statinfo" string="Tasks"/>
+                            </button>
+                        </div>
+                        <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                                invisible="active"/>
+                        <field name="active" invisible="1"/>
+
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                                <field name="priority" widget="priority"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Description">
+                                <field name="description" widget="html"/>
+                            </page>
+                            <page string="Tasks">
+                                <field name="task_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="user_id"/>
+                                        <field name="date_deadline"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                    <!-- Customized chatter with specific options -->
+                    <chatter
+                        anchor="always"
+                        web_internal_subtypes="['mail.mt_comment', 'mail.mt_note']"/>
+                </form>
+            </field>
+        </record>
+
+        <!-- =============================================
+             MINIMAL CHATTER (MESSAGES ONLY)
+             ============================================= -->
+
+        <!-- Chatter showing only messages/log notes (no activities) -->
+        <record id="view_minimal_chatter_form" model="ir.ui.view">
+            <field name="name">minimal.chatter.form</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <form string="Project">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                    <!-- Minimal chatter - only messages -->
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- =============================================
+             CHATTER WITH CUSTOM SUBTYPE
+             ============================================= -->
+
+        <!-- Example with tracking fields that post to chatter -->
+        <record id="view_tracked_fields_form" model="ir.ui.view">
+            <field name="name">tracked.fields.chatter.form</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <form string="Project">
+                    <header>
+                        <button name="action_start" type="object" string="Start"
+                                invisible="state != 'planning'" class="oe_highlight"/>
+                        <button name="action_complete" type="object" string="Complete"
+                                invisible="state != 'in_progress'" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,planning,in_progress,done"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- These fields have tracking=True in model -->
+                                <field name="name"/>
+                                <field name="user_id"/>  <!-- Tracked: shows "Assigned to changed" -->
+                                <field name="partner_id"/>  <!-- Tracked -->
+                            </group>
+                            <group>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                                <field name="priority" widget="priority"/>  <!-- Tracked -->
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Description">
+                                <field name="description" widget="html"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                    <!-- Chatter shows tracked field changes automatically -->
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- =============================================
+             PORTAL VIEW WITH CHATTER
+             ============================================= -->
+
+        <!-- Chatter in portal view (for customers) -->
+        <record id="view_portal_chatter_form" model="ir.ui.view">
+            <field name="name">portal.chatter.form</field>
+            <field name="model">complete.model.example</field>
+            <field name="arch" type="xml">
+                <form string="Project" class="o_portal_form">
+                    <sheet>
+                        <div class="alert alert-info text-center" role="alert">
+                            <strong>Project Details</strong>
+                        </div>
+
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="partner_id" readonly="1"/>
+                            <field name="state" readonly="1"/>
+                            <field name="date_start" readonly="1"/>
+                            <field name="date_end" readonly="1"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Description">
+                                <field name="description" readonly="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                    <!-- Portal users can send messages through chatter -->
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+    </data>
+
+    <!--
+    =============================================
+    PYTHON MODEL EXAMPLE WITH MAIL THREAD
+    =============================================
+
+    from odoo import models, fields, api
+
+    class CompleteModelExample(models.Model):
+        _name = 'complete.model.example'
+        _description = 'Complete Model Example'
+        _inherit = ['mail.thread', 'mail.activity.mixin']  # Enable chatter
+
+        # Basic fields
+        name = fields.Char(string='Name', required=True, tracking=True)  # tracking=True posts changes to chatter
+        description = fields.Html(string='Description')
+
+        # Tracked fields (changes appear in chatter)
+        user_id = fields.Many2one('res.users', string='Assigned To', tracking=True)
+        partner_id = fields.Many2one('res.partner', string='Customer', tracking=True)
+        state = fields.Selection([
+            ('draft', 'Draft'),
+            ('planning', 'Planning'),
+            ('in_progress', 'In Progress'),
+            ('done', 'Done'),
+            ('cancelled', 'Cancelled')
+        ], default='draft', tracking=True, string='Status')
+        priority = fields.Selection([
+            ('0', 'Low'),
+            ('1', 'Normal'),
+            ('2', 'High'),
+            ('3', 'Urgent')
+        ], default='1', tracking=True)
+
+        # Methods that post to chatter
+        def action_start(self):
+            self.write({'state': 'in_progress'})
+            # Post custom message to chatter
+            self.message_post(
+                body="Project started",
+                subject="Project Status",
+                message_type='notification',
+                subtype_xmlid='mail.mt_note'
+            )
+
+        def action_complete(self):
+            self.write({'state': 'done'})
+            # Post message and notify followers
+            self.message_post(
+                body=f"Project <b>{self.name}</b> has been completed!",
+                subject="Project Completed",
+                message_type='notification',
+                subtype_xmlid='mail.mt_comment',  # Notifies all followers
+                partner_ids=self.message_partner_ids.ids  # Send to specific partners
+            )
+
+        @api.model
+        def create(self, vals):
+            record = super().create(vals)
+            # Auto-follow creator
+            record.message_subscribe(partner_ids=[self.env.user.partner_id.id])
+            # Post creation message
+            record.message_post(
+                body=f"Project created by {self.env.user.name}",
+                message_type='notification',
+                subtype_xmlid='mail.mt_note'
+            )
+            return record
+
+        def write(self, vals):
+            # Custom tracking messages for specific field changes
+            if 'user_id' in vals and vals['user_id']:
+                new_user = self.env['res.users'].browse(vals['user_id'])
+                self.message_post(
+                    body=f"Project assigned to {new_user.name}",
+                    subject="Assignment Changed",
+                    message_type='notification',
+                    partner_ids=[new_user.partner_id.id]  # Notify the assigned user
+                )
+            return super().write(vals)
+
+        # Method to send email via chatter
+        def action_send_email_to_customer(self):
+            self.ensure_one()
+            template = self.env.ref('module_name.email_template_project_notification')
+            template.send_mail(self.id, force_send=True)
+            self.message_post(
+                body="Notification email sent to customer",
+                message_type='notification',
+                subtype_xmlid='mail.mt_note'
+            )
+
+    =============================================
+    CHATTER API METHODS
+    =============================================
+
+    # Post message to chatter
+    record.message_post(
+        body='Message content (can be HTML)',
+        subject='Email subject',
+        message_type='email',  # or 'comment', 'notification'
+        subtype_xmlid='mail.mt_comment',  # or 'mail.mt_note' for internal notes
+        partner_ids=[partner.id],  # Recipients
+        attachment_ids=[attachment.id],  # Attachments
+        email_from='sender@example.com',
+        author_id=user.partner_id.id
+    )
+
+    # Subscribe users/partners to follow
+    record.message_subscribe(
+        partner_ids=[partner1.id, partner2.id],
+        subtype_ids=[subtype.id]  # Which message types to receive
+    )
+
+    # Unsubscribe
+    record.message_unsubscribe(partner_ids=[partner.id])
+
+    # Get followers
+    followers = record.message_partner_ids  # All followers (partners)
+    follower_users = record.message_follower_ids  # All followers (mail.followers records)
+
+    # Schedule activity
+    record.activity_schedule(
+        activity_type_id=activity_type.id,
+        summary='Follow up on project',
+        date_deadline=fields.Date.today(),
+        user_id=user.id,
+        note='Additional notes'
+    )
+
+    # Mark activity as done
+    activity.action_done()
+
+    =============================================
+    -->
+
+</odoo>

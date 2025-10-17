@@ -1,0 +1,459 @@
+# -*- coding: utf-8 -*-
+"""
+Complete __manifest__.py Example for Odoo 18
+
+This file demonstrates all available manifest fields and best practices
+for module declarations in Odoo 18.
+
+Documentation: https://www.odoo.com/documentation/18.0/developer/reference/backend/module.html
+"""
+
+{
+    # ===========================================
+    # BASIC INFORMATION (REQUIRED)
+    # ===========================================
+
+    # Module name (shown in Apps menu)
+    'name': 'Complete Module Example',
+
+    # Short summary (one line, used in Apps list)
+    'summary': 'Comprehensive example demonstrating all Odoo 18 manifest features',
+
+    # Detailed description (supports reStructuredText)
+    'description': """
+Complete Module Example for Odoo 18
+====================================
+
+This module demonstrates:
+    * All manifest fields available in Odoo 18
+    * Proper dependency management
+    * Data file loading order
+    * Asset management (JS/CSS)
+    * Multi-language support
+    * Module categorization
+    * Security and access rights configuration
+
+Features
+--------
+* Feature 1: Complete model examples with all field types
+* Feature 2: Advanced view templates (list, form, kanban, pivot, graph)
+* Feature 3: Wizard and transient model examples
+* Feature 4: HTTP controllers and API endpoints
+* Feature 5: Automated actions and scheduled jobs
+* Feature 6: Report templates (QWeb PDF)
+* Feature 7: Email templates
+* Feature 8: Multi-company support
+
+Technical Details
+-----------------
+* ORM best practices
+* Performance optimization
+* Security implementation
+* Testing examples
+* Documentation standards
+
+For more information, see:
+* README.md in module root
+* Documentation in docs/ folder
+    """,
+
+    # Module technical name (must match folder name)
+    # Best practice: use underscores, lowercase, descriptive
+    # Pattern: <category>_<functionality> or <company>_<module>
+    # Example: 'hr_timesheet', 'sale_management', 'website_blog'
+
+    # ===========================================
+    # VERSIONING
+    # ===========================================
+
+    # Version (format: odoo_version.module_major.module_minor.module_patch)
+    # Examples:
+    #   '18.0.1.0.0' - Initial release for Odoo 18
+    #   '18.0.1.1.0' - Minor features added
+    #   '18.0.1.0.1' - Bug fix
+    #   '18.0.2.0.0' - Major changes (breaking changes)
+    'version': '18.0.1.0.0',
+
+    # ===========================================
+    # MODULE CLASSIFICATION
+    # ===========================================
+
+    # Category (groups module in Apps menu)
+    # Standard categories:
+    #   - Accounting/Accounting & Finance
+    #   - Administration
+    #   - CRM
+    #   - eCommerce
+    #   - Human Resources
+    #   - Inventory/Inventory
+    #   - Manufacturing
+    #   - Marketing
+    #   - Point of Sale
+    #   - Productivity
+    #   - Project
+    #   - Purchases
+    #   - Sales/Sales
+    #   - Services
+    #   - Website/Website
+    #   - Extra Tools
+    #   - Hidden (not shown in Apps menu)
+    #   - Customizations
+    'category': 'Extra Tools',
+
+    # ===========================================
+    # AUTHORING
+    # ===========================================
+
+    # Author (your company or name)
+    'author': 'Your Company Name',
+
+    # Company website
+    'website': 'https://www.yourcompany.com',
+
+    # Maintainer (if different from author)
+    'maintainer': 'Your Company Name',
+
+    # Contributors (list of people who contributed)
+    'contributors': [
+        'Developer Name <developer@company.com>',
+        'Another Developer <dev2@company.com>',
+    ],
+
+    # ===========================================
+    # LICENSING
+    # ===========================================
+
+    # License (REQUIRED)
+    # Options:
+    #   - LGPL-3: Odoo Community (OCA modules typically use this)
+    #   - OEEL-1: Odoo Enterprise
+    #   - OPL-1: Odoo Proprietary License (for paid modules)
+    #   - Other: GPL-2, GPL-3, AGPL-3, MIT, BSD, Apache
+    'license': 'LGPL-3',
+
+    # ===========================================
+    # DEPENDENCIES
+    # ===========================================
+
+    # Modules that must be installed before this one
+    # - Always include 'base' (implicitly included if omitted)
+    # - Order matters for data loading
+    # - Use technical names, not display names
+    'depends': [
+        'base',                   # Required: Core Odoo
+        'web',                    # Web framework and UI components
+        'mail',                   # Chatter, messaging, activities
+        'portal',                 # Customer portal access
+        'contacts',               # Partner management
+        'sale_management',        # Sales module
+        'stock',                  # Inventory management
+        'account',                # Accounting
+        # Add more as needed
+    ],
+
+    # Modules that conflict with this one
+    # Installation will fail if any of these are installed
+    'excludes': [
+        # 'old_version_of_module',
+    ],
+
+    # External Python dependencies (installed via pip)
+    # Format: {'python': ['package_name', 'another_package>=1.0.0']}
+    'external_dependencies': {
+        'python': [
+            'pandas',              # Data analysis
+            'numpy',               # Numerical computing
+            'requests',            # HTTP library
+            'pillow',              # Image processing (usually already in Odoo)
+            'lxml',                # XML processing (usually already in Odoo)
+            # 'package_name>=1.0.0,<2.0.0',  # Version pinning
+        ],
+        'bin': [
+            # 'wkhtmltopdf',       # PDF generation (if not using Odoo's)
+            # 'phantomjs',         # Headless browser
+        ],
+    },
+
+    # ===========================================
+    # DATA FILES (Loading Order Matters!)
+    # ===========================================
+
+    # Files loaded when module is installed/updated
+    # Order is important:
+    # 1. Security (groups)
+    # 2. Data (master data, sequences, etc)
+    # 3. Security (access rights using models/groups from above)
+    # 4. Views
+    # 5. Reports
+    # 6. Wizards
+    # 7. Other data
+    'data': [
+        # ---- SECURITY (Groups) ----
+        'security/security_groups.xml',          # User groups definition
+
+        # ---- MASTER DATA ----
+        'data/ir_sequence_data.xml',             # Sequences for auto-numbering
+        'data/mail_template_data.xml',           # Email templates
+        'data/report_paperformat_data.xml',      # Report paper formats
+        'data/ir_cron_data.xml',                 # Scheduled actions
+        'data/master_data.xml',                  # Initial master data
+
+        # ---- SECURITY (Access Rights) ----
+        # MUST come after models are loaded
+        'security/ir.model.access.csv',          # Access rights (CRUD permissions)
+        'security/ir_rule_security.xml',         # Record rules (row-level security)
+
+        # ---- VIEWS ----
+        # Main views
+        'views/menu_views.xml',                  # Main menu structure
+        'views/res_config_settings_views.xml',   # Settings page
+
+        # Model views (alphabetical order recommended)
+        'views/model_a_views.xml',
+        'views/model_b_views.xml',
+        'views/model_c_views.xml',
+
+        # Search views
+        'views/search_views.xml',
+
+        # ---- REPORTS ----
+        'reports/report_templates.xml',          # Report definitions
+        'reports/report_model_a.xml',            # QWeb report for Model A
+        'reports/report_model_b.xml',
+
+        # ---- WIZARDS ----
+        'wizard/wizard_a_views.xml',
+        'wizard/wizard_b_views.xml',
+
+        # ---- PORTAL / WEBSITE ----
+        'views/portal_templates.xml',            # Customer portal templates
+        'views/website_templates.xml',           # Website pages
+
+        # ---- OTHER DATA ----
+        'data/mail_message_subtype_data.xml',    # Custom message subtypes for chatter
+        'data/ir_actions_server_data.xml',       # Automated actions
+    ],
+
+    # Files loaded only in demonstration mode (--demo flag)
+    # Used for testing and showcasing features
+    'demo': [
+        'demo/demo_data.xml',                    # Demo records
+        'demo/demo_users.xml',                   # Demo users
+        'demo/demo_partners.xml',                # Demo partners
+    ],
+
+    # ===========================================
+    # ASSETS (JavaScript, CSS, SCSS)
+    # ===========================================
+
+    # Asset bundles for web interface
+    # New in Odoo 16+: declarative asset management
+    'assets': {
+        # Backend assets (loaded in Odoo backend)
+        'web.assets_backend': [
+            # JavaScript files
+            'module_name/static/src/js/*.js',
+            'module_name/static/src/components/**/*.js',
+
+            # XML templates for OWL components
+            'module_name/static/src/xml/*.xml',
+
+            # CSS/SCSS
+            'module_name/static/src/scss/backend.scss',
+            'module_name/static/src/css/backend.css',
+        ],
+
+        # Frontend assets (loaded on website)
+        'web.assets_frontend': [
+            'module_name/static/src/js/website.js',
+            'module_name/static/src/scss/website.scss',
+        ],
+
+        # Common assets (loaded everywhere)
+        'web.assets_common': [
+            'module_name/static/src/js/common.js',
+        ],
+
+        # Point of Sale assets
+        'point_of_sale.assets': [
+            'module_name/static/src/js/pos.js',
+        ],
+
+        # QUnit test assets
+        'web.qunit_suite_tests': [
+            'module_name/static/tests/**/*.js',
+        ],
+
+        # Third-party libraries
+        'web.assets_backend': [
+            ('include', 'web._assets_helpers'),
+            'module_name/static/lib/chart.js',
+        ],
+    },
+
+    # ===========================================
+    # QWeb TEMPLATES
+    # ===========================================
+
+    # QWeb templates (legacy, prefer assets for new code)
+    # Still used for reports and some specific cases
+    'qweb': [
+        # 'static/src/xml/templates.xml',  # Use 'assets' instead for Odoo 18
+    ],
+
+    # ===========================================
+    # MODULE BEHAVIOR
+    # ===========================================
+
+    # Auto-install if all dependencies are installed
+    # Use for bridge/glue modules
+    'auto_install': False,
+
+    # Application module (shown in main Apps menu with icon)
+    # Set to True for main modules, False for sub-modules
+    'application': True,
+
+    # Installable (can be installed via UI/CLI)
+    # Set to False to disable module (e.g., deprecated modules)
+    'installable': True,
+
+    # Active (for backward compatibility, same as installable)
+    'active': True,
+
+    # ===========================================
+    # MODULE PRESENTATION
+    # ===========================================
+
+    # Module icon
+    # Path relative to module root
+    # Recommended: 128x128px PNG with transparent background
+    'images': [
+        'static/description/icon.png',
+        'static/description/banner.gif',
+        'static/description/screenshot1.png',
+        'static/description/screenshot2.png',
+    ],
+
+    # ===========================================
+    # POST-INSTALL/UPDATE HOOKS
+    # ===========================================
+
+    # Python function called after module installation
+    # Format: 'module.path.function_name'
+    # Function signature: def post_init_hook(env)
+    'post_init_hook': 'post_init_hook',
+
+    # Python function called after module update
+    'post_load': None,
+
+    # Python function called before module uninstall
+    'pre_init_hook': None,
+
+    # Python function called before module uninstall
+    'uninstall_hook': 'uninstall_hook',
+
+    # ===========================================
+    # PRICING (Odoo.com App Store)
+    # ===========================================
+
+    # Price in EUR (for paid modules on Odoo App Store)
+    'price': 0.00,
+
+    # Currency (EUR or USD)
+    'currency': 'EUR',
+
+    # ===========================================
+    # DEPRECATED / LEGACY FIELDS
+    # ===========================================
+
+    # These fields are kept for backward compatibility
+    # but are not recommended for new modules in Odoo 18
+
+    # 'init_xml': [],              # Use 'data' instead
+    # 'update_xml': [],            # Use 'data' instead
+    # 'demo_xml': [],              # Use 'demo' instead
+    # 'test': [],                  # Use Python tests instead
+    # 'complexity': 'normal',      # Deprecated
+    # 'sequence': 10,              # Use category instead
+    # 'certificate': '',           # Deprecated
+
+    # ===========================================
+    # CUSTOM FIELDS (Module-Specific)
+    # ===========================================
+
+    # You can add custom fields for your own use
+    # Odoo will ignore fields it doesn't recognize
+
+    'support': 'support@yourcompany.com',
+    'documentation': 'https://docs.yourcompany.com/module_name',
+    'repository': 'https://github.com/yourcompany/module_name',
+    'issue_tracker': 'https://github.com/yourcompany/module_name/issues',
+
+    # Development status (for internal tracking)
+    'development_status': 'Production/Stable',
+    # Options: Alpha, Beta, Production/Stable, Mature
+
+    # Live test URL (for Odoo.com App Store)
+    'live_test_url': 'https://demo.yourcompany.com',
+
+    # Compatibility notes
+    'odoo_version_min': '18.0',
+    'python_version_min': '3.10',
+
+}
+
+
+# ===========================================
+# POST-INSTALL HOOK EXAMPLE
+# ===========================================
+
+def post_init_hook(env):
+    """
+    Post-installation hook
+
+    Called after module installation.
+    Use for:
+    - Data migration
+    - Initial configuration
+    - Updating existing records
+    - Creating dynamic data
+
+    Args:
+        env: Odoo environment
+    """
+    # Example: Set default values
+    companies = env['res.company'].search([])
+    companies.write({
+        'module_setting_field': True,
+    })
+
+    # Example: Create initial data
+    env['your.model'].create({
+        'name': 'Default Record',
+        'active': True,
+    })
+
+    # Example: Update existing records
+    records = env['existing.model'].search([('field', '=', 'old_value')])
+    records.write({'field': 'new_value'})
+
+
+def uninstall_hook(env):
+    """
+    Pre-uninstall hook
+
+    Called before module uninstallation.
+    Use for:
+    - Cleanup operations
+    - Removing external data
+    - Logging
+
+    Args:
+        env: Odoo environment
+    """
+    # Example: Archive instead of delete
+    records = env['your.model'].search([])
+    records.write({'active': False})
+
+    # Example: Clean up external resources
+    # (files, API connections, etc.)

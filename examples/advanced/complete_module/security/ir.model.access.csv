@@ -1,0 +1,131 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+"# ===============================================
+# Access Rights for Complete Model Example
+# ===============================================
+#
+# Format: id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+#
+# Permission Levels:
+# - perm_read (1): Can view records
+# - perm_write (1): Can edit records
+# - perm_create (1): Can create records
+# - perm_unlink (1): Can delete records
+#
+# ===============================================
+
+# ---------------------------------------------
+# MAIN MODEL: complete.model.example
+# ---------------------------------------------
+
+# PUBLIC ACCESS (no group_id) - Read only for portal/public users
+access_complete_model_example_public,Complete Model Public Access,model_complete_model_example,,1,0,0,0
+
+# USER ACCESS - Read and create for regular users
+access_complete_model_example_user,Complete Model User Access,model_complete_model_example,base.group_user,1,1,1,0
+
+# MANAGER ACCESS - Full access for managers
+access_complete_model_example_manager,Complete Model Manager Access,model_complete_model_example,base.group_system,1,1,1,1
+
+# PORTAL ACCESS - Read own projects
+access_complete_model_example_portal,Complete Model Portal Access,model_complete_model_example,base.group_portal,1,0,0,0
+
+# ---------------------------------------------
+# RELATED MODEL: complete.model.task
+# ---------------------------------------------
+
+# Public - No access
+access_complete_model_task_public,Complete Model Task Public,model_complete_model_task,,0,0,0,0
+
+# User - Full access (will be limited by record rules)
+access_complete_model_task_user,Complete Model Task User,model_complete_model_task,base.group_user,1,1,1,1
+
+# Manager - Full access
+access_complete_model_task_manager,Complete Model Task Manager,model_complete_model_task,base.group_system,1,1,1,1
+
+# Portal - Read own tasks
+access_complete_model_task_portal,Complete Model Task Portal,model_complete_model_task,base.group_portal,1,0,0,0
+
+# ---------------------------------------------
+# RELATED MODEL: complete.model.timesheet
+# ---------------------------------------------
+
+# User - Full access to own timesheets
+access_complete_model_timesheet_user,Complete Model Timesheet User,model_complete_model_timesheet,base.group_user,1,1,1,1
+
+# Manager - Full access
+access_complete_model_timesheet_manager,Complete Model Timesheet Manager,model_complete_model_timesheet,base.group_system,1,1,1,1
+
+# ---------------------------------------------
+# CONFIGURATION: complete.model.tag
+# ---------------------------------------------
+
+# User - Read all, no modifications
+access_complete_model_tag_user,Complete Model Tag User,model_complete_model_tag,base.group_user,1,0,0,0
+
+# Manager - Full access
+access_complete_model_tag_manager,Complete Model Tag Manager,model_complete_model_tag,base.group_system,1,1,1,1
+
+# ---------------------------------------------
+# CONFIGURATION: complete.model.stage
+# ---------------------------------------------
+
+# User - Read all
+access_complete_model_stage_user,Complete Model Stage User,model_complete_model_stage,base.group_user,1,0,0,0
+
+# Manager - Full access
+access_complete_model_stage_manager,Complete Model Stage Manager,model_complete_model_stage,base.group_system,1,1,1,1
+
+# ---------------------------------------------
+# TRANSIENT MODELS (Wizards)
+# ---------------------------------------------
+
+# Mass Update Wizard - User access
+access_project_mass_update_wizard,Project Mass Update Wizard,model_project_mass_update_wizard,base.group_user,1,1,1,1
+
+# Report Wizard - User access
+access_project_report_wizard,Project Report Wizard,model_project_report_wizard,base.group_user,1,1,1,1
+
+# Import Wizard - Manager only
+access_project_import_wizard,Project Import Wizard,model_project_import_wizard,base.group_system,1,1,1,1
+
+# Batch Action Wizard - Manager only
+access_project_batch_action_wizard,Project Batch Action Wizard,model_project_batch_action_wizard,base.group_system,1,1,1,1
+
+# ---------------------------------------------
+# CUSTOM SECURITY GROUPS (if defined)
+# ---------------------------------------------
+
+# Project User (custom group)
+# access_complete_model_example_project_user,Complete Model Project User,model_complete_model_example,module.group_project_user,1,1,1,0
+
+# Project Manager (custom group)
+# access_complete_model_example_project_manager,Complete Model Project Manager,model_complete_model_example,module.group_project_manager,1,1,1,1
+
+# ---------------------------------------------
+# NOTES:
+# ---------------------------------------------
+# 1. Always define public access first (no group)
+# 2. Then base.group_portal for portal users
+# 3. Then base.group_user for internal users
+# 4. Finally base.group_system for administrators
+#
+# 5. Use record rules (ir.rule) to limit which records users can access
+#    Access rights control MODEL access
+#    Record rules control RECORD access
+#
+# 6. For transient models (wizards), usually give full access since
+#    they only exist temporarily in memory
+#
+# 7. Common Odoo groups:
+#    - base.group_portal: Portal users (customers)
+#    - base.group_user: Internal users
+#    - base.group_system: Settings/Administrator
+#    - base.group_multi_company: Multi-company users
+#    - base.group_public: Public website visitors
+#
+# 8. Multi-company:
+#    Access rights are global
+#    Use record rules with company_ids for multi-company filtering
+#
+# ===============================================
+"

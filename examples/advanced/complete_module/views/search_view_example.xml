@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    =============================================================================
+    SEARCH VIEW EXAMPLE FOR ODOO 18
+    =============================================================================
+
+    This file demonstrates all search view features available in Odoo 18:
+    - Field filters
+    - Filter domains
+    - Group by
+    - Search panels
+    - Comparison features
+    - Custom filters
+    =============================================================================
+    -->
+
+    <!-- ========================================= -->
+    <!-- BASIC SEARCH VIEW -->
+    <!-- ========================================= -->
+
+    <record id="view_project_search_basic" model="ir.ui.view">
+        <field name="name">project.project.search.basic</field>
+        <field name="model">project.project</field>
+        <field name="arch" type="xml">
+            <search string="Projects">
+
+                <!-- Field filters (text search) -->
+                <field name="name" string="Project Name" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
+                <field name="code"/>
+                <field name="partner_id" operator="child_of"/>
+                <field name="user_id"/>
+
+                <!-- Separator (visual only) -->
+                <separator/>
+
+                <!-- Predefined filters -->
+                <filter string="My Projects" name="my_projects" domain="[('user_id', '=', uid)]"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+
+                <separator/>
+
+                <!-- Group by -->
+                <group expand="0" string="Group By">
+                    <filter string="Customer" name="group_partner" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Manager" name="group_user" context="{'group_by': 'user_id'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- ========================================= -->
+    <!-- ADVANCED SEARCH VIEW -->
+    <!-- ========================================= -->
+
+    <record id="view_project_search_advanced" model="ir.ui.view">
+        <field name="name">project.project.search.advanced</field>
+        <field name="model">project.project</field>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <search string="Projects Advanced Search">
+
+                <!-- ========== FIELD FILTERS ========== -->
+
+                <!-- Text fields with custom filter_domain -->
+                <field name="name"
+                       string="Project"
+                       filter_domain="['|', '|', ('name', 'ilike', self), ('code', 'ilike', self), ('reference', 'ilike', self)]"/>
+
+                <!-- Many2one with operator -->
+                <field name="partner_id"
+                       string="Customer"
+                       operator="child_of"
+                       filter_domain="[('partner_id', 'child_of', self)]"/>
+
+                <field name="user_id" string="Manager"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <!-- Selection field -->
+                <field name="state"/>
+                <field name="priority"/>
+                <field name="project_type"/>
+
+                <!-- Date fields -->
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="date_deadline"/>
+
+                <!-- Many2many -->
+                <field name="tag_ids" string="Tags"/>
+
+                <separator/>
+
+                <!-- ========== PREDEFINED FILTERS ========== -->
+
+                <!-- User-related filters -->
+                <filter string="My Projects"
+                        name="my_projects"
+                        domain="[('user_id', '=', uid)]"
+                        help="Projects I manage"/>
+
+                <filter string="My Team Projects"
+                        name="my_team_projects"
+                        domain="[('team_member_ids', 'in', uid)]"
+                        help="Projects where I am a team member"/>
+
+                <separator/>
+
+                <!-- State filters -->
+                <filter string="Draft"
+                        name="draft"
+                        domain="[('state', '=', 'draft')]"/>
+
+                <filter string="In Progress"
+                        name="in_progress"
+                        domain="[('state', '=', 'in_progress')]"/>
+
+                <filter string="Done"
+                        name="done"
+                        domain="[('state', '=', 'done')]"/>
+
+                <separator/>
+
+                <!-- Date filters -->
+                <filter string="Starting This Month"
+                        name="start_this_month"
+                        domain="[('date_start', '&gt;=', datetime.datetime.now().replace(day=1).strftime('%Y-%m-%d')),
+                                 ('date_start', '&lt;=', (datetime.datetime.now().replace(day=1) + datetime.timedelta(days=32)).replace(day=1).strftime('%Y-%m-%d'))]"/>
+
+                <filter string="Starting This Week"
+                        name="start_this_week"
+                        domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=context_today().weekday())).strftime('%Y-%m-%d')),
+                                 ('date_start', '&lt;=', (context_today() + datetime.timedelta(days=6-context_today().weekday())).strftime('%Y-%m-%d'))]"/>
+
+                <separator/>
+
+                <!-- Date range filters (Odoo 18) -->
+                <filter string="Start Date" name="filter_date_start" date="date_start" default_period="this_month"/>
+                <filter string="End Date" name="filter_date_end" date="date_end"/>
+                <filter string="Deadline" name="filter_deadline" date="date_deadline"/>
+
+                <separator/>
+
+                <!-- Business logic filters -->
+                <filter string="Overdue"
+                        name="overdue"
+                        domain="[('date_deadline', '&lt;', context_today().strftime('%Y-%m-%d')),
+                                 ('state', 'not in', ('done', 'cancelled'))]"
+                        help="Projects past their deadline"/>
+
+                <filter string="Urgent"
+                        name="urgent"
+                        domain="[('priority', '=', '3')]"/>
+
+                <filter string="High Priority"
+                        name="high_priority"
+                        domain="[('priority', 'in', ('2', '3'))]"/>
+
+                <separator/>
+
+                <!-- Billable filters -->
+                <filter string="Billable"
+                        name="billable"
+                        domain="[('is_billable', '=', True)]"/>
+
+                <filter string="Non-Billable"
+                        name="non_billable"
+                        domain="[('is_billable', '=', False)]"/>
+
+                <separator/>
+
+                <!-- Archive filter -->
+                <filter string="Archived"
+                        name="inactive"
+                        domain="[('active', '=', False)]"/>
+
+                <separator/>
+
+                <!-- ========== GROUP BY ========== -->
+
+                <group expand="0" string="Group By">
+                    <!-- Relational fields -->
+                    <filter string="Customer"
+                            name="group_partner"
+                            context="{'group_by': 'partner_id'}"/>
+
+                    <filter string="Project Manager"
+                            name="group_user"
+                            context="{'group_by': 'user_id'}"/>
+
+                    <filter string="Company"
+                            name="group_company"
+                            context="{'group_by': 'company_id'}"
+                            groups="base.group_multi_company"/>
+
+                    <separator orientation="vertical"/>
+
+                    <!-- Selection fields -->
+                    <filter string="Status"
+                            name="group_state"
+                            context="{'group_by': 'state'}"/>
+
+                    <filter string="Priority"
+                            name="group_priority"
+                            context="{'group_by': 'priority'}"/>
+
+                    <filter string="Project Type"
+                            name="group_type"
+                            context="{'group_by': 'project_type'}"/>
+
+                    <separator orientation="vertical"/>
+
+                    <!-- Date grouping (supports day, week, month, quarter, year) -->
+                    <filter string="Start Date: Month"
+                            name="group_date_start_month"
+                            context="{'group_by': 'date_start:month'}"/>
+
+                    <filter string="Start Date: Week"
+                            name="group_date_start_week"
+                            context="{'group_by': 'date_start:week'}"/>
+
+                    <filter string="Start Date: Year"
+                            name="group_date_start_year"
+                            context="{'group_by': 'date_start:year'}"/>
+                </group>
+
+                <!-- ========== SEARCH PANEL (Odoo 18) ========== -->
+
+                <!-- Search panel appears on the left side -->
+                <searchpanel>
+                    <!-- Select (single choice, like radio buttons) -->
+                    <field name="company_id"
+                           string="Company"
+                           select="one"
+                           icon="fa-building"
+                           groups="base.group_multi_company"
+                           enable_counters="1"/>
+
+                    <!-- Select with hierarchy -->
+                    <field name="partner_id"
+                           string="Customer"
+                           select="one"
+                           hierarchize="1"
+                           icon="fa-users"
+                           enable_counters="1"/>
+
+                    <!-- Select multi (checkboxes) -->
+                    <field name="state"
+                           string="Status"
+                           select="multi"
+                           icon="fa-tasks"
+                           enable_counters="1"/>
+
+                    <field name="tag_ids"
+                           string="Tags"
+                           select="multi"
+                           icon="fa-tag"
+                           color_field="color"
+                           enable_counters="1"/>
+                </searchpanel>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- ========================================= -->
+    <!-- SEARCH VIEW WITH COMPARISON (Odoo 18) -->
+    <!-- ========================================= -->
+
+    <record id="view_project_search_comparison" model="ir.ui.view">
+        <field name="name">project.project.search.comparison</field>
+        <field name="model">project.project</field>
+        <field name="priority">30</field>
+        <field name="arch" type="xml">
+            <search string="Projects Comparison">
+
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+
+                <separator/>
+
+                <!-- Filters for comparison -->
+                <filter string="This Month"
+                        name="this_month"
+                        date="date_start"
+                        default_period="this_month"/>
+
+                <filter string="Last Month"
+                        name="last_month"
+                        date="date_start"
+                        default_period="last_month"/>
+
+                <separator/>
+
+                <!-- Comparison filter (Odoo 18 feature) -->
+                <filter string="Compare Periods"
+                        name="compare_periods"
+                        context="{'comparison': {'range': 'this_month', 'comparisonRange': 'previous_period'}}"/>
+
+                <separator/>
+
+                <group expand="0" string="Group By">
+                    <filter string="Customer" name="group_partner" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Manager" name="group_user" context="{'group_by': 'user_id'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+
+                    <separator orientation="vertical"/>
+
+                    <filter string="Start Date: Month"
+                            name="group_month"
+                            context="{'group_by': 'date_start:month'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- ========================================= -->
+    <!-- CUSTOM FILTER EXAMPLES -->
+    <!-- ========================================= -->
+
+    <!-- Saved filters (ir.filters) can be created via UI or code -->
+    <record id="filter_my_urgent_projects" model="ir.filters">
+        <field name="name">My Urgent Projects</field>
+        <field name="model_id">project.project</field>
+        <field name="user_id" eval="False"/>  <!-- False = shared with all users -->
+        <field name="domain">[('user_id', '=', uid), ('priority', '=', '3'), ('state', '!=', 'done')]</field>
+        <field name="context">{}</field>
+        <field name="sort">["priority desc", "date_deadline asc"]</field>
+        <field name="is_default" eval="False"/>
+        <field name="action_id" ref="action_project_list"/>
+    </record>
+
+</odoo>

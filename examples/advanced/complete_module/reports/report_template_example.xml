@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    ============================================================================
+    TEMPLATE QWEB GENÉRICO - GUIA COMPLETO - ODOO 18
+    ============================================================================
+
+    Este arquivo demonstra todos os recursos principais de templates QWeb:
+    - Diferentes tipos de layouts
+    - Diretivas QWeb (t-foreach, t-if, t-esc, t-field, etc)
+    - Formatação de dados (datas, números, moeda)
+    - Uso de imagens e logos
+    - CSS inline e classes Bootstrap
+    - Boas práticas e exemplos comentados
+
+    ============================================================================
+    -->
+
+    <!--
+    ============================================================================
+    1. LAYOUTS DISPONÍVEIS NO ODOO
+    ============================================================================
+    -->
+
+    <!--
+    Layout 1: External Layout Standard
+    Layout padrão com header e footer da empresa
+    -->
+    <template id="example_external_layout_standard">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h1>Conteúdo com Layout Externo Padrão</h1>
+                <p>Este layout inclui automaticamente o cabeçalho e rodapé da empresa.</p>
+            </div>
+        </t>
+    </template>
+
+    <!--
+    Layout 2: External Layout Clean
+    Layout minimalista sem decorações
+    -->
+    <template id="example_external_layout_clean">
+        <t t-call="web.external_layout_clean">
+            <div class="page">
+                <h1>Conteúdo com Layout Limpo</h1>
+                <p>Layout minimalista ideal para documentos internos.</p>
+            </div>
+        </t>
+    </template>
+
+    <!--
+    Layout 3: External Layout Boxed
+    Layout com borda ao redor do conteúdo
+    -->
+    <template id="example_external_layout_boxed">
+        <t t-call="web.external_layout_boxed">
+            <div class="page">
+                <h1>Conteúdo com Layout Emoldurado</h1>
+                <p>Layout com borda decorativa.</p>
+            </div>
+        </t>
+    </template>
+
+    <!--
+    Layout 4: Basic Layout (sem header/footer)
+    Para total controle do layout
+    -->
+    <template id="example_basic_layout">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h1>Layout Básico</h1>
+                <p>Sem cabeçalho ou rodapé automático. Total controle.</p>
+            </div>
+        </t>
+    </template>
+
+    <!--
+    Layout 5: HTML Container (para relatórios HTML não-PDF)
+    -->
+    <template id="example_html_container">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <h1>Relatório HTML Interativo</h1>
+                    <p>Pode incluir JavaScript e interatividade.</p>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <!--
+    ============================================================================
+    2. DIRETIVAS QWEB - CONTROLE DE FLUXO
+    ============================================================================
+    -->
+
+    <template id="example_qweb_directives">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2>Exemplos de Diretivas QWeb</h2>
+
+                <!--
+                t-if: Renderiza condicionalmente
+                -->
+                <div class="section">
+                    <h4>1. Diretiva t-if (Condicional)</h4>
+
+                    <!-- Exemplo básico -->
+                    <t t-if="doc.state == 'draft'">
+                        <div class="alert alert-warning">
+                            Este documento está em rascunho.
+                        </div>
+                    </t>
+
+                    <!-- Exemplo com t-elif e t-else -->
+                    <t t-if="doc.amount_total > 10000">
+                        <p style="color: green;">Pedido de alto valor!</p>
+                    </t>
+                    <t t-elif="doc.amount_total > 5000">
+                        <p style="color: orange;">Pedido de valor médio.</p>
+                    </t>
+                    <t t-else="">
+                        <p style="color: blue;">Pedido padrão.</p>
+                    </t>
+
+                    <!-- Múltiplas condições -->
+                    <t t-if="doc.partner_id and doc.partner_id.country_id">
+                        <p>Cliente internacional: <span t-field="doc.partner_id.country_id.name"/></p>
+                    </t>
+
+                    <!-- Verificação de existência -->
+                    <t t-if="doc.note">
+                        <div class="mt-3">
+                            <strong>Observações:</strong>
+                            <p t-field="doc.note"/>
+                        </div>
+                    </t>
+                </div>
+
+                <!--
+                t-foreach: Loop sobre coleções
+                -->
+                <div class="section mt-4">
+                    <h4>2. Diretiva t-foreach (Loop)</h4>
+
+                    <!-- Loop básico -->
+                    <ul>
+                        <t t-foreach="doc.order_line" t-as="line">
+                            <li>
+                                <span t-field="line.product_id.name"/> -
+                                Qtd: <span t-field="line.product_uom_qty"/>
+                            </li>
+                        </t>
+                    </ul>
+
+                    <!-- Loop com índice e variáveis especiais -->
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Produto</th>
+                                <th>Status</th>
+                                <th>Info Loop</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="doc.order_line" t-as="line">
+                                <tr>
+                                    <!-- line_index: índice baseado em 0 -->
+                                    <td><span t-esc="line_index + 1"/></td>
+
+                                    <!-- Variável do loop -->
+                                    <td><span t-field="line.product_id.name"/></td>
+
+                                    <!-- line_first: True se é o primeiro item -->
+                                    <td>
+                                        <t t-if="line_first">
+                                            <span class="badge badge-primary">Primeiro</span>
+                                        </t>
+                                        <!-- line_last: True se é o último item -->
+                                        <t t-elif="line_last">
+                                            <span class="badge badge-success">Último</span>
+                                        </t>
+                                        <t t-else="">
+                                            <span class="badge badge-secondary">Item <t t-esc="line_index + 1"/></span>
+                                        </t>
+                                    </td>
+
+                                    <!-- Informações do loop -->
+                                    <td>
+                                        <!-- line_size: total de itens -->
+                                        Total: <span t-esc="line_size"/>
+                                        <!-- line_parity: 'odd' ou 'even' -->
+                                        | Paridade: <span t-esc="line_parity"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <!-- Loop com range -->
+                    <p>Números de 1 a 5:</p>
+                    <t t-foreach="range(1, 6)" t-as="number">
+                        <span t-esc="number"/><t t-if="not number_last">, </t>
+                    </t>
+
+                    <!-- Loop sobre dicionário -->
+                    <t t-set="status_dict" t-value="{'draft': 'Rascunho', 'sent': 'Enviado', 'sale': 'Confirmado'}"/>
+                    <ul>
+                        <t t-foreach="status_dict.items()" t-as="item">
+                            <li>
+                                Chave: <t t-esc="item[0]"/> -
+                                Valor: <t t-esc="item[1]"/>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+
+                <!--
+                t-set: Definir variáveis
+                -->
+                <div class="section mt-4">
+                    <h4>3. Diretiva t-set (Variáveis)</h4>
+
+                    <!-- Variável simples -->
+                    <t t-set="company_name" t-value="doc.company_id.name"/>
+                    <p>Empresa: <span t-esc="company_name"/></p>
+
+                    <!-- Variável com cálculo -->
+                    <t t-set="total_items" t-value="len(doc.order_line)"/>
+                    <p>Total de itens: <span t-esc="total_items"/></p>
+
+                    <!-- Variável com expressão complexa -->
+                    <t t-set="total_qty" t-value="sum(line.product_uom_qty for line in doc.order_line)"/>
+                    <p>Quantidade total: <span t-esc="total_qty"/></p>
+
+                    <!-- Variável booleana -->
+                    <t t-set="has_discount" t-value="any(line.discount > 0 for line in doc.order_line)"/>
+                    <t t-if="has_discount">
+                        <div class="alert alert-info">
+                            Este pedido contém itens com desconto.
+                        </div>
+                    </t>
+
+                    <!-- Variável com conteúdo HTML (body) -->
+                    <t t-set="custom_message">
+                        <div class="alert alert-success">
+                            <strong>Mensagem personalizada:</strong>
+                            Este conteúdo é definido como HTML.
+                        </div>
+                    </t>
+                    <t t-raw="custom_message"/>
+                </div>
+
+                <!--
+                t-esc vs t-field vs t-raw
+                -->
+                <div class="section mt-4">
+                    <h4>4. t-esc vs t-field vs t-raw</h4>
+
+                    <!-- t-esc: Escapa HTML, mostra texto puro -->
+                    <p>
+                        <strong>t-esc (texto escapado):</strong>
+                        <span t-esc="doc.name"/>
+                    </p>
+
+                    <!-- t-field: Formata baseado no tipo do campo -->
+                    <p>
+                        <strong>t-field (formatação automática):</strong>
+                        <span t-field="doc.date_order"/>
+                    </p>
+
+                    <!-- t-raw: Renderiza HTML sem escapar -->
+                    <t t-set="html_content" t-value="'&lt;b&gt;Texto em negrito&lt;/b&gt;'"/>
+                    <p>
+                        <strong>t-raw (HTML não escapado):</strong>
+                        <span t-raw="html_content"/>
+                    </p>
+
+                    <!-- Comparação lado a lado -->
+                    <t t-set="test_text" t-value="'&lt;script&gt;alert(1)&lt;/script&gt;'"/>
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Com t-esc (seguro):</strong><br/>
+                            <span t-esc="test_text"/>
+                        </div>
+                        <div class="col-6">
+                            <strong>Com t-raw (perigoso):</strong><br/>
+                            <span t-raw="test_text"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                t-att: Atributos dinâmicos
+                -->
+                <div class="section mt-4">
+                    <h4>5. Diretiva t-att (Atributos Dinâmicos)</h4>
+
+                    <!-- Atributo único -->
+                    <div t-att-class="'alert alert-' + ('success' if doc.state == 'sale' else 'warning')">
+                        Status dinâmico baseado no estado.
+                    </div>
+
+                    <!-- Múltiplos atributos -->
+                    <div t-att-class="'badge badge-primary'"
+                         t-att-title="'Pedido: ' + doc.name"
+                         t-att-data-id="doc.id">
+                        Passe o mouse para ver o tooltip
+                    </div>
+
+                    <!-- Atributo style dinâmico -->
+                    <div t-att-style="'color: ' + ('green' if doc.amount_total > 1000 else 'red') + ';'">
+                        Total: <span t-field="doc.amount_total"/>
+                    </div>
+
+                    <!-- src de imagem dinâmico -->
+                    <img t-att-src="'/web/image/res.company/' + str(doc.company_id.id) + '/logo'"
+                         alt="Company Logo"
+                         style="max-width: 100px;"/>
+                </div>
+
+                <!--
+                t-call: Chamar sub-templates
+                -->
+                <div class="section mt-4">
+                    <h4>6. Diretiva t-call (Sub-templates)</h4>
+
+                    <!-- Definir um sub-template -->
+                    <t t-set="product_badge">
+                        <span class="badge badge-info">
+                            <t t-esc="product_name"/>
+                        </span>
+                    </t>
+
+                    <!-- Usar o sub-template -->
+                    <t t-foreach="doc.order_line[:3]" t-as="line">
+                        <t t-set="product_name" t-value="line.product_id.name"/>
+                        <t t-raw="product_badge"/>
+                    </t>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <!--
+    ============================================================================
+    3. FORMATAÇÃO DE DADOS
+    ============================================================================
+    -->
+
+    <template id="example_data_formatting">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2>Formatação de Dados</h2>
+
+                <!--
+                FORMATAÇÃO DE DATAS
+                -->
+                <div class="section">
+                    <h4>1. Datas e Horários</h4>
+
+                    <!-- Data padrão -->
+                    <p>
+                        <strong>Data padrão:</strong>
+                        <span t-field="doc.date_order"/>
+                    </p>
+
+                    <!-- Data com widget -->
+                    <p>
+                        <strong>Somente data:</strong>
+                        <span t-field="doc.date_order" t-options='{"widget": "date"}'/>
+                    </p>
+
+                    <!-- Data e hora -->
+                    <p>
+                        <strong>Data e hora:</strong>
+                        <span t-field="doc.date_order" t-options='{"widget": "datetime"}'/>
+                    </p>
+
+                    <!-- Formato personalizado -->
+                    <p>
+                        <strong>Formato personalizado:</strong>
+                        <span t-esc="doc.date_order.strftime('%d/%m/%Y')" t-if="doc.date_order"/>
+                    </p>
+
+                    <!-- Data relativa -->
+                    <p>
+                        <strong>Data relativa:</strong>
+                        <span t-field="doc.date_order" t-options='{"widget": "relative"}'/>
+                    </p>
+
+                    <!-- Data atual -->
+                    <p>
+                        <strong>Data/Hora atual:</strong>
+                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y %H:%M:%S')"/>
+                    </p>
+
+                    <!-- Diferença de datas -->
+                    <t t-set="days_old" t-value="(datetime.datetime.now().date() - doc.date_order.date()).days" t-if="doc.date_order"/>
+                    <p>
+                        <strong>Dias desde criação:</strong>
+                        <span t-esc="days_old"/> dias
+                    </p>
+                </div>
+
+                <!--
+                FORMATAÇÃO DE NÚMEROS
+                -->
+                <div class="section mt-4">
+                    <h4>2. Números e Valores</h4>
+
+                    <!-- Número inteiro -->
+                    <p>
+                        <strong>Número inteiro:</strong>
+                        <span t-esc="len(doc.order_line)"/>
+                    </p>
+
+                    <!-- Número decimal -->
+                    <p>
+                        <strong>Decimal (2 casas):</strong>
+                        <span t-esc="'%.2f' % doc.amount_total"/>
+                    </p>
+
+                    <!-- Número com separador de milhares -->
+                    <p>
+                        <strong>Com separador:</strong>
+                        <span t-esc="'{:,.2f}'.format(doc.amount_total)"/>
+                    </p>
+
+                    <!-- Percentual -->
+                    <t t-set="discount_pct" t-value="15.5"/>
+                    <p>
+                        <strong>Percentual:</strong>
+                        <span t-esc="'%.1f%%' % discount_pct"/>
+                    </p>
+
+                    <!-- Arredondamento -->
+                    <t t-set="value" t-value="123.456"/>
+                    <p>
+                        <strong>Arredondado:</strong>
+                        <span t-esc="round(value, 2)"/>
+                    </p>
+                </div>
+
+                <!--
+                FORMATAÇÃO DE MOEDA
+                -->
+                <div class="section mt-4">
+                    <h4>3. Valores Monetários</h4>
+
+                    <!-- Moeda padrão com widget -->
+                    <p>
+                        <strong>Widget monetary:</strong>
+                        <span t-field="doc.amount_total"
+                              t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    </p>
+
+                    <!-- Moeda com símbolo antes -->
+                    <p>
+                        <strong>Símbolo antes:</strong>
+                        <span t-esc="doc.currency_id.symbol"/>
+                        <span t-esc="'{:,.2f}'.format(doc.amount_total)"/>
+                    </p>
+
+                    <!-- Moeda com código ISO -->
+                    <p>
+                        <strong>Com código ISO:</strong>
+                        <span t-esc="'{:,.2f}'.format(doc.amount_total)"/>
+                        <span t-esc="doc.currency_id.name"/>
+                    </p>
+
+                    <!-- Formatação por extenso (requer módulo adicional) -->
+                    <p>
+                        <strong>Valor formatado:</strong>
+                        <span t-field="doc.amount_total"
+                              t-options='{"widget": "monetary", "display_currency": doc.currency_id, "precision": 2}'/>
+                    </p>
+                </div>
+
+                <!--
+                FORMATAÇÃO DE TEXTO
+                -->
+                <div class="section mt-4">
+                    <h4>4. Texto e Strings</h4>
+
+                    <!-- Maiúsculas/Minúsculas -->
+                    <p>
+                        <strong>MAIÚSCULAS:</strong>
+                        <span t-esc="doc.name.upper()"/>
+                    </p>
+                    <p>
+                        <strong>minúsculas:</strong>
+                        <span t-esc="doc.name.lower()"/>
+                    </p>
+                    <p>
+                        <strong>Capitalize:</strong>
+                        <span t-esc="doc.name.title()"/>
+                    </p>
+
+                    <!-- Truncar texto -->
+                    <t t-set="long_text" t-value="'Este é um texto muito longo que precisa ser truncado'"/>
+                    <p>
+                        <strong>Truncado (20 chars):</strong>
+                        <span t-esc="long_text[:20] + '...' if len(long_text) > 20 else long_text"/>
+                    </p>
+
+                    <!-- Substituir texto -->
+                    <p>
+                        <strong>Replace:</strong>
+                        <span t-esc="doc.name.replace('/', '-')"/>
+                    </p>
+
+                    <!-- Remover espaços -->
+                    <p>
+                        <strong>Trim:</strong>
+                        '<span t-esc="'  texto  '.strip()"/>'
+                    </p>
+
+                    <!-- Concatenação -->
+                    <p>
+                        <strong>Concatenado:</strong>
+                        <span t-esc="doc.name + ' - ' + doc.partner_id.name"/>
+                    </p>
+
+                    <!-- Split e join -->
+                    <t t-set="parts" t-value="doc.name.split('/')"/>
+                    <p>
+                        <strong>Parts:</strong>
+                        <span t-esc="' | '.join(parts)"/>
+                    </p>
+                </div>
+
+                <!--
+                FORMATAÇÃO DE BOOLEANOS
+                -->
+                <div class="section mt-4">
+                    <h4>5. Valores Booleanos</h4>
+
+                    <!-- Checkbox visual -->
+                    <p>
+                        <strong>Checkbox:</strong>
+                        <t t-if="doc.state == 'sale'">
+                            <span style="color: green;">✓</span>
+                        </t>
+                        <t t-else="">
+                            <span style="color: red;">✗</span>
+                        </t>
+                    </p>
+
+                    <!-- Badge sim/não -->
+                    <p>
+                        <strong>Badge:</strong>
+                        <span t-att-class="'badge badge-' + ('success' if doc.state == 'sale' else 'danger')">
+                            <t t-if="doc.state == 'sale'">Sim</t>
+                            <t t-else="">Não</t>
+                        </span>
+                    </p>
+
+                    <!-- Ícone -->
+                    <p>
+                        <strong>Ícone:</strong>
+                        <i t-att-class="'fa fa-' + ('check-circle text-success' if doc.state == 'sale' else 'times-circle text-danger')"/>
+                    </p>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <!--
+    ============================================================================
+    4. IMAGENS E RECURSOS VISUAIS
+    ============================================================================
+    -->
+
+    <template id="example_images">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2>Imagens e Recursos Visuais</h2>
+
+                <!--
+                LOGO DA EMPRESA
+                -->
+                <div class="section">
+                    <h4>1. Logo da Empresa</h4>
+
+                    <!-- Método 1: image_data_uri (preferido) -->
+                    <div class="mb-3">
+                        <strong>Usando image_data_uri:</strong><br/>
+                        <img t-if="doc.company_id.logo"
+                             t-att-src="image_data_uri(doc.company_id.logo)"
+                             alt="Company Logo"
+                             style="max-height: 80px; border: 1px solid #ddd; padding: 5px;"/>
+                    </div>
+
+                    <!-- Método 2: URL web/image -->
+                    <div class="mb-3">
+                        <strong>Usando URL web/image:</strong><br/>
+                        <img t-att-src="'/web/image/res.company/%s/logo' % doc.company_id.id"
+                             alt="Company Logo"
+                             style="max-height: 80px;"/>
+                    </div>
+
+                    <!-- Com verificação de existência -->
+                    <div class="mb-3">
+                        <t t-if="doc.company_id.logo">
+                            <img t-att-src="image_data_uri(doc.company_id.logo)"
+                                 style="max-height: 80px;"
+                                 alt="Logo"/>
+                        </t>
+                        <t t-else="">
+                            <div class="alert alert-warning">Logo não disponível</div>
+                        </t>
+                    </div>
+                </div>
+
+                <!--
+                IMAGEM DE PRODUTO
+                -->
+                <div class="section mt-4">
+                    <h4>2. Imagem de Produto</h4>
+
+                    <t t-foreach="doc.order_line[:3]" t-as="line">
+                        <div class="row mb-2">
+                            <div class="col-2">
+                                <!-- Imagem do produto -->
+                                <img t-if="line.product_id.image_128"
+                                     t-att-src="image_data_uri(line.product_id.image_128)"
+                                     class="img-thumbnail"
+                                     style="max-width: 64px;"
+                                     t-att-alt="line.product_id.name"/>
+                                <!-- Placeholder se não houver imagem -->
+                                <t t-else="">
+                                    <div class="bg-light text-center"
+                                         style="width: 64px; height: 64px; line-height: 64px; border: 1px solid #ddd;">
+                                        <i class="fa fa-picture-o" style="font-size: 24px; color: #aaa;"/>
+                                    </div>
+                                </t>
+                            </div>
+                            <div class="col-10">
+                                <strong t-field="line.product_id.name"/><br/>
+                                <small class="text-muted" t-field="line.product_id.default_code"/>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+
+                <!--
+                CÓDIGOS DE BARRAS
+                -->
+                <div class="section mt-4">
+                    <h4>3. Códigos de Barras</h4>
+
+                    <!-- Barcode widget (requer módulo de barcode) -->
+                    <div class="mb-3">
+                        <strong>Barcode do pedido:</strong><br/>
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', doc.name, 600, 100)"
+                             style="width: 300px; height: 50px;"
+                             alt="Barcode"/>
+                    </div>
+
+                    <!-- QR Code -->
+                    <div class="mb-3">
+                        <strong>QR Code:</strong><br/>
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', doc.name, 200, 200)"
+                             style="width: 100px; height: 100px;"
+                             alt="QR Code"/>
+                    </div>
+                </div>
+
+                <!--
+                ASSINATURA
+                -->
+                <div class="section mt-4">
+                    <h4>4. Assinatura Digital</h4>
+
+                    <!-- Se usuário tiver assinatura -->
+                    <t t-if="doc.user_id.partner_id.image_1920">
+                        <div>
+                            <strong>Assinado por:</strong>
+                            <span t-field="doc.user_id.name"/><br/>
+                            <img t-att-src="image_data_uri(doc.user_id.partner_id.image_1920)"
+                                 style="max-height: 50px;"
+                                 alt="Signature"/>
+                        </div>
+                    </t>
+                </div>
+
+                <!--
+                ÍCONES E SÍMBOLOS
+                -->
+                <div class="section mt-4">
+                    <h4>5. Ícones Font Awesome</h4>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <i class="fa fa-check-circle text-success" style="font-size: 24px;"/>
+                            Aprovado
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-times-circle text-danger" style="font-size: 24px;"/>
+                            Rejeitado
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-clock-o text-warning" style="font-size: 24px;"/>
+                            Pendente
+                        </div>
+                        <div class="col-3">
+                            <i class="fa fa-info-circle text-info" style="font-size: 24px;"/>
+                            Informação
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <!--
+    ============================================================================
+    5. CSS E ESTILOS
+    ============================================================================
+    -->
+
+    <template id="example_css_styles">
+        <t t-call="web.external_layout">
+            <!-- CSS inline no template -->
+            <style>
+                /* Estilos customizados para o relatório */
+
+                .custom-header {
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 20px;
+                    border-radius: 5px;
+                }
+
+                .custom-table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                .custom-table th {
+                    background-color: #2c3e50;
+                    color: white;
+                    padding: 10px;
+                    text-align: left;
+                }
+
+                .custom-table td {
+                    padding: 8px;
+                    border-bottom: 1px solid #ecf0f1;
+                }
+
+                .custom-table tr:hover {
+                    background-color: #f8f9fa;
+                }
+
+                .highlight-box {
+                    background-color: #fff3cd;
+                    border-left: 4px solid #ffc107;
+                    padding: 15px;
+                    margin: 10px 0;
+                }
+
+                .status-badge {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+
+                .status-draft {
+                    background-color: #6c757d;
+                    color: white;
+                }
+
+                .status-confirmed {
+                    background-color: #28a745;
+                    color: white;
+                }
+
+                /* Estilos para impressão */
+                @media print {
+                    .no-print {
+                        display: none;
+                    }
+
+                    .page-break {
+                        page-break-after: always;
+                    }
+                }
+            </style>
+
+            <div class="page">
+                <h2>Exemplos de CSS e Estilos</h2>
+
+                <!--
+                CLASSES BOOTSTRAP ÚTEIS
+                -->
+                <div class="section">
+                    <h4>1. Classes Bootstrap</h4>
+
+                    <!-- Alertas -->
+                    <div class="alert alert-primary">Alerta Primário</div>
+                    <div class="alert alert-success">Alerta de Sucesso</div>
+                    <div class="alert alert-warning">Alerta de Aviso</div>
+                    <div class="alert alert-danger">Alerta de Perigo</div>
+
+                    <!-- Badges -->
+                    <p>
+                        <span class="badge badge-primary">Primary</span>
+                        <span class="badge badge-secondary">Secondary</span>
+                        <span class="badge badge-success">Success</span>
+                        <span class="badge badge-danger">Danger</span>
+                        <span class="badge badge-warning">Warning</span>
+                        <span class="badge badge-info">Info</span>
+                    </p>
+
+                    <!-- Cards -->
+                    <div class="card mb-3">
+                        <div class="card-header bg-primary text-white">
+                            Card Header
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title</h5>
+                            <p class="card-text">Conteúdo do card.</p>
+                        </div>
+                    </div>
+
+                    <!-- Grid System -->
+                    <div class="row">
+                        <div class="col-4 bg-light border">Coluna 1/3</div>
+                        <div class="col-4 bg-light border">Coluna 2/3</div>
+                        <div class="col-4 bg-light border">Coluna 3/3</div>
+                    </div>
+                </div>
+
+                <!--
+                ESTILOS CUSTOMIZADOS
+                -->
+                <div class="section mt-4">
+                    <h4>2. Estilos Customizados</h4>
+
+                    <!-- Header com gradiente -->
+                    <div class="custom-header">
+                        <h3>Header com Gradiente CSS</h3>
+                        <p>Este header usa um gradiente definido no CSS inline.</p>
+                    </div>
+
+                    <!-- Tabela customizada -->
+                    <table class="custom-table mt-3">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="doc.order_line[:5]" t-as="line">
+                                <tr>
+                                    <td t-field="line.product_id.name"/>
+                                    <td t-field="line.product_uom_qty"/>
+                                    <td t-field="line.price_unit"/>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <!-- Box destacado -->
+                    <div class="highlight-box mt-3">
+                        <strong>Importante:</strong>
+                        Esta é uma caixa de destaque com borda colorida.
+                    </div>
+
+                    <!-- Status badges customizados -->
+                    <p class="mt-3">
+                        <span class="status-badge status-draft">Draft</span>
+                        <span class="status-badge status-confirmed">Confirmed</span>
+                    </p>
+                </div>
+
+                <!--
+                CORES E TIPOGRAFIA
+                -->
+                <div class="section mt-4">
+                    <h4>3. Cores e Tipografia</h4>
+
+                    <!-- Cores de texto Bootstrap -->
+                    <p class="text-primary">Texto Primary</p>
+                    <p class="text-secondary">Texto Secondary</p>
+                    <p class="text-success">Texto Success</p>
+                    <p class="text-danger">Texto Danger</p>
+                    <p class="text-warning">Texto Warning</p>
+                    <p class="text-info">Texto Info</p>
+                    <p class="text-muted">Texto Muted</p>
+
+                    <!-- Cores de fundo -->
+                    <div class="bg-primary text-white p-2">Fundo Primary</div>
+                    <div class="bg-success text-white p-2">Fundo Success</div>
+                    <div class="bg-warning text-dark p-2">Fundo Warning</div>
+                    <div class="bg-danger text-white p-2">Fundo Danger</div>
+
+                    <!-- Tamanhos de fonte -->
+                    <p class="h1">Heading 1</p>
+                    <p class="h2">Heading 2</p>
+                    <p class="h3">Heading 3</p>
+                    <p class="h4">Heading 4</p>
+                    <p class="h5">Heading 5</p>
+                    <p class="h6">Heading 6</p>
+
+                    <!-- Estilos de texto -->
+                    <p><strong>Texto em negrito</strong></p>
+                    <p><em>Texto em itálico</em></p>
+                    <p><u>Texto sublinhado</u></p>
+                    <p><small>Texto pequeno</small></p>
+                    <p class="text-uppercase">texto maiúsculo</p>
+                    <p class="text-lowercase">TEXTO MINÚSCULO</p>
+                    <p class="text-capitalize">texto capitalizado</p>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <!--
+    ============================================================================
+    NOTAS E BOAS PRÁTICAS
+    ============================================================================
+
+    1. PERFORMANCE:
+       - Minimize consultas ao banco dentro de loops
+       - Use with_context() para otimizar queries
+       - Cache valores calculados em variáveis
+
+    2. SEGURANÇA:
+       - Use t-esc por padrão (escapa HTML)
+       - Use t-raw apenas para HTML confiável
+       - Valide dados antes de exibir
+
+    3. INTERNACIONALIZAÇÃO:
+       - Use t-field para formatação automática baseada no locale
+       - Suporte a múltiplos idiomas com with_context(lang=...)
+       - Formatos de data/número/moeda se adaptam ao idioma
+
+    4. MANUTENIBILIDADE:
+       - Comente código complexo
+       - Use nomes descritivos para variáveis
+       - Separe lógica complexa em sub-templates
+
+    5. COMPATIBILIDADE PDF:
+       - Evite JavaScript (não funciona em PDF)
+       - Teste posicionamento absoluto
+       - Use page-break-* para controlar paginação
+       - Prefira CSS inline para garantir renderização
+
+    6. DEBUGGING:
+       - Use qweb-html para visualizar antes de gerar PDF
+       - Ative modo desenvolvedor para erros detalhados
+       - Use t-esc para debugar valores de variáveis
+       - Verifique logs do servidor para erros Python
+
+    ============================================================================
+    -->
+
+</odoo>

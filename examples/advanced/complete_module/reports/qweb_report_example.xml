@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    ============================================================================
+    EXEMPLO COMPLETO DE QWEB REPORT (PDF) - ODOO 18
+    ============================================================================
+
+    Este arquivo demonstra a criação de um relatório PDF completo usando QWeb.
+    Inclui: external layout, internal layout, tabelas, formatação condicional,
+    totalizadores, múltiplas páginas e comentários explicativos.
+
+    Estrutura:
+    1. Definição do Report Action
+    2. External Layout (Header/Footer customizado)
+    3. Internal Layout (Corpo do relatório)
+    4. Template principal com dados
+    ============================================================================
+    -->
+
+    <!--
+    ============================================================================
+    1. DEFINIÇÃO DO REPORT ACTION
+    ============================================================================
+    Define como o relatório será chamado e seus parâmetros básicos.
+    -->
+    <record id="action_report_sale_order_custom" model="ir.actions.report">
+        <!-- Nome técnico único do relatório -->
+        <field name="name">Custom Sale Order Report</field>
+
+        <!-- Modelo Odoo ao qual este relatório se aplica -->
+        <field name="model">sale.order</field>
+
+        <!-- Tipo de relatório: qweb-pdf para PDF, qweb-html para preview HTML -->
+        <field name="report_type">qweb-pdf</field>
+
+        <!-- Nome do template QWeb principal (definido abaixo) -->
+        <field name="report_name">examples.report_sale_order_document_custom</field>
+
+        <!-- Nome do arquivo gerado (usa expressão Python) -->
+        <field name="report_file">Sale_Order_Custom</field>
+
+        <!-- Nome para download (pode usar variáveis do objeto) -->
+        <field name="print_report_name">'Sale Order - %s' % (object.name)</field>
+
+        <!-- Define se anexa automaticamente ao registro -->
+        <field name="attachment_use">False</field>
+
+        <!-- Binding: adiciona ao menu "Print" do modelo -->
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!--
+    ============================================================================
+    2. EXTERNAL LAYOUT - HEADER E FOOTER CUSTOMIZADOS
+    ============================================================================
+    O external layout define o cabeçalho e rodapé que aparecem em todas as páginas.
+    Herda do layout padrão do Odoo mas permite customizações.
+    -->
+    <template id="external_layout_custom" inherit_id="web.external_layout_standard">
+        <!--
+        Customização do Header (Cabeçalho)
+        XPath localiza o elemento a ser modificado
+        -->
+        <xpath expr="//div[hasclass('header')]" position="replace">
+            <div class="header">
+                <div class="row">
+                    <!-- Logo da empresa -->
+                    <div class="col-3">
+                        <img t-if="company.logo"
+                             t-att-src="image_data_uri(company.logo)"
+                             style="max-height: 80px;"
+                             alt="Company Logo"/>
+                    </div>
+
+                    <!-- Informações da empresa -->
+                    <div class="col-6 text-center">
+                        <h3 class="mt-0 mb-1" style="color: #2C3E50;">
+                            <strong t-field="company.name"/>
+                        </h3>
+                        <div class="small" style="color: #7F8C8D;">
+                            <div t-field="company.partner_id.street"/>
+                            <div>
+                                <span t-field="company.partner_id.city"/>,
+                                <span t-field="company.partner_id.state_id.name"/>
+                                <span t-field="company.partner_id.zip"/>
+                            </div>
+                            <div>
+                                Phone: <span t-field="company.phone"/>
+                                | Email: <span t-field="company.email"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Informações do documento -->
+                    <div class="col-3 text-right">
+                        <div class="small" style="color: #7F8C8D;">
+                            <strong>Document #:</strong><br/>
+                            <span t-esc="docs[0].name if docs else ''"/>
+                            <br/>
+                            <strong>Date:</strong><br/>
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 2px solid #3498DB; margin-top: 10px;"/>
+            </div>
+        </xpath>
+
+        <!--
+        Customização do Footer (Rodapé)
+        Aparece em todas as páginas do relatório
+        -->
+        <xpath expr="//div[hasclass('footer')]" position="replace">
+            <div class="footer">
+                <hr style="border-top: 1px solid #BDC3C7; margin-bottom: 5px;"/>
+                <div class="row small" style="color: #7F8C8D;">
+                    <!-- Informações legais à esquerda -->
+                    <div class="col-8">
+                        <div t-if="company.partner_id.vat">
+                            <strong>VAT/Tax ID:</strong> <span t-field="company.partner_id.vat"/>
+                        </div>
+                        <div>
+                            <strong>Website:</strong> <span t-field="company.website"/>
+                        </div>
+                    </div>
+
+                    <!-- Numeração de páginas à direita -->
+                    <div class="col-4 text-right">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                Page <span class="page"/> of <span class="topage"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!--
+    ============================================================================
+    3. TEMPLATE PRINCIPAL DO RELATÓRIO
+    ============================================================================
+    Este é o template que contém o conteúdo principal do relatório.
+    Ele é chamado para cada registro (doc) na lista de documentos.
+    -->
+    <template id="report_sale_order_document_custom">
+        <!--
+        t-call: Chama o layout externo (com header/footer)
+        O conteúdo dentro do t-call será inserido no body do layout
+        -->
+        <t t-call="web.external_layout">
+            <!-- Define a variável 'doc' para ser usada no template -->
+            <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
+
+            <!-- Container principal do relatório -->
+            <div class="page">
+                <!--
+                ================================================================
+                SEÇÃO: TÍTULO DO RELATÓRIO
+                ================================================================
+                -->
+                <div class="text-center mb-4">
+                    <h2 style="color: #2C3E50; border-bottom: 3px solid #3498DB; padding-bottom: 10px;">
+                        <strong>
+                            <!-- Título condicional baseado no estado -->
+                            <t t-if="doc.state in ['draft', 'sent']">
+                                QUOTATION
+                            </t>
+                            <t t-else="">
+                                SALES ORDER
+                            </t>
+                            <span t-field="doc.name"/>
+                        </strong>
+                    </h2>
+                </div>
+
+                <!--
+                ================================================================
+                SEÇÃO: INFORMAÇÕES DO CLIENTE E PEDIDO
+                ================================================================
+                Layout em duas colunas para organizar informações
+                -->
+                <div class="row mb-4">
+                    <!-- Coluna da Esquerda: Informações do Cliente -->
+                    <div class="col-6">
+                        <div class="card" style="border: 1px solid #BDC3C7; border-radius: 5px;">
+                            <div class="card-header" style="background-color: #ECF0F1; padding: 10px;">
+                                <strong style="color: #2C3E50;">CUSTOMER INFORMATION</strong>
+                            </div>
+                            <div class="card-body" style="padding: 15px;">
+                                <!-- Nome do cliente -->
+                                <div class="mb-2">
+                                    <strong style="color: #34495E;">Customer:</strong><br/>
+                                    <span t-field="doc.partner_id.name"/>
+                                </div>
+
+                                <!-- Endereço do cliente -->
+                                <div class="mb-2">
+                                    <strong style="color: #34495E;">Address:</strong><br/>
+                                    <div t-field="doc.partner_id"
+                                         t-options='{"widget": "contact", "fields": ["address"], "no_marker": True}'/>
+                                </div>
+
+                                <!-- Email e Telefone -->
+                                <div class="row">
+                                    <div class="col-6" t-if="doc.partner_id.email">
+                                        <strong style="color: #34495E;">Email:</strong><br/>
+                                        <span t-field="doc.partner_id.email"/>
+                                    </div>
+                                    <div class="col-6" t-if="doc.partner_id.phone">
+                                        <strong style="color: #34495E;">Phone:</strong><br/>
+                                        <span t-field="doc.partner_id.phone"/>
+                                    </div>
+                                </div>
+
+                                <!-- VAT/Tax ID se existir -->
+                                <div class="mt-2" t-if="doc.partner_id.vat">
+                                    <strong style="color: #34495E;">VAT/Tax ID:</strong>
+                                    <span t-field="doc.partner_id.vat"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna da Direita: Informações do Pedido -->
+                    <div class="col-6">
+                        <div class="card" style="border: 1px solid #BDC3C7; border-radius: 5px;">
+                            <div class="card-header" style="background-color: #ECF0F1; padding: 10px;">
+                                <strong style="color: #2C3E50;">ORDER INFORMATION</strong>
+                            </div>
+                            <div class="card-body" style="padding: 15px;">
+                                <!-- Número do pedido -->
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <strong style="color: #34495E;">Order Number:</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span t-field="doc.name"/>
+                                    </div>
+                                </div>
+
+                                <!-- Data do pedido -->
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <strong style="color: #34495E;">Order Date:</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span t-field="doc.date_order" t-options='{"widget": "date"}'/>
+                                    </div>
+                                </div>
+
+                                <!-- Vendedor -->
+                                <div class="row mb-2" t-if="doc.user_id">
+                                    <div class="col-6">
+                                        <strong style="color: #34495E;">Salesperson:</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span t-field="doc.user_id.name"/>
+                                    </div>
+                                </div>
+
+                                <!-- Referência do cliente -->
+                                <div class="row mb-2" t-if="doc.client_order_ref">
+                                    <div class="col-6">
+                                        <strong style="color: #34495E;">Customer Reference:</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span t-field="doc.client_order_ref"/>
+                                    </div>
+                                </div>
+
+                                <!-- Prazo de pagamento -->
+                                <div class="row mb-2" t-if="doc.payment_term_id">
+                                    <div class="col-6">
+                                        <strong style="color: #34495E;">Payment Terms:</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span t-field="doc.payment_term_id.name"/>
+                                    </div>
+                                </div>
+
+                                <!-- Status do pedido com badge colorido -->
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong style="color: #34495E;">Status:</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="badge"
+                                              t-att-class="'badge-success' if doc.state == 'sale' else 'badge-warning' if doc.state == 'sent' else 'badge-secondary'">
+                                            <t t-esc="dict(doc._fields['state'].selection).get(doc.state)"/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                ================================================================
+                SEÇÃO: TABELA DE ITENS DO PEDIDO
+                ================================================================
+                Tabela principal com todos os produtos/serviços do pedido
+                -->
+                <div class="mb-4">
+                    <h4 style="color: #2C3E50; border-bottom: 2px solid #95A5A6; padding-bottom: 5px;">
+                        ORDER LINES
+                    </h4>
+
+                    <table class="table table-sm table-bordered mt-3">
+                        <!-- Cabeçalho da tabela -->
+                        <thead style="background-color: #34495E; color: white;">
+                            <tr>
+                                <th class="text-center" style="width: 5%;">#</th>
+                                <th style="width: 35%;">Description</th>
+                                <th class="text-right" style="width: 10%;">Quantity</th>
+                                <th class="text-center" style="width: 10%;">Unit</th>
+                                <th class="text-right" style="width: 15%;">Unit Price</th>
+                                <th class="text-right" style="width: 10%;">Disc. (%)</th>
+                                <th class="text-right" style="width: 15%;">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Corpo da tabela -->
+                        <tbody>
+                            <!--
+                            t-foreach: Itera sobre todas as linhas do pedido
+                            t-as: Define o nome da variável para cada item
+                            -->
+                            <t t-foreach="doc.order_line" t-as="line">
+                                <tr>
+                                    <!-- Número sequencial da linha -->
+                                    <td class="text-center">
+                                        <span t-esc="line_index + 1"/>
+                                    </td>
+
+                                    <!-- Descrição do produto -->
+                                    <td>
+                                        <strong t-field="line.product_id.name"/>
+                                        <!-- Descrição adicional se existir -->
+                                        <t t-if="line.name != line.product_id.name">
+                                            <br/>
+                                            <small class="text-muted" t-field="line.name"/>
+                                        </t>
+                                        <!-- Código interno do produto se existir -->
+                                        <t t-if="line.product_id.default_code">
+                                            <br/>
+                                            <small class="text-muted">
+                                                [<span t-field="line.product_id.default_code"/>]
+                                            </small>
+                                        </t>
+                                    </td>
+
+                                    <!-- Quantidade -->
+                                    <td class="text-right">
+                                        <span t-field="line.product_uom_qty"/>
+                                    </td>
+
+                                    <!-- Unidade de medida -->
+                                    <td class="text-center">
+                                        <span t-field="line.product_uom.name"/>
+                                    </td>
+
+                                    <!-- Preço unitário formatado como moeda -->
+                                    <td class="text-right">
+                                        <span t-field="line.price_unit"
+                                              t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                    </td>
+
+                                    <!-- Desconto com formatação condicional -->
+                                    <td class="text-right">
+                                        <t t-if="line.discount > 0">
+                                            <span style="color: #E74C3C; font-weight: bold;">
+                                                <span t-field="line.discount"/>%
+                                            </span>
+                                        </t>
+                                        <t t-else="">
+                                            -
+                                        </t>
+                                    </td>
+
+                                    <!-- Subtotal da linha -->
+                                    <td class="text-right">
+                                        <span t-field="line.price_subtotal"
+                                              t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--
+                ================================================================
+                SEÇÃO: TOTALIZADORES
+                ================================================================
+                Subtotal, impostos, descontos e total geral
+                -->
+                <div class="row">
+                    <!-- Coluna da esquerda: Notas e observações -->
+                    <div class="col-7">
+                        <t t-if="doc.note">
+                            <div class="card" style="border: 1px solid #E8DAEF; border-radius: 5px;">
+                                <div class="card-header" style="background-color: #F4ECF7; padding: 10px;">
+                                    <strong style="color: #6C3483;">NOTES</strong>
+                                </div>
+                                <div class="card-body" style="padding: 15px;">
+                                    <span t-field="doc.note"/>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+
+                    <!-- Coluna da direita: Totalizadores -->
+                    <div class="col-5">
+                        <table class="table table-sm">
+                            <!-- Subtotal -->
+                            <tr>
+                                <td class="text-right">
+                                    <strong>Subtotal:</strong>
+                                </td>
+                                <td class="text-right" style="width: 40%;">
+                                    <span t-field="doc.amount_untaxed"
+                                          t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                </td>
+                            </tr>
+
+                            <!-- Impostos detalhados -->
+                            <t t-foreach="doc.amount_by_group" t-as="amount_by_group">
+                                <tr>
+                                    <td class="text-right">
+                                        <!-- Nome do imposto e base de cálculo -->
+                                        <span t-esc="amount_by_group[0]"/>
+                                        <t t-if="len(amount_by_group) >= 3">
+                                            <br/>
+                                            <small class="text-muted">
+                                                Base: <span t-esc="amount_by_group[2]"
+                                                           t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                            </small>
+                                        </t>
+                                    </td>
+                                    <td class="text-right">
+                                        <!-- Valor do imposto -->
+                                        <span t-esc="amount_by_group[1]"
+                                              t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </t>
+
+                            <!-- Linha separadora -->
+                            <tr>
+                                <td colspan="2">
+                                    <hr style="border-top: 2px solid #34495E; margin: 5px 0;"/>
+                                </td>
+                            </tr>
+
+                            <!-- Total geral destacado -->
+                            <tr style="background-color: #ECF0F1;">
+                                <td class="text-right">
+                                    <h5><strong style="color: #2C3E50;">TOTAL:</strong></h5>
+                                </td>
+                                <td class="text-right">
+                                    <h5>
+                                        <strong style="color: #27AE60;">
+                                            <span t-field="doc.amount_total"
+                                                  t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                        </strong>
+                                    </h5>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Estatísticas adicionais -->
+                        <div class="mt-3 text-right">
+                            <small class="text-muted">
+                                <!-- Total de itens -->
+                                <div>
+                                    <strong>Total Items:</strong>
+                                    <span t-esc="len(doc.order_line)"/>
+                                </div>
+                                <!-- Quantidade total de produtos -->
+                                <div>
+                                    <strong>Total Quantity:</strong>
+                                    <span t-esc="sum(line.product_uom_qty for line in doc.order_line)"/>
+                                </div>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                ================================================================
+                SEÇÃO: TERMOS E CONDIÇÕES
+                ================================================================
+                Aparece no final do relatório se houver termos configurados
+                -->
+                <t t-if="doc.company_id.terms_type == 'html' and doc.company_id.sale_terms_html">
+                    <div class="mt-5" style="page-break-inside: avoid;">
+                        <h5 style="color: #2C3E50; border-bottom: 1px solid #95A5A6; padding-bottom: 5px;">
+                            Terms and Conditions
+                        </h5>
+                        <div class="mt-2" t-field="doc.company_id.sale_terms_html"/>
+                    </div>
+                </t>
+                <t t-elif="doc.company_id.terms_type == 'plain' and doc.company_id.sale_terms">
+                    <div class="mt-5" style="page-break-inside: avoid;">
+                        <h5 style="color: #2C3E50; border-bottom: 1px solid #95A5A6; padding-bottom: 5px;">
+                            Terms and Conditions
+                        </h5>
+                        <div class="mt-2" style="white-space: pre-wrap;" t-field="doc.company_id.sale_terms"/>
+                    </div>
+                </t>
+
+                <!--
+                ================================================================
+                SEÇÃO: ASSINATURAS
+                ================================================================
+                Espaço para assinaturas (opcional)
+                -->
+                <div class="row mt-5 pt-5" style="page-break-inside: avoid;">
+                    <div class="col-6 text-center">
+                        <div style="border-top: 1px solid #000; display: inline-block; min-width: 200px; padding-top: 5px;">
+                            Customer Signature
+                        </div>
+                        <div class="mt-2">
+                            <small>Date: ___/___/______</small>
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <div style="border-top: 1px solid #000; display: inline-block; min-width: 200px; padding-top: 5px;">
+                            Company Representative
+                        </div>
+                        <div class="mt-2">
+                            <small>Date: ___/___/______</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                ================================================================
+                EXEMPLO: QUEBRA DE PÁGINA FORÇADA
+                ================================================================
+                Use quando precisar forçar uma nova página
+                -->
+                <!-- <div style="page-break-after: always;"></div> -->
+
+            </div><!-- Fim do div.page -->
+        </t><!-- Fim do t-call -->
+    </template>
+
+    <!--
+    ============================================================================
+    4. TEMPLATE WRAPPER PARA MÚLTIPLOS DOCUMENTOS
+    ============================================================================
+    Este template processa múltiplos documentos em um único relatório.
+    Usado quando você seleciona vários registros e imprime todos juntos.
+    -->
+    <template id="report_sale_order_custom">
+        <!--
+        t-foreach: Itera sobre todos os documentos selecionados
+        t-as: Define 'doc' como variável para cada documento
+        -->
+        <t t-foreach="docs" t-as="doc">
+            <!-- Chama o template principal para cada documento -->
+            <t t-call="examples.report_sale_order_document_custom"/>
+
+            <!-- Adiciona quebra de página entre documentos (exceto no último) -->
+            <t t-if="not doc_last">
+                <div style="page-break-after: always;"/>
+            </t>
+        </t>
+    </template>
+
+    <!--
+    ============================================================================
+    NOTAS IMPORTANTES SOBRE QWEB REPORTS
+    ============================================================================
+
+    1. FORMATAÇÃO DE DADOS:
+       - t-field: Formata automaticamente baseado no tipo do campo
+       - t-esc: Escapa HTML e mostra texto puro
+       - t-raw: Renderiza HTML sem escapar (cuidado com XSS!)
+       - t-options: Passa opções de formatação (widget, format, etc)
+
+    2. WIDGETS ÚTEIS:
+       - monetary: Formata valores monetários
+       - date: Formata datas
+       - datetime: Formata data e hora
+       - contact: Formata endereços de parceiros
+       - image: Exibe imagens
+
+    3. CONTROLE DE FLUXO:
+       - t-if: Condicional simples
+       - t-elif: Else-if encadeado
+       - t-else: Senão
+       - t-foreach: Loop sobre coleções
+       - t-set: Define variáveis
+
+    4. CSS E ESTILOS:
+       - Use Bootstrap 4 classes (disponível por padrão)
+       - CSS inline funciona normalmente
+       - Evite JavaScript (não funciona em PDF)
+
+    5. QUEBRAS DE PÁGINA:
+       - page-break-before: always (quebra antes)
+       - page-break-after: always (quebra depois)
+       - page-break-inside: avoid (evita quebra dentro)
+
+    6. PERFORMANCE:
+       - Minimize queries dentro de loops
+       - Use with_context() para carregar traduções
+       - Cache dados calculados em variáveis
+
+    7. DEBUGGING:
+       - Use qweb-html para ver o HTML gerado
+       - Ative modo desenvolvedor para ver erros detalhados
+       - Use t-esc para debugar valores de variáveis
+
+    ============================================================================
+    -->
+
+</odoo>

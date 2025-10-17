@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ========================================================================
+             AUTOMATED ACTIONS (ir.actions.server) - ODOO 18
+             ========================================================================
+
+             Automated Actions são ações que são executadas automaticamente
+             quando determinadas condições são atendidas (create, write, delete, etc.)
+
+             Principais tipos de triggers:
+             - on_create: Executado ao criar um registro
+             - on_write: Executado ao modificar um registro
+             - on_create_or_write: Executado ao criar ou modificar
+             - on_unlink: Executado ao deletar um registro
+             - on_time: Executado por cron/scheduled action
+             - on_change: Executado quando campos específicos mudam
+
+             Tipos de ações (state):
+             - code: Executar código Python
+             - object_create: Criar novo registro
+             - object_write: Atualizar registro
+             - multi: Executar múltiplas ações
+             - mail: Enviar email
+             - sms: Enviar SMS
+             - next_activity: Criar atividade
+             - followers: Adicionar seguidores
+        ======================================================================== -->
+
+        <!-- ====================================================================
+             1. ACTION ON CREATE - Executar ao criar registro
+             ==================================================================== -->
+        <record id="action_on_create_partner" model="ir.actions.server">
+            <field name="name">Partner: Send Welcome Email on Create</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+
+            <!-- Trigger: quando um registro é criado -->
+            <field name="state">code</field>
+            <field name="binding_model_id" ref="base.model_res_partner"/>
+            <field name="binding_type">action</field>
+
+            <!-- Código Python a ser executado
+                 Variáveis disponíveis:
+                 - env: ambiente Odoo
+                 - model: model do registro
+                 - record/records: registro(s) atual(is)
+                 - time, datetime, dateutil, timezone: bibliotecas de data/hora
+                 - log: função para logging
+                 - Warning: exceção de aviso
+            -->
+            <field name="code">
+# Enviar email de boas-vindas quando um novo parceiro é criado
+if record.email and record.customer_rank > 0:
+    # Log da ação
+    log("Sending welcome email to new customer: %s" % record.name)
+
+    # Criar template de email ou enviar diretamente
+    mail_template = env.ref('base.mail_template_data_notification_email_default', raise_if_not_found=False)
+
+    if mail_template:
+        # Enviar usando template
+        mail_template.send_mail(record.id, force_send=True)
+    else:
+        # Enviar email customizado
+        record.message_post(
+            body="""
+                &lt;p&gt;Bem-vindo(a) %s!&lt;/p&gt;
+                &lt;p&gt;Obrigado por se tornar nosso cliente.&lt;/p&gt;
+                &lt;p&gt;Estamos felizes em tê-lo(a) conosco.&lt;/p&gt;
+            """ % record.name,
+            subject="Bem-vindo à nossa empresa!",
+            message_type='email',
+            subtype_xmlid='mail.mt_comment',
+        )
+
+    # Criar atividade de follow-up para vendas
+    record.activity_schedule(
+        'mail.mail_activity_data_call',
+        summary='Ligar para novo cliente',
+        note='Cliente cadastrado em %s' % fields.Date.today(),
+        user_id=env.user.id,
+        date_deadline=fields.Date.add(fields.Date.today(), days=2)
+    )
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             2. ACTION ON WRITE - Executar ao modificar campos específicos
+             ==================================================================== -->
+        <record id="action_on_write_partner_country" model="ir.actions.server">
+            <field name="name">Partner: Notify on Country Change</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="binding_model_id" ref="base.model_res_partner"/>
+            <field name="binding_type">action</field>
+
+            <!-- Filtro de domínio: apenas para clientes -->
+            <field name="filter_domain">[('customer_rank', '>', 0)]</field>
+
+            <field name="code">
+# Notificar mudança de país
+# NOTA: Para detectar mudanças de campos específicos, use _origin para comparar
+for partner in records:
+    if hasattr(partner, '_origin') and partner._origin.country_id != partner.country_id:
+        old_country = partner._origin.country_id.name or 'N/A'
+        new_country = partner.country_id.name or 'N/A'
+
+        # Log da mudança
+        log("Country changed for %s: %s -> %s" % (partner.name, old_country, new_country))
+
+        # Postar mensagem no chatter
+        partner.message_post(
+            body="""
+                &lt;p&gt;&lt;strong&gt;País Alterado&lt;/strong&gt;&lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;De: %s&lt;/li&gt;
+                    &lt;li&gt;Para: %s&lt;/li&gt;
+                    &lt;li&gt;Por: %s&lt;/li&gt;
+                    &lt;li&gt;Em: %s&lt;/li&gt;
+                &lt;/ul&gt;
+            """ % (old_country, new_country, env.user.name, fields.Datetime.now()),
+            subject="Alteração de País",
+            subtype_xmlid='mail.mt_note',
+        )
+
+        # Notificar equipe de vendas
+        sales_team = env['crm.team'].search([('company_id', '=', partner.company_id.id)], limit=1)
+        if sales_team and sales_team.user_id:
+            partner.activity_schedule(
+                'mail.mail_activity_data_todo',
+                summary='Verificar lista de preços após mudança de país',
+                note='País alterado de %s para %s' % (old_country, new_country),
+                user_id=sales_team.user_id.id,
+            )
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             3. ACTION ON DELETE - Executar antes de deletar
+             ==================================================================== -->
+        <record id="action_on_delete_product" model="ir.actions.server">
+            <field name="name">Product: Archive Before Delete</field>
+            <field name="model_id" ref="product.model_product_product"/>
+            <field name="state">code</field>
+            <field name="binding_model_id" ref="product.model_product_product"/>
+            <field name="binding_type">action</field>
+
+            <field name="code">
+# Arquivar produto ao invés de deletar (se tiver movimentações)
+from odoo.exceptions import UserError
+
+for product in records:
+    # Verificar se há movimentações de estoque
+    stock_moves = env['stock.move'].search([
+        ('product_id', '=', product.id),
+        ('state', '=', 'done')
+    ], limit=1)
+
+    if stock_moves:
+        # Arquivar ao invés de deletar
+        log("Product %s has stock moves, archiving instead of deleting" % product.name)
+        product.active = False
+
+        # Notificar
+        product.message_post(
+            body="&lt;p&gt;Produto arquivado automaticamente ao tentar deletar (possui movimentações de estoque).&lt;/p&gt;",
+            subject="Produto Arquivado",
+            subtype_xmlid='mail.mt_note',
+        )
+
+        raise UserError(
+            "O produto '%s' possui movimentações de estoque e foi arquivado ao invés de deletado." % product.name
+        )
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             4. PYTHON CODE ACTION - Ação complexa com Python
+             ==================================================================== -->
+        <record id="action_update_partner_credit_limit" model="ir.actions.server">
+            <field name="name">Partner: Calculate Credit Limit</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="binding_model_id" ref="base.model_res_partner"/>
+            <field name="binding_type">action</field>
+
+            <field name="code">
+# Calcular limite de crédito baseado em histórico de compras
+for partner in records:
+    if not partner.customer_rank:
+        continue
+
+    # Buscar todas as faturas pagas dos últimos 12 meses
+    twelve_months_ago = fields.Date.subtract(fields.Date.today(), months=12)
+
+    invoices = env['account.move'].search([
+        ('partner_id', '=', partner.id),
+        ('move_type', '=', 'out_invoice'),
+        ('state', '=', 'posted'),
+        ('payment_state', '=', 'paid'),
+        ('invoice_date', '>=', twelve_months_ago),
+    ])
+
+    # Calcular total pago
+    total_paid = sum(invoices.mapped('amount_total'))
+
+    # Calcular limite de crédito (30% do total pago nos últimos 12 meses)
+    credit_limit = total_paid * 0.3
+
+    # Arredondar para cima (múltiplo de 1000)
+    import math
+    credit_limit = math.ceil(credit_limit / 1000) * 1000
+
+    # Atualizar parceiro
+    partner.write({
+        'credit_limit': credit_limit,
+    })
+
+    # Log e notificação
+    log("Updated credit limit for %s: %.2f (based on %.2f in paid invoices)" %
+        (partner.name, credit_limit, total_paid))
+
+    partner.message_post(
+        body="""
+            &lt;p&gt;&lt;strong&gt;Limite de Crédito Atualizado&lt;/strong&gt;&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Novo limite: %s&lt;/li&gt;
+                &lt;li&gt;Baseado em: %s pagos nos últimos 12 meses&lt;/li&gt;
+                &lt;li&gt;Total de faturas: %d&lt;/li&gt;
+            &lt;/ul&gt;
+        """ % (
+            '{:,.2f}'.format(credit_limit),
+            '{:,.2f}'.format(total_paid),
+            len(invoices)
+        ),
+        subject="Limite de Crédito Atualizado",
+        subtype_xmlid='mail.mt_note',
+    )
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             5. SEND EMAIL ACTION - Enviar email usando template
+             ==================================================================== -->
+        <record id="action_send_email_overdue_invoice" model="ir.actions.server">
+            <field name="name">Invoice: Send Overdue Reminder</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="state">mail</field>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">action</field>
+
+            <!-- Template de email (deve ser criado separadamente) -->
+            <field name="template_id" ref="account.email_template_edi_invoice"/>
+
+            <!-- Filtro: apenas faturas vencidas -->
+            <field name="filter_domain">[
+                ('move_type', '=', 'out_invoice'),
+                ('state', '=', 'posted'),
+                ('payment_state', 'in', ['not_paid', 'partial']),
+                ('invoice_date_due', '&lt;', context_today().strftime('%Y-%m-%d'))
+            ]</field>
+        </record>
+
+        <!-- ====================================================================
+             6. CREATE RECORD ACTION - Criar novo registro
+             ==================================================================== -->
+        <record id="action_create_followup_activity" model="ir.actions.server">
+            <field name="name">Sale Order: Create Follow-up Activity</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">object_create</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">action</field>
+
+            <!-- Modelo do registro a ser criado -->
+            <field name="crud_model_id" ref="mail.model_mail_activity"/>
+
+            <!-- Campos do novo registro
+                 Usar Python expressions para valores dinâmicos
+            -->
+            <field name="fields_lines" eval="[
+                (0, 0, {
+                    'col1': 'res_model',
+                    'value': 'sale.order',
+                }),
+                (0, 0, {
+                    'col1': 'res_id',
+                    'evaluation_type': 'equation',
+                    'value': 'record.id',
+                }),
+                (0, 0, {
+                    'col1': 'activity_type_id',
+                    'evaluation_type': 'reference',
+                    'resource_ref': 'mail.mail_activity_data_call',
+                }),
+                (0, 0, {
+                    'col1': 'summary',
+                    'value': 'Follow-up de Pedido de Venda',
+                }),
+                (0, 0, {
+                    'col1': 'note',
+                    'evaluation_type': 'equation',
+                    'value': '&quot;Pedido: &quot; + record.name',
+                }),
+                (0, 0, {
+                    'col1': 'user_id',
+                    'evaluation_type': 'equation',
+                    'value': 'record.user_id.id or env.user.id',
+                }),
+                (0, 0, {
+                    'col1': 'date_deadline',
+                    'evaluation_type': 'equation',
+                    'value': '(fields.Date.today() + timedelta(days=7)).strftime(&quot;%Y-%m-%d&quot;)',
+                }),
+            ]"/>
+        </record>
+
+        <!-- ====================================================================
+             7. UPDATE RECORD ACTION - Atualizar registro existente
+             ==================================================================== -->
+        <record id="action_update_invoice_payment_term" model="ir.actions.server">
+            <field name="name">Invoice: Update Payment Term</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="state">object_write</field>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">action</field>
+
+            <!-- Filtro: apenas rascunhos -->
+            <field name="filter_domain">[('state', '=', 'draft')]</field>
+
+            <!-- Campos a atualizar -->
+            <field name="fields_lines" eval="[
+                (0, 0, {
+                    'col1': 'invoice_payment_term_id',
+                    'evaluation_type': 'reference',
+                    'resource_ref': 'account.account_payment_term_30days',
+                }),
+                (0, 0, {
+                    'col1': 'narration',
+                    'evaluation_type': 'equation',
+                    'value': '&quot;Prazo de pagamento atualizado automaticamente em &quot; + str(fields.Date.today())',
+                }),
+            ]"/>
+        </record>
+
+        <!-- ====================================================================
+             8. MULTI-STEP ACTION - Executar múltiplas ações sequencialmente
+             ==================================================================== -->
+        <record id="action_multi_confirm_sale_order" model="ir.actions.server">
+            <field name="name">Sale Order: Confirm and Create Invoice</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">multi</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">action</field>
+
+            <!-- Filtro: apenas rascunhos -->
+            <field name="filter_domain">[('state', '=', 'draft')]</field>
+        </record>
+
+        <!-- Sub-ação 1: Confirmar pedido -->
+        <record id="action_multi_confirm_sale_order_step1" model="ir.actions.server">
+            <field name="name">Step 1: Confirm Order</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+            <field name="sequence">1</field>
+
+            <!-- Vinculado à ação principal -->
+            <field name="parent_id" ref="action_multi_confirm_sale_order"/>
+
+            <field name="code">
+# Confirmar pedido
+for order in records:
+    if order.state == 'draft':
+        order.action_confirm()
+        log("Order %s confirmed" % order.name)
+            </field>
+        </record>
+
+        <!-- Sub-ação 2: Criar fatura -->
+        <record id="action_multi_confirm_sale_order_step2" model="ir.actions.server">
+            <field name="name">Step 2: Create Invoice</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+            <field name="sequence">2</field>
+            <field name="parent_id" ref="action_multi_confirm_sale_order"/>
+
+            <field name="code">
+# Criar fatura
+for order in records:
+    if order.state == 'sale' and not order.invoice_ids:
+        # Criar fatura
+        invoice = order._create_invoices()
+
+        if invoice:
+            log("Invoice %s created for order %s" % (invoice.name, order.name))
+
+            # Postar mensagem
+            order.message_post(
+                body="&lt;p&gt;Fatura %s criada automaticamente.&lt;/p&gt;" % invoice.name,
+                subject="Fatura Criada",
+                subtype_xmlid='mail.mt_note',
+            )
+            </field>
+        </record>
+
+        <!-- Sub-ação 3: Enviar email de confirmação -->
+        <record id="action_multi_confirm_sale_order_step3" model="ir.actions.server">
+            <field name="name">Step 3: Send Confirmation Email</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+            <field name="sequence">3</field>
+            <field name="parent_id" ref="action_multi_confirm_sale_order"/>
+
+            <field name="code">
+# Enviar email de confirmação
+template = env.ref('sale.email_template_edi_sale', raise_if_not_found=False)
+
+for order in records:
+    if template and order.partner_id.email:
+        template.send_mail(order.id, force_send=False)
+        log("Confirmation email sent for order %s" % order.name)
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             9. ACTION WITH CONDITION - Ação com condição complexa
+             ==================================================================== -->
+        <record id="action_notify_large_order" model="ir.actions.server">
+            <field name="name">Sale Order: Notify Manager on Large Order</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_type">action</field>
+
+            <field name="code">
+# Notificar gerente sobre pedidos grandes
+LARGE_ORDER_THRESHOLD = 10000.00
+
+for order in records:
+    if order.amount_total >= LARGE_ORDER_THRESHOLD:
+        # Buscar gerente de vendas
+        manager = order.team_id.user_id if order.team_id else env.user
+
+        # Criar atividade para o gerente
+        order.activity_schedule(
+            'mail.mail_activity_data_warning',
+            summary='Pedido de grande valor requer aprovação',
+            note="""
+                &lt;p&gt;&lt;strong&gt;Pedido de Grande Valor&lt;/strong&gt;&lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Pedido: %s&lt;/li&gt;
+                    &lt;li&gt;Cliente: %s&lt;/li&gt;
+                    &lt;li&gt;Valor: %s&lt;/li&gt;
+                    &lt;li&gt;Vendedor: %s&lt;/li&gt;
+                &lt;/ul&gt;
+            """ % (
+                order.name,
+                order.partner_id.name,
+                '{:,.2f}'.format(order.amount_total),
+                order.user_id.name
+            ),
+            user_id=manager.id,
+        )
+
+        # Log
+        log("Large order notification sent to %s for order %s (amount: %.2f)" %
+            (manager.name, order.name, order.amount_total))
+
+        # Adicionar tag ao pedido
+        large_order_tag = env['crm.tag'].search([('name', '=', 'Pedido Grande')], limit=1)
+        if not large_order_tag:
+            large_order_tag = env['crm.tag'].create({'name': 'Pedido Grande', 'color': 2})
+
+        if hasattr(order, 'tag_ids'):
+            order.tag_ids = [(4, large_order_tag.id)]
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             10. ACTION WITH ERROR HANDLING - Ação com tratamento de erros
+             ==================================================================== -->
+        <record id="action_validate_partner_data" model="ir.actions.server">
+            <field name="name">Partner: Validate Data Quality</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="binding_model_id" ref="base.model_res_partner"/>
+            <field name="binding_type">action</field>
+
+            <field name="code">
+# Validar qualidade dos dados do parceiro
+from odoo.exceptions import UserError, ValidationError
+import re
+
+errors = []
+warnings = []
+
+for partner in records:
+    # Validar email
+    if partner.email:
+        email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        if not re.match(email_regex, partner.email):
+            errors.append("Email inválido: %s" % partner.email)
+    elif partner.customer_rank > 0:
+        warnings.append("Cliente sem email cadastrado")
+
+    # Validar telefone
+    if not partner.phone and not partner.mobile:
+        warnings.append("Parceiro sem telefone cadastrado")
+
+    # Validar endereço
+    if partner.customer_rank > 0:
+        if not partner.street:
+            warnings.append("Cliente sem endereço cadastrado")
+        if not partner.city:
+            warnings.append("Cliente sem cidade cadastrada")
+        if not partner.country_id:
+            errors.append("Cliente sem país cadastrado")
+
+    # Validar documento (VAT)
+    if partner.country_id.code == 'BR' and partner.company_type == 'company':
+        if not partner.vat:
+            errors.append("Empresa brasileira sem CNPJ cadastrado")
+
+    # Se houver erros críticos, lançar exceção
+    if errors:
+        error_msg = "&lt;p&gt;&lt;strong&gt;Erros encontrados:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;"
+        for error in errors:
+            error_msg += "&lt;li&gt;%s&lt;/li&gt;" % error
+        error_msg += "&lt;/ul&gt;"
+
+        partner.message_post(
+            body=error_msg,
+            subject="Erros de Validação",
+            subtype_xmlid='mail.mt_note',
+        )
+
+        raise ValidationError("Foram encontrados %d erro(s) nos dados do parceiro. Verifique o chatter para detalhes." % len(errors))
+
+    # Se houver avisos, apenas notificar
+    if warnings:
+        warning_msg = "&lt;p&gt;&lt;strong&gt;Avisos:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;"
+        for warning in warnings:
+            warning_msg += "&lt;li&gt;%s&lt;/li&gt;" % warning
+        warning_msg += "&lt;/ul&gt;"
+
+        partner.message_post(
+            body=warning_msg,
+            subject="Avisos de Validação",
+            subtype_xmlid='mail.mt_note',
+        )
+
+        log("Validation warnings for %s: %s" % (partner.name, ', '.join(warnings)))
+    else:
+        # Tudo OK
+        partner.message_post(
+            body="&lt;p&gt;✓ Dados validados com sucesso!&lt;/p&gt;",
+            subject="Validação OK",
+            subtype_xmlid='mail.mt_note',
+        )
+        log("Data validation passed for %s" % partner.name)
+            </field>
+        </record>
+
+        <!-- ====================================================================
+             11. ACTION WITH BATCH PROCESSING - Processamento em lote
+             ==================================================================== -->
+        <record id="action_batch_archive_old_leads" model="ir.actions.server">
+            <field name="name">Lead: Archive Old Lost Leads (Batch)</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="state">code</field>
+
+            <field name="code">
+# Arquivar leads perdidas com mais de 6 meses
+from datetime import timedelta
+
+# Calcular data limite (6 meses atrás)
+six_months_ago = fields.Datetime.now() - timedelta(days=180)
+
+# Buscar leads perdidas antigas
+old_lost_leads = env['crm.lead'].search([
+    ('active', '=', True),
+    ('probability', '=', 0),  # Lost
+    ('write_date', '&lt;', six_months_ago),
+])
+
+# Processar em lotes de 100
+batch_size = 100
+total_archived = 0
+
+for i in range(0, len(old_lost_leads), batch_size):
+    batch = old_lost_leads[i:i+batch_size]
+
+    try:
+        # Arquivar lote
+        batch.write({'active': False})
+        total_archived += len(batch)
+
+        # Commit parcial para liberar memória
+        env.cr.commit()
+
+        log("Archived batch %d-%d (%d leads)" % (i+1, i+len(batch), len(batch)))
+
+    except Exception as e:
+        log("Error archiving batch %d-%d: %s" % (i+1, i+len(batch), str(e)), level='error')
+        env.cr.rollback()
+
+# Log final
+log("Batch archive completed: %d leads archived out of %d found" % (total_archived, len(old_lost_leads)))
+
+# Notificar administrador
+admin_user = env.ref('base.user_admin')
+env['mail.activity'].create({
+    'res_model': 'res.users',
+    'res_id': admin_user.id,
+    'activity_type_id': env.ref('mail.mail_activity_data_todo').id,
+    'summary': 'Arquivamento automático de leads concluído',
+    'note': '&lt;p&gt;Total de leads arquivadas: %d&lt;/p&gt;' % total_archived,
+    'user_id': admin_user.id,
+})
+            </field>
+        </record>
+
+    </data>
+</odoo>

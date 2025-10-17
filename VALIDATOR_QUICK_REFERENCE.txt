@@ -1,0 +1,122 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  🔍 COMO USAR O VALIDATOR NEO SEMPRE - RESUMO EXECUTIVO          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📍 LOCALIZAÇÃO
+─────────────────────────────────────────────────────────────────
+Framework:  ~/neo_sempre/neodoo18framework
+Plugin:     ~/neo_sempre/neodoo18framework/corporate_plugins/neo_sempre/
+Script:     ~/neo_sempre/neodoo18framework/validate_neo_sempre.sh
+Módulos:    ~/neo_sempre/neo_sempre/custom_addons/
+
+🚀 3 FORMAS DE USAR
+─────────────────────────────────────────────────────────────────
+1. SCRIPT (MAIS FÁCIL) ⭐ RECOMENDADO
+   cd ~/neo_sempre/neodoo18framework
+   ./validate_neo_sempre.sh semprereal
+
+2. PYTHON DIRETO
+   cd ~/neo_sempre/neodoo18framework
+   python3 framework/validator/validate.py \
+       ../neo_sempre/custom_addons/semprereal \
+       --plugins-dir corporate_plugins/neo_sempre \
+       --strict
+
+3. VARIÁVEL DE AMBIENTE
+   export NEODOO_VALIDATOR_PLUGINS="$HOME/neo_sempre/neodoo18framework/corporate_plugins/neo_sempre"
+   python3 framework/validator/validate.py ../neo_sempre/custom_addons/semprereal --strict
+
+✅ O QUE O PLUGIN VALIDA
+─────────────────────────────────────────────────────────────────
+✓ Prefixos de módulo (semprereal, neo_sempre, neodoo_ai, ns_)
+✓ Campo CPF usando 'vat' padrão do Odoo
+✓ Campos monetários com currency_field
+✓ Campos INSS obrigatórios (numero_beneficio, margem_consignavel)
+✓ Docstrings em métodos de ação
+✓ Views Odoo 18+ (<list> em vez de <tree>)
+✓ Actions com view_mode='list,form'
+✓ Grupos de segurança
+✓ Versão 18.0.x.x.x no manifest
+
+❌ ERROS CRÍTICOS ENCONTRADOS NO SEMPREREAL (3 ERROS)
+─────────────────────────────────────────────────────────────────
+1. Campo 'cpf' customizado em wizard/import_partner_wizard.py
+   → SOLUÇÃO: Remover e usar campo 'vat' padrão do Odoo
+
+2. view_mode='tree,form' em views/semprereal_beneficio_views.xml
+   → SOLUÇÃO: Mudar para view_mode='list,form'
+
+3. Tag <tree> em views/semprereal_beneficio_views.xml
+   → SOLUÇÃO: Mudar para <list>
+
+⚠️ AVISOS IMPORTANTES (28 WARNINGS)
+─────────────────────────────────────────────────────────────────
+• 14 IDs XML sem prefixo do módulo
+• 8 Actions sem 'list' no view_mode
+• 2 Campos INSS faltando (margem_consignavel)
+• 1 Método sem ensure_one()
+• 1 Autor não especificado no manifest
+• 2 Views sem campos importantes
+
+🎯 COMANDOS MAIS USADOS
+─────────────────────────────────────────────────────────────────
+Ajuda:
+  ./validate_neo_sempre.sh --help
+
+Validar módulo:
+  ./validate_neo_sempre.sh semprereal
+
+Validar todos:
+  ./validate_neo_sempre.sh
+
+Modo verboso:
+  ./validate_neo_sempre.sh semprereal -v
+
+Sem strict:
+  ./validate_neo_sempre.sh semprereal --no-strict
+
+📚 DOCUMENTAÇÃO COMPLETA
+─────────────────────────────────────────────────────────────────
+⚡ Guia Rápido:
+   docs/guides/pt/GUIA_RAPIDO_VALIDATOR.md
+
+📖 Guia Completo:
+   docs/guides/pt/COMO_USAR_VALIDATOR_NEO_SEMPRE.md
+
+🎯 Melhores Práticas:
+   docs/VALIDATOR_BEST_PRACTICES.md
+
+🔌 Plugin Guide:
+   docs/guides/en/VALIDATOR_PLUGINS.md
+
+🔄 WORKFLOW RECOMENDADO
+─────────────────────────────────────────────────────────────────
+1. Fazer mudanças no código
+2. Validar: ./validate_neo_sempre.sh semprereal
+3. Corrigir erros críticos
+4. Re-validar até passar
+5. Commitar: git commit -m "fix: correções validator"
+
+💡 DICAS
+─────────────────────────────────────────────────────────────────
+• Use SEMPRE --strict em produção
+• Valide ANTES de commitar
+• Configure task no VSCode para validar com atalho
+• Corrija erros críticos primeiro, warnings depois
+• Documente decisões se ignorar algum warning
+
+🆘 PROBLEMAS COMUNS
+─────────────────────────────────────────────────────────────────
+Plugin não carrega:
+  → Certifique-se de estar em ~/neo_sempre/neodoo18framework
+
+Muitos erros "acme_":
+  → Plugin Acme está carregando junto, use o subdiretório:
+    --plugins-dir corporate_plugins/neo_sempre
+
+Arquivo não encontrado:
+  → Use caminho absoluto ou verifique path relativo
+
+═══════════════════════════════════════════════════════════════════
+Para começar agora: cd ~/neo_sempre/neodoo18framework && ./validate_neo_sempre.sh semprereal
+═══════════════════════════════════════════════════════════════════

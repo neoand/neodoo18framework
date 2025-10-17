@@ -95,9 +95,45 @@ Select your preferred language for detailed guides:
 
 - [[glossary|Glossário de Termos]] - Definições dos termos utilizados
 
+## 📚 Knowledge Base (v2.0)
+
+**Nova seção adicionada na versão 2.0 com documentação completa do Odoo 18+:**
+
+- [[../knowledge/README|📖 Knowledge Base Index]] - Índice completo da base de conhecimento (20 documentos, 400+ KB)
+
+### Guias Práticos
+- [[../knowledge/guides/migration_guide|🔄 Guia de Migração]] - Migração de Odoo 15/16/17 para 18
+- [[../knowledge/guides/best_practices|✨ Melhores Práticas]] - Padrões recomendados para Odoo 18+
+- [[../knowledge/guides/workflow_state_machine|⚙️ Máquinas de Estado]] - Implementação de workflows
+- [[../knowledge/guides/external_api_integration|🔌 Integração de APIs]] - Como integrar APIs externas
+- [[../knowledge/guides/cheatsheet|📋 Cheatsheet]] - Referência rápida
+
+### Referência Técnica
+- [[../knowledge/reference/api_changes|🔧 Mudanças de API]] - Changelog completo de APIs Odoo 18
+- [[../knowledge/reference/view_syntax|📐 Sintaxe de Views]] - Referência XML completa
+- [[../knowledge/reference/common_issues|🐛 Problemas Comuns]] - Troubleshooting e soluções
+- [[../knowledge/reference/tips_python_odoo18|🐍 Dicas Python]] - Python moderno para Odoo 18+
+
+### OWL 2.0 Framework
+- [[../knowledge/owl/owl_notes|🦉 OWL 2.0 Completo]] - Guia definitivo de OWL 2.0
+- [[../knowledge/owl/owl_version_check|✅ Verificação de Versão]] - Como verificar compatibilidade OWL
+
+## 🎯 Exemplos Avançados (v2.0)
+
+**Nova coleção de exemplos production-ready:**
+
+- [[../examples/advanced/README|📦 Advanced Examples]] - 36 arquivos com 15,000+ linhas de código
+- [[../examples/advanced/complete_module|🏗️ Complete Module]] - Módulo completo com todos os componentes
+  - 4 modelos Python (1,334+ linhas cada)
+  - 5 views XML (List, Form, Calendar, Kanban, Pivot)
+  - 7 componentes OWL 2.0 (4,000+ linhas JavaScript)
+  - Security, Reports, Wizards, Tests
+
 ### 🇧🇷 Português (Guia Completo)
 
-[[guides/pt/GUIA_COMPLETO|📖 Guia Completo em Português]] - Documentação completa em português## 👤 Papéis Especializados
+[[guides/pt/GUIA_COMPLETO|📖 Guia Completo em Português]] - Documentação completa em português
+[[guides/pt/COMO_USAR_VALIDATOR_NEO_SEMPRE|🔍 Como Usar o Validator Neo Sempre]] - Guia completo de uso do validator
+[[guides/pt/GUIA_RAPIDO_VALIDATOR|⚡ Guia Rápido - Validator]] - Referência rápida para validação## 👤 Papéis Especializados
 
 
 

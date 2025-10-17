@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--
+    ================================================================
+    MANIFEST ASSETS - Como Registrar Assets no __manifest__.py
+    ================================================================
+
+    Este arquivo demonstra como registrar corretamente os assets JS/XML
+    no manifest de um módulo Odoo 18.
+
+    IMPORTANTE: Este NÃO é um arquivo para incluir diretamente.
+    É um exemplo de como configurar seu __manifest__.py
+    ================================================================
+    -->
+
+    <!--
+    ================================================================
+    EXEMPLO 1: Registro básico de assets no __manifest__.py
+    ================================================================
+    -->
+
+    <!--
+    # __manifest__.py
+
+    {
+        'name': 'Odoo Examples',
+        'version': '18.0.1.0.0',
+        'category': 'Tools',
+        'summary': 'Exemplos de componentes OWL para Odoo 18',
+        'description': '''
+            Este módulo contém exemplos completos de componentes OWL 2.0
+            para Odoo 18, incluindo componentes básicos, avançados e dashboards.
+        ''',
+        'depends': [
+            'base',
+            'web',
+        ],
+        'data': [
+            # Segurança
+            'security/ir.model.access.csv',
+
+            # Views
+            'views/templates.xml',
+            'views/menu_actions.xml',
+        ],
+        'assets': {
+            # ===== WEB.ASSETS_BACKEND =====
+            # Assets carregados no backend (interface principal do Odoo)
+            'web.assets_backend': [
+                # JavaScript Components
+                'odoo_examples/static/src/js/component_basic_example.js',
+                'odoo_examples/static/src/js/component_advanced_example.js',
+                'odoo_examples/static/src/js/component_list_dashboard.js',
+
+                # SCSS/CSS (se houver)
+                'odoo_examples/static/src/scss/components.scss',
+                'odoo_examples/static/src/css/dashboard.css',
+
+                # XML Templates (QWeb)
+                # NOTA: Em Odoo 18, templates XML devem ser registrados aqui
+                'odoo_examples/static/src/xml/templates.xml',
+            ],
+
+            # ===== WEB.ASSETS_FRONTEND =====
+            # Assets para o website/portal (frontend público)
+            'web.assets_frontend': [
+                # Componentes específicos do frontend
+                'odoo_examples/static/src/js/frontend_component.js',
+                'odoo_examples/static/src/css/frontend.css',
+            ],
+
+            # ===== WEB.ASSETS_QWEB =====
+            # Templates QWeb (Odoo < 18, mantido para compatibilidade)
+            'web.assets_qweb': [
+                'odoo_examples/static/src/xml/**/*',
+            ],
+        },
+        'installable': True,
+        'application': True,
+        'auto_install': False,
+        'license': 'LGPL-3',
+    }
+    -->
+
+    <!--
+    ================================================================
+    EXEMPLO 2: Manifest com organização avançada
+    ================================================================
+    -->
+
+    <!--
+    # __manifest__.py (versão avançada)
+
+    {
+        'name': 'Odoo Examples Advanced',
+        'version': '18.0.1.0.0',
+        'category': 'Tools',
+        'depends': [
+            'base',
+            'web',
+            'mail',
+            'sale',
+        ],
+        'data': [
+            'security/ir.model.access.csv',
+            'views/templates.xml',
+            'views/menu_actions.xml',
+        ],
+        'assets': {
+            # Backend Assets - Carregados na interface principal
+            'web.assets_backend': [
+                # === CORE COMPONENTS ===
+                'odoo_examples/static/src/js/core/*.js',
+
+                # === BASIC COMPONENTS ===
+                'odoo_examples/static/src/js/components/basic/*.js',
+
+                # === ADVANCED COMPONENTS ===
+                'odoo_examples/static/src/js/components/advanced/*.js',
+
+                # === DASHBOARD COMPONENTS ===
+                'odoo_examples/static/src/js/components/dashboard/*.js',
+
+                # === SERVICES ===
+                'odoo_examples/static/src/js/services/*.js',
+
+                # === UTILS ===
+                'odoo_examples/static/src/js/utils/*.js',
+
+                # === STYLES ===
+                'odoo_examples/static/src/scss/main.scss',
+                'odoo_examples/static/src/scss/components/*.scss',
+                'odoo_examples/static/src/css/*.css',
+
+                # === TEMPLATES ===
+                'odoo_examples/static/src/xml/*.xml',
+            ],
+
+            # Frontend Assets - Portal/Website
+            'web.assets_frontend': [
+                'odoo_examples/static/src/js/frontend/**/*.js',
+                'odoo_examples/static/src/css/frontend.css',
+            ],
+
+            # Assets específicos para testes
+            'web.assets_tests': [
+                'odoo_examples/static/tests/**/*.js',
+            ],
+
+            # Assets para modo de demonstração
+            'web.assets_backend_prod_only': [
+                # Assets que só devem ser carregados em produção
+                'odoo_examples/static/src/js/analytics.js',
+            ],
+        },
+        'installable': True,
+        'application': True,
+        'auto_install': False,
+    }
+    -->
+
+    <!--
+    ================================================================
+    EXEMPLO 3: Registro de componentes individuais com lazy loading
+    ================================================================
+    -->
+
+    <!--
+    # __manifest__.py (com lazy loading)
+
+    {
+        'name': 'Odoo Examples Lazy',
+        'version': '18.0.1.0.0',
+        'depends': ['base', 'web'],
+        'data': [
+            'views/templates.xml',
+        ],
+        'assets': {
+            # Assets principais (sempre carregados)
+            'web.assets_backend': [
+                # Core essencial
+                'odoo_examples/static/src/js/core/registry.js',
+                'odoo_examples/static/src/js/core/utils.js',
+
+                # Templates essenciais
+                'odoo_examples/static/src/xml/core_templates.xml',
+            ],
+
+            # Bundle específico para componente básico
+            # Carregado apenas quando necessário
+            'odoo_examples.basic_component': [
+                ('include', 'web.assets_backend'),
+                'odoo_examples/static/src/js/component_basic_example.js',
+                'odoo_examples/static/src/xml/basic_templates.xml',
+            ],
+
+            # Bundle para dashboard
+            'odoo_examples.dashboard': [
+                ('include', 'web.assets_backend'),
+                'odoo_examples/static/src/js/component_list_dashboard.js',
+                'odoo_examples/static/src/js/services/dashboard_service.js',
+                'odoo_examples/static/src/xml/dashboard_templates.xml',
+                'odoo_examples/static/src/scss/dashboard.scss',
+
+                # Incluir bibliotecas externas (Chart.js, etc)
+                'odoo_examples/static/lib/chart.js/chart.min.js',
+            ],
+        },
+    }
+
+    # Para carregar um bundle específico em uma action:
+    # <record id="action_dashboard" model="ir.actions.client">
+    #     <field name="name">Dashboard</field>
+    #     <field name="tag">ComponentListDashboard</field>
+    #     <field name="target">current</field>
+    #     <field name="params" eval="{
+    #         'resModel': 'sale.order',
+    #     }"/>
+    #     <!-- Especifica qual bundle carregar -->
+    #     <field name="bundle">odoo_examples.dashboard</field>
+    # </record>
+    -->
+
+    <!--
+    ================================================================
+    EXEMPLO 4: Menu Actions - Como usar os componentes
+    ================================================================
+    -->
+
+    <data>
+        <!-- ===== CLIENT ACTIONS ===== -->
+
+        <!-- Action para Componente Básico -->
+        <record id="action_basic_component" model="ir.actions.client">
+            <field name="name">Exemplo Básico</field>
+            <field name="tag">odoo_examples.ComponentBasicExample</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'title': 'Componente Básico OWL',
+                'subtitle': 'Demonstração de conceitos fundamentais',
+                'maxCount': 100,
+                'initialCounter': 0,
+            }"/>
+        </record>
+
+        <!-- Action para Componente Avançado -->
+        <record id="action_advanced_component" model="ir.actions.client">
+            <field name="name">Exemplo Avançado</field>
+            <field name="tag">odoo_examples.ComponentAdvancedExample</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'resModel': 'res.partner',
+                'domain': [('customer_rank', '>', 0)],
+                'context': {'default_customer_rank': 1},
+                'allowCreate': True,
+                'allowEdit': True,
+                'allowDelete': False,
+            }"/>
+        </record>
+
+        <!-- Action para Dashboard -->
+        <record id="action_dashboard_example" model="ir.actions.client">
+            <field name="name">Dashboard Exemplo</field>
+            <field name="tag">odoo_examples.ComponentListDashboard</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'resModel': 'sale.order',
+                'title': 'Dashboard de Vendas',
+                'domain': [],
+                'showStatistics': True,
+                'showCharts': True,
+                'showFilters': True,
+            }"/>
+        </record>
+
+        <!-- ===== MENU ITEMS ===== -->
+
+        <!-- Menu principal -->
+        <menuitem id="menu_odoo_examples_root"
+                  name="OWL Examples"
+                  sequence="100"
+                  web_icon="odoo_examples,static/description/icon.png"/>
+
+        <!-- Sub-menu Componentes -->
+        <menuitem id="menu_components"
+                  name="Componentes"
+                  parent="menu_odoo_examples_root"
+                  sequence="10"/>
+
+        <menuitem id="menu_basic_component"
+                  name="Básico"
+                  parent="menu_components"
+                  action="action_basic_component"
+                  sequence="10"/>
+
+        <menuitem id="menu_advanced_component"
+                  name="Avançado"
+                  parent="menu_components"
+                  action="action_advanced_component"
+                  sequence="20"/>
+
+        <!-- Sub-menu Dashboards -->
+        <menuitem id="menu_dashboards"
+                  name="Dashboards"
+                  parent="menu_odoo_examples_root"
+                  sequence="20"/>
+
+        <menuitem id="menu_dashboard_example"
+                  name="Dashboard Exemplo"
+                  parent="menu_dashboards"
+                  action="action_dashboard_example"
+                  sequence="10"/>
+    </data>
+
+    <!--
+    ================================================================
+    REGISTRANDO COMPONENTES NO REGISTRY DO ODOO
+    ================================================================
+    -->
+
+    <!--
+    Em um arquivo separado: static/src/js/registry.js
+
+    /** @odoo-module **/
+
+    import { registry } from "@web/core/registry";
+    import { ComponentBasicExample } from "./component_basic_example";
+    import { ComponentAdvancedExample } from "./component_advanced_example";
+    import { ComponentListDashboard } from "./component_list_dashboard";
+
+    // Registra componentes como client actions
+    const actionRegistry = registry.category("actions");
+
+    actionRegistry.add("odoo_examples.ComponentBasicExample", ComponentBasicExample);
+    actionRegistry.add("odoo_examples.ComponentAdvancedExample", ComponentAdvancedExample);
+    actionRegistry.add("odoo_examples.ComponentListDashboard", ComponentListDashboard);
+
+    // Também pode registrar em outras categorias:
+
+    // 1. Como Field Widget
+    const fieldRegistry = registry.category("fields");
+    // fieldRegistry.add("custom_widget", CustomFieldWidget);
+
+    // 2. Como Systray Item
+    const systrayRegistry = registry.category("systray");
+    // systrayRegistry.add("CustomSystray", { Component: CustomSystray }, { sequence: 100 });
+
+    // 3. Como Service
+    const serviceRegistry = registry.category("services");
+    // serviceRegistry.add("customService", customServiceFactory);
+    -->
+
+    <!--
+    ================================================================
+    ESTRUTURA DE PASTAS RECOMENDADA
+    ================================================================
+
+    odoo_examples/
+    ├── __init__.py
+    ├── __manifest__.py
+    │
+    ├── models/
+    │   ├── __init__.py
+    │   └── example_model.py
+    │
+    ├── views/
+    │   ├── templates.xml
+    │   └── menu_actions.xml
+    │
+    ├── security/
+    │   └── ir.model.access.csv
+    │
+    └── static/
+        ├── description/
+        │   └── icon.png
+        │
+        └── src/
+            ├── js/
+            │   ├── core/
+            │   │   ├── registry.js
+            │   │   └── utils.js
+            │   │
+            │   ├── components/
+            │   │   ├── basic/
+            │   │   │   └── component_basic_example.js
+            │   │   │
+            │   │   ├── advanced/
+            │   │   │   └── component_advanced_example.js
+            │   │   │
+            │   │   └── dashboard/
+            │   │       └── component_list_dashboard.js
+            │   │
+            │   ├── services/
+            │   │   └── dashboard_service.js
+            │   │
+            │   └── utils/
+            │       ├── formatters.js
+            │       └── validators.js
+            │
+            ├── xml/
+            │   ├── basic_templates.xml
+            │   ├── advanced_templates.xml
+            │   └── dashboard_templates.xml
+            │
+            ├── scss/
+            │   ├── main.scss
+            │   ├── components/
+            │   │   ├── _basic.scss
+            │   │   ├── _advanced.scss
+            │   │   └── _dashboard.scss
+            │   │
+            │   └── utils/
+            │       ├── _variables.scss
+            │       └── _mixins.scss
+            │
+            └── css/
+                └── legacy.css
+
+    ================================================================
+    -->
+
+    <!--
+    ================================================================
+    DICAS DE PERFORMANCE E BOAS PRÁTICAS
+    ================================================================
+
+    1. LAZY LOADING:
+       - Use bundles separados para componentes grandes
+       - Carregue apenas o necessário para cada view
+       - Aproveite o code splitting do Odoo 18
+
+    2. ORDEM DE CARREGAMENTO:
+       - Core/Utils primeiro
+       - Componentes base depois
+       - Componentes específicos por último
+       - Templates sempre após o JS correspondente
+
+    3. ORGANIZAÇÃO:
+       - Agrupe por funcionalidade, não por tipo de arquivo
+       - Use wildcards (* e **) com cuidado
+       - Prefira paths explícitos para assets críticos
+
+    4. SCSS vs CSS:
+       - Use SCSS para estilos componentizados
+       - Aproveite variáveis e mixins
+       - CSS puro para overrides rápidos
+
+    5. TEMPLATES XML:
+       - Em Odoo 18, templates vão em assets_backend
+       - Use t-name único e descritivo
+       - Organize por componente
+
+    6. CACHE:
+       - Odoo faz cache de assets automaticamente
+       - Use versioning no manifest para invalidar cache
+       - Modo dev: --dev=all desabilita cache
+
+    7. DEBUGGING:
+       - Use --dev=xml,js para reload automático
+       - Source maps são gerados automaticamente
+       - Console do browser mostra erros de carregamento
+
+    ================================================================
+    -->
+
+    <!--
+    ================================================================
+    EXEMPLO DE COMANDO PARA ATUALIZAR MÓDULO
+    ================================================================
+
+    # Instalar módulo
+    odoo-bin -c odoo.conf -d mydb -i odoo_examples
+
+    # Atualizar módulo (após mudanças)
+    odoo-bin -c odoo.conf -d mydb -u odoo_examples
+
+    # Modo desenvolvedor (sem cache)
+    odoo-bin -c odoo.conf -d mydb -u odoo_examples --dev=all
+
+    # Atualizar apenas assets
+    odoo-bin -c odoo.conf -d mydb -u odoo_examples --dev=xml,js
+
+    ================================================================
+    -->
+
+</odoo>

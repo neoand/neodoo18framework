@@ -1,0 +1,274 @@
+================================================================================
+          EXEMPLOS OWL COMPONENTS - ODOO 18 - ESTRUTURA DE ARQUIVOS
+================================================================================
+
+📁 /examples/
+│
+├── 📄 __init__.py                                 [Python Module Init]
+├── 📄 __manifest__.py                             [Odoo Manifest]
+│
+├── 📘 README.md                                   [Guia Principal - 12KB]
+├── 📘 INDEX.md                                    [Índice Detalhado - 13KB]
+├── 📘 ARQUIVOS_CRIADOS.md                         [Lista de Arquivos - 11KB]
+├── 📘 RESUMO.md                                   [Resumo Executivo - 10KB]
+├── 📘 ESTRUTURA.txt                               [Este Arquivo]
+│
+├── 📁 static/src/
+│   │
+│   ├── 📁 js/                                     [Componentes JavaScript]
+│   │   │
+│   │   ├── 🟦 registry.js                         [14KB - Registry]
+│   │   │   ├── Registro de Client Actions
+│   │   │   ├── Exemplos de Field Widgets
+│   │   │   ├── Exemplos de Systray Items
+│   │   │   ├── Exemplos de Services
+│   │   │   ├── Utility Functions
+│   │   │   └── Guia de Debugging
+│   │   │
+│   │   ├── 🟦 component_basic_example.js          [10KB - Básico]
+│   │   │   ├── Props validation (static props)
+│   │   │   ├── State management (useState)
+│   │   │   ├── Lifecycle hooks
+│   │   │   ├── Event handling
+│   │   │   ├── Computed properties
+│   │   │   └── Form handling
+│   │   │
+│   │   ├── 🟦 component_advanced_example.js       [23KB - Avançado]
+│   │   │   ├── useService (ORM, action, notification, rpc)
+│   │   │   ├── useRef para DOM
+│   │   │   ├── useEffect para side effects
+│   │   │   ├── CRUD completo
+│   │   │   ├── Search com debounce
+│   │   │   ├── Paginação
+│   │   │   └── Error handling
+│   │   │
+│   │   └── 🟦 component_list_dashboard.js         [26KB - Dashboard]
+│   │       ├── Multi-model data loading
+│   │       ├── Filtros avançados
+│   │       ├── Multiple view modes
+│   │       ├── Estatísticas
+│   │       ├── Charts (Chart.js ready)
+│   │       ├── Auto-refresh
+│   │       └── Export functionality
+│   │
+│   └── 📁 xml/                                    [Templates QWeb]
+│       └── (usar templates.xml em /views/)
+│
+└── 📁 views/                                      [Views e Actions]
+    │
+    ├── 🟨 templates.xml                           [41KB - Templates QWeb]
+    │   ├── Template: ComponentBasicExample
+    │   ├── Template: ComponentAdvancedExample
+    │   └── Template: ComponentListDashboard
+    │
+    ├── 🟨 menu_actions.xml                        [17KB - Actions e Menus]
+    │   ├── 8 Client Actions
+    │   ├── Estrutura de menus
+    │   ├── Exemplos de targets
+    │   └── Documentação inline
+    │
+    └── 🟨 manifest_assets.xml                     [17KB - Guia de Assets]
+        ├── 4 exemplos de __manifest__.py
+        ├── Estrutura de pastas
+        ├── Dicas de performance
+        └── Troubleshooting
+
+================================================================================
+                              COMPONENTES CRIADOS
+================================================================================
+
+1. COMPONENTE BÁSICO (component_basic_example.js)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Props:
+   • title: String (obrigatório)
+   • subtitle: String (opcional)
+   • maxCount: Number (opcional)
+   • onSave: Function (opcional)
+
+   Funcionalidades:
+   ✓ Counter com increment/decrement
+   ✓ Progress bar
+   ✓ Active/Inactive toggle
+   ✓ Form com validação
+   ✓ Lista dinâmica de items
+   ✓ State management completo
+
+2. COMPONENTE AVANÇADO (component_advanced_example.js)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Props:
+   • resModel: String (obrigatório)
+   • domain: Array (opcional)
+   • context: Object (opcional)
+   • allowCreate/Edit/Delete: Boolean
+
+   Funcionalidades:
+   ✓ CRUD completo (create, read, update, delete)
+   ✓ Search com debounce
+   ✓ Filtros avançados
+   ✓ Paginação
+   ✓ Integration com backend
+   ✓ Error handling robusto
+
+3. DASHBOARD (component_list_dashboard.js)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Props:
+   • resModel: String (obrigatório)
+   • title: String (opcional)
+   • showStatistics/Charts/Filters: Boolean
+
+   Funcionalidades:
+   ✓ Busca de dados via ORM
+   ✓ Filtros complexos (search, categoria, parceiro, datas)
+   ✓ Multiple views (cards, list, kanban)
+   ✓ Estatísticas em tempo real
+   ✓ Charts (preparado)
+   ✓ Auto-refresh
+   ✓ Export de dados
+   ✓ Drill-down navigation
+
+================================================================================
+                              CLIENT ACTIONS
+================================================================================
+
+1. action_basic_component
+   Tag: odoo_examples.ComponentBasicExample
+   Target: current
+
+2. action_advanced_partners
+   Tag: odoo_examples.ComponentAdvancedExample
+   Model: res.partner
+   Target: current
+
+3. action_advanced_products
+   Tag: odoo_examples.ComponentAdvancedExample
+   Model: product.product
+   Target: current
+
+4. action_dashboard_sales
+   Tag: odoo_examples.ComponentListDashboard
+   Model: sale.order
+   Target: current
+
+5. action_dashboard_invoices
+   Tag: odoo_examples.ComponentListDashboard
+   Model: account.move
+   Target: current
+
+6. action_dashboard_tasks
+   Tag: odoo_examples.ComponentListDashboard
+   Model: project.task
+   Target: current
+
+7. action_basic_modal
+   Tag: odoo_examples.ComponentBasicExample
+   Target: new (modal)
+
+8. action_dashboard_fullscreen
+   Tag: odoo_examples.ComponentListDashboard
+   Target: fullscreen
+
+================================================================================
+                              ESTRUTURA DE MENUS
+================================================================================
+
+OWL Examples (Root)
+├── Componentes Básicos
+│   ├── Exemplo Básico
+│   └── Exemplo Modal
+│
+├── Componentes Avançados
+│   ├── Gerenciar Parceiros
+│   └── Gerenciar Produtos
+│
+├── Dashboards
+│   ├── Vendas
+│   ├── Faturas
+│   ├── Tarefas
+│   └── Dashboard Fullscreen
+│
+└── Documentação
+
+================================================================================
+                         ASSETS REGISTRATION
+================================================================================
+
+web.assets_backend:
+  1. odoo_examples/static/src/js/registry.js              [PRIMEIRO]
+  2. odoo_examples/static/src/js/component_basic_example.js
+  3. odoo_examples/static/src/js/component_advanced_example.js
+  4. odoo_examples/static/src/js/component_list_dashboard.js
+  5. odoo_examples/static/src/xml/templates.xml          [ÚLTIMO]
+
+================================================================================
+                         CONCEITOS COBERTOS
+================================================================================
+
+OWL 2.0:
+✓ setup() method                    ✓ useRef
+✓ static props                      ✓ useEffect
+✓ useState                          ✓ useService
+✓ Lifecycle hooks                   ✓ Computed properties
+✓ Event handling
+
+Odoo Services:
+✓ ORM (searchRead, create, write, unlink, call, readGroup)
+✓ Action (doAction)
+✓ Notification (add)
+✓ RPC (custom endpoints)
+✓ User (context, info)
+
+QWeb Templates:
+✓ t-esc / t-out                     ✓ t-foreach / t-as / t-key
+✓ t-att-*                           ✓ t-on-* (events)
+✓ t-if / t-elif / t-else            ✓ t-ref
+
+================================================================================
+                         INSTALAÇÃO RÁPIDA
+================================================================================
+
+# 1. Copiar módulo
+cp -r examples/ /path/to/odoo/addons/odoo_examples/
+
+# 2. Instalar (desenvolvimento)
+odoo-bin -c odoo.conf -d mydb -i odoo_examples --dev=all
+
+# 3. Atualizar
+odoo-bin -c odoo.conf -d mydb -u odoo_examples --dev=all
+
+# 4. Acessar
+Menu: OWL Examples → escolher componente
+
+================================================================================
+                         ESTATÍSTICAS
+================================================================================
+
+Total de Arquivos:        11
+Tamanho Total:           ~200KB
+Linhas de Código:        ~6.500
+Linhas de Comentários:   ~1.800
+
+JavaScript:              4 arquivos (72KB)
+XML:                     3 arquivos (81KB)
+Python:                  2 arquivos (11KB)
+Markdown:                2 arquivos (25KB)
+
+Componentes OWL:         3
+Client Actions:          8
+Templates QWeb:          3
+
+================================================================================
+                    DOCUMENTAÇÃO DE REFERÊNCIA
+================================================================================
+
+📘 README.md              - Guia principal completo
+📘 INDEX.md               - Índice detalhado com estatísticas
+📘 ARQUIVOS_CRIADOS.md    - Lista completa de arquivos
+📘 RESUMO.md              - Resumo executivo
+
+Todos os arquivos JS contêm comentários extensivos em português!
+
+================================================================================
+                         DESENVOLVIDO PARA ODOO 18
+                    Desenvolvido para a comunidade Odoo 🚀
+                              2025-10-17
+================================================================================

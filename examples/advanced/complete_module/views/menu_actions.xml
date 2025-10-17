@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--
+        ================================================================
+        MENU ACTIONS - Exemplos Completos de Client Actions
+        ================================================================
+
+        Este arquivo demonstra como criar menus e actions para usar
+        os componentes OWL no Odoo 18.
+
+        IMPORTANTE: Os componentes devem estar registrados no registry.js
+        ================================================================
+        -->
+
+        <!-- ===== CLIENT ACTIONS ===== -->
+
+        <!-- ========================================
+             Action 1: Componente Básico
+             ======================================== -->
+        <record id="action_basic_component" model="ir.actions.client">
+            <field name="name">Exemplo Básico OWL</field>
+            <field name="tag">odoo_examples.ComponentBasicExample</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'title': 'Componente Básico',
+                'subtitle': 'Demonstração de conceitos fundamentais do OWL 2.0',
+                'maxCount': 100,
+                'initialCounter': 0,
+            }"/>
+        </record>
+
+        <!-- ========================================
+             Action 2: Componente Avançado - Partners
+             ======================================== -->
+        <record id="action_advanced_partners" model="ir.actions.client">
+            <field name="name">Gerenciador de Parceiros</field>
+            <field name="tag">odoo_examples.ComponentAdvancedExample</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'resModel': 'res.partner',
+                'domain': [('customer_rank', '>', 0)],
+                'context': {
+                    'default_customer_rank': 1,
+                    'default_type': 'contact',
+                },
+                'viewMode': 'list',
+                'allowCreate': True,
+                'allowEdit': True,
+                'allowDelete': False,
+            }"/>
+        </record>
+
+        <!-- ========================================
+             Action 3: Componente Avançado - Products
+             ======================================== -->
+        <record id="action_advanced_products" model="ir.actions.client">
+            <field name="name">Gerenciador de Produtos</field>
+            <field name="tag">odoo_examples.ComponentAdvancedExample</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'resModel': 'product.product',
+                'domain': [('sale_ok', '=', True)],
+                'context': {
+                    'default_sale_ok': True,
+                },
+                'allowCreate': True,
+                'allowEdit': True,
+                'allowDelete': True,
+            }"/>
+        </record>
+
+        <!-- ========================================
+             Action 4: Dashboard - Sales Orders
+             ======================================== -->
+        <record id="action_dashboard_sales" model="ir.actions.client">
+            <field name="name">Dashboard de Vendas</field>
+            <field name="tag">odoo_examples.ComponentListDashboard</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'resModel': 'sale.order',
+                'title': 'Dashboard de Pedidos de Venda',
+                'domain': [],
+                'context': {},
+                'fields': ['name', 'partner_id', 'date_order', 'state', 'amount_total'],
+                'showStatistics': True,
+                'showCharts': True,
+                'showFilters': True,
+            }"/>
+        </record>
+
+        <!-- ========================================
+             Action 5: Dashboard - Invoices
+             ======================================== -->
+        <record id="action_dashboard_invoices" model="ir.actions.client">
+            <field name="name">Dashboard de Faturas</field>
+            <field name="tag">odoo_examples.ComponentListDashboard</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'resModel': 'account.move',
+                'title': 'Dashboard de Faturas',
+                'domain': [('move_type', '=', 'out_invoice')],
+                'context': {},
+                'showStatistics': True,
+                'showCharts': True,
+                'showFilters': True,
+            }"/>
+        </record>
+
+        <!-- ========================================
+             Action 6: Dashboard - Projects/Tasks
+             ======================================== -->
+        <record id="action_dashboard_tasks" model="ir.actions.client">
+            <field name="name">Dashboard de Tarefas</field>
+            <field name="tag">odoo_examples.ComponentListDashboard</field>
+            <field name="target">current</field>
+            <field name="params" eval="{
+                'resModel': 'project.task',
+                'title': 'Dashboard de Tarefas',
+                'domain': [],
+                'showStatistics': True,
+                'showCharts': True,
+                'showFilters': True,
+            }"/>
+        </record>
+
+        <!-- ========================================
+             Action 7: Modal Example (target=new)
+             ======================================== -->
+        <record id="action_basic_modal" model="ir.actions.client">
+            <field name="name">Componente em Modal</field>
+            <field name="tag">odoo_examples.ComponentBasicExample</field>
+            <field name="target">new</field>
+            <field name="params" eval="{
+                'title': 'Modal Exemplo',
+                'maxCount': 50,
+            }"/>
+        </record>
+
+        <!-- ========================================
+             Action 8: Fullscreen Example
+             ======================================== -->
+        <record id="action_dashboard_fullscreen" model="ir.actions.client">
+            <field name="name">Dashboard Fullscreen</field>
+            <field name="tag">odoo_examples.ComponentListDashboard</field>
+            <field name="target">fullscreen</field>
+            <field name="params" eval="{
+                'resModel': 'sale.order',
+                'title': 'Dashboard Fullscreen',
+                'showStatistics': True,
+                'showCharts': True,
+            }"/>
+        </record>
+
+        <!-- ===== MENU STRUCTURE ===== -->
+
+        <!-- ========================================
+             Menu Principal
+             ======================================== -->
+        <menuitem id="menu_owl_examples_root"
+                  name="OWL Examples"
+                  sequence="100"
+                  web_icon="odoo_examples,static/description/icon.png"/>
+
+        <!-- ========================================
+             Sub-menu: Componentes Básicos
+             ======================================== -->
+        <menuitem id="menu_basic_components"
+                  name="Componentes Básicos"
+                  parent="menu_owl_examples_root"
+                  sequence="10"/>
+
+        <menuitem id="menu_basic_component"
+                  name="Exemplo Básico"
+                  parent="menu_basic_components"
+                  action="action_basic_component"
+                  sequence="10"/>
+
+        <menuitem id="menu_basic_modal"
+                  name="Exemplo Modal"
+                  parent="menu_basic_components"
+                  action="action_basic_modal"
+                  sequence="20"/>
+
+        <!-- ========================================
+             Sub-menu: Componentes Avançados
+             ======================================== -->
+        <menuitem id="menu_advanced_components"
+                  name="Componentes Avançados"
+                  parent="menu_owl_examples_root"
+                  sequence="20"/>
+
+        <menuitem id="menu_advanced_partners"
+                  name="Gerenciar Parceiros"
+                  parent="menu_advanced_components"
+                  action="action_advanced_partners"
+                  sequence="10"/>
+
+        <menuitem id="menu_advanced_products"
+                  name="Gerenciar Produtos"
+                  parent="menu_advanced_components"
+                  action="action_advanced_products"
+                  sequence="20"/>
+
+        <!-- ========================================
+             Sub-menu: Dashboards
+             ======================================== -->
+        <menuitem id="menu_dashboards"
+                  name="Dashboards"
+                  parent="menu_owl_examples_root"
+                  sequence="30"/>
+
+        <menuitem id="menu_dashboard_sales"
+                  name="Vendas"
+                  parent="menu_dashboards"
+                  action="action_dashboard_sales"
+                  sequence="10"/>
+
+        <menuitem id="menu_dashboard_invoices"
+                  name="Faturas"
+                  parent="menu_dashboards"
+                  action="action_dashboard_invoices"
+                  sequence="20"/>
+
+        <menuitem id="menu_dashboard_tasks"
+                  name="Tarefas"
+                  parent="menu_dashboards"
+                  action="action_dashboard_tasks"
+                  sequence="30"/>
+
+        <menuitem id="menu_dashboard_fullscreen"
+                  name="Dashboard Fullscreen"
+                  parent="menu_dashboards"
+                  action="action_dashboard_fullscreen"
+                  sequence="40"/>
+
+        <!-- ========================================
+             Sub-menu: Documentação
+             ======================================== -->
+        <menuitem id="menu_documentation"
+                  name="Documentação"
+                  parent="menu_owl_examples_root"
+                  sequence="100"/>
+
+        <!--
+        ================================================================
+        COMO ABRIR ACTIONS PROGRAMATICAMENTE
+        ================================================================
+        -->
+
+        <!--
+        Em JavaScript, você pode abrir estas actions de várias formas:
+
+        1. VIA TAG (string):
+        ==================
+        import { useService } from "@web/core/utils/hooks";
+
+        setup() {
+            this.action = useService("action");
+        }
+
+        async openBasicExample() {
+            await this.action.doAction("odoo_examples.ComponentBasicExample");
+        }
+
+
+        2. VIA XML ID:
+        ==============
+        async openFromXmlId() {
+            await this.action.doAction("odoo_examples.action_basic_component");
+        }
+
+
+        3. VIA ID NUMÉRICO:
+        ===================
+        async openFromId() {
+            await this.action.doAction(123); // ID da action
+        }
+
+
+        4. VIA OBJETO COMPLETO:
+        =======================
+        async openWithObject() {
+            await this.action.doAction({
+                type: "ir.actions.client",
+                tag: "odoo_examples.ComponentBasicExample",
+                name: "Meu Título Custom",
+                target: "new", // "current", "new", "fullscreen", "main"
+                params: {
+                    title: "Título Dinâmico",
+                    maxCount: 200,
+                },
+                context: {
+                    // context adicional
+                },
+            });
+        }
+
+
+        5. COM CALLBACKS:
+        =================
+        async openWithCallbacks() {
+            await this.action.doAction(
+                "odoo_examples.ComponentBasicExample",
+                {
+                    onClose: () => {
+                        console.log("Action fechada!");
+                        this.refresh();
+                    },
+                    additionalContext: {
+                        my_key: "my_value",
+                    },
+                    props: {
+                        title: "Custom Title",
+                    },
+                }
+            );
+        }
+
+
+        6. ABRIR COMO MODAL:
+        ===================
+        async openModal() {
+            await this.action.doAction({
+                type: "ir.actions.client",
+                tag: "odoo_examples.ComponentBasicExample",
+                target: "new",
+                params: {
+                    title: "Modal",
+                },
+            });
+        }
+
+
+        7. SUBSTITUIR ACTION ATUAL:
+        ==========================
+        async replaceCurrentAction() {
+            await this.action.doAction(
+                "odoo_examples.ComponentListDashboard",
+                {
+                    clearBreadcrumbs: true, // Limpa breadcrumbs
+                    stackPosition: "replaceCurrentAction", // Substitui
+                }
+            );
+        }
+
+
+        8. ABRIR EM NOVA ABA:
+        ====================
+        // Não há suporte direto, mas você pode:
+        openInNewTab() {
+            const url = `/web#action=odoo_examples.action_basic_component`;
+            window.open(url, '_blank');
+        }
+        -->
+
+        <!--
+        ================================================================
+        TARGET OPTIONS EXPLICADOS
+        ================================================================
+
+        target="current"
+        - Abre na área principal (substitui conteúdo atual)
+        - Adiciona breadcrumb
+        - Permite navegação de volta
+        - USO: Views principais, dashboards
+
+        target="new"
+        - Abre em modal/dialog
+        - Não adiciona breadcrumb
+        - Usuário precisa fechar para continuar
+        - USO: Forms rápidos, wizards, confirmações
+
+        target="fullscreen"
+        - Abre em tela cheia (sem menu/navbar)
+        - Ocupa toda a tela
+        - ESC para sair
+        - USO: Dashboards imersivos, apresentações
+
+        target="main"
+        - Abre na área principal sem breadcrumb
+        - Limpa navegação anterior
+        - USO: Redirecionamentos após ações
+        -->
+
+        <!--
+        ================================================================
+        PARAMS vs CONTEXT
+        ================================================================
+
+        PARAMS:
+        - Passados diretamente para o componente como props
+        - Acessíveis via this.props no componente
+        - Específicos para cada action
+        - Exemplo: title, maxCount, resModel
+
+        CONTEXT:
+        - Disponível globalmente no Odoo
+        - Usado em chamadas ORM
+        - Pode definir valores padrão (default_*)
+        - Exemplo: default_customer_rank, lang, tz
+
+        <field name="params" eval="{
+            'title': 'Meu Dashboard',  # Vai para props
+            'resModel': 'sale.order',  # Vai para props
+        }"/>
+
+        <field name="context" eval="{
+            'default_state': 'draft',  # Usado em create()
+            'search_default_my_filter': 1,
+        }"/>
+        -->
+
+        <!--
+        ================================================================
+        SEGURANÇA E PERMISSÕES
+        ================================================================
+        -->
+
+        <!-- Para restringir acesso a menus/actions, use groups -->
+
+        <!-- Exemplo: Apenas admin pode ver -->
+        <!--
+        <menuitem id="menu_admin_only"
+                  name="Apenas Admin"
+                  parent="menu_owl_examples_root"
+                  action="action_basic_component"
+                  groups="base.group_system"/>
+        -->
+
+        <!-- Exemplo: Múltiplos grupos (OR) -->
+        <!--
+        <menuitem id="menu_multiple_groups"
+                  name="Manager ou User"
+                  parent="menu_owl_examples_root"
+                  groups="base.group_user,base.group_partner_manager"/>
+        -->
+
+        <!-- Exemplo: Action com permissões -->
+        <!--
+        <record id="action_restricted" model="ir.actions.client">
+            <field name="name">Restrito</field>
+            <field name="tag">odoo_examples.ComponentBasicExample</field>
+            <field name="groups_id" eval="[(4, ref('base.group_system'))]"/>
+        </record>
+        -->
+
+        <!--
+        ================================================================
+        EXEMPLO DE ACTION WINDOW (não client)
+        ================================================================
+
+        Para comparação, aqui está uma action.window normal:
+
+        <record id="action_partner_form" model="ir.actions.act_window">
+            <field name="name">Parceiros</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="domain">[('customer_rank', '>', 0)]</field>
+            <field name="context">{
+                'default_customer_rank': 1,
+                'search_default_customer': 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crie seu primeiro parceiro
+                </p>
+            </field>
+        </record>
+
+        Diferença:
+        - act_window: usa views padrão do Odoo (tree, form, kanban)
+        - client: usa componente customizado (OWL)
+        -->
+
+    </data>
+</odoo>

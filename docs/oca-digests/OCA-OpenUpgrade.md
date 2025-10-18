@@ -26,3 +26,8 @@
 
 - Commit edb78c8: Merge pull request #5399 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/edb78c84734441586b3beecedbb4427575aaac42
 
+## 2025-10-18
+
+- Commit 5506575: [OU-FIX] hr_timesheet: Convert task progress → https://github.com/OCA/OpenUpgrade/commit/55065753c716bb15732ed322b94a9419f98bab8c
+- Commit 5f12f8d: Merge pull request #5404 from Tecnativa/18.0-ou_fix-hr_timesheet-progress → https://github.com/OCA/OpenUpgrade/commit/5f12f8ddcf86b8b422019334257e5560e5afcc67
+

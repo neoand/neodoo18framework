@@ -44,3 +44,9 @@
 
 - Commit 8acfc12: Added translation using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/8acfc12337b85048e4da9673572979f7a2a6f718
 
+## 2025-10-18
+
+- Commit 3f9d423: [FIX] sale_automatic_workflow_job email sending → https://github.com/OCA/sale-workflow/commit/3f9d4232422d209f509af6729285532fa340e375
+- Commit ee1de3d: Merge PR #3938 into 18.0 → https://github.com/OCA/sale-workflow/commit/ee1de3d2680b84b0766eac5d96253cdacce4b685
+- Commit 7a6abef: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/7a6abef76cc299d561ba03831be4ab3214627e4e
+

@@ -30,3 +30,11 @@
 - Commit 55a5a10: Merge PR #82 into 18.0 → https://github.com/OCA/spreadsheet/commit/55a5a10d8f09083c2a6210439cd06cdada456fa6
 - Commit b55e6ff: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/b55e6ff0a4171518db9cedd6c07ef1807029ddf0
 
+## 2025-10-21
+
+- Commit 17fef71: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/17fef718b91955dd9bc4f12d417855f1f8d481b5
+- Commit fce1740: Update translation files → https://github.com/OCA/spreadsheet/commit/fce1740fa40edaef96e4b0fe8ab9608a99f186f7
+- Commit 93170b1: Update translation files → https://github.com/OCA/spreadsheet/commit/93170b18ea6957d3203b4d9797205ec697d91d85
+- Commit f787cc2: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/f787cc2c7a9f381bf81b3021a71a4b13f096dff5
+- Commit 6aa56fd: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/6aa56fd9f57081ceb1f10e1d157d18c4f4c329df
+

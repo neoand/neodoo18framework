@@ -27,3 +27,10 @@
 
 - Commit 2967184: Added translation using Weblate (Italian) → https://github.com/OCA/management-system/commit/296718425453e036f1310898ae674c31e40b041d
 
+## 2025-10-22
+
+- Commit 51abc02: [FIX] mgmtsystem_nonconformity: fixed access permission error → https://github.com/OCA/management-system/commit/51abc028729daad2d0d17af6399822a61115d21d
+- Commit 041d807: Merge PR #750 into 18.0 → https://github.com/OCA/management-system/commit/041d807135d301375ee46c5ea13da0e7411df2a4
+- Commit 3445e5a: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/3445e5aa3c52a16a8ca2fdeda52d2b71dd5f7423
+- Commit 71b8fb7: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/71b8fb7d368fd0b7aad93de23d9523d3aa249e9d
+

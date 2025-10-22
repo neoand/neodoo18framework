@@ -8,3 +8,9 @@
 - Commit 3cbb9c6: Added translation using Weblate (Swedish) → https://github.com/OCA/project/commit/3cbb9c6f136a820bb98178102e3995e74c1bf2d0
 - Commit 48101aa: Translated using Weblate (Swedish) → https://github.com/OCA/project/commit/48101aa63a05aad3d84fc6d7fb5db54257dea9e2
 
+## 2025-10-22
+
+- Commit 7f73f1e: [IMP] project_tag*: Remove auto_install=True → https://github.com/OCA/project/commit/7f73f1ed87b8d82e357624bcc747ac7bc25793ed
+- Commit 72dabf3: Merge PR #1584 into 18.0 → https://github.com/OCA/project/commit/72dabf328247a7a2fd8d3df42e7a3dc985e33ec2
+- Commit ee26d08: [BOT] post-merge updates → https://github.com/OCA/project/commit/ee26d087c285af525c0996193e8761ffc8ea83fc
+

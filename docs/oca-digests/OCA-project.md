@@ -14,3 +14,7 @@
 - Commit 72dabf3: Merge PR #1584 into 18.0 → https://github.com/OCA/project/commit/72dabf328247a7a2fd8d3df42e7a3dc985e33ec2
 - Commit ee26d08: [BOT] post-merge updates → https://github.com/OCA/project/commit/ee26d087c285af525c0996193e8761ffc8ea83fc
 
+## 2025-10-23
+
+- Commit b3d18ac: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/b3d18acd18eae59e08fa48d226f659bff65aa381
+

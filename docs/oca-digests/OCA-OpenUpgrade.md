@@ -31,3 +31,8 @@
 - Commit 5506575: [OU-FIX] hr_timesheet: Convert task progress → https://github.com/OCA/OpenUpgrade/commit/55065753c716bb15732ed322b94a9419f98bab8c
 - Commit 5f12f8d: Merge pull request #5404 from Tecnativa/18.0-ou_fix-hr_timesheet-progress → https://github.com/OCA/OpenUpgrade/commit/5f12f8ddcf86b8b422019334257e5560e5afcc67
 
+## 2025-10-23
+
+- Commit 16bb0a1: [OU-ADD] auth_ldap: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/16bb0a1d0dd0c6b334c7c4e39aa395354c53dd5c
+- Commit 8d7b3bc: Merge pull request #5418 from Tecnativa/18.0-ou-add-auth_ldap → https://github.com/OCA/OpenUpgrade/commit/8d7b3bcc4fefa295b431969828150b46e1b4456a
+

@@ -12,3 +12,9 @@
 - Commit 397fd71: Merge PR #1076 into 18.0 → https://github.com/OCA/reporting-engine/commit/397fd71742e6a4d5f83fb1208e35176bb0539d9c
 - Commit 49b755b: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/49b755b280345c2d18b4d14e5ca308b43443d05b
 
+## 2025-10-23
+
+- Commit 12afe44: Merge PR #1059 into 18.0 → https://github.com/OCA/reporting-engine/commit/12afe4421c2a46aec2275f236f4d31b003e5a6ce
+- Commit 3927d30: [UPD] Update sql_export_mail.pot → https://github.com/OCA/reporting-engine/commit/3927d305cc9e35fbf79748ca786a22771fc9a2b4
+- Commit 0049fa4: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/0049fa4ac2ff5e9814d5bfc0ac4f245c6a606dc2
+

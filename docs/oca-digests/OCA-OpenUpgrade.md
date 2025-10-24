@@ -36,3 +36,11 @@
 - Commit 16bb0a1: [OU-ADD] auth_ldap: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/16bb0a1d0dd0c6b334c7c4e39aa395354c53dd5c
 - Commit 8d7b3bc: Merge pull request #5418 from Tecnativa/18.0-ou-add-auth_ldap → https://github.com/OCA/OpenUpgrade/commit/8d7b3bcc4fefa295b431969828150b46e1b4456a
 
+## 2025-10-24
+
+- Commit e31705d: Merge pull request #5421 from Tecnativa/18.0-ou-add-l10n_latam_invoice_document → https://github.com/OCA/OpenUpgrade/commit/e31705df7638016001f7a3719fd6b89927c58c1f
+- Commit 1e568fe: [OU-ADD] sale_product_configurator: Migration scripts → https://github.com/OCA/OpenUpgrade/commit/1e568fea10e27ab047d7b81cc89d48e39bf6773e
+- Commit d5595e5: [OU-ADD] account_check_printing: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/d5595e5b88bc257eba7fcabf9a43ef9899392a4c
+- Commit 56347fe: Merge pull request #5424 from Tecnativa/18.0-ou-add-account_check_printing → https://github.com/OCA/OpenUpgrade/commit/56347fea09816a0dfcb45080611e3b9d1f435522
+- Commit 3090208: Merge pull request #5423 from Tecnativa/18.0-ou-add-sale_product_configurator → https://github.com/OCA/OpenUpgrade/commit/309020815cbf3d811239adac3e208b3507072c39
+

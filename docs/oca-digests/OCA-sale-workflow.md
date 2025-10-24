@@ -59,3 +59,9 @@
 - Commit 787a488: [OU-ADD] sale_order_type: Migration scripts → https://github.com/OCA/sale-workflow/commit/787a488337cf6c8566ba652b24077ab6a504f054
 - Commit b3efa01: Merge pull request #3958 from Tecnativa/18.0-ou-add-sale_order_type → https://github.com/OCA/sale-workflow/commit/b3efa0115c27bed40f1fddc5bce6e9899cf91311
 
+## 2025-10-24
+
+- Commit 0d2127c: Merge PR #3717 into 18.0 → https://github.com/OCA/sale-workflow/commit/0d2127ccc5a5bdfdc5ce07caaf273c546a39703d
+- Commit 7c84f9b: [UPD] Update sale_readonly_security.pot → https://github.com/OCA/sale-workflow/commit/7c84f9bea3317dd39a4f4d1f513fbf77de34ad34
+- Commit eac36e8: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/eac36e830b42e9695e67166e59818c96097f38f3
+

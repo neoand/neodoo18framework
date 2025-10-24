@@ -21,3 +21,11 @@
 - Commit d318d87: [UPD] Update partner_property.pot → https://github.com/OCA/partner-contact/commit/d318d8763f6c2f12cf84225ceab62ab5b93cf4aa
 - Commit 054cfab: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/054cfab9cf31b6a955112eeb2a1a8406abfb9bbd
 
+## 2025-10-24
+
+- Commit d6cb8b2: [UPD] Update base_location.pot → https://github.com/OCA/partner-contact/commit/d6cb8b2344fd04e1d8c16f17666c4f265078e936
+- Commit 1565390: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/1565390b88f7979aa3990b09b6ffc223ef757bf8
+- Commit 250a33b: Update translation files → https://github.com/OCA/partner-contact/commit/250a33b01d2fbee04b1052e1d4bed63ca929faeb
+- Commit a50afb4: Merge PR #2170 into 18.0 → https://github.com/OCA/partner-contact/commit/a50afb422d3d48d699475969c0498226f5518b1f
+- Commit 62d141f: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/62d141fb5ca8ac39f2f33f73d1e6206d5d2da1a7
+

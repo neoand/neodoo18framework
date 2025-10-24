@@ -14,3 +14,11 @@
 - Commit 26c93e5: Merge PR #890 into 18.0 → https://github.com/OCA/multi-company/commit/26c93e5af877a163da60169eb6b0339818a53637
 - Commit 437b185: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/437b185ffcc4c3e55c1e4bc4a39b9940c1794885
 
+## 2025-10-24
+
+- Commit d93e5da: [FIX] partner_multi_company: Keep partner companies aligned → https://github.com/OCA/multi-company/commit/d93e5dad533b06aed8c772908bb594d9ee06051e
+- Commit f31500c: Merge PR #894 into 18.0 → https://github.com/OCA/multi-company/commit/f31500cb6a9f2bf367e1f79a77a9f62395b62873
+- Commit 849613e: [UPD] Update partner_multi_company.pot → https://github.com/OCA/multi-company/commit/849613eb22fbd557ae69af9759b368d7b9298c78
+- Commit 1f95b23: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/1f95b2399acb93eab4809be6c91bf01458d7fd05
+- Commit 988b642: Update translation files → https://github.com/OCA/multi-company/commit/988b642af88b5766e8b0f27c1f7612cae3eeeea5
+

@@ -22,3 +22,7 @@
 - Commit 1f95b23: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/1f95b2399acb93eab4809be6c91bf01458d7fd05
 - Commit 988b642: Update translation files → https://github.com/OCA/multi-company/commit/988b642af88b5766e8b0f27c1f7612cae3eeeea5
 
+## 2025-10-25
+
+- Commit 27fc8ec: Added translation using Weblate (Turkish) → https://github.com/OCA/multi-company/commit/27fc8ec622080f5eb6c96ef9e4363787c3686cd3
+

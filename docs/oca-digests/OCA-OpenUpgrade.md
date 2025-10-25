@@ -44,3 +44,9 @@
 - Commit 56347fe: Merge pull request #5424 from Tecnativa/18.0-ou-add-account_check_printing → https://github.com/OCA/OpenUpgrade/commit/56347fea09816a0dfcb45080611e3b9d1f435522
 - Commit 3090208: Merge pull request #5423 from Tecnativa/18.0-ou-add-sale_product_configurator → https://github.com/OCA/OpenUpgrade/commit/309020815cbf3d811239adac3e208b3507072c39
 
+## 2025-10-25
+
+- Commit dca671e: [OU-FIX] account: Outstanding accounts → https://github.com/OCA/OpenUpgrade/commit/dca671e1c7dcc749bac466e2e0681a7860cfc9b9
+- Commit 2a087b9: Merge pull request #5425 from Tecnativa/18.0-ou-fix-account-payment_accounts → https://github.com/OCA/OpenUpgrade/commit/2a087b9326ed051d8ccce52f8519931165b848ad
+- Commit 4af0c61: [OU-FIX] account: XML-ID should be no update → https://github.com/OCA/OpenUpgrade/commit/4af0c61b2bad8b032d97951cfdb5abde78f700aa
+

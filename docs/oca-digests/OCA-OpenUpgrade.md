@@ -50,3 +50,8 @@
 - Commit 2a087b9: Merge pull request #5425 from Tecnativa/18.0-ou-fix-account-payment_accounts → https://github.com/OCA/OpenUpgrade/commit/2a087b9326ed051d8ccce52f8519931165b848ad
 - Commit 4af0c61: [OU-FIX] account: XML-ID should be no update → https://github.com/OCA/OpenUpgrade/commit/4af0c61b2bad8b032d97951cfdb5abde78f700aa
 
+## 2025-10-26
+
+- Commit be6c105: [OU-FIX] account: Generate accounting entries from payments → https://github.com/OCA/OpenUpgrade/commit/be6c105eeb4e6ba53e854939738ff2b63bc40499
+- Commit ffc0601: Merge pull request #5426 from Tecnativa/18.0-ou-fix-outstanding-2 → https://github.com/OCA/OpenUpgrade/commit/ffc06016e7f13e55d51e208632f518db742e0620
+

@@ -55,3 +55,7 @@
 - Commit be6c105: [OU-FIX] account: Generate accounting entries from payments → https://github.com/OCA/OpenUpgrade/commit/be6c105eeb4e6ba53e854939738ff2b63bc40499
 - Commit ffc0601: Merge pull request #5426 from Tecnativa/18.0-ou-fix-outstanding-2 → https://github.com/OCA/OpenUpgrade/commit/ffc06016e7f13e55d51e208632f518db742e0620
 
+## 2025-10-27
+
+- Commit 64bf85c: Merge pull request #5427 from Tecnativa/18.0-ou-fix-account-autocheck_on_post → https://github.com/OCA/OpenUpgrade/commit/64bf85c62598a53fd86e604dc49dd95e3ee1f9ca
+

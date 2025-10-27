@@ -48,3 +48,11 @@
 - Commit 29bc935: Update translation files → https://github.com/OCA/server-tools/commit/29bc9357ee93093e740c82a688fb0a7f3483aed1
 - Commit a844903: Update translation files → https://github.com/OCA/server-tools/commit/a844903c494af97926314284dd31506ef52cc51a
 
+## 2025-10-27
+
+- Commit 461b85b: Merge PR #3426 into 18.0 → https://github.com/OCA/server-tools/commit/461b85bd2d196bdd71e5ee50f619fad428a2e40c
+- Commit db98f94: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/db98f94c9ee8d79585ad74d3da47979fffa8fc94
+- Commit c575dda: Merge PR #3427 into 18.0 → https://github.com/OCA/server-tools/commit/c575ddada02c5a6397136b8e196d63a96bb67891
+- Commit 842380d: [UPD] Update base_fontawesome_web_editor.pot → https://github.com/OCA/server-tools/commit/842380d100167cd01f8c85bf6abe16fb46acf070
+- Commit 741f465: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/741f4653cf230055c3a1c8ea1260bc76045df1ee
+

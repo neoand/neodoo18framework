@@ -56,3 +56,7 @@
 - Commit 842380d: [UPD] Update base_fontawesome_web_editor.pot → https://github.com/OCA/server-tools/commit/842380d100167cd01f8c85bf6abe16fb46acf070
 - Commit 741f465: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/741f4653cf230055c3a1c8ea1260bc76045df1ee
 
+## 2025-10-28
+
+- Commit 0590408: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/05904083bcfa69116251bf6b919ec8f0ea988186
+

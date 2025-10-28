@@ -38,3 +38,11 @@
 - Commit f787cc2: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/f787cc2c7a9f381bf81b3021a71a4b13f096dff5
 - Commit 6aa56fd: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/6aa56fd9f57081ceb1f10e1d157d18c4f4c329df
 
+## 2025-10-28
+
+- Commit bc3b15c: [IMP] spreadsheet_dashboard_oca: Add to dashboard feature from existing spreadsheet → https://github.com/OCA/spreadsheet/commit/bc3b15c4a8bd64c5e3d884625caabae807e4b6a1
+- Commit d977561: Merge PR #83 into 18.0 → https://github.com/OCA/spreadsheet/commit/d977561dde89cb61a1f988c3b06dcf64af51c0fd
+- Commit cdc783c: [UPD] Update spreadsheet_dashboard_oca.pot → https://github.com/OCA/spreadsheet/commit/cdc783c83175ef233e4664a2db28231130e61eca
+- Commit e8c140d: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/e8c140db44c63922253fcde3878ebfa8ccc76efe
+- Commit 3e4d995: Update translation files → https://github.com/OCA/spreadsheet/commit/3e4d9958b12ffbf075488336ab8afa8bc12af34f
+

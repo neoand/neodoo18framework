@@ -65,3 +65,9 @@
 - Commit 7c84f9b: [UPD] Update sale_readonly_security.pot → https://github.com/OCA/sale-workflow/commit/7c84f9bea3317dd39a4f4d1f513fbf77de34ad34
 - Commit eac36e8: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/eac36e830b42e9695e67166e59818c96097f38f3
 
+## 2025-10-28
+
+- Commit d499784: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/d4997848d6ce38aceac9a45386e05047aba3ab1c
+- Commit 0adc871: [OU-ADD] sale_order_general_discount: Migration scripts → https://github.com/OCA/sale-workflow/commit/0adc87184b94d344c8f15eb68aeecee1ee93df0b
+- Commit 3166d16: Merge pull request #3972 from Tecnativa/18.0-ou-add-sale_order_general_discount → https://github.com/OCA/sale-workflow/commit/3166d16fb03a50f5f5f994c126ec16d53a48a467
+

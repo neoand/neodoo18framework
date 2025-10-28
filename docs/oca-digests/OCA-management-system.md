@@ -34,3 +34,11 @@
 - Commit 3445e5a: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/3445e5aa3c52a16a8ca2fdeda52d2b71dd5f7423
 - Commit 71b8fb7: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/71b8fb7d368fd0b7aad93de23d9523d3aa249e9d
 
+## 2025-10-28
+
+- Commit ad56183: [UPD] Update mgmtsystem_review.pot → https://github.com/OCA/management-system/commit/ad5618351d5452012a328c52665501255ad4d564
+- Commit 96b4021: [UPD] Update mgmtsystem_review_objective.pot → https://github.com/OCA/management-system/commit/96b4021675b4ea0531cbf47fd68b92a6838bf94b
+- Commit 16e9ed4: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/16e9ed4b5d662ddbcfedfd00c80b4a048793b8da
+- Commit 84317b4: Update translation files → https://github.com/OCA/management-system/commit/84317b4ffc6f669660c915caadc940e6c4a50517
+- Commit aa355b5: Update translation files → https://github.com/OCA/management-system/commit/aa355b57799791d855d1c7355607de70902d70ed
+

@@ -3,25 +3,25 @@
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "7ea33bb7e154568085b3d3c3ad51539d2f75ecef",
     "OCA/project@18.0::commits": "b3d18acd18eae59e08fa48d226f659bff65aa381",
-    "OCA/sale-workflow@18.0::commits": "eac36e830b42e9695e67166e59818c96097f38f3",
+    "OCA/sale-workflow@18.0::commits": "3166d16fb03a50f5f5f994c126ec16d53a48a467",
     "OCA/oca-port@main::commits": "d31a660a9cae242e86b0382028987a3e8c3bd8b7",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
     "OCA/account-financial-tools@18.0::commits": "adeca0de879bd201a6802570590cac87de4e82aa",
     "OCA/reporting-engine@18.0::commits": "0049fa4ac2ff5e9814d5bfc0ac4f245c6a606dc2",
-    "OCA/server-tools@18.0::commits": "741f4653cf230055c3a1c8ea1260bc76045df1ee",
+    "OCA/server-tools@18.0::commits": "05904083bcfa69116251bf6b919ec8f0ea988186",
     "OCA/OpenUpgrade@18.0::commits": "64bf85c62598a53fd86e604dc49dd95e3ee1f9ca",
-    "OCA/web@18.0::commits": "0762d94974c8c5754ac44bbafcf292d214a72440",
-    "OCA/partner-contact@18.0::commits": "62d141fb5ca8ac39f2f33f73d1e6206d5d2da1a7",
+    "OCA/web@18.0::commits": "6a866f22ec3b0f9643e34b9d39dbe93bd75cea41",
+    "OCA/partner-contact@18.0::commits": "7ca278aff0ea3305fb5903df857f9e4e80a7648a",
     "OCA/queue@18.0::commits": "edc21e4c4ef11a1ef746ca5ac641e9227602a35d",
-    "OCA/management-system@18.0::commits": "71b8fb7d368fd0b7aad93de23d9523d3aa249e9d",
+    "OCA/management-system@18.0::commits": "aa355b57799791d855d1c7355607de70902d70ed",
     "OCA/product-attribute@18.0::commits": "37fb901b5fc97ed2e673239a9c18235bb9dd78ae",
-    "OCA/calendar@18.0::commits": "af59193ae6e19d462f928cbc6e94129e67bf5384",
+    "OCA/calendar@18.0::commits": "d57eaa2b1a635a62d43219c0bc6873a4c59cf765",
     "OCA/bank-statement-import@18.0::commits": "c3192e20a217b9405da7819d4820084bbb2e6589",
     "OCA/multi-company@18.0::commits": "27fc8ec622080f5eb6c96ef9e4363787c3686cd3",
     "OCA/knowledge@18.0::commits": "6a2eff36dbc3a79cebfed1ce0addcb162ede87d4",
     "OCA/account-reconcile@18.0::commits": "1b1310647bbc8054e9b5fdf739a4f57e378ec5a3",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
-    "OCA/spreadsheet@18.0::commits": "6aa56fd9f57081ceb1f10e1d157d18c4f4c329df"
+    "OCA/spreadsheet@18.0::commits": "3e4d9958b12ffbf075488336ab8afa8bc12af34f"
   },
-  "updated_at": "2025-10-27T03:13:03.372933+00:00"
+  "updated_at": "2025-10-28T03:01:54.942526+00:00"
 }

@@ -14,3 +14,9 @@
 - Commit 36803de: Merge PR #183 into 18.0 → https://github.com/OCA/calendar/commit/36803de135d54085c59b37d6cc0912a41e934006
 - Commit af59193: [BOT] post-merge updates → https://github.com/OCA/calendar/commit/af59193ae6e19d462f928cbc6e94129e67bf5384
 
+## 2025-10-28
+
+- Commit 39bbc15: [FIX] resource_booking: correct resource parameter in availability check → https://github.com/OCA/calendar/commit/39bbc15752beb2cb62466564c7a062cc09063f7a
+- Commit 5d0b342: Merge PR #188 into 18.0 → https://github.com/OCA/calendar/commit/5d0b34236575de2bc7ab8d8bdd45deeaa7f2d46e
+- Commit d57eaa2: [BOT] post-merge updates → https://github.com/OCA/calendar/commit/d57eaa2b1a635a62d43219c0bc6873a4c59cf765
+

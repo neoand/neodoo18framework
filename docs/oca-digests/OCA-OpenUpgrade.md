@@ -59,3 +59,8 @@
 
 - Commit 64bf85c: Merge pull request #5427 from Tecnativa/18.0-ou-fix-account-autocheck_on_post → https://github.com/OCA/OpenUpgrade/commit/64bf85c62598a53fd86e604dc49dd95e3ee1f9ca
 
+## 2025-10-29
+
+- Commit af66a1d: Revert "[18.0][OU-FIX] account: Don't autocheck_on_post by default" → https://github.com/OCA/OpenUpgrade/commit/af66a1d9594b14cec50c1b66bfc59fb1ce4806dc
+- Commit acb1a01: Merge pull request #5431 from OCA/revert-5427-18.0-ou-fix-account-autocheck_on_post → https://github.com/OCA/OpenUpgrade/commit/acb1a01cc528a55d59aa9bfd7d205df8d30ffd2c
+

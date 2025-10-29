@@ -60,3 +60,8 @@
 
 - Commit 0590408: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/05904083bcfa69116251bf6b919ec8f0ea988186
 
+## 2025-10-29
+
+- Commit 189d802: Merge PR #3240 into 18.0 → https://github.com/OCA/server-tools/commit/189d8025f647e1c451d82c6b024f24788e491515
+- Commit 6f6db79: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/6f6db7937605f5320a5e2cbd521fbe8207b52071
+

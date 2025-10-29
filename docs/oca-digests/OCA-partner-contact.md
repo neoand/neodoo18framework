@@ -33,3 +33,9 @@
 
 - Commit 7ca278a: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/7ca278aff0ea3305fb5903df857f9e4e80a7648a
 
+## 2025-10-29
+
+- Commit 36b93fa: [FIX] partner_property: broken partner/user export → https://github.com/OCA/partner-contact/commit/36b93fa723f020e2d0f5e7e85166f3574982ce29
+- Commit 22c36ca: Merge PR #2190 into 18.0 → https://github.com/OCA/partner-contact/commit/22c36cad09fd5dd483e1d8f7ecfaae58fc301930
+- Commit 6c7cbf4: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/6c7cbf41b122190d170562324eaee9f016fdff53
+

@@ -42,3 +42,7 @@
 - Commit 84317b4: Update translation files → https://github.com/OCA/management-system/commit/84317b4ffc6f669660c915caadc940e6c4a50517
 - Commit aa355b5: Update translation files → https://github.com/OCA/management-system/commit/aa355b57799791d855d1c7355607de70902d70ed
 
+## 2025-10-29
+
+- Commit 6e6557b: Added translation using Weblate (Italian) → https://github.com/OCA/management-system/commit/6e6557b610601d8eba222c2dfe313788f4d588ed
+

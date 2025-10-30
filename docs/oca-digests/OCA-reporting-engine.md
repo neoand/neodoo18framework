@@ -18,3 +18,9 @@
 - Commit 3927d30: [UPD] Update sql_export_mail.pot → https://github.com/OCA/reporting-engine/commit/3927d305cc9e35fbf79748ca786a22771fc9a2b4
 - Commit 0049fa4: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/0049fa4ac2ff5e9814d5bfc0ac4f245c6a606dc2
 
+## 2025-10-30
+
+- Commit 76ed5bf: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/76ed5bfa3bde6a5e5edfd3f0640b483217436342
+- Commit d31ceca: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/d31cecad0fa72047b421004fd7a7e0b7433c54cf
+- Commit 77e574c: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/77e574c3cf341b8f4574875a2f360247cd2a52c2
+

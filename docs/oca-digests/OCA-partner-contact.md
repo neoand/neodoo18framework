@@ -39,3 +39,9 @@
 - Commit 22c36ca: Merge PR #2190 into 18.0 → https://github.com/OCA/partner-contact/commit/22c36cad09fd5dd483e1d8f7ecfaae58fc301930
 - Commit 6c7cbf4: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/6c7cbf41b122190d170562324eaee9f016fdff53
 
+## 2025-10-30
+
+- Commit 27762ba: [IMP]partner_industry_secondary - test_res_partner_industry.py → https://github.com/OCA/partner-contact/commit/27762baa16b330ecf02a691f72606e15b19c8feb
+- Commit 0b12ca8: Merge PR #2067 into 18.0 → https://github.com/OCA/partner-contact/commit/0b12ca8435743f1132fc2f024a2f48a933b7f80c
+- Commit 29cea11: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/29cea112bfea9803b31052b4d775b9a520e2b789
+

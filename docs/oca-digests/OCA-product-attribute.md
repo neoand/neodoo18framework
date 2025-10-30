@@ -1,0 +1,10 @@
+# OCA Digest for OCA/product-attribute
+
+## 2025-10-30
+
+- Commit 94d7c3e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/94d7c3e9498133309d7be264b653126080decb1f
+- Commit 2f7b297: Update translation files → https://github.com/OCA/product-attribute/commit/2f7b297dfe84a5f1b93caa704e719f07a5cf2b85
+- Commit 7e1ef42: Merge PR #2103 into 18.0 → https://github.com/OCA/product-attribute/commit/7e1ef429e8ff78cecee184e663dee37e0e9014b6
+- Commit b7175fe: [UPD] Update product_multi_price.pot → https://github.com/OCA/product-attribute/commit/b7175feb6020d4207c5c37cdd05ad4b79063167b
+- Commit c914cd0: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/c914cd05e5edf1cefff409a274a22508c405bb67
+

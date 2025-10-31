@@ -64,3 +64,8 @@
 - Commit af66a1d: Revert "[18.0][OU-FIX] account: Don't autocheck_on_post by default" → https://github.com/OCA/OpenUpgrade/commit/af66a1d9594b14cec50c1b66bfc59fb1ce4806dc
 - Commit acb1a01: Merge pull request #5431 from OCA/revert-5427-18.0-ou-fix-account-autocheck_on_post → https://github.com/OCA/OpenUpgrade/commit/acb1a01cc528a55d59aa9bfd7d205df8d30ffd2c
 
+## 2025-10-31
+
+- Commit 65ae525: [OU][ADD] web_editor: Fix snippets → https://github.com/OCA/OpenUpgrade/commit/65ae525a3ccfed9f6dbebfb366ccfa66e8713ebc
+- Commit d7a7e93: Merge pull request #5435 from dixmit/18.0-fix-snippet → https://github.com/OCA/OpenUpgrade/commit/d7a7e93966ec3ed1d4bc4b281742ec163d0dbdfa
+

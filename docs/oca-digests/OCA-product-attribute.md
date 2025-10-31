@@ -8,3 +8,7 @@
 - Commit b7175fe: [UPD] Update product_multi_price.pot → https://github.com/OCA/product-attribute/commit/b7175feb6020d4207c5c37cdd05ad4b79063167b
 - Commit c914cd0: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/c914cd05e5edf1cefff409a274a22508c405bb67
 
+## 2025-10-31
+
+- Commit 6a08186: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/6a08186ea178c9946793d263ce84c6577a036621
+

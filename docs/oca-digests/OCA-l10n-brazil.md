@@ -49,3 +49,10 @@
 - Commit c06f909: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/c06f909ba73dadb2318167c92f7749db73e036ad
 - Commit 7ea33bb: Update translation files → https://github.com/OCA/l10n-brazil/commit/7ea33bb7e154568085b3d3c3ad51539d2f75ecef
 
+## 2025-10-31
+
+- Commit 79f4bac: [FIX] l10n_br_nfse_focus: error http 422 → https://github.com/OCA/l10n-brazil/commit/79f4bac84fefa34903e64fce1d69fa2e252ee30b
+- Commit 9e42895: [FIX] l10n_br_nfse_focus: limit informacoes_adicionais_contribuinte → https://github.com/OCA/l10n-brazil/commit/9e4289573eec1a450233e239dc79c7668443faba
+- Commit f49fc7f: Merge PR #4190 into 18.0 → https://github.com/OCA/l10n-brazil/commit/f49fc7fec24125b929c1eed86733a470b432c276
+- Commit fd27f0e: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/fd27f0e714aee1822788358a903a40c0d2d14a8e
+

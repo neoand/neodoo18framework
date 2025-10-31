@@ -24,3 +24,9 @@
 - Commit d31ceca: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/d31cecad0fa72047b421004fd7a7e0b7433c54cf
 - Commit 77e574c: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/77e574c3cf341b8f4574875a2f360247cd2a52c2
 
+## 2025-10-31
+
+- Commit ae5dd3b: Merge PR #1082 into 18.0 → https://github.com/OCA/reporting-engine/commit/ae5dd3b7c4d46c2357fbbf21c3e5434d895515e0
+- Commit 111cadf: [UPD] Update report_pdf_zip_download.pot → https://github.com/OCA/reporting-engine/commit/111cadf5a705c5be109945163405d37b06bcfb9b
+- Commit aeedd34: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/aeedd348a3b388c7d249eb40e15e5eda715eb9eb
+

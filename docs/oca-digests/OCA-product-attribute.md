@@ -12,3 +12,9 @@
 
 - Commit 6a08186: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/6a08186ea178c9946793d263ce84c6577a036621
 
+## 2025-11-01
+
+- Commit 8edb1ee: [FIX] product_pricelist_direct_print: show only defined products is not showing the correct products → https://github.com/OCA/product-attribute/commit/8edb1eee364a231e68a14974e9d3dc88f88ed8ff
+- Commit 137fafc: Merge PR #2118 into 18.0 → https://github.com/OCA/product-attribute/commit/137fafcd3ba3fd39e5525458bd2770fca3e83b19
+- Commit e80a17c: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/e80a17c5b4b8293dc49777075b4de38b6e853dfb
+

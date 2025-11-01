@@ -71,3 +71,9 @@
 - Commit 0adc871: [OU-ADD] sale_order_general_discount: Migration scripts → https://github.com/OCA/sale-workflow/commit/0adc87184b94d344c8f15eb68aeecee1ee93df0b
 - Commit 3166d16: Merge pull request #3972 from Tecnativa/18.0-ou-add-sale_order_general_discount → https://github.com/OCA/sale-workflow/commit/3166d16fb03a50f5f5f994c126ec16d53a48a467
 
+## 2025-11-01
+
+- Commit 724c51f: Merge PR #3462 into 18.0 → https://github.com/OCA/sale-workflow/commit/724c51fb846325eba6495c705f9014f407e45c47
+- Commit 13c78e9: [UPD] Update sale_stock_delivery_address.pot → https://github.com/OCA/sale-workflow/commit/13c78e96d8a57e4270f4ea5794624a9486ec82a7
+- Commit a80b6e9: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/a80b6e9df75f740661713e2578955b73655687cb
+

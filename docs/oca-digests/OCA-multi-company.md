@@ -26,3 +26,11 @@
 
 - Commit 27fc8ec: Added translation using Weblate (Turkish) → https://github.com/OCA/multi-company/commit/27fc8ec622080f5eb6c96ef9e4363787c3686cd3
 
+## 2025-11-01
+
+- Commit b7ef857: [MIG] purchase_sale_stock_inter_company: Migration to version 18.0 → https://github.com/OCA/multi-company/commit/b7ef8570ed62fd2f9b4df1a125c553fbc1247810
+- Commit 6419361: [IMP] purchase_sale_stock_inter_company: support shared lots between companies → https://github.com/OCA/multi-company/commit/6419361e3355eaed96ada0b4e81865c62e917fd7
+- Commit 3ee2490: Merge PR #892 into 18.0 → https://github.com/OCA/multi-company/commit/3ee2490ad067867659ad41c0139eca5e7b340cdd
+- Commit f8d0539: [UPD] Update purchase_sale_stock_inter_company.pot → https://github.com/OCA/multi-company/commit/f8d0539ba550e3de2ad3861b0986c73c144e41ad
+- Commit 3f1d4a3: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/3f1d4a3e1299a523ae4658f1bc7c242829b3b4e8
+

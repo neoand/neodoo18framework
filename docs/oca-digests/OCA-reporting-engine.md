@@ -30,3 +30,11 @@
 - Commit 111cadf: [UPD] Update report_pdf_zip_download.pot → https://github.com/OCA/reporting-engine/commit/111cadf5a705c5be109945163405d37b06bcfb9b
 - Commit aeedd34: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/aeedd348a3b388c7d249eb40e15e5eda715eb9eb
 
+## 2025-11-01
+
+- Commit e65081e: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/e65081e2d15bf294f0fe75036033ed318b0fae3f
+- Commit 8c625d1: Merge PR #1067 into 18.0 → https://github.com/OCA/reporting-engine/commit/8c625d18e033126b6e2e56fb402e8c66cacbc738
+- Commit 52d1c71: [UPD] Update base_comment_template.pot → https://github.com/OCA/reporting-engine/commit/52d1c71fa413def38d5b06d3dc8da0f6bcb36955
+- Commit 9e69705: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/9e69705640d23891c0c2cfdd554b5b40ee837801
+- Commit 3b69e9f: Update translation files → https://github.com/OCA/reporting-engine/commit/3b69e9f93f0075ad6edb7f186e25bba8130d1df8
+

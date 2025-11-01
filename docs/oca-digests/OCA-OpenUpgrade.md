@@ -69,3 +69,8 @@
 - Commit 65ae525: [OU][ADD] web_editor: Fix snippets → https://github.com/OCA/OpenUpgrade/commit/65ae525a3ccfed9f6dbebfb366ccfa66e8713ebc
 - Commit d7a7e93: Merge pull request #5435 from dixmit/18.0-fix-snippet → https://github.com/OCA/OpenUpgrade/commit/d7a7e93966ec3ed1d4bc4b281742ec163d0dbdfa
 
+## 2025-11-01
+
+- Commit 9b9b5a3: [IMP] add migration script to force load utm noupdate changes → https://github.com/OCA/OpenUpgrade/commit/9b9b5a3f88eec91fa0066ab53a0082b3e812bd3b
+- Commit 39068ac: Merge pull request #5406 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/39068ac9750ca1783a61c05033982b119b46bf94
+

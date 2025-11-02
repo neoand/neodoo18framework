@@ -56,3 +56,9 @@
 - Commit f49fc7f: Merge PR #4190 into 18.0 → https://github.com/OCA/l10n-brazil/commit/f49fc7fec24125b929c1eed86733a470b432c276
 - Commit fd27f0e: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/fd27f0e714aee1822788358a903a40c0d2d14a8e
 
+## 2025-11-02
+
+- Commit 4ef4c23: [FIX] l10n_br_currency_rate_update: enable external requests during tests → https://github.com/OCA/l10n-brazil/commit/4ef4c23383375d7b6ab37226715b7efeeb66854e
+- Commit 193cbfc: Merge PR #4202 into 18.0 → https://github.com/OCA/l10n-brazil/commit/193cbfc1bda2b99e155f4845818e8c6217a78cd2
+- Commit 4482fd0: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/4482fd02b0031e3695857b550ac281e602f1c52e
+

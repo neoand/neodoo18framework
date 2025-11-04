@@ -74,3 +74,8 @@
 - Commit 9b9b5a3: [IMP] add migration script to force load utm noupdate changes → https://github.com/OCA/OpenUpgrade/commit/9b9b5a3f88eec91fa0066ab53a0082b3e812bd3b
 - Commit 39068ac: Merge pull request #5406 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/39068ac9750ca1783a61c05033982b119b46bf94
 
+## 2025-11-04
+
+- Commit 382d4c0: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/382d4c095268ac5e83e046571c08bb4ec7bc51a4
+- Commit 87e2dae: Merge pull request #5436 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/87e2dae3e808d09f099f820394326ea9ff0e451b
+

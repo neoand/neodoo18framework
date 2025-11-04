@@ -38,3 +38,8 @@
 - Commit 9e69705: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/9e69705640d23891c0c2cfdd554b5b40ee837801
 - Commit 3b69e9f: Update translation files → https://github.com/OCA/reporting-engine/commit/3b69e9f93f0075ad6edb7f186e25bba8130d1df8
 
+## 2025-11-04
+
+- Commit b2dfcbb: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/b2dfcbbcc1e7e73973a9182a67504d5ea217548e
+- Commit f84f1e6: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/f84f1e697da6472f00280fba9eca347a3c446968
+

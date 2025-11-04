@@ -12,3 +12,9 @@
 
 - Commit 1b13106: Translated using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/1b1310647bbc8054e9b5fdf739a4f57e378ec5a3
 
+## 2025-11-04
+
+- Commit 298a25b: [FIX] account_reconcile_analytic_tag: Apply the analytical tag to the account move. → https://github.com/OCA/account-reconcile/commit/298a25ba2a4fbe627ef4177d081c079fbe473bfc
+- Commit 0b4fae6: Merge PR #927 into 18.0 → https://github.com/OCA/account-reconcile/commit/0b4fae63ebdc837fdab9d004b5913545732f4c8e
+- Commit 5553918: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/55539180b6a9d1607fe947a2d3f314a8c545572b
+

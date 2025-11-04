@@ -77,3 +77,11 @@
 - Commit 13c78e9: [UPD] Update sale_stock_delivery_address.pot → https://github.com/OCA/sale-workflow/commit/13c78e96d8a57e4270f4ea5794624a9486ec82a7
 - Commit a80b6e9: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/a80b6e9df75f740661713e2578955b73655687cb
 
+## 2025-11-04
+
+- Commit 76e4de0: Added translation using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/76e4de0dec4d695ea6d97f7579418392c72bca96
+- Commit 03d8f7d: Merge PR #3915 into 18.0 → https://github.com/OCA/sale-workflow/commit/03d8f7daae08e13642d4ea28a11de9e78f04481b
+- Commit 374f26f: [UPD] Update sale_order_carrier_auto_assign.pot → https://github.com/OCA/sale-workflow/commit/374f26f3f510bfd8d4d4220e33fde1f8883f0d39
+- Commit 672afa5: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/672afa5eef8e70de4a581f45c11731e62a616e65
+- Commit 4372747: Update translation files → https://github.com/OCA/sale-workflow/commit/4372747e9e56f13615b0b71987f9fc3779e2a0c8
+

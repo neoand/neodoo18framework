@@ -46,3 +46,7 @@
 
 - Commit 6e6557b: Added translation using Weblate (Italian) → https://github.com/OCA/management-system/commit/6e6557b610601d8eba222c2dfe313788f4d588ed
 
+## 2025-11-04
+
+- Commit 08b6714: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/08b6714ee0712fc5b531a583601210225803aafd
+

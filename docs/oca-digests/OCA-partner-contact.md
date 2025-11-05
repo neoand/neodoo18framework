@@ -45,3 +45,9 @@
 - Commit 0b12ca8: Merge PR #2067 into 18.0 → https://github.com/OCA/partner-contact/commit/0b12ca8435743f1132fc2f024a2f48a933b7f80c
 - Commit 29cea11: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/29cea112bfea9803b31052b4d775b9a520e2b789
 
+## 2025-11-05
+
+- Commit cbca7cd: Merge PR #2081 into 18.0 → https://github.com/OCA/partner-contact/commit/cbca7cd4d7463c3988c11f3591d35fd75e06bd8e
+- Commit 170a531: [UPD] Update partner_bank_code.pot → https://github.com/OCA/partner-contact/commit/170a5319c2896750d675c0a0c02b74c2e6d145b0
+- Commit 8869c6a: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/8869c6ae144b6f71f148d8554494cbe4d6d6db13
+

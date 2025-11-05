@@ -85,3 +85,11 @@
 - Commit 672afa5: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/672afa5eef8e70de4a581f45c11731e62a616e65
 - Commit 4372747: Update translation files → https://github.com/OCA/sale-workflow/commit/4372747e9e56f13615b0b71987f9fc3779e2a0c8
 
+## 2025-11-05
+
+- Commit 9f5b919: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/9f5b919fce68b3f8b37fd43c736e58cad1f043c7
+- Commit 0b37567: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/0b375670d5ee52c021914154cd485d81c31bc749
+- Commit 09eec4f: [FIX] sale_order_line_sequence: fix SingletonError in rare cases → https://github.com/OCA/sale-workflow/commit/09eec4f67030edd45689cf5a32e5f94bf2263049
+- Commit 339b0b2: Merge PR #3988 into 18.0 → https://github.com/OCA/sale-workflow/commit/339b0b2ae5758cdbd7e2b660cd56f9bced6258c5
+- Commit 5724c32: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/5724c3252984c590836898736108c7d6f44c534c
+

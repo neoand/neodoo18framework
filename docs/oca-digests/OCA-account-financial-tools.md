@@ -33,3 +33,9 @@
 - Commit 42e88e0: Added translation using Weblate (Swedish) → https://github.com/OCA/account-financial-tools/commit/42e88e06c9eae525c9d6507125b7582cc257c6ae
 - Commit a31864f: Translated using Weblate (Swedish) → https://github.com/OCA/account-financial-tools/commit/a31864f7e55c332c00320ec13f0debe42a423887
 
+## 2025-11-06
+
+- Commit 937b174: [FIX] account_asset_transfer: correct view_mode from tree to list → https://github.com/OCA/account-financial-tools/commit/937b17423ae570851190d67a00b7a9ac6e6a73dc
+- Commit 1218e3d: Merge PR #2168 into 18.0 → https://github.com/OCA/account-financial-tools/commit/1218e3df8c2115ca8627756d9d089298b41ffc6d
+- Commit 5e4b22b: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/5e4b22bf6e9d0b82354b2c86d3d4facac32ffbc6
+

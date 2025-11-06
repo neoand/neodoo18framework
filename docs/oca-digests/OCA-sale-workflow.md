@@ -93,3 +93,11 @@
 - Commit 339b0b2: Merge PR #3988 into 18.0 → https://github.com/OCA/sale-workflow/commit/339b0b2ae5758cdbd7e2b660cd56f9bced6258c5
 - Commit 5724c32: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/5724c3252984c590836898736108c7d6f44c534c
 
+## 2025-11-06
+
+- Commit 02e8fdd: Merge PR #3984 into 18.0 → https://github.com/OCA/sale-workflow/commit/02e8fddf79ce9ce60b9b9df6378e751ab6f6ae7d
+- Commit ec4837d: [UPD] Update sale_order_lot_selection_price.pot → https://github.com/OCA/sale-workflow/commit/ec4837d77b7b93252baa8d852a54ec611b1dbeac
+- Commit bb3b3b3: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/bb3b3b33f42ae9e4183c291bb22aa21b55a987c7
+- Commit 680b00d: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/680b00db7e13490ef42cf0c5a599c80391fe3e3d
+- Commit cbc141a: Update translation files → https://github.com/OCA/sale-workflow/commit/cbc141a3a2d2acadc9c67f91bbdfbdf76e585dc3
+

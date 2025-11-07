@@ -57,3 +57,7 @@
 - Commit 3237814: [UPD] Update partner_rank_single.pot → https://github.com/OCA/partner-contact/commit/323781476d3cdfc995bbae5803fac933b50fef5a
 - Commit 7115ea7: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/7115ea7c6bf7c10f40822c03325b4515504ac227
 
+## 2025-11-07
+
+- Commit 518b92a: Added translation using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/518b92ad46c5837dbf92dab7a5ff7ecd465cf16f
+

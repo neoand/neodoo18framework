@@ -101,3 +101,8 @@
 - Commit 680b00d: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/680b00db7e13490ef42cf0c5a599c80391fe3e3d
 - Commit cbc141a: Update translation files → https://github.com/OCA/sale-workflow/commit/cbc141a3a2d2acadc9c67f91bbdfbdf76e585dc3
 
+## 2025-11-07
+
+- Commit 7219978: Added translation using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/7219978cc91f14fb62724c3b172cae437fdc3541
+- Commit cf41369: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/cf41369e569f49b542cfb2c3608fa051f7c93153
+

@@ -28,3 +28,11 @@
 - Commit d127358: Merge PR #846 into 18.0 → https://github.com/OCA/bank-statement-import/commit/d12735812470c8c8155902b286f153899e806fd2
 - Commit c3192e2: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/c3192e20a217b9405da7819d4820084bbb2e6589
 
+## 2025-11-07
+
+- Commit 6128052: [FIX] account_statement_import_online_ponto: Python set iteration order is non-deterministic → https://github.com/OCA/bank-statement-import/commit/61280528cabb1f74cda427ae5c06b3b4146a8698
+- Commit 4f575eb: Merge PR #854 into 18.0 → https://github.com/OCA/bank-statement-import/commit/4f575ebf1ea34b59717d9a85b336c89b460ae14d
+- Commit 812f5ce: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/812f5cef8ed2d6626bc156f724d779326befe81f
+- Commit 2f1b658: Merge PR #853 into 18.0 → https://github.com/OCA/bank-statement-import/commit/2f1b658a1aba5b87dbeb6a93f187eba92e5746cc
+- Commit 96a7b9f: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/96a7b9fe532a707415b14a57c073f902473a9fc6
+

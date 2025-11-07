@@ -79,3 +79,7 @@
 - Commit 382d4c0: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/382d4c095268ac5e83e046571c08bb4ec7bc51a4
 - Commit 87e2dae: Merge pull request #5436 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/87e2dae3e808d09f099f820394326ea9ff0e451b
 
+## 2025-11-07
+
+- Commit 827265f: [IMP] apriori: account_vat_period_end_statement -> l10n_it_account_vat_period_end_settlement → https://github.com/OCA/OpenUpgrade/commit/827265f915cfc565caa39b151d59a6eb26c07a53
+

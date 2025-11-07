@@ -65,3 +65,9 @@
 - Commit 189d802: Merge PR #3240 into 18.0 → https://github.com/OCA/server-tools/commit/189d8025f647e1c451d82c6b024f24788e491515
 - Commit 6f6db79: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/6f6db7937605f5320a5e2cbd521fbe8207b52071
 
+## 2025-11-07
+
+- Commit 5ac9764: Merge PR #3207 into 18.0 → https://github.com/OCA/server-tools/commit/5ac9764d2d92a44363ab7927db02a1eaddeff474
+- Commit 92b2dba: [UPD] Update excel_import_export.pot → https://github.com/OCA/server-tools/commit/92b2dbadc02acaf0611011d9ec80d3b80f805f62
+- Commit e40eeb5: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/e40eeb5a4928ced98c107a9a4225ed1d4dfa5ba8
+

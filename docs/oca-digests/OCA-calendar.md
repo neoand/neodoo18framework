@@ -20,3 +20,9 @@
 - Commit 5d0b342: Merge PR #188 into 18.0 → https://github.com/OCA/calendar/commit/5d0b34236575de2bc7ab8d8bdd45deeaa7f2d46e
 - Commit d57eaa2: [BOT] post-merge updates → https://github.com/OCA/calendar/commit/d57eaa2b1a635a62d43219c0bc6873a4c59cf765
 
+## 2025-11-07
+
+- Commit add3676: [FIX] resource_booking: create the meeting with same tz as when scheduling → https://github.com/OCA/calendar/commit/add3676e64b7ab78cad196859c070bd6bf206e3d
+- Commit 2142faf: Merge PR #189 into 18.0 → https://github.com/OCA/calendar/commit/2142faf78fe88b7554d0e00011c6ed7ba4bb83a6
+- Commit d531dcb: [BOT] post-merge updates → https://github.com/OCA/calendar/commit/d531dcb8bbc18dd95ca9783ea9db9da70b25e3d2
+

@@ -18,3 +18,11 @@
 - Commit 0b4fae6: Merge PR #927 into 18.0 → https://github.com/OCA/account-reconcile/commit/0b4fae63ebdc837fdab9d004b5913545732f4c8e
 - Commit 5553918: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/55539180b6a9d1607fe947a2d3f314a8c545572b
 
+## 2025-11-07
+
+- Commit 7d2e360: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/7d2e360a6d22d6e9d3485be482e87b7725d9a4e4
+- Commit 0908bce: [IMP] account_reconcile_model_oca: Add Unique match option to reconciliation models → https://github.com/OCA/account-reconcile/commit/0908bce997fb10087446f6ba0b04e8c8468d49ff
+- Commit 02adaed: Merge PR #928 into 18.0 → https://github.com/OCA/account-reconcile/commit/02adaed9be8010a0b8af5694d154f9704fd40a09
+- Commit 806c691: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/806c69199d2a35ea1e0e08ee7766c7f9bfa75a8e
+- Commit e23474f: Update translation files → https://github.com/OCA/account-reconcile/commit/e23474fc6b9fc893b476d4be3d370711fa6623c9
+

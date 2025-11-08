@@ -61,3 +61,11 @@
 
 - Commit 518b92a: Added translation using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/518b92ad46c5837dbf92dab7a5ff7ecd465cf16f
 
+## 2025-11-08
+
+- Commit bc63222: [UPD] Update partner_address_street3.pot → https://github.com/OCA/partner-contact/commit/bc632227752473b60d01931b280010e8e8e6271d
+- Commit 3c901c3: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/3c901c39dc1dc97ad301e291be3c5070d6c78563
+- Commit dd21d7c: Merge PR #1988 into 18.0 → https://github.com/OCA/partner-contact/commit/dd21d7ccb344e4582e9712ac117dfa18e57e4a5f
+- Commit bf58c8e: [UPD] Update partner_contact_type_end_user.pot → https://github.com/OCA/partner-contact/commit/bf58c8e4d3e72f527accaee344b12c75059f689b
+- Commit 0cfb0fb: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/0cfb0fb9b5845b94d69eff337b83b917be442d8a
+

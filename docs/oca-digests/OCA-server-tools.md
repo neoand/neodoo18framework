@@ -71,3 +71,10 @@
 - Commit 92b2dba: [UPD] Update excel_import_export.pot → https://github.com/OCA/server-tools/commit/92b2dbadc02acaf0611011d9ec80d3b80f805f62
 - Commit e40eeb5: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/e40eeb5a4928ced98c107a9a4225ed1d4dfa5ba8
 
+## 2025-11-08
+
+- Commit c4bcf95: [MIG] bus_alt_connection: Migration to 18.0 → https://github.com/OCA/server-tools/commit/c4bcf95e134ff7316e73945c909e4822f89eaf06
+- Commit bd06f49: Merge PR #3336 into 18.0 → https://github.com/OCA/server-tools/commit/bd06f498a85b6e452ef9bb8575a826f00ae66f6d
+- Commit b7f4ddd: [UPD] Update bus_alt_connection.pot → https://github.com/OCA/server-tools/commit/b7f4ddd4b2d24e1c92ea25f78116bd3e9644c932
+- Commit 30653a6: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/30653a6fc38d6685c6f1a7a06295084fa7ecdc83
+

@@ -83,3 +83,10 @@
 
 - Commit 827265f: [IMP] apriori: account_vat_period_end_statement -> l10n_it_account_vat_period_end_settlement → https://github.com/OCA/OpenUpgrade/commit/827265f915cfc565caa39b151d59a6eb26c07a53
 
+## 2025-11-08
+
+- Commit 527770f: [FIX] don't set install_filename when loading views from openupgrade_scripts → https://github.com/OCA/OpenUpgrade/commit/527770f0f38691b8a14a17a750dffdebb22caa44
+- Commit 6fc1656: Merge PR #5445 into 18.0 → https://github.com/OCA/OpenUpgrade/commit/6fc1656ab3ff7590594ddff90f7f0cc77cc66614
+- Commit 2756b21: Merge pull request #5407 from Tecnativa/18.0-ou-add-apriori-website_sale_filter_product_brand → https://github.com/OCA/OpenUpgrade/commit/2756b2175d42ccd24f46f568e784d365e7a828ca
+- Commit fe5988a: [IMP] apriori: l10n_it_vat_statement_communication -> l10n_it_vat_settlement_communication → https://github.com/OCA/OpenUpgrade/commit/fe5988ae54915067c41b381273a0c52ee7c12192
+

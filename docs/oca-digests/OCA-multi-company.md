@@ -34,3 +34,9 @@
 - Commit f8d0539: [UPD] Update purchase_sale_stock_inter_company.pot → https://github.com/OCA/multi-company/commit/f8d0539ba550e3de2ad3861b0986c73c144e41ad
 - Commit 3f1d4a3: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/3f1d4a3e1299a523ae4658f1bc7c242829b3b4e8
 
+## 2025-11-08
+
+- Commit 116cbeb: [IMP] purchase_sale_stock_inter_company: prevent errors when stock_picking_batch is installed → https://github.com/OCA/multi-company/commit/116cbebdf1021883970832419e901d3cfdc77e7d
+- Commit d751f07: Merge PR #902 into 18.0 → https://github.com/OCA/multi-company/commit/d751f07b53e3a60874c919408de6c48896253553
+- Commit 04c419f: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/04c419f0eb861084d8e540e8cecb4aab21a6c20c
+

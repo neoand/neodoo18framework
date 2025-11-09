@@ -90,3 +90,8 @@
 - Commit 2756b21: Merge pull request #5407 from Tecnativa/18.0-ou-add-apriori-website_sale_filter_product_brand → https://github.com/OCA/OpenUpgrade/commit/2756b2175d42ccd24f46f568e784d365e7a828ca
 - Commit fe5988a: [IMP] apriori: l10n_it_vat_statement_communication -> l10n_it_vat_settlement_communication → https://github.com/OCA/OpenUpgrade/commit/fe5988ae54915067c41b381273a0c52ee7c12192
 
+## 2025-11-09
+
+- Commit a391fa2: [OU][IMP] account: add made_sequence_gap field → https://github.com/OCA/OpenUpgrade/commit/a391fa26f51d4c96b15206457e15b416d999b2c2
+- Commit 49f28dd: Merge pull request #5447 from dixmit/18.0-imp-account → https://github.com/OCA/OpenUpgrade/commit/49f28ddcfc82942be59195ca521a050eb0e91996
+

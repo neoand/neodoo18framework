@@ -70,3 +70,9 @@
 - Commit 8835670: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/8835670e82b0a0ba025ad054eabf5bfd6fbdde43
 - Commit 26e3c7c: Update translation files → https://github.com/OCA/l10n-brazil/commit/26e3c7c5a0e2bbd897fa5b22566ae296a342fa70
 
+## 2025-11-10
+
+- Commit cfee61e: [REF] spec_driven_model: cleanup _register_hook → https://github.com/OCA/l10n-brazil/commit/cfee61e27295e6bc25ddefb71bc2a7389c79950e
+- Commit 63eb2d8: Merge PR #4222 into 18.0 → https://github.com/OCA/l10n-brazil/commit/63eb2d8676a7c60b66622b47561ace498bc0f5b9
+- Commit a231080: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/a231080d41a18329f07bad2c987f7dfa8db2b84e
+

@@ -95,3 +95,10 @@
 - Commit a391fa2: [OU][IMP] account: add made_sequence_gap field → https://github.com/OCA/OpenUpgrade/commit/a391fa26f51d4c96b15206457e15b416d999b2c2
 - Commit 49f28dd: Merge pull request #5447 from dixmit/18.0-imp-account → https://github.com/OCA/OpenUpgrade/commit/49f28ddcfc82942be59195ca521a050eb0e91996
 
+## 2025-11-11
+
+- Commit 1f576b1: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/1f576b148e8c9b9ba3f5801ce0160943f67f8112
+- Commit 73c5015: Merge pull request #5441 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/73c5015a2dc37f861526bc43e5ef55dd22c4f452
+- Commit 3f00e2d: [FIX]openupgrade_framework: Fix Nonetype Error when install_filenmae path does not exist → https://github.com/OCA/OpenUpgrade/commit/3f00e2de9adfa915577cda649ac14dce745cb4ea
+- Commit 6422275: Merge pull request #5448 from Comunitea/18.0-fix-path-info-none → https://github.com/OCA/OpenUpgrade/commit/6422275939aa573d0c4111a3d48aa9a9dea8e046
+

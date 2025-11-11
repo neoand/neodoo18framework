@@ -78,3 +78,7 @@
 - Commit b7f4ddd: [UPD] Update bus_alt_connection.pot → https://github.com/OCA/server-tools/commit/b7f4ddd4b2d24e1c92ea25f78116bd3e9644c932
 - Commit 30653a6: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/30653a6fc38d6685c6f1a7a06295084fa7ecdc83
 
+## 2025-11-11
+
+- Commit be20c83: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/be20c830f854e8effeae2e6f730162a7f0367de6
+

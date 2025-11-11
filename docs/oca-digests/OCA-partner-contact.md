@@ -69,3 +69,11 @@
 - Commit bf58c8e: [UPD] Update partner_contact_type_end_user.pot → https://github.com/OCA/partner-contact/commit/bf58c8e4d3e72f527accaee344b12c75059f689b
 - Commit 0cfb0fb: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/0cfb0fb9b5845b94d69eff337b83b917be442d8a
 
+## 2025-11-11
+
+- Commit bd64a47: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/bd64a478d083273fa4cc67142d33f0147e2e6ddd
+- Commit 5286de7: Update translation files → https://github.com/OCA/partner-contact/commit/5286de7d3eafed9fb0e300db1cd33138897bb5e4
+- Commit 1dddc4d: Merge PR #2006 into 18.0 → https://github.com/OCA/partner-contact/commit/1dddc4d48cb0445e926e8da077354c143210147e
+- Commit acd5ab7: [UPD] Update partner_shipping_policy.pot → https://github.com/OCA/partner-contact/commit/acd5ab744960f57200de13c8f75dd73d5c9d3ff8
+- Commit 46a1caf: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/46a1cafda17eccbd620e8fac398f55617cfe464f
+

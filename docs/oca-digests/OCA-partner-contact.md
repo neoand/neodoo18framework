@@ -77,3 +77,11 @@
 - Commit acd5ab7: [UPD] Update partner_shipping_policy.pot → https://github.com/OCA/partner-contact/commit/acd5ab744960f57200de13c8f75dd73d5c9d3ff8
 - Commit 46a1caf: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/46a1cafda17eccbd620e8fac398f55617cfe464f
 
+## 2025-11-12
+
+- Commit 45e0961: [IMP] purchase_supplier_rank: pre-commit auto fixes → https://github.com/OCA/partner-contact/commit/45e096136e5a83111a130e63523a400f865b7c3b
+- Commit 1372ed6: [MIG] purchase_supplier_rank: Migration to 18.0 → https://github.com/OCA/partner-contact/commit/1372ed6102f81fae1c04c4b740abe99704e7b588
+- Commit 2d0ee59: Merge PR #1992 into 18.0 → https://github.com/OCA/partner-contact/commit/2d0ee59353b217998081ea925e26b74d311eb0a5
+- Commit a5f5d7f: [UPD] Update purchase_supplier_rank.pot → https://github.com/OCA/partner-contact/commit/a5f5d7fc0b587870dc12b15e1fc161b07632bc6a
+- Commit afbe6f2: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/afbe6f22be4f500b392917ddbe4f85229899acf1
+

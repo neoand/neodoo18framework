@@ -76,3 +76,11 @@
 - Commit 63eb2d8: Merge PR #4222 into 18.0 → https://github.com/OCA/l10n-brazil/commit/63eb2d8676a7c60b66622b47561ace498bc0f5b9
 - Commit a231080: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/a231080d41a18329f07bad2c987f7dfa8db2b84e
 
+## 2025-11-12
+
+- Commit a3b0894: [IMP] l10n_br_zip: remove version specifier dependency → https://github.com/OCA/l10n-brazil/commit/a3b0894e5cce5d6b6bcc3d993cfe45f0c6800bfa
+- Commit 9208847: [IMP] requirements: remove version specifier dependency → https://github.com/OCA/l10n-brazil/commit/92088472b8b166cb38c75ef49a9041041820fddf
+- Commit b48433b: [IMP] l10n_br_fiscal_dfe: use newest nfelib → https://github.com/OCA/l10n-brazil/commit/b48433bdf862daaa8481920d9fb92246fb1f6030
+- Commit ec75fa9: Merge PR #4232 into 18.0 → https://github.com/OCA/l10n-brazil/commit/ec75fa9804b6e7107881d39c6cf528123c67048f
+- Commit 2cdfca7: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/2cdfca758f1b0f6eb892d245a0fd90b1ee84dac8
+

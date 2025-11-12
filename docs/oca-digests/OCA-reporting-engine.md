@@ -43,3 +43,9 @@
 - Commit b2dfcbb: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/b2dfcbbcc1e7e73973a9182a67504d5ea217548e
 - Commit f84f1e6: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/f84f1e697da6472f00280fba9eca347a3c446968
 
+## 2025-11-12
+
+- Commit d931ea7: [FIX]When set data in report_action function, the print_report_name does not update the file name when printing file → https://github.com/OCA/reporting-engine/commit/d931ea74a6ed37bab5f67362cd4b66f195baba81
+- Commit c9bddba: Merge PR #1057 into 18.0 → https://github.com/OCA/reporting-engine/commit/c9bddba3921f6ef024730905139eb288979138db
+- Commit c4b9b30: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/c4b9b303b4d8e1db18dac0acd6ad4707c9930a16
+

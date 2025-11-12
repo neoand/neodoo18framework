@@ -39,3 +39,11 @@
 - Commit 1218e3d: Merge PR #2168 into 18.0 → https://github.com/OCA/account-financial-tools/commit/1218e3df8c2115ca8627756d9d089298b41ffc6d
 - Commit 5e4b22b: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/5e4b22bf6e9d0b82354b2c86d3d4facac32ffbc6
 
+## 2025-11-12
+
+- Commit 882bd05: [IMP] account_loan: pre-commit auto fixes → https://github.com/OCA/account-financial-tools/commit/882bd05c794ec355d35cd94764b0477b19de2b31
+- Commit 2269fe0: [MIG] account_loan: Migration to 18.0 → https://github.com/OCA/account-financial-tools/commit/2269fe06311ff4557110906e911337c627ec9dce
+- Commit 398b91b: Merge PR #2108 into 18.0 → https://github.com/OCA/account-financial-tools/commit/398b91becdd7b145424032b2a8b6c708a034c6e8
+- Commit 44d2b22: [UPD] Update account_loan.pot → https://github.com/OCA/account-financial-tools/commit/44d2b22d4d14679568ce87eb5a8217380e578f9b
+- Commit 349937b: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/349937b23f3f83d025820fbfb947d89cd0506805
+

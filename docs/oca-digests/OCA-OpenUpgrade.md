@@ -102,3 +102,8 @@
 - Commit 3f00e2d: [FIX]openupgrade_framework: Fix Nonetype Error when install_filenmae path does not exist → https://github.com/OCA/OpenUpgrade/commit/3f00e2de9adfa915577cda649ac14dce745cb4ea
 - Commit 6422275: Merge pull request #5448 from Comunitea/18.0-fix-path-info-none → https://github.com/OCA/OpenUpgrade/commit/6422275939aa573d0c4111a3d48aa9a9dea8e046
 
+## 2025-11-13
+
+- Commit 10984c2: [OU-ADD] spreadsheet_dashboard_event_sale: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/10984c28096b4b66ac23bd1e26a53daf04888246
+- Commit 7e74cf6: Merge pull request #5451 from Tecnativa/18.0-ou_add-spreadsheet_dashboard_event_sale → https://github.com/OCA/OpenUpgrade/commit/7e74cf6d3cb5db7e56797f78694dfe8fd308603c
+

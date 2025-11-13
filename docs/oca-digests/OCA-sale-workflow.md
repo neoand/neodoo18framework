@@ -106,3 +106,9 @@
 - Commit 7219978: Added translation using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/7219978cc91f14fb62724c3b172cae437fdc3541
 - Commit cf41369: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/cf41369e569f49b542cfb2c3608fa051f7c93153
 
+## 2025-11-13
+
+- Commit 32b608a: [IMP-FIX] sale_order_product_recommendation: Test the complete flow of a sales order with action_confirm → https://github.com/OCA/sale-workflow/commit/32b608a3d719d132218465b3b952295f6db14e4d
+- Commit e4a939a: Merge PR #4007 into 18.0 → https://github.com/OCA/sale-workflow/commit/e4a939a06cb60fa3d2b0a90b8dfa573cb79b0e96
+- Commit be211dc: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/be211dcacc8dbd39192706fd4a02d95d969dd7a6
+

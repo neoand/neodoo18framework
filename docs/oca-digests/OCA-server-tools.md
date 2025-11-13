@@ -82,3 +82,11 @@
 
 - Commit be20c83: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/be20c830f854e8effeae2e6f730162a7f0367de6
 
+## 2025-11-13
+
+- Commit 43f6e62: Translated using Weblate (Japanese) → https://github.com/OCA/server-tools/commit/43f6e626075dfa430d93f30185ecccbcfdedeced
+- Commit 69058a3: [ADD] base_temporary_action - a module to create temporary actions → https://github.com/OCA/server-tools/commit/69058a369f131e0115674da2ea4669b270a5e6dd
+- Commit 07f97d0: Merge PR #3431 into 18.0 → https://github.com/OCA/server-tools/commit/07f97d079c5826d63fc73b6bc5d8a5cfc700ade5
+- Commit 706a052: [UPD] Update base_temporary_action.pot → https://github.com/OCA/server-tools/commit/706a052afc6a8523ff529bc789ec0d412831f9af
+- Commit 5562381: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/5562381b17f291ea70f8e94f6ad742c1bcc2f471
+

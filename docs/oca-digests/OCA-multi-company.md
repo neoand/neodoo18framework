@@ -40,3 +40,11 @@
 - Commit d751f07: Merge PR #902 into 18.0 → https://github.com/OCA/multi-company/commit/d751f07b53e3a60874c919408de6c48896253553
 - Commit 04c419f: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/04c419f0eb861084d8e540e8cecb4aab21a6c20c
 
+## 2025-11-13
+
+- Commit 541a517: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/541a5177880f9575b10a7d0dd5b5a5e5c03c13ef
+- Commit dd8f91b: Merge PR #904 into 18.0 → https://github.com/OCA/multi-company/commit/dd8f91bbae214896340a12f37d5f76c5b83d6247
+- Commit 8d28df3: [UPD] Update purchase_sale_stock_inter_company.pot → https://github.com/OCA/multi-company/commit/8d28df3981ffabdc2b19138b8276458fb6b73d8d
+- Commit 5b4e3da: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/5b4e3da31762153e01805ef0d090e1a9e8db6801
+- Commit e67ef05: Update translation files → https://github.com/OCA/multi-company/commit/e67ef05f0bfd471da3482490e9a11bdf7643629a
+

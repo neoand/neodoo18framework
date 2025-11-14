@@ -18,3 +18,10 @@
 
 - Commit b3d18ac: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/b3d18acd18eae59e08fa48d226f659bff65aa381
 
+## 2025-11-14
+
+- Commit 406b564: [ADD] project_task_ancestor: New module → https://github.com/OCA/project/commit/406b56445ec9d57e32219fbaebf654e42beb6820
+- Commit 4849d44: Merge PR #1598 into 18.0 → https://github.com/OCA/project/commit/4849d4471634c0487628b114c9707dd8480c823e
+- Commit 54a402d: [UPD] Update project_task_ancestor.pot → https://github.com/OCA/project/commit/54a402d4e5000917cee54708b3c2275f2cf15903
+- Commit ebc51b1: [BOT] post-merge updates → https://github.com/OCA/project/commit/ebc51b110748c936e86ffd32bc482fd9074251ba
+

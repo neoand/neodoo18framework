@@ -85,3 +85,11 @@
 - Commit a5f5d7f: [UPD] Update purchase_supplier_rank.pot → https://github.com/OCA/partner-contact/commit/a5f5d7fc0b587870dc12b15e1fc161b07632bc6a
 - Commit afbe6f2: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/afbe6f22be4f500b392917ddbe4f85229899acf1
 
+## 2025-11-14
+
+- Commit 90964c6: Merge PR #2211 into 18.0 → https://github.com/OCA/partner-contact/commit/90964c6674d5d529d799efbacd90d02934d816d4
+- Commit 108ded6: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/108ded67272512f61290aea0a3bfd4749f544bd6
+- Commit 5afec22: Merge PR #2000 into 18.0 → https://github.com/OCA/partner-contact/commit/5afec22bb7aa54652088555b64cc2efdb85fb14f
+- Commit fc656f1: [UPD] Update partner_title_active.pot → https://github.com/OCA/partner-contact/commit/fc656f1498cf85fd4207234bf6e5e537d261841b
+- Commit 1e7232e: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/1e7232e5f889a341c09c9e697e88725ca912fcd0
+

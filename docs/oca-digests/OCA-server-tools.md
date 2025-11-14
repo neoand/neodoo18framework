@@ -90,3 +90,8 @@
 - Commit 706a052: [UPD] Update base_temporary_action.pot → https://github.com/OCA/server-tools/commit/706a052afc6a8523ff529bc789ec0d412831f9af
 - Commit 5562381: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/5562381b17f291ea70f8e94f6ad742c1bcc2f471
 
+## 2025-11-14
+
+- Commit a50bfc6: Merge PR #3433 into 18.0 → https://github.com/OCA/server-tools/commit/a50bfc69aa02f61972c9168929393b95293b5332
+- Commit d54a730: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/d54a730079f7e6e0c7116296e861547dbe4fb40c
+

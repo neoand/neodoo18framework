@@ -112,3 +112,11 @@
 - Commit e4a939a: Merge PR #4007 into 18.0 → https://github.com/OCA/sale-workflow/commit/e4a939a06cb60fa3d2b0a90b8dfa573cb79b0e96
 - Commit be211dc: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/be211dcacc8dbd39192706fd4a02d95d969dd7a6
 
+## 2025-11-14
+
+- Commit 9ee8f3f: [FIX] sale_order_product_recommendation: Adapt kanban view to 18 → https://github.com/OCA/sale-workflow/commit/9ee8f3fa6d425a7f20c30f41334f57e463b57ffb
+- Commit f75ecd2: Merge PR #4013 into 18.0 → https://github.com/OCA/sale-workflow/commit/f75ecd2f42db4f9d21df00aede3fb69a71374e99
+- Commit 449c85c: [UPD] Update sale_order_product_recommendation.pot → https://github.com/OCA/sale-workflow/commit/449c85c0a4872f1c94af802383f62e3d0023627a
+- Commit e1c1c2f: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/e1c1c2fe4307b91ca173ce1c4ab761bb4edc5685
+- Commit e6c7db7: Update translation files → https://github.com/OCA/sale-workflow/commit/e6c7db724bd81a27d19ed2f0b7687f93ad1bbd32
+

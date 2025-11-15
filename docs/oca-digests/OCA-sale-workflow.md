@@ -120,3 +120,10 @@
 - Commit e1c1c2f: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/e1c1c2fe4307b91ca173ce1c4ab761bb4edc5685
 - Commit e6c7db7: Update translation files → https://github.com/OCA/sale-workflow/commit/e6c7db724bd81a27d19ed2f0b7687f93ad1bbd32
 
+## 2025-11-15
+
+- Commit 0cace01: Merge PR #3720 into 18.0 → https://github.com/OCA/sale-workflow/commit/0cace019f7f0e14b0828bc1cbf5fe31a4dc1db32
+- Commit bdd8adf: [UPD] Update sale_stock_secondary_unit.pot → https://github.com/OCA/sale-workflow/commit/bdd8adfc3cb8c6732accec0874e72559a1003330
+- Commit 014b592: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/014b59289a117b89b4e5c0d854a8ba4b18b01004
+- Commit 2af8ea2: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/2af8ea225548357faa2d0663e5e0483d732fa143
+

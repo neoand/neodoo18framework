@@ -47,3 +47,10 @@
 - Commit 44d2b22: [UPD] Update account_loan.pot → https://github.com/OCA/account-financial-tools/commit/44d2b22d4d14679568ce87eb5a8217380e578f9b
 - Commit 349937b: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/349937b23f3f83d025820fbfb947d89cd0506805
 
+## 2025-11-15
+
+- Commit f9750ce: [FIX] account_chart_update: fix HTML fields translation → https://github.com/OCA/account-financial-tools/commit/f9750ce705733627b05bd74bf462280d69cb9e20
+- Commit 3b59444: [FIX] acccount_chart_update: ignore start/end whitespace when comparing → https://github.com/OCA/account-financial-tools/commit/3b59444ba4e307a03c090815ec0eb068061679b3
+- Commit b13570b: Merge PR #2166 into 18.0 → https://github.com/OCA/account-financial-tools/commit/b13570b64f8e0f587eb0b9ba77dbdf10e410f4e1
+- Commit 05876ea: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/05876ea7260a1278afe28f0e6aae5c4c2faa1a52
+

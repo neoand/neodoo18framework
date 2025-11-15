@@ -30,3 +30,9 @@
 
 - Commit 4aea503: Translated using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/4aea503008ea76aa734e7cd815216b5559582913
 
+## 2025-11-15
+
+- Commit f0ad311: [FIX] account_reconcile_oca: Don't apply max_amount on intermediate counterparts → https://github.com/OCA/account-reconcile/commit/f0ad31172d87743d54fdaef69f55b51b73fd9a71
+- Commit 392cfe1: Merge PR #931 into 18.0 → https://github.com/OCA/account-reconcile/commit/392cfe1e6a43eff2a85623caa88903263fb870d0
+- Commit 7148044: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/7148044df2a93905762cb5d646e89176cdba8c2e
+

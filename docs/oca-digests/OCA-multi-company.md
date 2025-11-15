@@ -48,3 +48,7 @@
 - Commit 5b4e3da: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/5b4e3da31762153e01805ef0d090e1a9e8db6801
 - Commit e67ef05: Update translation files → https://github.com/OCA/multi-company/commit/e67ef05f0bfd471da3482490e9a11bdf7643629a
 
+## 2025-11-15
+
+- Commit 53d8e3e: Translated using Weblate (Italian) → https://github.com/OCA/multi-company/commit/53d8e3e4410d78db74b3eaeab6f4a67bbba4718f
+

@@ -107,3 +107,8 @@
 - Commit 10984c2: [OU-ADD] spreadsheet_dashboard_event_sale: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/10984c28096b4b66ac23bd1e26a53daf04888246
 - Commit 7e74cf6: Merge pull request #5451 from Tecnativa/18.0-ou_add-spreadsheet_dashboard_event_sale → https://github.com/OCA/OpenUpgrade/commit/7e74cf6d3cb5db7e56797f78694dfe8fd308603c
 
+## 2025-11-15
+
+- Commit a2c0387: [OU-ADD] l10n_be: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/a2c038745715df4c2074b06c6e78472d009ef2ca
+- Commit ee03efc: Merge pull request #5452 from Tecnativa/18.0-ou_add-l10n_be → https://github.com/OCA/OpenUpgrade/commit/ee03efcb371232b1fa48845d25c70ce5d927fa2f
+

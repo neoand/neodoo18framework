@@ -18,3 +18,11 @@
 - Commit 137fafc: Merge PR #2118 into 18.0 → https://github.com/OCA/product-attribute/commit/137fafcd3ba3fd39e5525458bd2770fca3e83b19
 - Commit e80a17c: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/e80a17c5b4b8293dc49777075b4de38b6e853dfb
 
+## 2025-11-15
+
+- Commit eb11688: [FIX] product_variant_route_mto: add missing inverse → https://github.com/OCA/product-attribute/commit/eb116883c9b079488188c847cb463d15a081b4fe
+- Commit 1699fc2: Merge PR #2131 into 18.0 → https://github.com/OCA/product-attribute/commit/1699fc2029e5b2229d4a9e1be53bd8020e79f958
+- Commit fea223e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/fea223e1274b32cd940f796f2b773b40808b4709
+- Commit c63309c: Added translation using Weblate (Dutch) → https://github.com/OCA/product-attribute/commit/c63309c49922f8280af6db5bca069041d0e82fe5
+- Commit cd0a733: Translated using Weblate (Dutch) → https://github.com/OCA/product-attribute/commit/cd0a73314dc7c199fb4706c47f2edbc5a67021c7
+

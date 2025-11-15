@@ -25,3 +25,8 @@
 - Commit 54a402d: [UPD] Update project_task_ancestor.pot → https://github.com/OCA/project/commit/54a402d4e5000917cee54708b3c2275f2cf15903
 - Commit ebc51b1: [BOT] post-merge updates → https://github.com/OCA/project/commit/ebc51b110748c936e86ffd32bc482fd9074251ba
 
+## 2025-11-15
+
+- Commit b447690: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/b447690cef699c9a745a1870c16de7ed995ecf3b
+- Commit 2e38d6a: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/2e38d6a7d157cf4c4d845a53e0b764e0117739f8
+

@@ -95,3 +95,9 @@
 - Commit a50bfc6: Merge PR #3433 into 18.0 → https://github.com/OCA/server-tools/commit/a50bfc69aa02f61972c9168929393b95293b5332
 - Commit d54a730: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/d54a730079f7e6e0c7116296e861547dbe4fb40c
 
+## 2025-11-15
+
+- Commit 3ad2e67: Translated using Weblate (Dutch) → https://github.com/OCA/server-tools/commit/3ad2e6774ea10f3aa061d761744211b44f3f2e2b
+- Commit 4111332: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/4111332d4092e387b9568a002217885e07b47efa
+- Commit 42d80c8: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/42d80c8696fb03acbf83355d62ae0a5cf3adde08
+

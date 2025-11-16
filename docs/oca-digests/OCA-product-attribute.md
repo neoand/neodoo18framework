@@ -26,3 +26,8 @@
 - Commit c63309c: Added translation using Weblate (Dutch) → https://github.com/OCA/product-attribute/commit/c63309c49922f8280af6db5bca069041d0e82fe5
 - Commit cd0a733: Translated using Weblate (Dutch) → https://github.com/OCA/product-attribute/commit/cd0a73314dc7c199fb4706c47f2edbc5a67021c7
 
+## 2025-11-16
+
+- Commit 0d3af0f: Added translation using Weblate (Dutch) → https://github.com/OCA/product-attribute/commit/0d3af0ffe625fa5f2f46e430a8a0d168db2512bd
+- Commit b0db17b: Translated using Weblate (Dutch) → https://github.com/OCA/product-attribute/commit/b0db17bbff21f4e47776cf815646e01845e2be35
+

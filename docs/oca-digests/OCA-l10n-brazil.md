@@ -92,3 +92,11 @@
 - Commit 36e30b4: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/36e30b4ae99a84374a46d0a90227664e83db8406
 - Commit f4c414c: Update translation files → https://github.com/OCA/l10n-brazil/commit/f4c414c23cf43da9ca4dc4912c874f5e42f4847c
 
+## 2025-11-16
+
+- Commit 243cf67: [REF] l10n_br_fiscal: merge document.line.mixin.methods into document.line.mixin → https://github.com/OCA/l10n-brazil/commit/243cf67a1746eafa5abc8c6cc29a10edd22d1645
+- Commit 3f31a22: Merge PR #4241 into 18.0 → https://github.com/OCA/l10n-brazil/commit/3f31a222bba71e571cbc9aa201c5a8b6e93e0567
+- Commit e8b5142: [UPD] Update l10n_br_fiscal.pot → https://github.com/OCA/l10n-brazil/commit/e8b5142fe6317a3c35825e3097f42ea218e3ed17
+- Commit 6583a1a: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/6583a1ab57a8e8bfa119e4f0c1804064596ddf08
+- Commit 720ee84: Update translation files → https://github.com/OCA/l10n-brazil/commit/720ee849b9f7ece2d0a33f45c630c64c9a1d7346
+

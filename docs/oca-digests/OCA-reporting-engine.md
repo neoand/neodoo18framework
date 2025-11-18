@@ -49,3 +49,7 @@
 - Commit c9bddba: Merge PR #1057 into 18.0 → https://github.com/OCA/reporting-engine/commit/c9bddba3921f6ef024730905139eb288979138db
 - Commit c4b9b30: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/c4b9b303b4d8e1db18dac0acd6ad4707c9930a16
 
+## 2025-11-18
+
+- Commit 7409203: Added translation using Weblate (Japanese) → https://github.com/OCA/reporting-engine/commit/740920355a03f0e6d2d91061522a29512a1edd11
+

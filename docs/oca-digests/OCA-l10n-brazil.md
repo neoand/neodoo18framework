@@ -100,3 +100,9 @@
 - Commit 6583a1a: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/6583a1ab57a8e8bfa119e4f0c1804064596ddf08
 - Commit 720ee84: Update translation files → https://github.com/OCA/l10n-brazil/commit/720ee849b9f7ece2d0a33f45c630c64c9a1d7346
 
+## 2025-11-18
+
+- Commit ffabec9: [FIX] l10n_br_nfse_focus: valor_desconto_incondicionado → https://github.com/OCA/l10n-brazil/commit/ffabec964fb19ade4c1eca7f6b1f5744b5062c70
+- Commit 3ef720b: Merge PR #4244 into 18.0 → https://github.com/OCA/l10n-brazil/commit/3ef720bd142c7892239f01469821ca7d0d71efc5
+- Commit a11039c: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/a11039c644fd94e4cf05fa0ef0ec368b6e7d8e4e
+

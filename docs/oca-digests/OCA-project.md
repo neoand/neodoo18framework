@@ -30,3 +30,9 @@
 - Commit b447690: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/b447690cef699c9a745a1870c16de7ed995ecf3b
 - Commit 2e38d6a: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/2e38d6a7d157cf4c4d845a53e0b764e0117739f8
 
+## 2025-11-18
+
+- Commit 75e8c40: Merge PR #1540 into 18.0 → https://github.com/OCA/project/commit/75e8c4011eb691a78b906eaa9caac749cf011244
+- Commit 6dd5063: [UPD] addons table in README.md → https://github.com/OCA/project/commit/6dd50639a13e211f6de7d069f45f73609bfd7fd9
+- Commit 635a74e: [BOT] add or update setup/_metapackage → https://github.com/OCA/project/commit/635a74eda926603f5e7824fbb8e9769737be8d69
+

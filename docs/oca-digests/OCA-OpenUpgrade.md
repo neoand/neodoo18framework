@@ -112,3 +112,8 @@
 - Commit a2c0387: [OU-ADD] l10n_be: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/a2c038745715df4c2074b06c6e78472d009ef2ca
 - Commit ee03efc: Merge pull request #5452 from Tecnativa/18.0-ou_add-l10n_be → https://github.com/OCA/OpenUpgrade/commit/ee03efcb371232b1fa48845d25c70ce5d927fa2f
 
+## 2025-11-18
+
+- Commit ac0c4bd: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/ac0c4bd99c5388aec06713cc107798de7c251555
+- Commit cb2ecc9: Merge pull request #5453 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/cb2ecc9f7ee37f2b43c7aaa96bfe1c809b8c3f14
+

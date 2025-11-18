@@ -127,3 +127,9 @@
 - Commit 014b592: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/014b59289a117b89b4e5c0d854a8ba4b18b01004
 - Commit 2af8ea2: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/2af8ea225548357faa2d0663e5e0483d732fa143
 
+## 2025-11-18
+
+- Commit 0cedc8b: Merge PR #4006 into 18.0 → https://github.com/OCA/sale-workflow/commit/0cedc8b22d2fe56a9908b7fc76970ffa0d139cff
+- Commit 3748a10: [UPD] Update sale_order_line_effective_date.pot → https://github.com/OCA/sale-workflow/commit/3748a10fc4c02d7695f393d3e95cd9a600ea806a
+- Commit 0a8285b: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/0a8285b7348dfa55460eb4e36637076c27423210
+

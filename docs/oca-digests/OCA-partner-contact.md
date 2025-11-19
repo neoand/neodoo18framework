@@ -93,3 +93,8 @@
 - Commit fc656f1: [UPD] Update partner_title_active.pot → https://github.com/OCA/partner-contact/commit/fc656f1498cf85fd4207234bf6e5e537d261841b
 - Commit 1e7232e: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/1e7232e5f889a341c09c9e697e88725ca912fcd0
 
+## 2025-11-19
+
+- Commit ef26248: Merge PR #2046 into 18.0 → https://github.com/OCA/partner-contact/commit/ef262482f77f09f9b7723a93ff191e051c89c159
+- Commit c54ca0f: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/c54ca0ffa2411e661e2174e0acc8056d01766c63
+

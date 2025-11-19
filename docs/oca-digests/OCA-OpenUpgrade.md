@@ -117,3 +117,8 @@
 - Commit ac0c4bd: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/ac0c4bd99c5388aec06713cc107798de7c251555
 - Commit cb2ecc9: Merge pull request #5453 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/cb2ecc9f7ee37f2b43c7aaa96bfe1c809b8c3f14
 
+## 2025-11-19
+
+- Commit 9797779: [OU-ADD] spreadsheet_dashboard_pos_hr: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/97977791eb6f62fb80a8c0f40da955a201be89c2
+- Commit 4251ecc: Merge pull request #5455 from Tecnativa/18.0-ou_add-spreadsheet_dashboard_pos_hr → https://github.com/OCA/OpenUpgrade/commit/4251ecc0298bef2a1cba44f83e3efd9cf64b1eb5
+

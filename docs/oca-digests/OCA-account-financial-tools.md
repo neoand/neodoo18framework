@@ -54,3 +54,11 @@
 - Commit b13570b: Merge PR #2166 into 18.0 → https://github.com/OCA/account-financial-tools/commit/b13570b64f8e0f587eb0b9ba77dbdf10e410f4e1
 - Commit 05876ea: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/05876ea7260a1278afe28f0e6aae5c4c2faa1a52
 
+## 2025-11-20
+
+- Commit 672b4ea: [FIX] account_dashboard_banner: fix value of customer_overdue → https://github.com/OCA/account-financial-tools/commit/672b4ea7901b9b5ac3087756ed0e1afb72fe20d6
+- Commit 0170858: Merge PR #2171 into 18.0 → https://github.com/OCA/account-financial-tools/commit/01708589cd83c3a485e6e149e90876c9aa1f8167
+- Commit 56175f4: [UPD] Update account_dashboard_banner.pot → https://github.com/OCA/account-financial-tools/commit/56175f47781b452736fcbef1927321591f695556
+- Commit e70727c: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/e70727ca81d22c74cf29d039ca6414c87fe51ebd
+- Commit df04b3c: Update translation files → https://github.com/OCA/account-financial-tools/commit/df04b3cf1cb1a430a173ae4df5b2267aadfaf0cc
+

@@ -36,3 +36,11 @@
 - Commit 6dd5063: [UPD] addons table in README.md → https://github.com/OCA/project/commit/6dd50639a13e211f6de7d069f45f73609bfd7fd9
 - Commit 635a74e: [BOT] add or update setup/_metapackage → https://github.com/OCA/project/commit/635a74eda926603f5e7824fbb8e9769737be8d69
 
+## 2025-11-20
+
+- Commit 3e09d03: [IMP] project_task_stock: Add the option to cancel moves in a task → https://github.com/OCA/project/commit/3e09d034a90ac0c2c84870989ad2e6879f09cb9f
+- Commit 9f7de0c: Merge PR #1607 into 18.0 → https://github.com/OCA/project/commit/9f7de0c438ea20168b9d7e99331fdf10d2193458
+- Commit 51ae1d4: [UPD] Update project_task_stock.pot → https://github.com/OCA/project/commit/51ae1d48364ac04d7cc2114eb1f1e0e4ea932679
+- Commit f7a69e6: [BOT] post-merge updates → https://github.com/OCA/project/commit/f7a69e6823844444163525948447df1add14e077
+- Commit da7314e: Update translation files → https://github.com/OCA/project/commit/da7314ec5826e02e9a10a657fc590d702798fe81
+

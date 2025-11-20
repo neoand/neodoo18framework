@@ -98,3 +98,10 @@
 - Commit ef26248: Merge PR #2046 into 18.0 → https://github.com/OCA/partner-contact/commit/ef262482f77f09f9b7723a93ff191e051c89c159
 - Commit c54ca0f: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/c54ca0ffa2411e661e2174e0acc8056d01766c63
 
+## 2025-11-20
+
+- Commit 3337888: Merge PR #2214 into 18.0 → https://github.com/OCA/partner-contact/commit/33378888c430bb8463130e91da9cb8418dc11b2c
+- Commit 1424f11: [UPD] Update base_location.pot → https://github.com/OCA/partner-contact/commit/1424f11f2c74fe04d51e497738ac1f5ae61e3a9f
+- Commit e06e4e4: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/e06e4e43c7101b03d577a775eaf587af8afd9d83
+- Commit 9353d0d: Update translation files → https://github.com/OCA/partner-contact/commit/9353d0d0c6b1ba8ff824cd7ce1088c99ebe87f20
+

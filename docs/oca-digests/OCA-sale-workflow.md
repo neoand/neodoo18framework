@@ -141,3 +141,8 @@
 - Commit 0118bdf: Merge PR #3993 into 18.0 → https://github.com/OCA/sale-workflow/commit/0118bdf98e2dc582c172cc31256a91a0c67afda3
 - Commit 218a5ac: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/218a5ac08e0d252d523f53e9239ecbbbf595801b
 
+## 2025-11-20
+
+- Commit d30c2ee: Merge PR #3995 into 18.0 → https://github.com/OCA/sale-workflow/commit/d30c2ee5da2a0b0a45601208bb14498fb4cb8e7a
+- Commit 7c315e5: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/7c315e5722f65e08f4a0659ac159ce86b3b7cee3
+

@@ -105,3 +105,7 @@
 - Commit e06e4e4: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/e06e4e43c7101b03d577a775eaf587af8afd9d83
 - Commit 9353d0d: Update translation files → https://github.com/OCA/partner-contact/commit/9353d0d0c6b1ba8ff824cd7ce1088c99ebe87f20
 
+## 2025-11-21
+
+- Commit fe2c375: Added translation using Weblate (Japanese) → https://github.com/OCA/partner-contact/commit/fe2c375ce7faeb6a19272f51a8841129ad7ad38e
+

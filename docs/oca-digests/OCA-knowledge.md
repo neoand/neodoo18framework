@@ -12,3 +12,7 @@
 - Commit 62c55c9: [UPD] Update document_page_tag.pot → https://github.com/OCA/knowledge/commit/62c55c969fca9e19b26bfcb7e3f6c00627401f6f
 - Commit 6a2eff3: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/6a2eff36dbc3a79cebfed1ce0addcb162ede87d4
 
+## 2025-11-21
+
+- Commit 5e62a93: Translated using Weblate (Japanese) → https://github.com/OCA/knowledge/commit/5e62a9363725f63d86f8754174fcaf802c08902b
+

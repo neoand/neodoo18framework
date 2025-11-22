@@ -109,3 +109,9 @@
 
 - Commit fe2c375: Added translation using Weblate (Japanese) → https://github.com/OCA/partner-contact/commit/fe2c375ce7faeb6a19272f51a8841129ad7ad38e
 
+## 2025-11-22
+
+- Commit e1d9269: Merge PR #2064 into 18.0 → https://github.com/OCA/partner-contact/commit/e1d92696dd19a81afe9b71066e91b2d29aac2522
+- Commit 1c15b20: [UPD] Update partner_industry_parent.pot → https://github.com/OCA/partner-contact/commit/1c15b2053cb76eae93d6f3cd06074bff6e844714
+- Commit 4f99e48: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/4f99e48b05251d4b1db36dd191bb09d6e1f0ae6f
+

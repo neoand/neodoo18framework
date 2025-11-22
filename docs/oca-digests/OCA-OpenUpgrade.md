@@ -122,3 +122,7 @@
 - Commit 9797779: [OU-ADD] spreadsheet_dashboard_pos_hr: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/97977791eb6f62fb80a8c0f40da955a201be89c2
 - Commit 4251ecc: Merge pull request #5455 from Tecnativa/18.0-ou_add-spreadsheet_dashboard_pos_hr → https://github.com/OCA/OpenUpgrade/commit/4251ecc0298bef2a1cba44f83e3efd9cf64b1eb5
 
+## 2025-11-22
+
+- Commit 9fac6e0: [FIX] hr_holidays: False -> None → https://github.com/OCA/OpenUpgrade/commit/9fac6e09ff6cf60e4fc55c6215e9d5b50dfd7160
+

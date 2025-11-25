@@ -50,3 +50,7 @@
 
 - Commit ff8be9f: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/ff8be9f153ea49e68662c1f03c58d9287ed9b6a0
 
+## 2025-11-25
+
+- Commit 755bf96: Translated using Weblate (Slovenian) → https://github.com/OCA/spreadsheet/commit/755bf9633adca474060ce2657352b67598722fed
+

@@ -16,3 +16,7 @@
 
 - Commit 5e62a93: Translated using Weblate (Japanese) → https://github.com/OCA/knowledge/commit/5e62a9363725f63d86f8754174fcaf802c08902b
 
+## 2025-11-25
+
+- Commit 90a8ed4: Translated using Weblate (Italian) → https://github.com/OCA/knowledge/commit/90a8ed45f6e85f7f1f09c659f5f3832f93442757
+

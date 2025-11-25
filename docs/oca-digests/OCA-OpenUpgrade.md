@@ -126,3 +126,8 @@
 
 - Commit 9fac6e0: [FIX] hr_holidays: False -> None → https://github.com/OCA/OpenUpgrade/commit/9fac6e09ff6cf60e4fc55c6215e9d5b50dfd7160
 
+## 2025-11-25
+
+- Commit 30481c5: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/30481c55295359e18c773c1d755179a6ca4779f1
+- Commit 59c03c4: Merge pull request #5458 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/59c03c4a042bf0a0fe9b2eb248617fdbbf3ed050
+

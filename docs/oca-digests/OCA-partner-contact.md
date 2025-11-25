@@ -115,3 +115,10 @@
 - Commit 1c15b20: [UPD] Update partner_industry_parent.pot → https://github.com/OCA/partner-contact/commit/1c15b2053cb76eae93d6f3cd06074bff6e844714
 - Commit 4f99e48: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/4f99e48b05251d4b1db36dd191bb09d6e1f0ae6f
 
+## 2025-11-25
+
+- Commit d3d54e4: Added translation using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/d3d54e4d1ac32a69b6a8839dbb5fc121462a6960
+- Commit 19d0c2c: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/19d0c2c7028815345dd3b4139810984f43358b14
+- Commit 44ee093: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/44ee0934885104c4a68078041d1a1d7428f1e036
+- Commit a2f3303: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/a2f3303cd32b7feb7df9cadd1528acbbbc6003ef
+

@@ -53,3 +53,9 @@
 
 - Commit 7409203: Added translation using Weblate (Japanese) → https://github.com/OCA/reporting-engine/commit/740920355a03f0e6d2d91061522a29512a1edd11
 
+## 2025-11-25
+
+- Commit 8e2a0df: [FIX] report_xslx: Revert action_manager_report.esm.js to fix KeyError on OCA Financial Reports. → https://github.com/OCA/reporting-engine/commit/8e2a0dffb6234259ec86bbd34d2ed313819c2c95
+- Commit 4ecc31f: Merge PR #1095 into 18.0 → https://github.com/OCA/reporting-engine/commit/4ecc31f675d2a4876114bcb445740e6e2b0bc3d6
+- Commit a602ffd: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/a602ffda7c9a9c5fc67dd14d4d96188c77d67b6f
+

@@ -35,3 +35,9 @@
 
 - Commit f48f9d4: Translated using Weblate (Dutch) → https://github.com/OCA/product-attribute/commit/f48f9d40132f2d0b262afc631b73ccc9ae765d2c
 
+## 2025-11-25
+
+- Commit 074f148: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/074f148d2cb75ae6108cc0d95c00aca0e5aa60d7
+- Commit 2d427e5: Translated using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/2d427e53652ad0a67c1ed5c4e1dc9c9514ae7152
+- Commit 7837e2a: Translated using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/7837e2ac96a450c4ff3da69bcd132472d2549ad2
+

@@ -101,3 +101,8 @@
 - Commit 4111332: Added translation using Weblate (Italian) → https://github.com/OCA/server-tools/commit/4111332d4092e387b9568a002217885e07b47efa
 - Commit 42d80c8: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/42d80c8696fb03acbf83355d62ae0a5cf3adde08
 
+## 2025-11-26
+
+- Commit 5b220d9: Added translation using Weblate (Japanese) → https://github.com/OCA/server-tools/commit/5b220d9505da85aaccf2cf3180f70fe9aa4dc9c5
+- Commit 79ea3d4: Translated using Weblate (Japanese) → https://github.com/OCA/server-tools/commit/79ea3d4ce59870cc7f4402998b18b146af124671
+

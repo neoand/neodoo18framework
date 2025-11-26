@@ -66,3 +66,9 @@
 
 - Commit 2b8097e: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/2b8097e59a0fca9396305faebd66f04359ee9cb9
 
+## 2025-11-26
+
+- Commit 435129d: Merge PR #1980 into 18.0 → https://github.com/OCA/account-financial-tools/commit/435129d756fc70e88d1b8e8ab944672987468a9c
+- Commit 2423d4d: [UPD] Update account_partner_required.pot → https://github.com/OCA/account-financial-tools/commit/2423d4df17f73b8b5a465e9da3fc9fd7c242c912
+- Commit 2870381: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/28703816d6aa414bfc3e77fae2ec5dc23f6b7519
+

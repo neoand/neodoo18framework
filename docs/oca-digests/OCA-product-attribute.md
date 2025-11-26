@@ -41,3 +41,11 @@
 - Commit 2d427e5: Translated using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/2d427e53652ad0a67c1ed5c4e1dc9c9514ae7152
 - Commit 7837e2a: Translated using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/7837e2ac96a450c4ff3da69bcd132472d2549ad2
 
+## 2025-11-26
+
+- Commit 054951c: [IMP] product_simple_seasonality: pre-commit auto fixes → https://github.com/OCA/product-attribute/commit/054951ce592aaa5b549db314ef16481b976243c8
+- Commit bbde805: [MIG] product_simple_seasonality: Migration to 18.0 → https://github.com/OCA/product-attribute/commit/bbde805e9b417a7b722d8193f5896527965b94de
+- Commit eff82bb: Merge PR #1922 into 18.0 → https://github.com/OCA/product-attribute/commit/eff82bbe0d4c680ac49680db8ca79ea2e28650a5
+- Commit dbf9ed5: [UPD] Update product_simple_seasonality.pot → https://github.com/OCA/product-attribute/commit/dbf9ed5ebfb3fd3a3961ca033d51532529988f52
+- Commit 8d4bc7e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/8d4bc7ed2be264030dd077be73c22650ee1147d1
+

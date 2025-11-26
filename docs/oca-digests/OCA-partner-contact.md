@@ -122,3 +122,7 @@
 - Commit 44ee093: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/44ee0934885104c4a68078041d1a1d7428f1e036
 - Commit a2f3303: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/a2f3303cd32b7feb7df9cadd1528acbbbc6003ef
 
+## 2025-11-26
+
+- Commit bb231ec: Translated using Weblate (Japanese) → https://github.com/OCA/partner-contact/commit/bb231ecb6abe37930432e94d0d10e4f01f148f82
+

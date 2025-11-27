@@ -131,3 +131,8 @@
 - Commit 30481c5: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/30481c55295359e18c773c1d755179a6ca4779f1
 - Commit 59c03c4: Merge pull request #5458 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/59c03c4a042bf0a0fe9b2eb248617fdbbf3ed050
 
+## 2025-11-27
+
+- Commit c5adc90: [OU-ADD] l10n_es_pos: Renamed to l10n_es_pos_oca → https://github.com/OCA/OpenUpgrade/commit/c5adc90f56cf4c3216cab315614a6380081a0827
+- Commit c27c806: Merge pull request #5459 from Tecnativa/18.0-ou_add-l10n_es_pos → https://github.com/OCA/OpenUpgrade/commit/c27c806763fdf17a586fb63b18dff3e7e9652809
+

@@ -154,3 +154,11 @@
 - Commit 34d2440: Added translation using Weblate (Dutch) → https://github.com/OCA/sale-workflow/commit/34d2440c5820e22a35c81d91bad863ed4be3ded5
 - Commit 537447e: Translated using Weblate (Dutch) → https://github.com/OCA/sale-workflow/commit/537447ec673b5e1b25ba30ac7dfc26035caa1fa6
 
+## 2025-11-27
+
+- Commit 352ea13: [UPD] Update sale_stock_reservation_issue_on_qty_at_date_widget.pot → https://github.com/OCA/sale-workflow/commit/352ea13c6ccd2b7ba221dd61b3ec49ceaa5bfe6d
+- Commit ae011c2: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/ae011c26dee21088cb566b98ab159eaddd69281f
+- Commit 24a4d93: Merge PR #4015 into 18.0 → https://github.com/OCA/sale-workflow/commit/24a4d93840b30316bd669894cf74a7f32a5d9d9c
+- Commit 020d96e: [UPD] Update sale_order_line_price_lock_by_pricelist.pot → https://github.com/OCA/sale-workflow/commit/020d96ef5ef816eecc5e8bc4f67691bfa585e343
+- Commit 294b53f: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/294b53f3c1a60e50c1050fac68c4de1790ac5a7b
+

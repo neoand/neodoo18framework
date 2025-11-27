@@ -126,3 +126,10 @@
 
 - Commit bb231ec: Translated using Weblate (Japanese) → https://github.com/OCA/partner-contact/commit/bb231ecb6abe37930432e94d0d10e4f01f148f82
 
+## 2025-11-27
+
+- Commit 498ac1c: Merge PR #2117 into 18.0 → https://github.com/OCA/partner-contact/commit/498ac1c352f98c4257b62b2f987bf35a50872e12
+- Commit 6b659a9: [UPD] Update partner_firstname.pot → https://github.com/OCA/partner-contact/commit/6b659a9a50c139bb0baff5fe49e32a3d154dd1e2
+- Commit 156ebda: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/156ebda32716007ad7bff60bd852c0307718107f
+- Commit 25f12ab: Update translation files → https://github.com/OCA/partner-contact/commit/25f12ab061a354839adc9bbd00fb008a91e2cdf1
+

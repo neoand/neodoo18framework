@@ -59,3 +59,11 @@
 - Commit 4ecc31f: Merge PR #1095 into 18.0 → https://github.com/OCA/reporting-engine/commit/4ecc31f675d2a4876114bcb445740e6e2b0bc3d6
 - Commit a602ffd: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/a602ffda7c9a9c5fc67dd14d4d96188c77d67b6f
 
+## 2025-11-27
+
+- Commit ae8f802: [UPD] Update report_footer_html.pot → https://github.com/OCA/reporting-engine/commit/ae8f802e3ca10dd78834907a55d6c0ecf0d30dc5
+- Commit 8e6afb9: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/8e6afb902719ce1c37b55fca33d0c3253c96789c
+- Commit 0fd74ce: Merge PR #1092 into 18.0 → https://github.com/OCA/reporting-engine/commit/0fd74ce75f484ff6b5740308df0c1d2215aa5e98
+- Commit f672226: [UPD] Update report_display_name_in_footer.pot → https://github.com/OCA/reporting-engine/commit/f6722266445d818e4fe00bac5b182e5b82553c04
+- Commit 1ffe84e: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/1ffe84edfc72d9036d94255dbde39d1372573ed8
+

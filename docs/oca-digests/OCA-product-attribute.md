@@ -49,3 +49,9 @@
 - Commit dbf9ed5: [UPD] Update product_simple_seasonality.pot → https://github.com/OCA/product-attribute/commit/dbf9ed5ebfb3fd3a3961ca033d51532529988f52
 - Commit 8d4bc7e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/8d4bc7ed2be264030dd077be73c22650ee1147d1
 
+## 2025-11-27
+
+- Commit f2a8590: [REF] product_pricelist_direct_print_xlsx → https://github.com/OCA/product-attribute/commit/f2a85907eca8bbebf21cfe6a08296c64552bae70
+- Commit 0c64e6c: Merge PR #2108 into 18.0 → https://github.com/OCA/product-attribute/commit/0c64e6cd796293bd9a7147d1e0d5630cbd1421d8
+- Commit 481a98a: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/481a98a77c64634dd042638ba3194d3854e9b92a
+

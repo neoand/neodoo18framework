@@ -42,3 +42,7 @@
 - Commit 5817cb6: [UPD] Update account_partner_reconcile.pot → https://github.com/OCA/account-reconcile/commit/5817cb6e77393fb641f9ebabce5b61656e1adb69
 - Commit 7aaf040: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/7aaf0406669ef2264305464b258915b1cdb4d610
 
+## 2025-11-28
+
+- Commit 2db8b8c: Translated using Weblate (Swedish) → https://github.com/OCA/account-reconcile/commit/2db8b8cdabb0c167a10e6d4a12d790a3dd69e240
+

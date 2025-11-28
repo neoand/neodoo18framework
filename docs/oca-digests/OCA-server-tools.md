@@ -106,3 +106,8 @@
 - Commit 5b220d9: Added translation using Weblate (Japanese) → https://github.com/OCA/server-tools/commit/5b220d9505da85aaccf2cf3180f70fe9aa4dc9c5
 - Commit 79ea3d4: Translated using Weblate (Japanese) → https://github.com/OCA/server-tools/commit/79ea3d4ce59870cc7f4402998b18b146af124671
 
+## 2025-11-28
+
+- Commit 1f89d76: Merge PR #3392 into 18.0 → https://github.com/OCA/server-tools/commit/1f89d76f45271ad9695f401dae23aa3211c49c2f
+- Commit c19f122: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/c19f1222706899d8352014a5d847e87531978ca5
+

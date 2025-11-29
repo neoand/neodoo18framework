@@ -133,3 +133,11 @@
 - Commit 156ebda: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/156ebda32716007ad7bff60bd852c0307718107f
 - Commit 25f12ab: Update translation files → https://github.com/OCA/partner-contact/commit/25f12ab061a354839adc9bbd00fb008a91e2cdf1
 
+## 2025-11-29
+
+- Commit 86ccc54: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/86ccc545eb13469d9e55febdb6fb61ec2ad250fb
+- Commit 6aa3483: Update translation files → https://github.com/OCA/partner-contact/commit/6aa348354360ab644a3e6a72c8941365bd020a15
+- Commit e31c06f: Merge PR #1975 into 18.0 → https://github.com/OCA/partner-contact/commit/e31c06f4235dd117155d7676255d12e0c8c53f50
+- Commit 2723a48: [UPD] Update partner_tier_validation.pot → https://github.com/OCA/partner-contact/commit/2723a486298f9de3d9a4fd44aff84e4d0a383ee6
+- Commit d497b48: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/d497b48d8c38b8eb2c1fe2fafd34844dccda3226
+

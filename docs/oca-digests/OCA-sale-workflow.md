@@ -162,3 +162,9 @@
 - Commit 020d96e: [UPD] Update sale_order_line_price_lock_by_pricelist.pot → https://github.com/OCA/sale-workflow/commit/020d96ef5ef816eecc5e8bc4f67691bfa585e343
 - Commit 294b53f: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/294b53f3c1a60e50c1050fac68c4de1790ac5a7b
 
+## 2025-11-29
+
+- Commit b1c0320: [FIX] sale_order_lot_selection: Avoid the error when trying to select a lot if the user does not have Inventory permissions → https://github.com/OCA/sale-workflow/commit/b1c0320fe2301d7f95ac37d31ccc80e9e72ef0e2
+- Commit aba5188: Merge PR #4045 into 18.0 → https://github.com/OCA/sale-workflow/commit/aba5188c11d9e08ac315fe479c9a68e03da45c04
+- Commit 1fa26ac: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/1fa26acbcb60242af7ef9bcfd86a5414f7d9cf80
+

@@ -72,3 +72,7 @@
 - Commit 2423d4d: [UPD] Update account_partner_required.pot → https://github.com/OCA/account-financial-tools/commit/2423d4df17f73b8b5a465e9da3fc9fd7c242c912
 - Commit 2870381: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/28703816d6aa414bfc3e77fae2ec5dc23f6b7519
 
+## 2025-11-29
+
+- Commit e2054b6: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/e2054b6d36963a8f7f6a1904f5370ecda65e02a2
+

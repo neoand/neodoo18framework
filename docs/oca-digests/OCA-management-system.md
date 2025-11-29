@@ -50,3 +50,7 @@
 
 - Commit 08b6714: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/08b6714ee0712fc5b531a583601210225803aafd
 
+## 2025-11-29
+
+- Commit 098c49c: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/098c49c4759476c125adbfee6cce5e6a14dc5cbd
+

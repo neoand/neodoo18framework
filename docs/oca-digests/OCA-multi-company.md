@@ -52,3 +52,8 @@
 
 - Commit 53d8e3e: Translated using Weblate (Italian) → https://github.com/OCA/multi-company/commit/53d8e3e4410d78db74b3eaeab6f4a67bbba4718f
 
+## 2025-11-30
+
+- Commit d97225d: [IMP] product_multi_company_stock: consider archived products → https://github.com/OCA/multi-company/commit/d97225d7e102669d88e7076b427c0b6a723d9ea1
+- Commit 97cfb77: Merge PR #909 into 18.0 → https://github.com/OCA/multi-company/commit/97cfb773b72775b0f04410fd45daac8b340c0eba
+

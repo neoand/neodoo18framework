@@ -168,3 +168,9 @@
 - Commit aba5188: Merge PR #4045 into 18.0 → https://github.com/OCA/sale-workflow/commit/aba5188c11d9e08ac315fe479c9a68e03da45c04
 - Commit 1fa26ac: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/1fa26acbcb60242af7ef9bcfd86a5414f7d9cf80
 
+## 2025-12-01
+
+- Commit f368001: Merge PR #3807 into 18.0 → https://github.com/OCA/sale-workflow/commit/f3680019383ed4f369848629ca0b0c3956dcf69f
+- Commit 2fa7345: [UPD] Update sale_advance_payment.pot → https://github.com/OCA/sale-workflow/commit/2fa7345d42f33aa80869db1cc4092e7b515d040a
+- Commit 2669512: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/26695122d48b0b142c676726fb474d27f1ffa935
+

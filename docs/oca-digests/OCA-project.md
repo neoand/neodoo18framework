@@ -48,3 +48,11 @@
 
 - Commit c4f0803: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/c4f080333f87d2bc3e3509cab61952262f0ef27b
 
+## 2025-12-01
+
+- Commit 813b42b: Merge PR #1605 into 18.0 → https://github.com/OCA/project/commit/813b42b9a6f87b5f079b981ac66667cc11a2862f
+- Commit 26f3d37: [BOT] post-merge updates → https://github.com/OCA/project/commit/26f3d37416a5dc52991e4ea92db7492a47534d67
+- Commit 1263d8c: Merge PR #1575 into 18.0 → https://github.com/OCA/project/commit/1263d8caf0bbf7f3b7fa9d67ff14aa5ab1d29a2d
+- Commit eba19dc: [UPD] Update sale_project_task_selection.pot → https://github.com/OCA/project/commit/eba19dca60aa24f86305a4b60813c3fe537d68f9
+- Commit 9b8d5bc: [BOT] post-merge updates → https://github.com/OCA/project/commit/9b8d5bc532ee4ec4a9d9191892162a05e4eb500c
+

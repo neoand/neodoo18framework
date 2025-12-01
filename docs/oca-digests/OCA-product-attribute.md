@@ -55,3 +55,11 @@
 - Commit 0c64e6c: Merge PR #2108 into 18.0 → https://github.com/OCA/product-attribute/commit/0c64e6cd796293bd9a7147d1e0d5630cbd1421d8
 - Commit 481a98a: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/481a98a77c64634dd042638ba3194d3854e9b92a
 
+## 2025-12-01
+
+- Commit c9d6291: Merge PR #2060 into 18.0 → https://github.com/OCA/product-attribute/commit/c9d62911818e53af3be6a7f9f1427c78f267749b
+- Commit 52da0cd: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/52da0cd1261588acb0cb920466b00388a2b2e9ef
+- Commit 453f800: Merge PR #2009 into 18.0 → https://github.com/OCA/product-attribute/commit/453f8009988b9f745a67b2cf7eb51bda6d6694a4
+- Commit 43486c4: [UPD] Update product_abc_classification.pot → https://github.com/OCA/product-attribute/commit/43486c420547c0ae0031342c1db716aa937583df
+- Commit c8c3a6b: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/c8c3a6bbe3f0dc129cb356ca97e5a73a3b725a84
+

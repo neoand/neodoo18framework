@@ -56,3 +56,9 @@
 - Commit eba19dc: [UPD] Update sale_project_task_selection.pot → https://github.com/OCA/project/commit/eba19dca60aa24f86305a4b60813c3fe537d68f9
 - Commit 9b8d5bc: [BOT] post-merge updates → https://github.com/OCA/project/commit/9b8d5bc532ee4ec4a9d9191892162a05e4eb500c
 
+## 2025-12-02
+
+- Commit 4147c68: Translated using Weblate (Turkish) → https://github.com/OCA/project/commit/4147c680848a57d3446cd476b0aae5bd928f3fb7
+- Commit 90464e6: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/90464e6195bf1d703685d5617a90c7121f1851be
+- Commit e9c79f0: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/e9c79f0911b99eb150452bfe953891be202593b7
+

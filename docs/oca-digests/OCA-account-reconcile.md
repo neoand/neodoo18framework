@@ -46,3 +46,9 @@
 
 - Commit 2db8b8c: Translated using Weblate (Swedish) → https://github.com/OCA/account-reconcile/commit/2db8b8cdabb0c167a10e6d4a12d790a3dd69e240
 
+## 2025-12-02
+
+- Commit f42d587: [FIX] account_reconcile_oca: auto reconcile journal → https://github.com/OCA/account-reconcile/commit/f42d587ac66934bfd4a9eade4407e9c2652345c9
+- Commit 63747c1: Merge PR #914 into 18.0 → https://github.com/OCA/account-reconcile/commit/63747c149fe1ac5b56482a0aaf9f5ee2c58b0995
+- Commit d0928eb: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/d0928eb708ebce5539951ea19b792eef684fee66
+

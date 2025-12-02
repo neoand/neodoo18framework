@@ -141,3 +141,9 @@
 - Commit 2723a48: [UPD] Update partner_tier_validation.pot → https://github.com/OCA/partner-contact/commit/2723a486298f9de3d9a4fd44aff84e4d0a383ee6
 - Commit d497b48: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/d497b48d8c38b8eb2c1fe2fafd34844dccda3226
 
+## 2025-12-02
+
+- Commit 1745662: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/174566274d2b17ba3e4ecfa7fac22af4e8d7bd4b
+- Commit 57cd56e: Translated using Weblate (French) → https://github.com/OCA/partner-contact/commit/57cd56e26ba94fde328f7b92df7bee0475f0d463
+- Commit 0700991: Translated using Weblate (Spanish) → https://github.com/OCA/partner-contact/commit/0700991b1f5f4ef584c2cc57ab93dc423e02401e
+

@@ -76,3 +76,7 @@
 
 - Commit e2054b6: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/e2054b6d36963a8f7f6a1904f5370ecda65e02a2
 
+## 2025-12-03
+
+- Commit 2c01f05: Translated using Weblate (Swedish) → https://github.com/OCA/account-financial-tools/commit/2c01f0555910f5bb31dbb89e9c8731dcdca43f48
+

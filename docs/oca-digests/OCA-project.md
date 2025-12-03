@@ -62,3 +62,10 @@
 - Commit 90464e6: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/90464e6195bf1d703685d5617a90c7121f1851be
 - Commit e9c79f0: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/e9c79f0911b99eb150452bfe953891be202593b7
 
+## 2025-12-03
+
+- Commit 5c90395: [IMP] project_task_code_portal: add code to sharing views and sharing URL. → https://github.com/OCA/project/commit/5c90395c40dfd07867bc0f37ea535e33304c06ba
+- Commit 34ff69c: Merge PR #1602 into 18.0 → https://github.com/OCA/project/commit/34ff69c8465b55972b4682e83a6a773eb1afbbab
+- Commit a2cb725: [UPD] Update project_task_code_portal.pot → https://github.com/OCA/project/commit/a2cb725462a665ae56127553194472e7d8e943ce
+- Commit e441ced: [BOT] post-merge updates → https://github.com/OCA/project/commit/e441ced0c7ee9f8bdf1f9c56d50c84736bd108ca
+

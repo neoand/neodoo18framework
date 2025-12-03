@@ -52,3 +52,11 @@
 - Commit 63747c1: Merge PR #914 into 18.0 → https://github.com/OCA/account-reconcile/commit/63747c149fe1ac5b56482a0aaf9f5ee2c58b0995
 - Commit d0928eb: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/d0928eb708ebce5539951ea19b792eef684fee66
 
+## 2025-12-03
+
+- Commit 9a19164: [FIX] account_reconcile_oca: auto reconcile → https://github.com/OCA/account-reconcile/commit/9a1916405e1042499e4030ffd5ba92818843092a
+- Commit 9f3532a: [ADD] account_reconcile_oca_queue: auto reconcile with queue job → https://github.com/OCA/account-reconcile/commit/9f3532ae54f2f6ccaf971e71d1c937028a21f20e
+- Commit 6dd6276: Merge PR #915 into 18.0 → https://github.com/OCA/account-reconcile/commit/6dd62768e3f1cfca2bb518c3519c3b1b87870fb7
+- Commit 745b277: [UPD] Update account_reconcile_oca_queue.pot → https://github.com/OCA/account-reconcile/commit/745b2770b33b50adc1acc2933102fb8bc49fbecc
+- Commit 8698b3c: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/8698b3cfe422def230b3a3ed27d062a37421423a
+

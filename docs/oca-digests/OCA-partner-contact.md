@@ -147,3 +147,8 @@
 - Commit 57cd56e: Translated using Weblate (French) → https://github.com/OCA/partner-contact/commit/57cd56e26ba94fde328f7b92df7bee0475f0d463
 - Commit 0700991: Translated using Weblate (Spanish) → https://github.com/OCA/partner-contact/commit/0700991b1f5f4ef584c2cc57ab93dc423e02401e
 
+## 2025-12-04
+
+- Commit be5a301: Added translation using Weblate (Dutch) → https://github.com/OCA/partner-contact/commit/be5a301227b5f3a0423c24e85d5c8114388f513a
+- Commit b703e8d: Translated using Weblate (Dutch) → https://github.com/OCA/partner-contact/commit/b703e8d1452a6287987f92199568bee1d679e656
+

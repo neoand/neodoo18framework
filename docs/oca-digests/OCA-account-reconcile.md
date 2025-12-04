@@ -60,3 +60,7 @@
 - Commit 745b277: [UPD] Update account_reconcile_oca_queue.pot → https://github.com/OCA/account-reconcile/commit/745b2770b33b50adc1acc2933102fb8bc49fbecc
 - Commit 8698b3c: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/8698b3cfe422def230b3a3ed27d062a37421423a
 
+## 2025-12-04
+
+- Commit ec5fb15: Added translation using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/ec5fb1599c4d3fc762cec1efc161d3280e153945
+

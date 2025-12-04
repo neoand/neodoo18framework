@@ -80,3 +80,7 @@
 
 - Commit 2c01f05: Translated using Weblate (Swedish) → https://github.com/OCA/account-financial-tools/commit/2c01f0555910f5bb31dbb89e9c8731dcdca43f48
 
+## 2025-12-04
+
+- Commit d4aa84d: Translated using Weblate (Swedish) → https://github.com/OCA/account-financial-tools/commit/d4aa84dddea761fb7d2a1183b8ec3070b8fd3cf9
+

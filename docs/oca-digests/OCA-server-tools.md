@@ -116,3 +116,7 @@
 - Commit 2be9c06: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/2be9c06f6219600b2a2dfe6c7ee6f8f73e10559b
 - Commit 129ef8b: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/129ef8ba64ab64c94bfab18cef2243ed48a47c8e
 
+## 2025-12-04
+
+- Commit 7fc0763: Translated using Weblate (Swedish) → https://github.com/OCA/server-tools/commit/7fc076351381bbd33a0c4cb7f219acda8cb80a00
+

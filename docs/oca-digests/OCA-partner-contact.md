@@ -152,3 +152,10 @@
 - Commit be5a301: Added translation using Weblate (Dutch) → https://github.com/OCA/partner-contact/commit/be5a301227b5f3a0423c24e85d5c8114388f513a
 - Commit b703e8d: Translated using Weblate (Dutch) → https://github.com/OCA/partner-contact/commit/b703e8d1452a6287987f92199568bee1d679e656
 
+## 2025-12-05
+
+- Commit 1f42a5b: [ADD] partner_supplier_ref_sequence → https://github.com/OCA/partner-contact/commit/1f42a5ba3df17f5c7c1617dbcd83d896faedb5d8
+- Commit e0853a4: Merge PR #2084 into 18.0 → https://github.com/OCA/partner-contact/commit/e0853a43fd0f85bd0f55ccbe76418114ecdcbef8
+- Commit 6d88708: [UPD] Update partner_supplier_ref_sequence.pot → https://github.com/OCA/partner-contact/commit/6d88708ffa29618a1457deb7e078f2c1ee2fb409
+- Commit 9d7ad1f: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/9d7ad1f071c6cd08ec301824a39eb116e20e6adb
+

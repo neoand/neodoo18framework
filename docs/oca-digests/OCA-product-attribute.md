@@ -71,3 +71,11 @@
 - Commit d6f917f: Added translation using Weblate (Dutch (nl_NL)) → https://github.com/OCA/product-attribute/commit/d6f917f9aff536f608745d72cbe1d67c5171b0b8
 - Commit 3ad544d: Translated using Weblate (Dutch (nl_NL)) → https://github.com/OCA/product-attribute/commit/3ad544d663f67c8f01059a6cf2e446074898d0b9
 
+## 2025-12-05
+
+- Commit f115116: [IMP] product_usability: pre-commit auto fixes → https://github.com/OCA/product-attribute/commit/f115116c399c0e6275aeb1be97c821a4d2f3c2da
+- Commit df0bf5e: [MIG] product_usability: Migration to 18.0 → https://github.com/OCA/product-attribute/commit/df0bf5e018d27426aeb657530f1f8613c8280f6d
+- Commit 8cc62af: Merge PR #2152 into 18.0 → https://github.com/OCA/product-attribute/commit/8cc62af53ff9a953d908971f18bb215ebca8f0bc
+- Commit 7b4fb62: [UPD] Update product_usability.pot → https://github.com/OCA/product-attribute/commit/7b4fb62ccb3091b428d28d7d1df4c4505210a769
+- Commit d86b15a: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/d86b15af55b71338be5166b56eac9a720186dd52
+

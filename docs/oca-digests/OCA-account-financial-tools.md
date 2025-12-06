@@ -84,3 +84,10 @@
 
 - Commit d4aa84d: Translated using Weblate (Swedish) → https://github.com/OCA/account-financial-tools/commit/d4aa84dddea761fb7d2a1183b8ec3070b8fd3cf9
 
+## 2025-12-06
+
+- Commit 3316324: Translated using Weblate (Swedish) → https://github.com/OCA/account-financial-tools/commit/3316324d5cf280ba64053fdcbea836bc33b71aa6
+- Commit 20e03d9: [FIX] account_chart_update: Update boolean fields with `False` → https://github.com/OCA/account-financial-tools/commit/20e03d9ce4b0b8c932ef5572176020c79136d952
+- Commit fc30450: Merge PR #2184 into 18.0 → https://github.com/OCA/account-financial-tools/commit/fc30450724c60de58e67c04c9cea9b6c496dbc06
+- Commit 3994f4e: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/3994f4e1668f3f71b1508d8d6a8a3f26153fedb9
+

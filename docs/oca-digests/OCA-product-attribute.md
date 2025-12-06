@@ -79,3 +79,8 @@
 - Commit 7b4fb62: [UPD] Update product_usability.pot → https://github.com/OCA/product-attribute/commit/7b4fb62ccb3091b428d28d7d1df4c4505210a769
 - Commit d86b15a: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/d86b15af55b71338be5166b56eac9a720186dd52
 
+## 2025-12-06
+
+- Commit 015ab33: Merge PR #2102 into 18.0 → https://github.com/OCA/product-attribute/commit/015ab33d26e7224de092485656cdc5b82e6e149c
+- Commit ec6bdb5: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/ec6bdb52c8a24d129d4ee7e2fae6468082c2f9df
+

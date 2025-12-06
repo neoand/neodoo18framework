@@ -182,3 +182,11 @@
 - Commit 79c1f38: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/79c1f38bf8dab58890445d3d6dff577913856789
 - Commit 390febb: Update translation files → https://github.com/OCA/sale-workflow/commit/390febbbfb5fe0dfcf9e3e0298905d7b05d3295f
 
+## 2025-12-06
+
+- Commit a83002f: [IMP] sale_order_lot_selection: Add lot_id field to kanban view → https://github.com/OCA/sale-workflow/commit/a83002feab5330a5ff9df5cf5327fe622e014605
+- Commit 588768c: Merge PR #4058 into 18.0 → https://github.com/OCA/sale-workflow/commit/588768c92208c1205e0cdf55bd7776dafb386af1
+- Commit 88cc9df: [UPD] Update sale_order_lot_selection.pot → https://github.com/OCA/sale-workflow/commit/88cc9df52b5a9a9ccdf73e59f12b5304a804e310
+- Commit c7adaf4: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/c7adaf4f1580142838bbb4429d3f7d402dd152b6
+- Commit 6354dc5: Update translation files → https://github.com/OCA/sale-workflow/commit/6354dc514daf7ed19ed4c518da02de14f40d345b
+

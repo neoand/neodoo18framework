@@ -120,3 +120,8 @@
 
 - Commit 7fc0763: Translated using Weblate (Swedish) → https://github.com/OCA/server-tools/commit/7fc076351381bbd33a0c4cb7f219acda8cb80a00
 
+## 2025-12-06
+
+- Commit 4c291e8: Merge PR #3452 into 18.0 → https://github.com/OCA/server-tools/commit/4c291e850d6a5ad68cd430c67887edfebd8c1914
+- Commit 1f1b4b4: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/1f1b4b41c35ff1d5fa53264bf859a4ec7fdde632
+

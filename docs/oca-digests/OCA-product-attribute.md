@@ -84,3 +84,9 @@
 - Commit 015ab33: Merge PR #2102 into 18.0 → https://github.com/OCA/product-attribute/commit/015ab33d26e7224de092485656cdc5b82e6e149c
 - Commit ec6bdb5: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/ec6bdb52c8a24d129d4ee7e2fae6468082c2f9df
 
+## 2025-12-08
+
+- Commit f468fde: Merge PR #1968 into 18.0 → https://github.com/OCA/product-attribute/commit/f468fdeab5a9943bcf8d8e8bce674549f92d3298
+- Commit 4d74208: [UPD] Update product_pricelist_item_list_view.pot → https://github.com/OCA/product-attribute/commit/4d74208e0ce042926b59adeee9528a84be76607a
+- Commit 87e1a77: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/87e1a77c341d54b82e1daceb72880c525c489b69
+

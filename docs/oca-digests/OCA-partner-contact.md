@@ -159,3 +159,7 @@
 - Commit 6d88708: [UPD] Update partner_supplier_ref_sequence.pot → https://github.com/OCA/partner-contact/commit/6d88708ffa29618a1457deb7e078f2c1ee2fb409
 - Commit 9d7ad1f: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/9d7ad1f071c6cd08ec301824a39eb116e20e6adb
 
+## 2025-12-09
+
+- Commit d9fa1c5: Added translation using Weblate (Croatian) → https://github.com/OCA/partner-contact/commit/d9fa1c5bd8883cdae40062dac96ff738446720a6
+

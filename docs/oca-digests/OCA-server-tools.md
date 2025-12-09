@@ -125,3 +125,10 @@
 - Commit 4c291e8: Merge PR #3452 into 18.0 → https://github.com/OCA/server-tools/commit/4c291e850d6a5ad68cd430c67887edfebd8c1914
 - Commit 1f1b4b4: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/1f1b4b41c35ff1d5fa53264bf859a4ec7fdde632
 
+## 2025-12-09
+
+- Commit e2d4a76: Merge PR #3273 into 18.0 → https://github.com/OCA/server-tools/commit/e2d4a76a3815e144c744430a5b32b7271f573979
+- Commit a4c6114: [UPD] Update database_cleanup.pot → https://github.com/OCA/server-tools/commit/a4c6114eb122d6eafc1868253c3d0356838b30b8
+- Commit 555f78e: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/555f78e7f8999e692f37bb1eb5cffa0f145f16b6
+- Commit fe2093d: Update translation files → https://github.com/OCA/server-tools/commit/fe2093d524167317952ae840fc10cba1491d2879
+

@@ -90,3 +90,11 @@
 - Commit 4d74208: [UPD] Update product_pricelist_item_list_view.pot → https://github.com/OCA/product-attribute/commit/4d74208e0ce042926b59adeee9528a84be76607a
 - Commit 87e1a77: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/87e1a77c341d54b82e1daceb72880c525c489b69
 
+## 2025-12-09
+
+- Commit 3ee4310: Translated using Weblate (Croatian) → https://github.com/OCA/product-attribute/commit/3ee43109031781afffa05ef5325a84243ebb9264
+- Commit db29f14: Added translation using Weblate (Croatian) → https://github.com/OCA/product-attribute/commit/db29f14cca6a444f4aa220d9e7a9e4e7d3ad1630
+- Commit 5a2814f: Translated using Weblate (Croatian) → https://github.com/OCA/product-attribute/commit/5a2814f1cbc91e6cebf0c049da9370547c81b775
+- Commit 5294e70: Added translation using Weblate (Croatian) → https://github.com/OCA/product-attribute/commit/5294e7026a563873dcec8a2b7d46f6f59242d290
+- Commit 620f142: Translated using Weblate (Croatian) → https://github.com/OCA/product-attribute/commit/620f14297641bba0b5eb692da604480f53ee4f90
+

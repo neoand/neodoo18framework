@@ -132,3 +132,7 @@
 - Commit 555f78e: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/555f78e7f8999e692f37bb1eb5cffa0f145f16b6
 - Commit fe2093d: Update translation files → https://github.com/OCA/server-tools/commit/fe2093d524167317952ae840fc10cba1491d2879
 
+## 2025-12-10
+
+- Commit 63fcf4a: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/63fcf4acccf6abacd88df4faeffacd7c3a7d375e
+

@@ -98,3 +98,9 @@
 - Commit 5294e70: Added translation using Weblate (Croatian) → https://github.com/OCA/product-attribute/commit/5294e7026a563873dcec8a2b7d46f6f59242d290
 - Commit 620f142: Translated using Weblate (Croatian) → https://github.com/OCA/product-attribute/commit/620f14297641bba0b5eb692da604480f53ee4f90
 
+## 2025-12-10
+
+- Commit 98bc84f: Merge PR #2149 into 18.0 → https://github.com/OCA/product-attribute/commit/98bc84f10e194d7b5f0dc4dc79eb5846758283e9
+- Commit 8d6d04b: [UPD] Update product_packaging_archive.pot → https://github.com/OCA/product-attribute/commit/8d6d04bd9107d0faf968f18f3ef4441b6d17c8f4
+- Commit 99b366c: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/99b366c83b0fb3012fc774853e59d18d8d18783f
+

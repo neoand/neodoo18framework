@@ -69,3 +69,11 @@
 - Commit a2cb725: [UPD] Update project_task_code_portal.pot → https://github.com/OCA/project/commit/a2cb725462a665ae56127553194472e7d8e943ce
 - Commit e441ced: [BOT] post-merge updates → https://github.com/OCA/project/commit/e441ced0c7ee9f8bdf1f9c56d50c84736bd108ca
 
+## 2025-12-10
+
+- Commit 63397d4: Merge PR #1621 into 18.0 → https://github.com/OCA/project/commit/63397d4954fe91ff7408d477520aa43115c76d19
+- Commit dab25a3: [UPD] Update project_task_note.pot → https://github.com/OCA/project/commit/dab25a3521de500528d9ecc029c8965c66261d6b
+- Commit 450a35f: [BOT] post-merge updates → https://github.com/OCA/project/commit/450a35f6ba3393ca33a6991093f5858edcf38e3d
+- Commit ec77d9e: Update translation files → https://github.com/OCA/project/commit/ec77d9eedfc033e099177ba4f43a1cbd20a5b5e9
+- Commit 28cd584: Translated using Weblate (Spanish) → https://github.com/OCA/project/commit/28cd58447d36840e2574a8e6ae59fe8abaedc13d
+

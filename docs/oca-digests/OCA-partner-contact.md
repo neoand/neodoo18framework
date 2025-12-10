@@ -163,3 +163,8 @@
 
 - Commit d9fa1c5: Added translation using Weblate (Croatian) → https://github.com/OCA/partner-contact/commit/d9fa1c5bd8883cdae40062dac96ff738446720a6
 
+## 2025-12-10
+
+- Commit cd47461: Translated using Weblate (Japanese) → https://github.com/OCA/partner-contact/commit/cd474617898c2e22bceb1cea027b7066bca1d583
+- Commit b791109: Added translation using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/b7911093412fed29b5d7886d801e0949cd5ca9bb
+

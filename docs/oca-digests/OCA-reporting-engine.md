@@ -67,3 +67,8 @@
 - Commit f672226: [UPD] Update report_display_name_in_footer.pot → https://github.com/OCA/reporting-engine/commit/f6722266445d818e4fe00bac5b182e5b82553c04
 - Commit 1ffe84e: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/1ffe84edfc72d9036d94255dbde39d1372573ed8
 
+## 2025-12-10
+
+- Commit 7e6cba7: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/7e6cba7f0609591c33345bc8395af04a7b4df4e6
+- Commit df2ba0b: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/df2ba0b0fd298562b44b6dfbf68c8325cc661a60
+

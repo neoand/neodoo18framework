@@ -95,3 +95,9 @@
 
 - Commit f0af20c: Translated using Weblate (Catalan) → https://github.com/OCA/account-financial-tools/commit/f0af20ca1a27d8543d28e68e8021185ec320f846
 
+## 2025-12-11
+
+- Commit dc5fd1a: Translated using Weblate (Catalan) → https://github.com/OCA/account-financial-tools/commit/dc5fd1adbded37862e67495247b85a6a2d358f5c
+- Commit f2f5bcb: Added translation using Weblate (Catalan) → https://github.com/OCA/account-financial-tools/commit/f2f5bcbe32cf643200d27f601267d07b9690e433
+- Commit 6c90a79: Translated using Weblate (Catalan) → https://github.com/OCA/account-financial-tools/commit/6c90a79f73097e58cb499f30168de78b9a83c47f
+

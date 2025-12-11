@@ -64,3 +64,10 @@
 
 - Commit ec5fb15: Added translation using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/ec5fb1599c4d3fc762cec1efc161d3280e153945
 
+## 2025-12-11
+
+- Commit eb4c5db: [FIX] account_reconcile_model_oca: Allow regex search → https://github.com/OCA/account-reconcile/commit/eb4c5dbf8f471a2af2fc091802513aa6d0e11cdb
+- Commit b9a66fe: [FIX] account_reconcile_oca: Pass label for matching → https://github.com/OCA/account-reconcile/commit/b9a66fe9062bb9a4a53b18d6784df2f0303b550c
+- Commit 0c1c2ee: Merge PR #933 into 18.0 → https://github.com/OCA/account-reconcile/commit/0c1c2eec20c0efa56839c7c2eb7606583c054d19
+- Commit 80d24e2: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/80d24e2aeec92dba0d1b91c89276eb9350141e2a
+

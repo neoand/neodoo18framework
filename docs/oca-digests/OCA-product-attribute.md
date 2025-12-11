@@ -104,3 +104,10 @@
 - Commit 8d6d04b: [UPD] Update product_packaging_archive.pot → https://github.com/OCA/product-attribute/commit/8d6d04bd9107d0faf968f18f3ef4441b6d17c8f4
 - Commit 99b366c: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/99b366c83b0fb3012fc774853e59d18d8d18783f
 
+## 2025-12-11
+
+- Commit cfc1cc0: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/cfc1cc01f03fc3a0f4ceca1da669d9d0afbe0de2
+- Commit e3c0ca7: Translated using Weblate (Catalan) → https://github.com/OCA/product-attribute/commit/e3c0ca7b20f9817bbeb99baef3ca97a6d9827cfc
+- Commit 54ffd06: Merge PR #2140 into 18.0 → https://github.com/OCA/product-attribute/commit/54ffd06e36cfc629997d4fde58dfe1cd9d8cc68d
+- Commit ffcadc6: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/ffcadc6c85dfc9ddba3f83f9f712971fa28d19b0
+

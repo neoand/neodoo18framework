@@ -77,3 +77,8 @@
 - Commit ec77d9e: Update translation files → https://github.com/OCA/project/commit/ec77d9eedfc033e099177ba4f43a1cbd20a5b5e9
 - Commit 28cd584: Translated using Weblate (Spanish) → https://github.com/OCA/project/commit/28cd58447d36840e2574a8e6ae59fe8abaedc13d
 
+## 2025-12-11
+
+- Commit 2c7b81c: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/2c7b81c34901f7e63dfb9d596f2d07e00a40ed38
+- Commit 45d77b0: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/45d77b05730256ec14b7803edacc25074c2422e2
+

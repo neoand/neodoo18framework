@@ -168,3 +168,7 @@
 - Commit cd47461: Translated using Weblate (Japanese) → https://github.com/OCA/partner-contact/commit/cd474617898c2e22bceb1cea027b7066bca1d583
 - Commit b791109: Added translation using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/b7911093412fed29b5d7886d801e0949cd5ca9bb
 
+## 2025-12-11
+
+- Commit 1045f5c: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/1045f5c505b4baac63079ac4ee75dfa83aac8bea
+

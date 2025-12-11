@@ -54,3 +54,11 @@
 
 - Commit 098c49c: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/098c49c4759476c125adbfee6cce5e6a14dc5cbd
 
+## 2025-12-11
+
+- Commit cb99f1a: [UPD] Update mgmtsystem_claim.pot → https://github.com/OCA/management-system/commit/cb99f1a12bf5c790d679178cbd47922090c3adea
+- Commit 66f8e86: [UPD] Update mgmtsystem_hazard.pot → https://github.com/OCA/management-system/commit/66f8e86c8904cd909370320488b4843dd86a7c1f
+- Commit bc78409: [UPD] Update mgmtsystem_nonconformity.pot → https://github.com/OCA/management-system/commit/bc7840911a04d867fb1357833d5a2fe314a0f629
+- Commit 4755945: [UPD] Update mgmtsystem_review.pot → https://github.com/OCA/management-system/commit/47559455f0a996ba92a52af13dc546b8b501cd7f
+- Commit 824cdd3: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/824cdd393099f1c695f9aea035c7233cffc4a454
+

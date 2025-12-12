@@ -172,3 +172,9 @@
 
 - Commit 1045f5c: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/1045f5c505b4baac63079ac4ee75dfa83aac8bea
 
+## 2025-12-12
+
+- Commit d37a6e1: [IMP] partner_rank_single: less invasive constraint on rank increase → https://github.com/OCA/partner-contact/commit/d37a6e18f99d9011e524053f01e45fbad3f07394
+- Commit 8f0fc2e: Merge PR #2237 into 18.0 → https://github.com/OCA/partner-contact/commit/8f0fc2ee271fd67a6a9d0b2980f8f35f031da9ab
+- Commit 95d0340: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/95d034004de1b9fc87aa041fab3d7f0bd82dd2ee
+

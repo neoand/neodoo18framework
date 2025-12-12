@@ -82,3 +82,8 @@
 - Commit 2c7b81c: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/2c7b81c34901f7e63dfb9d596f2d07e00a40ed38
 - Commit 45d77b0: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/45d77b05730256ec14b7803edacc25074c2422e2
 
+## 2025-12-12
+
+- Commit 19df36e: Merge PR #1588 into 18.0 → https://github.com/OCA/project/commit/19df36e98e85895bb920daa7b54b0625e9b9d359
+- Commit 5bbd81f: [BOT] post-merge updates → https://github.com/OCA/project/commit/5bbd81fed7a9b68e365e7781750a67b72eb2691a
+

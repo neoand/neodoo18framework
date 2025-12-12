@@ -136,3 +136,9 @@
 
 - Commit 63fcf4a: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/63fcf4acccf6abacd88df4faeffacd7c3a7d375e
 
+## 2025-12-12
+
+- Commit 72cf8cd: [IMP] base_view_inheritance_extension: drop unused dependency → https://github.com/OCA/server-tools/commit/72cf8cd241c6536eb343ddc32453332b864263f5
+- Commit 92d3984: Merge PR #3352 into 18.0 → https://github.com/OCA/server-tools/commit/92d39847f4281472d4ac32fa49ae58b4a8f01e2e
+- Commit 39077df: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/39077df380eef28be511b5e43e76f5f93accd98a
+

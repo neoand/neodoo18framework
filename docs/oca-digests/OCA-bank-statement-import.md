@@ -36,3 +36,11 @@
 - Commit 2f1b658: Merge PR #853 into 18.0 → https://github.com/OCA/bank-statement-import/commit/2f1b658a1aba5b87dbeb6a93f187eba92e5746cc
 - Commit 96a7b9f: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/96a7b9fe532a707415b14a57c073f902473a9fc6
 
+## 2025-12-12
+
+- Commit abaa227: Added translation using Weblate (Catalan) → https://github.com/OCA/bank-statement-import/commit/abaa227370d85386d6e8b8d1fa1c55f8884d2ac4
+- Commit 1f8f5d4: Added translation using Weblate (Catalan) → https://github.com/OCA/bank-statement-import/commit/1f8f5d415fbad9a78c3625461e669ce461faae42
+- Commit f18206c: Translated using Weblate (Catalan) → https://github.com/OCA/bank-statement-import/commit/f18206c9e018287839dcce233c7d1a5a67d593e7
+- Commit 581dd99: Added translation using Weblate (Catalán (ca_ES) (ca_ES)) → https://github.com/OCA/bank-statement-import/commit/581dd998166b5bb6bac84246465bac01acab8582
+- Commit 72e9cfc: Translated using Weblate (Catalan) → https://github.com/OCA/bank-statement-import/commit/72e9cfc814dbae8f64d7f8fdc63e6a08c592516f
+

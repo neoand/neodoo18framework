@@ -71,3 +71,10 @@
 - Commit 0c1c2ee: Merge PR #933 into 18.0 → https://github.com/OCA/account-reconcile/commit/0c1c2eec20c0efa56839c7c2eb7606583c054d19
 - Commit 80d24e2: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/80d24e2aeec92dba0d1b91c89276eb9350141e2a
 
+## 2025-12-12
+
+- Commit 9e7a4d3: Translated using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/9e7a4d3bd30a0a53521e7af1a34f89e208401290
+- Commit d1286bb: Translated using Weblate (Catalan) → https://github.com/OCA/account-reconcile/commit/d1286bbb73d0c9544ee6a5f8bdeb0b6358aa3d5a
+- Commit 71fe06f: Added translation using Weblate (Catalan) → https://github.com/OCA/account-reconcile/commit/71fe06f390828b5b41a6235dbbfc0ff70cf4ac3f
+- Commit 5923710: Translated using Weblate (Catalan) → https://github.com/OCA/account-reconcile/commit/59237106ea33d1fb86cebca533c33730d28fb0aa
+

@@ -211,3 +211,11 @@
 
 - Commit 2b32421: Translated using Weblate (German) → https://github.com/OCA/sale-workflow/commit/2b32421b8d3db119c9f6adc11e46cb8507ef799e
 
+## 2025-12-13
+
+- Commit 9b89fbd: [UPD] Update pricelist_cache_rest.pot → https://github.com/OCA/sale-workflow/commit/9b89fbd0cb23c02fb5d26d1d59b7fe4cea15929a
+- Commit f3ee25b: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/f3ee25bab270e93604efeb5b0ef759190d047e37
+- Commit eb87002: Merge PR #3953 into 18.0 → https://github.com/OCA/sale-workflow/commit/eb8700215fdc1709e783249bb6ea6beca84df2cc
+- Commit 735f5dc: [UPD] Update sale_confirm_group.pot → https://github.com/OCA/sale-workflow/commit/735f5dc7ece6d346334748fbdab3aeda5872f283
+- Commit 51cbf6c: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/51cbf6cc48b10bd86fcdb3c6ace33b7eeb3358d8
+

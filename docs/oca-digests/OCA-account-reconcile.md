@@ -78,3 +78,9 @@
 - Commit 71fe06f: Added translation using Weblate (Catalan) → https://github.com/OCA/account-reconcile/commit/71fe06f390828b5b41a6235dbbfc0ff70cf4ac3f
 - Commit 5923710: Translated using Weblate (Catalan) → https://github.com/OCA/account-reconcile/commit/59237106ea33d1fb86cebca533c33730d28fb0aa
 
+## 2025-12-13
+
+- Commit bbc7a7e: [FIX] account_reconcile_oca: wrong inheritance → https://github.com/OCA/account-reconcile/commit/bbc7a7e6905bb2f22870cb284a82105c8cf53735
+- Commit 13db160: Merge PR #935 into 18.0 → https://github.com/OCA/account-reconcile/commit/13db1601242443050361a9ff778ef37ef33d7182
+- Commit 8024962: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/80249627036434e26f11bf3f8526ce7ef94fdc0a
+

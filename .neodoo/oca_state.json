@@ -19,9 +19,9 @@
     "OCA/bank-statement-import@18.0::commits": "72e9cfc814dbae8f64d7f8fdc63e6a08c592516f",
     "OCA/multi-company@18.0::commits": "62aeebe85a04389bd758d39e5a138288d5e42e73",
     "OCA/knowledge@18.0::commits": "90a8ed45f6e85f7f1f09c659f5f3832f93442757",
-    "OCA/account-reconcile@18.0::commits": "80249627036434e26f11bf3f8526ce7ef94fdc0a",
+    "OCA/account-reconcile@18.0::commits": "846d558d7c17959583fc4a12e8813365db0daca3",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "755bf9633adca474060ce2657352b67598722fed"
   },
-  "updated_at": "2025-12-13T02:31:13.104225+00:00"
+  "updated_at": "2025-12-14T02:38:18.153195+00:00"
 }

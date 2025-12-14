@@ -84,3 +84,10 @@
 - Commit 13db160: Merge PR #935 into 18.0 → https://github.com/OCA/account-reconcile/commit/13db1601242443050361a9ff778ef37ef33d7182
 - Commit 8024962: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/80249627036434e26f11bf3f8526ce7ef94fdc0a
 
+## 2025-12-14
+
+- Commit eaaf2b4: [IMP] account_reconcile_oca: Allow to return to the same record → https://github.com/OCA/account-reconcile/commit/eaaf2b40b7cac038c4df476db0b9b8cee6abb203
+- Commit cdaa68d: [FIX] account_reconcile_oca: Avoid a race condition → https://github.com/OCA/account-reconcile/commit/cdaa68d38d4295df08bcf485a6e772c0b4515c4f
+- Commit 14f1bd1: Merge PR #937 into 18.0 → https://github.com/OCA/account-reconcile/commit/14f1bd1a253f45399c0d5d8b7ccbf7db9f60b506
+- Commit 846d558: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/846d558d7c17959583fc4a12e8813365db0daca3
+

@@ -219,3 +219,7 @@
 - Commit 735f5dc: [UPD] Update sale_confirm_group.pot → https://github.com/OCA/sale-workflow/commit/735f5dc7ece6d346334748fbdab3aeda5872f283
 - Commit 51cbf6c: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/51cbf6cc48b10bd86fcdb3c6ace33b7eeb3358d8
 
+## 2025-12-15
+
+- Commit 81ab2f3: Added translation using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/81ab2f353c29f88e128edaea83320913fdbd5e76
+

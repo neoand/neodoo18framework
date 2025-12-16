@@ -105,3 +105,10 @@
 
 - Commit 348eb39: Translated using Weblate (Catalan) → https://github.com/OCA/account-financial-tools/commit/348eb393c45612ce1f35107a53da674382b5abe7
 
+## 2025-12-16
+
+- Commit 3a893ae: Merge PR #2091 into 18.0 → https://github.com/OCA/account-financial-tools/commit/3a893ae06de054438a7b7875ea74a1ee370f5819
+- Commit 4c2ffbd: [UPD] Update account_asset_low_value.pot → https://github.com/OCA/account-financial-tools/commit/4c2ffbd1d0c0290872b10d936610e90997affe3f
+- Commit 7075ae3: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/7075ae34ac89f4b73bbd5e88a7e421d4fea56348
+- Commit dfb059c: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/dfb059c1094ee32888af38146fe54b01abb857ac
+

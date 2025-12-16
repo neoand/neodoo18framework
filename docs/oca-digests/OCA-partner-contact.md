@@ -178,3 +178,8 @@
 - Commit 8f0fc2e: Merge PR #2237 into 18.0 → https://github.com/OCA/partner-contact/commit/8f0fc2ee271fd67a6a9d0b2980f8f35f031da9ab
 - Commit 95d0340: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/95d034004de1b9fc87aa041fab3d7f0bd82dd2ee
 
+## 2025-12-16
+
+- Commit dcc9ceb: Merge PR #2208 into 18.0 → https://github.com/OCA/partner-contact/commit/dcc9cebf316a2dee9e28da3c4a638834eebb7306
+- Commit eb05e17: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/eb05e17aecbc95f2a3ffc4c8023d0a3b91adb979
+

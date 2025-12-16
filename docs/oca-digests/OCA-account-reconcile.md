@@ -91,3 +91,9 @@
 - Commit 14f1bd1: Merge PR #937 into 18.0 → https://github.com/OCA/account-reconcile/commit/14f1bd1a253f45399c0d5d8b7ccbf7db9f60b506
 - Commit 846d558: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/846d558d7c17959583fc4a12e8813365db0daca3
 
+## 2025-12-16
+
+- Commit 75a4438: [FIX] account_reconcile_oca: Force the use of the props.state only on the first load. Otherwise, it has no sense. → https://github.com/OCA/account-reconcile/commit/75a443808902d9cad7fe19b4c88ca6ac132339af
+- Commit 4b4c925: Merge PR #938 into 18.0 → https://github.com/OCA/account-reconcile/commit/4b4c925c711443a2573abfab411cac1150d5670d
+- Commit 40de3ff: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/40de3ff4fa81453d07122296012e6998c533e8a8
+

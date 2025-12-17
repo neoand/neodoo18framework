@@ -72,3 +72,11 @@
 - Commit 7e6cba7: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/7e6cba7f0609591c33345bc8395af04a7b4df4e6
 - Commit df2ba0b: Translated using Weblate (Catalan) → https://github.com/OCA/reporting-engine/commit/df2ba0b0fd298562b44b6dfbf68c8325cc661a60
 
+## 2025-12-17
+
+- Commit 1376bd8: Update translation files → https://github.com/OCA/reporting-engine/commit/1376bd826325809f22a93c48cc8272ec97a2db03
+- Commit ea03fdb: Update translation files → https://github.com/OCA/reporting-engine/commit/ea03fdb49186db2c654eed0a1f1d47407931b4ac
+- Commit f536985: Update translation files → https://github.com/OCA/reporting-engine/commit/f536985412c5c90f41141b3f30f0b415923ec702
+- Commit ad8ea72: Update translation files → https://github.com/OCA/reporting-engine/commit/ad8ea72ad2da663125c9025b8b1c26b696a2dd95
+- Commit 5f462f5: Update translation files → https://github.com/OCA/reporting-engine/commit/5f462f5444155ec570ccd04acc2ad840e8167ff1
+

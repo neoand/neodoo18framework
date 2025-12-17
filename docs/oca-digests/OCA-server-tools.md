@@ -142,3 +142,11 @@
 - Commit 92d3984: Merge PR #3352 into 18.0 → https://github.com/OCA/server-tools/commit/92d39847f4281472d4ac32fa49ae58b4a8f01e2e
 - Commit 39077df: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/39077df380eef28be511b5e43e76f5f93accd98a
 
+## 2025-12-17
+
+- Commit 047c826: Merge PR #3464 into 18.0 → https://github.com/OCA/server-tools/commit/047c826dbb3a2e1879c5ffd765bfc835bb0e1398
+- Commit 5d1ae43: [UPD] Update autovacuum_message_attachment.pot → https://github.com/OCA/server-tools/commit/5d1ae4353b68861c487f619dbf189aec98344a94
+- Commit 1f37f28: [UPD] Update module_analysis.pot → https://github.com/OCA/server-tools/commit/1f37f284ef5e69da379579164d49c9eb37304dc3
+- Commit a17e96d: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/a17e96d33470df4ee986c1f739877cccce9f6588
+- Commit adec64e: Update translation files → https://github.com/OCA/server-tools/commit/adec64e27900e7527262ef02071b74d2e1d47c8f
+

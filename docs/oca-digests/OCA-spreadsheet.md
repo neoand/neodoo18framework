@@ -54,3 +54,11 @@
 
 - Commit 755bf96: Translated using Weblate (Slovenian) → https://github.com/OCA/spreadsheet/commit/755bf9633adca474060ce2657352b67598722fed
 
+## 2025-12-17
+
+- Commit b1fa3b7: [IMP]ACL: make tag readonly for basic users → https://github.com/OCA/spreadsheet/commit/b1fa3b7df0f05d680f5f5e31eeaba17ef85c3b3d
+- Commit fe3f4b5: Merge PR #84 into 18.0 → https://github.com/OCA/spreadsheet/commit/fe3f4b5d09a2269afbb9c0fbddf5723eff8e4a3f
+- Commit b02c6c4: [UPD] Update spreadsheet_oca.pot → https://github.com/OCA/spreadsheet/commit/b02c6c4b0aae25417b4f4560eff84adf9241d6da
+- Commit 308acc8: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/308acc864c32911c7e2bb90ea37a90be9bc59e24
+- Commit dfc88e9: Update translation files → https://github.com/OCA/spreadsheet/commit/dfc88e9134e47a90f5e6687007bd4022450f890f
+

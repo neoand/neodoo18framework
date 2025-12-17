@@ -223,3 +223,10 @@
 
 - Commit 81ab2f3: Added translation using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/81ab2f353c29f88e128edaea83320913fdbd5e76
 
+## 2025-12-17
+
+- Commit 04dfc9a: [IMP] sale_require_po_doc: use xpath to point the exact field position → https://github.com/OCA/sale-workflow/commit/04dfc9a831094c34d837e3b5e7283efd294f3b9a
+- Commit 27c1c6b: Merge PR #4053 into 18.0 → https://github.com/OCA/sale-workflow/commit/27c1c6b3e39dc531656af1005d55e792e3f11f2b
+- Commit fc91963: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/fc91963c746410e78eb85049d921a3b1dc51e7f8
+- Commit 7389eef: Translated using Weblate (German) → https://github.com/OCA/sale-workflow/commit/7389eef80a773541ef64e3b8a25be2914cebfe08
+

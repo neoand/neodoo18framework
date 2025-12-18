@@ -7,21 +7,21 @@
     "OCA/oca-port@main::commits": "e7cf1e7e38fd0e6f4f4426c5a7bea56d94ab7ce0",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
     "OCA/account-financial-tools@18.0::commits": "9b1476e8d30fb04a33cbcfc6ff897b885c15d68c",
-    "OCA/reporting-engine@18.0::commits": "5f462f5444155ec570ccd04acc2ad840e8167ff1",
+    "OCA/reporting-engine@18.0::commits": "fe474d2fa138552c4ec4b0c0da57150cd701629e",
     "OCA/server-tools@18.0::commits": "adec64e27900e7527262ef02071b74d2e1d47c8f",
-    "OCA/OpenUpgrade@18.0::commits": "e4ecb0b85a5364e1239791f6c23298171e8080bc",
+    "OCA/OpenUpgrade@18.0::commits": "fdbadaf1eb5a298450e87622b9c78f71e6b4716c",
     "OCA/web@18.0::commits": "dbff15b4a07ad5b22dc61de095e2b1bea1b4ad1d",
     "OCA/partner-contact@18.0::commits": "eb05e17aecbc95f2a3ffc4c8023d0a3b91adb979",
     "OCA/queue@18.0::commits": "6792545c270536038dac025e1179d7695c092fb2",
     "OCA/management-system@18.0::commits": "824cdd393099f1c695f9aea035c7233cffc4a454",
     "OCA/product-attribute@18.0::commits": "f15ff98850a8f3ef4b5548f04138641df310e64a",
     "OCA/calendar@18.0::commits": "d531dcb8bbc18dd95ca9783ea9db9da70b25e3d2",
-    "OCA/bank-statement-import@18.0::commits": "72e9cfc814dbae8f64d7f8fdc63e6a08c592516f",
+    "OCA/bank-statement-import@18.0::commits": "7798dbf60f1b55d4386364afcf05f07b874aa9ea",
     "OCA/multi-company@18.0::commits": "62aeebe85a04389bd758d39e5a138288d5e42e73",
-    "OCA/knowledge@18.0::commits": "90a8ed45f6e85f7f1f09c659f5f3832f93442757",
+    "OCA/knowledge@18.0::commits": "66b76f51b8c426609cddeb7712c4f297630a4bde",
     "OCA/account-reconcile@18.0::commits": "40de3ff4fa81453d07122296012e6998c533e8a8",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
-    "OCA/spreadsheet@18.0::commits": "dfc88e9134e47a90f5e6687007bd4022450f890f"
+    "OCA/spreadsheet@18.0::commits": "58e289f665bdd993a7c4bd88de20e5bb8c2aab57"
   },
-  "updated_at": "2025-12-17T02:32:06.028040+00:00"
+  "updated_at": "2025-12-18T02:32:15.428298+00:00"
 }

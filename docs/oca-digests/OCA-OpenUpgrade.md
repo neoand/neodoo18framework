@@ -149,3 +149,7 @@
 - Commit 5fc32c5: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/5fc32c5f627182eeaf2d59df7c59e8f8878f4a49
 - Commit e4ecb0b: Merge PR #5467 into 18.0 → https://github.com/OCA/OpenUpgrade/commit/e4ecb0b85a5364e1239791f6c23298171e8080bc
 
+## 2025-12-18
+
+- Commit fdbadaf: [OU-FIX] hr_holidays: Crash if not active employees → https://github.com/OCA/OpenUpgrade/commit/fdbadaf1eb5a298450e87622b9c78f71e6b4716c
+

@@ -20,3 +20,11 @@
 
 - Commit 90a8ed4: Translated using Weblate (Italian) → https://github.com/OCA/knowledge/commit/90a8ed45f6e85f7f1f09c659f5f3832f93442757
 
+## 2025-12-18
+
+- Commit 92775bd: [FIX] document_page_reference: Fix tests to use HTML → https://github.com/OCA/knowledge/commit/92775bd6547e14d1666229480e5f581c86c5d3f9
+- Commit 60b3cec: Merge PR #563 into 18.0 → https://github.com/OCA/knowledge/commit/60b3cec5929b8dc8abb36d2246be071de3c09261
+- Commit 82b5e2d: [UPD] Update document_page.pot → https://github.com/OCA/knowledge/commit/82b5e2d8b54f449268c5abe127a4cce5f2e8949e
+- Commit 6305191: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/6305191cdbcd5daf60d687a7206f8a6831f71fce
+- Commit 66b76f5: Update translation files → https://github.com/OCA/knowledge/commit/66b76f51b8c426609cddeb7712c4f297630a4bde
+

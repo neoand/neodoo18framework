@@ -62,3 +62,7 @@
 - Commit 308acc8: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/308acc864c32911c7e2bb90ea37a90be9bc59e24
 - Commit dfc88e9: Update translation files → https://github.com/OCA/spreadsheet/commit/dfc88e9134e47a90f5e6687007bd4022450f890f
 
+## 2025-12-18
+
+- Commit 58e289f: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/58e289f665bdd993a7c4bd88de20e5bb8c2aab57
+

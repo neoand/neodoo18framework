@@ -80,3 +80,11 @@
 - Commit ad8ea72: Update translation files → https://github.com/OCA/reporting-engine/commit/ad8ea72ad2da663125c9025b8b1c26b696a2dd95
 - Commit 5f462f5: Update translation files → https://github.com/OCA/reporting-engine/commit/5f462f5444155ec570ccd04acc2ad840e8167ff1
 
+## 2025-12-18
+
+- Commit 10bab90: Added translation using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/10bab904c276a4b050eb19e2cfc8aeb3a12a6ab7
+- Commit 76173c1: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/76173c194fd35ffbcd87e5cde6546e05d4851343
+- Commit f0d0683: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/f0d06832331a9f4887cb2e6e6c5ad195d9815ee1
+- Commit f19ec2b: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/f19ec2ba8bc9aef9eed167526bb4cb5b693c59d7
+- Commit fe474d2: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/fe474d2fa138552c4ec4b0c0da57150cd701629e
+

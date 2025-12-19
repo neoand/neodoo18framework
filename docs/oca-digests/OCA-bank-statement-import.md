@@ -52,3 +52,7 @@
 - Commit e033674: [UPD] Update account_statement_import_sheet_file.pot → https://github.com/OCA/bank-statement-import/commit/e033674e5a78515249e940a5b95a9a8d40c577f9
 - Commit 7798dbf: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/7798dbf60f1b55d4386364afcf05f07b874aa9ea
 
+## 2025-12-19
+
+- Commit 00b5030: Added translation using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/00b50309ae7e1a11a52b7a34a2da0efe9d55e83d
+

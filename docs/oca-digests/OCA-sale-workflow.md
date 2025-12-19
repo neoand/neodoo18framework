@@ -230,3 +230,10 @@
 - Commit fc91963: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/fc91963c746410e78eb85049d921a3b1dc51e7f8
 - Commit 7389eef: Translated using Weblate (German) → https://github.com/OCA/sale-workflow/commit/7389eef80a773541ef64e3b8a25be2914cebfe08
 
+## 2025-12-19
+
+- Commit 0315597: [ADD] sale_pricelist_packaging → https://github.com/OCA/sale-workflow/commit/0315597e2d6a0d0a1d5e850fe4adc70ba2255658
+- Commit b23f1e9: Merge PR #4069 into 18.0 → https://github.com/OCA/sale-workflow/commit/b23f1e9bf125918ed35f8075761ce6f31c65fd28
+- Commit e7c6235: [UPD] Update sale_pricelist_packaging.pot → https://github.com/OCA/sale-workflow/commit/e7c6235a0d0cc9d7d6a600532f92daa9f248e65a
+- Commit f067b1a: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/f067b1acddb9017ae2ff4ecb8b08a6d0b3c98680
+

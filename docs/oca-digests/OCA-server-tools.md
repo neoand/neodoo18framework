@@ -150,3 +150,7 @@
 - Commit a17e96d: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/a17e96d33470df4ee986c1f739877cccce9f6588
 - Commit adec64e: Update translation files → https://github.com/OCA/server-tools/commit/adec64e27900e7527262ef02071b74d2e1d47c8f
 
+## 2025-12-19
+
+- Commit 25fc616: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/25fc6169f9c1f5e333805a97f93436929fb7c793
+

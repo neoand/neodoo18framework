@@ -87,3 +87,11 @@
 - Commit 19df36e: Merge PR #1588 into 18.0 → https://github.com/OCA/project/commit/19df36e98e85895bb920daa7b54b0625e9b9d359
 - Commit 5bbd81f: [BOT] post-merge updates → https://github.com/OCA/project/commit/5bbd81fed7a9b68e365e7781750a67b72eb2691a
 
+## 2025-12-19
+
+- Commit 6d37b88: [IMP] project_portal_task_visibility: pre-commit execution → https://github.com/OCA/project/commit/6d37b8869d04cd079fdf7cc4f7ed5b27a935547f
+- Commit cf523ed: [MIG] project_portal_task_visibility: Migration to 18.0 → https://github.com/OCA/project/commit/cf523ed05d3d3fc6b8b9ccfd8532b4eb42ab8d9d
+- Commit 97beb96: Merge PR #1590 into 18.0 → https://github.com/OCA/project/commit/97beb96c9034650e118e23f8740330c26d1d5965
+- Commit 991f4ee: [UPD] Update project_portal_task_visibility.pot → https://github.com/OCA/project/commit/991f4eee58f59d0974dd0a4e4890ab6432c94c61
+- Commit 10fbb7d: [BOT] post-merge updates → https://github.com/OCA/project/commit/10fbb7d59f4c8a36d30e9c25ad5c6bbfb43c4aeb
+

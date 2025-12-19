@@ -88,3 +88,8 @@
 - Commit f19ec2b: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/f19ec2ba8bc9aef9eed167526bb4cb5b693c59d7
 - Commit fe474d2: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/fe474d2fa138552c4ec4b0c0da57150cd701629e
 
+## 2025-12-19
+
+- Commit c59492d: Added translation using Weblate (Dutch) → https://github.com/OCA/reporting-engine/commit/c59492d6b500baadb556618bdd158199fec3de11
+- Commit ad025d3: Translated using Weblate (Dutch) → https://github.com/OCA/reporting-engine/commit/ad025d3f40461f0078e0b2380ed900d544fe3f4b
+

@@ -95,3 +95,7 @@
 - Commit 991f4ee: [UPD] Update project_portal_task_visibility.pot → https://github.com/OCA/project/commit/991f4eee58f59d0974dd0a4e4890ab6432c94c61
 - Commit 10fbb7d: [BOT] post-merge updates → https://github.com/OCA/project/commit/10fbb7d59f4c8a36d30e9c25ad5c6bbfb43c4aeb
 
+## 2025-12-21
+
+- Commit 1e39cd0: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/1e39cd0b3661667d37c9259920809e117bc6c735
+

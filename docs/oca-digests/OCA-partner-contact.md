@@ -183,3 +183,10 @@
 - Commit dcc9ceb: Merge PR #2208 into 18.0 → https://github.com/OCA/partner-contact/commit/dcc9cebf316a2dee9e28da3c4a638834eebb7306
 - Commit eb05e17: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/eb05e17aecbc95f2a3ffc4c8023d0a3b91adb979
 
+## 2025-12-22
+
+- Commit 2a978b1: [ADD] partner_bank_acc_holder_name → https://github.com/OCA/partner-contact/commit/2a978b17f75166a48d6f5567b7cef3d6a5cd8263
+- Commit 414b840: Merge PR #2242 into 18.0 → https://github.com/OCA/partner-contact/commit/414b840cf906927b92a0d30475beb1ffa9059a7d
+- Commit b596b10: [UPD] Update partner_bank_acc_holder_name.pot → https://github.com/OCA/partner-contact/commit/b596b105d0de22d9948c675c2b75ac9c74da334a
+- Commit 0a9a614: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/0a9a6144bb310a694fd967a840b0cf06ac84b0ec
+

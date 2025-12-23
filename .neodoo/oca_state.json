@@ -3,7 +3,7 @@
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "a11039c644fd94e4cf05fa0ef0ec368b6e7d8e4e",
     "OCA/project@18.0::commits": "1e39cd0b3661667d37c9259920809e117bc6c735",
-    "OCA/sale-workflow@18.0::commits": "f067b1acddb9017ae2ff4ecb8b08a6d0b3c98680",
+    "OCA/sale-workflow@18.0::commits": "0bbaf5f3d375b5d8b1d150c30b2e1fe0731e4449",
     "OCA/oca-port@main::commits": "e7cf1e7e38fd0e6f4f4426c5a7bea56d94ab7ce0",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
     "OCA/account-financial-tools@18.0::commits": "9b1476e8d30fb04a33cbcfc6ff897b885c15d68c",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "58e289f665bdd993a7c4bd88de20e5bb8c2aab57"
   },
-  "updated_at": "2025-12-22T02:38:18.968660+00:00"
+  "updated_at": "2025-12-23T02:35:17.247543+00:00"
 }

@@ -237,3 +237,9 @@
 - Commit e7c6235: [UPD] Update sale_pricelist_packaging.pot → https://github.com/OCA/sale-workflow/commit/e7c6235a0d0cc9d7d6a600532f92daa9f248e65a
 - Commit f067b1a: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/f067b1acddb9017ae2ff4ecb8b08a6d0b3c98680
 
+## 2025-12-23
+
+- Commit 5ace7b3: [FIX] sale_order_secondary_unit: show optional on order lines → https://github.com/OCA/sale-workflow/commit/5ace7b3506dbeefe1822c8572cf6076c86395194
+- Commit eb95e58: Merge PR #4084 into 18.0 → https://github.com/OCA/sale-workflow/commit/eb95e58e4bf39e0b11bc258e4bc919eae6950ba5
+- Commit 0bbaf5f: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/0bbaf5f3d375b5d8b1d150c30b2e1fe0731e4449
+

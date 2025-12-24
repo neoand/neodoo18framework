@@ -115,3 +115,11 @@
 
 - Commit f15ff98: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/f15ff98850a8f3ef4b5548f04138641df310e64a
 
+## 2025-12-24
+
+- Commit 1bd666e: [IMP] product_form_pricelist: pre-commit execution → https://github.com/OCA/product-attribute/commit/1bd666eaf605544fcee90e77565de97b72bd0848
+- Commit dc0a9a7: [MIG] product_form_pricelist: Migration to 18.0 → https://github.com/OCA/product-attribute/commit/dc0a9a74d2eb07d7fdebd8298db6d8d4dd8646be
+- Commit ea02f76: Merge PR #2067 into 18.0 → https://github.com/OCA/product-attribute/commit/ea02f7616c8069ce9bb5569f48809f35dc32b2fe
+- Commit ed882be: [UPD] Update product_form_pricelist.pot → https://github.com/OCA/product-attribute/commit/ed882be2b8f838c7fd740a2b192e33d2ea915625
+- Commit d204ab3: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/d204ab3a8930c00f1847f891355172aebc57c149
+

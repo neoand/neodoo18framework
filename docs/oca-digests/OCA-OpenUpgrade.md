@@ -153,3 +153,7 @@
 
 - Commit fdbadaf: [OU-FIX] hr_holidays: Crash if not active employees → https://github.com/OCA/OpenUpgrade/commit/fdbadaf1eb5a298450e87622b9c78f71e6b4716c
 
+## 2025-12-25
+
+- Commit 0bfbb2c: Merge pull request #5375 from hbrunn/18.0-create-test-database-workflow → https://github.com/OCA/OpenUpgrade/commit/0bfbb2c972282e95fbb40f6c028b4e002d746307
+

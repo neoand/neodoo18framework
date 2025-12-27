@@ -154,3 +154,7 @@
 
 - Commit 25fc616: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/25fc6169f9c1f5e333805a97f93436929fb7c793
 
+## 2025-12-27
+
+- Commit f1e92af: Translated using Weblate (German) → https://github.com/OCA/server-tools/commit/f1e92afb93150506b85116aa0864df14ff7cfb22
+

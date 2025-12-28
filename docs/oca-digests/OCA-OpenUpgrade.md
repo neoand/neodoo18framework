@@ -157,3 +157,8 @@
 
 - Commit 0bfbb2c: Merge pull request #5375 from hbrunn/18.0-create-test-database-workflow → https://github.com/OCA/OpenUpgrade/commit/0bfbb2c972282e95fbb40f6c028b4e002d746307
 
+## 2025-12-28
+
+- Commit e18185f: [OU-ADD] l10n_pt: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/e18185f27c4077f3bf2276274b5442b41e8f039a
+- Commit b530eb0: Merge pull request #5479 from Tecnativa/18.0-ou_add-l10n_pt → https://github.com/OCA/OpenUpgrade/commit/b530eb094d512865e1dadbc730ecf1b117a6c4e8
+

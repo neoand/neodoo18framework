@@ -106,3 +106,11 @@
 - Commit 3ef720b: Merge PR #4244 into 18.0 → https://github.com/OCA/l10n-brazil/commit/3ef720bd142c7892239f01469821ca7d0d71efc5
 - Commit a11039c: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/a11039c644fd94e4cf05fa0ef0ec368b6e7d8e4e
 
+## 2025-12-30
+
+- Commit 25fdbcd: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/25fdbcd0da9d73efc28188f166158e856cd2b077
+- Commit 21dda27: Merge PR #4318 into 18.0 → https://github.com/OCA/l10n-brazil/commit/21dda274599b8dcf14d441b5fed88d3b92ea52c6
+- Commit 8b7b2ee: [UPD] Update l10n_br_nfe_spec.pot → https://github.com/OCA/l10n-brazil/commit/8b7b2ee88eaa920521035fc3ab8ac14abcb07f4e
+- Commit 022ef1c: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/022ef1c32152297df7ad4a1c7d5f7b9124653177
+- Commit 09c00a9: Update translation files → https://github.com/OCA/l10n-brazil/commit/09c00a9110e84bf8afec6872ae76a95534944775
+

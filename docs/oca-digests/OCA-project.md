@@ -99,3 +99,9 @@
 
 - Commit 1e39cd0: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/1e39cd0b3661667d37c9259920809e117bc6c735
 
+## 2025-12-30
+
+- Commit acaecdd: [FIX] project_task_parent_due_auto: completing subtask now updates parent deadline → https://github.com/OCA/project/commit/acaecdd92ef27cb919173f58efd99d450f828f3b
+- Commit 2a6b219: Merge PR #1636 into 18.0 → https://github.com/OCA/project/commit/2a6b21982a34d79f3e76e7be44d2b5240e73f71f
+- Commit 556ab1f: [BOT] post-merge updates → https://github.com/OCA/project/commit/556ab1f802c012597d026e5f6905fda1070a6314
+

@@ -123,3 +123,8 @@
 - Commit ed882be: [UPD] Update product_form_pricelist.pot → https://github.com/OCA/product-attribute/commit/ed882be2b8f838c7fd740a2b192e33d2ea915625
 - Commit d204ab3: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/d204ab3a8930c00f1847f891355172aebc57c149
 
+## 2025-12-30
+
+- Commit daae449: Added translation using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/daae4499e4be66fe57a23d33d42b317d07cf459d
+- Commit c86378f: Translated using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/c86378f1a18bdb2fdb9cca69afe6eacc9d5de1d0
+

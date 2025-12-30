@@ -61,3 +61,11 @@
 
 - Commit 62aeebe: Translated using Weblate (Italian) → https://github.com/OCA/multi-company/commit/62aeebe85a04389bd758d39e5a138288d5e42e73
 
+## 2025-12-30
+
+- Commit 2915016: Merge PR #924 into 18.0 → https://github.com/OCA/multi-company/commit/29150163fc6358b5c64a39c644b65f0533ce7cdd
+- Commit 90fd75b: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/90fd75bf6e79b062f5de3f8a79ce84026be66a83
+- Commit e9998c1: Merge PR #796 into 18.0 → https://github.com/OCA/multi-company/commit/e9998c12b1832bec35a48ca1930abd2e69d1010d
+- Commit 7cd107f: [UPD] Update pos_category_multicompany.pot → https://github.com/OCA/multi-company/commit/7cd107feeb48151f73c818db8b32927191ab3a64
+- Commit 5cf2596: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/5cf2596ad5b38315158c9231024f0e88a8168cfc
+

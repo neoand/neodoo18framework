@@ -190,3 +190,7 @@
 - Commit b596b10: [UPD] Update partner_bank_acc_holder_name.pot → https://github.com/OCA/partner-contact/commit/b596b105d0de22d9948c675c2b75ac9c74da334a
 - Commit 0a9a614: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/0a9a6144bb310a694fd967a840b0cf06ac84b0ec
 
+## 2025-12-30
+
+- Commit e32b835: Translated using Weblate (Catalan) → https://github.com/OCA/partner-contact/commit/e32b835e885bdb3b6b69cfc25dbad1b080767d10
+

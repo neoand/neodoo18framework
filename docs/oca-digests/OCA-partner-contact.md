@@ -194,3 +194,10 @@
 
 - Commit e32b835: Translated using Weblate (Catalan) → https://github.com/OCA/partner-contact/commit/e32b835e885bdb3b6b69cfc25dbad1b080767d10
 
+## 2025-12-31
+
+- Commit 50a3b6e: Merge PR #2057 into 18.0 → https://github.com/OCA/partner-contact/commit/50a3b6e45142648787eab86260a30e6846d5b8df
+- Commit 5c49f65: [UPD] Update base_partner_sequence.pot → https://github.com/OCA/partner-contact/commit/5c49f654217364b93bc19562fd1540b52f26770e
+- Commit 6f8c9c9: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/6f8c9c994a86bcbb2014920b67ee661744104dbe
+- Commit 4fb4ad4: Update translation files → https://github.com/OCA/partner-contact/commit/4fb4ad477671015236d2344dd9bb3746326a07a2
+

@@ -114,3 +114,9 @@
 - Commit 022ef1c: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/022ef1c32152297df7ad4a1c7d5f7b9124653177
 - Commit 09c00a9: Update translation files → https://github.com/OCA/l10n-brazil/commit/09c00a9110e84bf8afec6872ae76a95534944775
 
+## 2026-01-01
+
+- Commit 9acecb0: [REF][l10n_br_fiscal] chatter → https://github.com/OCA/l10n-brazil/commit/9acecb03dd3cdc0bba5ccd4adb69d85526e22592
+- Commit 4b96f90: Merge PR #4322 into 18.0 → https://github.com/OCA/l10n-brazil/commit/4b96f9007cf219ba2cc2ba990337dae306f65c6a
+- Commit 3a39f34: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/3a39f34749f058b39a425aa78945aecb8b386a22
+

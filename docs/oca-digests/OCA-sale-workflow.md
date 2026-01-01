@@ -243,3 +243,10 @@
 - Commit eb95e58: Merge PR #4084 into 18.0 → https://github.com/OCA/sale-workflow/commit/eb95e58e4bf39e0b11bc258e4bc919eae6950ba5
 - Commit 0bbaf5f: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/0bbaf5f3d375b5d8b1d150c30b2e1fe0731e4449
 
+## 2026-01-01
+
+- Commit 2cc4a33: [ADD] sale_order_cancel_optional_email → https://github.com/OCA/sale-workflow/commit/2cc4a33d16736b46b623c6f6bc5d12d45ea5b5b1
+- Commit ddb5787: Merge PR #4085 into 18.0 → https://github.com/OCA/sale-workflow/commit/ddb578777e7161dba19c725fa8dbbe8aaeff6ac2
+- Commit 7925a1e: [UPD] Update sale_order_cancel_optional_email.pot → https://github.com/OCA/sale-workflow/commit/7925a1ee9a7e7069d2974bc62ffadd95c4d76714
+- Commit f621084: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/f621084185940f38498b385999109483e5071d15
+

@@ -28,3 +28,11 @@
 - Commit 6305191: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/6305191cdbcd5daf60d687a7206f8a6831f71fce
 - Commit 66b76f5: Update translation files → https://github.com/OCA/knowledge/commit/66b76f51b8c426609cddeb7712c4f297630a4bde
 
+## 2026-01-01
+
+- Commit ba7e2f5: [IMP] attachment_preview: pre-commit auto fixes → https://github.com/OCA/knowledge/commit/ba7e2f5f72df6f65c793b939f9f25d4178367ff9
+- Commit a62e036: [MIG] attachment_preview: Migration to 18.0 → https://github.com/OCA/knowledge/commit/a62e0366fb7c3b6ac32ddcf01afeb99d40bc7250
+- Commit 6c63999: Merge PR #552 into 18.0 → https://github.com/OCA/knowledge/commit/6c6399982b46b5e09858f3cc68a46c77b6e9aeb5
+- Commit a343d3b: [UPD] Update attachment_preview.pot → https://github.com/OCA/knowledge/commit/a343d3b26071911c736d630dee59c6c8179fc1b1
+- Commit 9921245: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/99212455755ea9d194b2e00a06077a1f3bf990b5
+

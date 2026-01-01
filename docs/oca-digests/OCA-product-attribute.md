@@ -128,3 +128,10 @@
 - Commit daae449: Added translation using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/daae4499e4be66fe57a23d33d42b317d07cf459d
 - Commit c86378f: Translated using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/c86378f1a18bdb2fdb9cca69afe6eacc9d5de1d0
 
+## 2026-01-01
+
+- Commit bf0e290: [MIG] product_pricelist_margin: Migration to 18.0 → https://github.com/OCA/product-attribute/commit/bf0e2906374b864a67a0467eb7a35b23bc252fc6
+- Commit 6ee95ab: Merge PR #2157 into 18.0 → https://github.com/OCA/product-attribute/commit/6ee95ab5668a7d6ad9975f370949deb01ceaf8cc
+- Commit 0307e53: [UPD] Update product_pricelist_margin.pot → https://github.com/OCA/product-attribute/commit/0307e53d496198420d78f049e505fec2749ef714
+- Commit 6a850c4: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/6a850c4df714b520a4fbe58b76341db74ba49de4
+

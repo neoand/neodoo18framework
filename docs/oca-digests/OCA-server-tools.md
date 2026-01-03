@@ -158,3 +158,9 @@
 
 - Commit f1e92af: Translated using Weblate (German) → https://github.com/OCA/server-tools/commit/f1e92afb93150506b85116aa0864df14ff7cfb22
 
+## 2026-01-03
+
+- Commit 15530bb: [FIX] auditlog: drop tocompute register entirely from ThrowAwayCache → https://github.com/OCA/server-tools/commit/15530bbd7657e4b6d19abd505c50c756fa6400ed
+- Commit 63db73a: Merge PR #3469 into 18.0 → https://github.com/OCA/server-tools/commit/63db73ad2ed854b06eed8a564f25843c850a87c8
+- Commit 6df81fe: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/6df81fedb7274364d303793c96e6132aed895875
+

@@ -120,3 +120,11 @@
 - Commit 4b96f90: Merge PR #4322 into 18.0 → https://github.com/OCA/l10n-brazil/commit/4b96f9007cf219ba2cc2ba990337dae306f65c6a
 - Commit 3a39f34: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/3a39f34749f058b39a425aa78945aecb8b386a22
 
+## 2026-01-03
+
+- Commit 4a4d40d: [IMP] l10n_br_sped_base: pre-commit auto fixes → https://github.com/OCA/l10n-brazil/commit/4a4d40d9b5b00933bad327bc65c0143af53155f0
+- Commit c74bb0a: [MIG] l10n_br_sped_base: Migration to 18.0 → https://github.com/OCA/l10n-brazil/commit/c74bb0a1d5b5ba9c648c209f41aa38b8a6d77fca
+- Commit 21e5a35: Merge PR #4327 into 18.0 → https://github.com/OCA/l10n-brazil/commit/21e5a35e54e6028e2f765bdfc5f55ae24f7d3b13
+- Commit 05e6ccb: [UPD] Update l10n_br_sped_base.pot → https://github.com/OCA/l10n-brazil/commit/05e6ccb94c358bb980fdf3010339ee9b495a0161
+- Commit b231d95: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/b231d9557880594bef99969ee4a618d2c01354a4
+

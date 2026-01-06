@@ -250,3 +250,9 @@
 - Commit 7925a1e: [UPD] Update sale_order_cancel_optional_email.pot → https://github.com/OCA/sale-workflow/commit/7925a1ee9a7e7069d2974bc62ffadd95c4d76714
 - Commit f621084: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/f621084185940f38498b385999109483e5071d15
 
+## 2026-01-06
+
+- Commit 11de4e7: [IMP] sale_stock_delivery_address: remove address extension from procurement group name → https://github.com/OCA/sale-workflow/commit/11de4e79c7f725ea43cc31e1fc903dc86f808cdd
+- Commit c38b2c6: Merge PR #4044 into 18.0 → https://github.com/OCA/sale-workflow/commit/c38b2c689dee4cc29008c6876d34003d361cc29d
+- Commit a9ba406: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/a9ba4064e8bb7fa13e91f34cb6b7214b25a9e8d0
+

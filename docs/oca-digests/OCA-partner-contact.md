@@ -205,3 +205,8 @@
 
 - Commit 867ddb9: Added translation using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/867ddb9ce98130c509fc74a8766d4e3076567190
 
+## 2026-01-06
+
+- Commit 8776d79: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/8776d7968fda97b40d04198c900fb20cadc0134f
+- Commit 01a37cc: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/01a37cc402073634119b71e28c75bcbb8c1cdd6c
+

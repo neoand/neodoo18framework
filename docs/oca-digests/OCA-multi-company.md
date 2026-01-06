@@ -69,3 +69,11 @@
 - Commit 7cd107f: [UPD] Update pos_category_multicompany.pot → https://github.com/OCA/multi-company/commit/7cd107feeb48151f73c818db8b32927191ab3a64
 - Commit 5cf2596: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/5cf2596ad5b38315158c9231024f0e88a8168cfc
 
+## 2026-01-06
+
+- Commit b4c7d26: [IMP] res_company_active: pre-commit auto fixes → https://github.com/OCA/multi-company/commit/b4c7d26d87dbd7cfc5488ddbaa1d74ce1afa3dde
+- Commit 66b6e9c: [MIG] res_company_active: Migration to 18.0 → https://github.com/OCA/multi-company/commit/66b6e9c04bb04a7526a606b3502850e368c4ee31
+- Commit 6f10e1b: Merge PR #797 into 18.0 → https://github.com/OCA/multi-company/commit/6f10e1b6798f9e90bc3ae32a5dfc5ff5d6073d7c
+- Commit a088b64: [UPD] Update res_company_active.pot → https://github.com/OCA/multi-company/commit/a088b64a9153a42ca0f7c813d5062ff8157ef638
+- Commit 2627138: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/2627138f1e408c70b9ade3c107dadd43e49eb4ad
+

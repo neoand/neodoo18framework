@@ -121,3 +121,8 @@
 - Commit c975c88: Added translation using Weblate (Spanish (Latin America)) → https://github.com/OCA/account-financial-tools/commit/c975c88e71664e94102eb0bf4faeb2a56f98f936
 - Commit 3ba1815: Added translation using Weblate (Spanish (Argentina)) → https://github.com/OCA/account-financial-tools/commit/3ba18155aeeb31b453b40ae300295f9d5d88b1c4
 
+## 2026-01-06
+
+- Commit 6015e93: Translated using Weblate (Spanish (Argentina)) → https://github.com/OCA/account-financial-tools/commit/6015e93999932db0d3e57128d0e1dc0d57ae8aaf
+- Commit b10b6ce: Translated using Weblate (Spanish) → https://github.com/OCA/account-financial-tools/commit/b10b6ce4eafa2bfac28fdb245bb3f20faca0b091
+

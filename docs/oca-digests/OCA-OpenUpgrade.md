@@ -167,3 +167,8 @@
 - Commit 20a90d3: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/20a90d314b2def40d031dcba024c0b3d48f26a3c
 - Commit 515fe56: Merge pull request #5475 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/515fe56051174663dbd9d5e24a390bb2577e837b
 
+## 2026-01-06
+
+- Commit e245437: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/e2454378101eb18ee11738ae80673fb6492ce5b2
+- Commit e72e5c5: Merge pull request #5483 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/e72e5c5741069405c74ebd6006108a402fd9c497
+

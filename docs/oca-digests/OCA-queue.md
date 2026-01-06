@@ -21,3 +21,9 @@
 - Commit 9a57664: Merge PR #866 into 18.0 → https://github.com/OCA/queue/commit/9a576642687c7239209b84a85a7ce853c6e5c9b3
 - Commit 48f5707: [BOT] post-merge updates → https://github.com/OCA/queue/commit/48f57078be0d61f9314d592a19be043fca01c146
 
+## 2026-01-06
+
+- Commit 80d2076: [IMP] queue_job: take weaker locks → https://github.com/OCA/queue/commit/80d2076435469b40c995437dd8ea9ba5c5054396
+- Commit 5950735: Merge PR #873 into 18.0 → https://github.com/OCA/queue/commit/595073583d82ccb53375c571ad0fe1406ef61159
+- Commit 7ba8b45: [BOT] post-merge updates → https://github.com/OCA/queue/commit/7ba8b45758627b8e477621d7712eb3ce24dba767
+

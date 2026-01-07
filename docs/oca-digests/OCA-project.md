@@ -105,3 +105,9 @@
 - Commit 2a6b219: Merge PR #1636 into 18.0 → https://github.com/OCA/project/commit/2a6b21982a34d79f3e76e7be44d2b5240e73f71f
 - Commit 556ab1f: [BOT] post-merge updates → https://github.com/OCA/project/commit/556ab1f802c012597d026e5f6905fda1070a6314
 
+## 2026-01-07
+
+- Commit 215c984: Merge PR #1382 into 18.0 → https://github.com/OCA/project/commit/215c98411104d1850d4107660ad8156bdd36df2b
+- Commit 4b0ff69: [UPD] Update project_stage_extra_info.pot → https://github.com/OCA/project/commit/4b0ff6912fc603dcb4c4e8402b5e54c3113ebeb5
+- Commit a29056e: [BOT] post-merge updates → https://github.com/OCA/project/commit/a29056eb19d55e569b29e9e38479d039d8d529a1
+

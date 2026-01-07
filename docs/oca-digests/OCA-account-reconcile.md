@@ -97,3 +97,11 @@
 - Commit 4b4c925: Merge PR #938 into 18.0 → https://github.com/OCA/account-reconcile/commit/4b4c925c711443a2573abfab411cac1150d5670d
 - Commit 40de3ff: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/40de3ff4fa81453d07122296012e6998c533e8a8
 
+## 2026-01-07
+
+- Commit 463e9f6: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/463e9f6298e774ef525910a21b45b7367a602ac6
+- Commit ab6e06f: Merge PR #874 into 18.0 → https://github.com/OCA/account-reconcile/commit/ab6e06fe9a6ac7be1dff83e912fae924ae834d64
+- Commit d4738f2: [UPD] Update account_move_base_import.pot → https://github.com/OCA/account-reconcile/commit/d4738f264fd21460eac5ecf2a12f0051a6557032
+- Commit 4ac1809: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/4ac1809a965116fa4092d333d4d394e7318883ec
+- Commit a09782c: Update translation files → https://github.com/OCA/account-reconcile/commit/a09782c682ca32cf5ac33049a01aaeab51e18870
+

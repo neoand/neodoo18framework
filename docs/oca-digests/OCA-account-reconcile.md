@@ -105,3 +105,7 @@
 - Commit 4ac1809: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/4ac1809a965116fa4092d333d4d394e7318883ec
 - Commit a09782c: Update translation files → https://github.com/OCA/account-reconcile/commit/a09782c682ca32cf5ac33049a01aaeab51e18870
 
+## 2026-01-09
+
+- Commit 9ecf6bb: Translated using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/9ecf6bb311c99a76babb3679c3842e2272d3e1e3
+

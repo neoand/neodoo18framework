@@ -135,3 +135,11 @@
 - Commit 0307e53: [UPD] Update product_pricelist_margin.pot → https://github.com/OCA/product-attribute/commit/0307e53d496198420d78f049e505fec2749ef714
 - Commit 6a850c4: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/6a850c4df714b520a4fbe58b76341db74ba49de4
 
+## 2026-01-09
+
+- Commit 1eabab7: Merge PR #2139 into 18.0 → https://github.com/OCA/product-attribute/commit/1eabab7d0c0973ed1a2b27af4a4b748e1468d1e1
+- Commit e577985: [UPD] Update product_pricelist_direct_print.pot → https://github.com/OCA/product-attribute/commit/e5779858086dcd7a2df1dd10887f5099e0ec310c
+- Commit 976bb49: [UPD] Update product_sale_team.pot → https://github.com/OCA/product-attribute/commit/976bb497f2cc29582b75b49aabf1e473fd08a993
+- Commit 5ea2ab9: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/5ea2ab98073d61b7e203bb1b2555dbb3643443ea
+- Commit 11a2f98: Update translation files → https://github.com/OCA/product-attribute/commit/11a2f980a343fb11a07d20a0419ef8e891a47b5f
+

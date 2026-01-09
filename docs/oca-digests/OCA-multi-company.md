@@ -77,3 +77,11 @@
 - Commit a088b64: [UPD] Update res_company_active.pot → https://github.com/OCA/multi-company/commit/a088b64a9153a42ca0f7c813d5062ff8157ef638
 - Commit 2627138: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/2627138f1e408c70b9ade3c107dadd43e49eb4ad
 
+## 2026-01-09
+
+- Commit be5fa8a: [IMP] purchase_sale_inter_company: Post a message with the link to inter-company purchase and sale order → https://github.com/OCA/multi-company/commit/be5fa8a448ab203f664bbf296541cc985753f6e0
+- Commit 1ed47bd: Merge PR #926 into 18.0 → https://github.com/OCA/multi-company/commit/1ed47bd1174f361de4533256df172c7655b34f59
+- Commit c4ee654: [UPD] Update purchase_sale_inter_company.pot → https://github.com/OCA/multi-company/commit/c4ee654716f08a57795a5577e9bd11d366511dbc
+- Commit 06d0d11: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/06d0d11b1cb740bf1bce567a024845727c431896
+- Commit 3e998f7: Update translation files → https://github.com/OCA/multi-company/commit/3e998f7185edd1c8829294407b3d5c945d5cd6f5
+

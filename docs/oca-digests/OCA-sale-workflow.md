@@ -260,3 +260,10 @@
 
 - Commit 6fc4268: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/6fc42683aa39b9c69852a6ca260772f8e0bb0f1b
 
+## 2026-01-09
+
+- Commit 58fc819: [FIX] sale_order_product_recommendation: Update line if quantities had changed → https://github.com/OCA/sale-workflow/commit/58fc8199ec8b93ec6492c92fdaf6fa771384b4b2
+- Commit 7e82cea: [FIX] sale_order_product_recommendation: recommendations on sales with section or notes → https://github.com/OCA/sale-workflow/commit/7e82ceaa122aecaa4a7331184f9281fffcd3b09f
+- Commit b5363d7: Merge PR #4095 into 18.0 → https://github.com/OCA/sale-workflow/commit/b5363d7831c8289f37c0037b2e1e9429e867d635
+- Commit 33bf873: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/33bf873cf85118aa0d8182dbd329d18b1295cdea
+

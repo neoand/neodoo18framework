@@ -36,3 +36,11 @@
 - Commit a343d3b: [UPD] Update attachment_preview.pot → https://github.com/OCA/knowledge/commit/a343d3b26071911c736d630dee59c6c8179fc1b1
 - Commit 9921245: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/99212455755ea9d194b2e00a06077a1f3bf990b5
 
+## 2026-01-09
+
+- Commit 4c3a2d9: [FIX] document_url: Easier template inheriting → https://github.com/OCA/knowledge/commit/4c3a2d9bc928dc9d5f4e03878ee7c7a57eb3f49b
+- Commit a87b755: Merge PR #581 into 18.0 → https://github.com/OCA/knowledge/commit/a87b755055a0117301562e5dfefd86cf91b964b1
+- Commit 050008d: [UPD] Update document_url.pot → https://github.com/OCA/knowledge/commit/050008d04cbd17131ac6e55b583e83eef53fe5eb
+- Commit b4f7174: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/b4f7174aa1fb2795f1dd8836df651e1211b63b68
+- Commit 42352dd: Update translation files → https://github.com/OCA/knowledge/commit/42352dd17ec0bd2e81f210c6605fb39bf7e70af6
+

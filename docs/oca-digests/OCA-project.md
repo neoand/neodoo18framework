@@ -111,3 +111,11 @@
 - Commit 4b0ff69: [UPD] Update project_stage_extra_info.pot → https://github.com/OCA/project/commit/4b0ff6912fc603dcb4c4e8402b5e54c3113ebeb5
 - Commit a29056e: [BOT] post-merge updates → https://github.com/OCA/project/commit/a29056eb19d55e569b29e9e38479d039d8d529a1
 
+## 2026-01-09
+
+- Commit e16ef3c: Merge PR #1635 into 18.0 → https://github.com/OCA/project/commit/e16ef3c3449e8b345b921c5b665ced9206a56e60
+- Commit 2d71acd: [BOT] post-merge updates → https://github.com/OCA/project/commit/2d71acd1e900488259d5773dbe2ded13045e8951
+- Commit 4e3c06a: Merge PR #1644 into 18.0 → https://github.com/OCA/project/commit/4e3c06acc4c6346fd68052c7892abe0f1856f466
+- Commit 34e0cb0: [UPD] Update project_task_pull_request_state.pot → https://github.com/OCA/project/commit/34e0cb0a40d52c19b874acda08a19a84ad975038
+- Commit 2bd3d8f: [BOT] post-merge updates → https://github.com/OCA/project/commit/2bd3d8f58d93f2e0f8f7193cc2474deb3a3d4962
+

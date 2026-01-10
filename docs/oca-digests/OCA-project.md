@@ -119,3 +119,11 @@
 - Commit 34e0cb0: [UPD] Update project_task_pull_request_state.pot → https://github.com/OCA/project/commit/34e0cb0a40d52c19b874acda08a19a84ad975038
 - Commit 2bd3d8f: [BOT] post-merge updates → https://github.com/OCA/project/commit/2bd3d8f58d93f2e0f8f7193cc2474deb3a3d4962
 
+## 2026-01-10
+
+- Commit 891892e: [BOT] post-merge updates → https://github.com/OCA/project/commit/891892e2c7097a239c215bbff8ebff21f3a40397
+- Commit abfdd88: [MIG]project_task_material: migration to v18 → https://github.com/OCA/project/commit/abfdd88d4d5ab2c805fc0865181d3daa0889b15e
+- Commit 56a6230: Merge PR #1587 into 18.0 → https://github.com/OCA/project/commit/56a6230f572d31c00cb549619dc708f7d4b5873c
+- Commit babd66d: [UPD] Update project_task_material.pot → https://github.com/OCA/project/commit/babd66d6885e3ea12a53991332a24c74afe029bd
+- Commit ed7cc29: [BOT] post-merge updates → https://github.com/OCA/project/commit/ed7cc29ce068511af0765a71db236632409a296f
+

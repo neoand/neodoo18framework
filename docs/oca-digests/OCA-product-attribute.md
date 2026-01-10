@@ -143,3 +143,10 @@
 - Commit 5ea2ab9: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/5ea2ab98073d61b7e203bb1b2555dbb3643443ea
 - Commit 11a2f98: Update translation files → https://github.com/OCA/product-attribute/commit/11a2f980a343fb11a07d20a0419ef8e891a47b5f
 
+## 2026-01-10
+
+- Commit 20abea6: Merge PR #2183 into 18.0 → https://github.com/OCA/product-attribute/commit/20abea6c945285bedd552cefc4e90c3924f77d6b
+- Commit db75f44: [UPD] Update product_multi_price.pot → https://github.com/OCA/product-attribute/commit/db75f44c2f82787ecb062b91569d22e44b2154b7
+- Commit 906f9df: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/906f9df536cade7fa7344c2342ff277445b3e92a
+- Commit eb54727: Update translation files → https://github.com/OCA/product-attribute/commit/eb547278ef3ef6b27737273d8557206b3eea3750
+

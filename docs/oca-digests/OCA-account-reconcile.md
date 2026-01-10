@@ -109,3 +109,9 @@
 
 - Commit 9ecf6bb: Translated using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/9ecf6bb311c99a76babb3679c3842e2272d3e1e3
 
+## 2026-01-10
+
+- Commit de547a0: [FIX] account_reconcile_oca: Day aggregation was failing. → https://github.com/OCA/account-reconcile/commit/de547a098c855523c39b3420e4dd817b2f0f526c
+- Commit 47f3c7a: Merge PR #942 into 18.0 → https://github.com/OCA/account-reconcile/commit/47f3c7a43692b6f2571b2440814dca2a6f680555
+- Commit 2b38ed6: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/2b38ed6ee0de785ccf0f1fe78953cb861198c43e
+

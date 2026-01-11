@@ -44,3 +44,8 @@
 - Commit b4f7174: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/b4f7174aa1fb2795f1dd8836df651e1211b63b68
 - Commit 42352dd: Update translation files → https://github.com/OCA/knowledge/commit/42352dd17ec0bd2e81f210c6605fb39bf7e70af6
 
+## 2026-01-11
+
+- Commit dd7b18c: Translated using Weblate (Italian) → https://github.com/OCA/knowledge/commit/dd7b18c61aa33c4d3cef330517ac001187b88584
+- Commit 0881d75: Translated using Weblate (Italian) → https://github.com/OCA/knowledge/commit/0881d75a35e7fc2f814110df4878177e805e589b
+

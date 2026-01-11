@@ -172,3 +172,7 @@
 - Commit e245437: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/e2454378101eb18ee11738ae80673fb6492ce5b2
 - Commit e72e5c5: Merge pull request #5483 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/e72e5c5741069405c74ebd6006108a402fd9c497
 
+## 2026-01-11
+
+- Commit 30666c1: [IMP] apriori: l10n_it_riba -> l10n_it_riba_oca → https://github.com/OCA/OpenUpgrade/commit/30666c100cb4e3c5fad02ca4949a93dd9b12c56b
+

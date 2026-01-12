@@ -128,3 +128,11 @@
 - Commit 05e6ccb: [UPD] Update l10n_br_sped_base.pot → https://github.com/OCA/l10n-brazil/commit/05e6ccb94c358bb980fdf3010339ee9b495a0161
 - Commit b231d95: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/b231d9557880594bef99969ee4a618d2c01354a4
 
+## 2026-01-12
+
+- Commit 9c6640b: [UPD] Update l10n_br_fiscal.pot → https://github.com/OCA/l10n-brazil/commit/9c6640bb4930e99cf2748586ee4d3b93d9fa7af0
+- Commit 7282440: [UPD] Update l10n_br_fiscal_edi.pot → https://github.com/OCA/l10n-brazil/commit/72824402ab7b30c2e661e9cd4a23d4c0d74c7723
+- Commit c989407: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/c9894073f52aca9060054f736886c7e3c02fbca9
+- Commit d10bab6: Update translation files → https://github.com/OCA/l10n-brazil/commit/d10bab6c12971bdf63d86ba6c6018686bf887116
+- Commit 575840c: Update translation files → https://github.com/OCA/l10n-brazil/commit/575840c3335e6a7276900989b73e1fc49acc06db
+

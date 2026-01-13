@@ -127,3 +127,8 @@
 - Commit babd66d: [UPD] Update project_task_material.pot → https://github.com/OCA/project/commit/babd66d6885e3ea12a53991332a24c74afe029bd
 - Commit ed7cc29: [BOT] post-merge updates → https://github.com/OCA/project/commit/ed7cc29ce068511af0765a71db236632409a296f
 
+## 2026-01-13
+
+- Commit c913e49: Merge PR #1649 into 18.0 → https://github.com/OCA/project/commit/c913e492347b283c962e6da60ccb3988bd82cdf6
+- Commit 8ef8c0a: [BOT] post-merge updates → https://github.com/OCA/project/commit/8ef8c0a96a2955240bd0fa8519925fbee263a1c3
+

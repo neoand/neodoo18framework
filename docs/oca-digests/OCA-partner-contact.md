@@ -210,3 +210,9 @@
 - Commit 8776d79: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/8776d7968fda97b40d04198c900fb20cadc0134f
 - Commit 01a37cc: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/01a37cc402073634119b71e28c75bcbb8c1cdd6c
 
+## 2026-01-13
+
+- Commit 81cdcc7: Merge PR #2086 into 18.0 → https://github.com/OCA/partner-contact/commit/81cdcc76c3b5a68acebe3974322a836b7f227d78
+- Commit 55ff432: [UPD] Update partner_country_lang.pot → https://github.com/OCA/partner-contact/commit/55ff43209bfc95230db2c3fbeac150176a1c98a1
+- Commit 4bae8f9: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/4bae8f99dd11dcea57787cd081eb4b0f355ba4e6
+

@@ -93,3 +93,7 @@
 - Commit c59492d: Added translation using Weblate (Dutch) → https://github.com/OCA/reporting-engine/commit/c59492d6b500baadb556618bdd158199fec3de11
 - Commit ad025d3: Translated using Weblate (Dutch) → https://github.com/OCA/reporting-engine/commit/ad025d3f40461f0078e0b2380ed900d544fe3f4b
 
+## 2026-01-13
+
+- Commit e677975: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/e67797518838fe3c75c62160e2c6372f058aeb47
+

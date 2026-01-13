@@ -271,3 +271,11 @@
 
 - Commit c5fcb64: Added translation using Weblate (Slovenian) → https://github.com/OCA/sale-workflow/commit/c5fcb64f80379019d1b468dd348b73d2969cd091
 
+## 2026-01-13
+
+- Commit 669bf99: [UPD] Update sale_order_line_client_order_ref.pot → https://github.com/OCA/sale-workflow/commit/669bf9934a07154f01c2eb8082e58bd7fa311e7e
+- Commit 9d7309d: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/9d7309d97853845629436f394951dcb9e0cc25c3
+- Commit 8716162: Merge PR #4023 into 18.0 → https://github.com/OCA/sale-workflow/commit/8716162d68a841af73d89bca008943820d734900
+- Commit 101b8b8: [UPD] Update sale_stock_expiry_date_on_qty_at_date_widget.pot → https://github.com/OCA/sale-workflow/commit/101b8b861575ee5124ea77c25d37dc3a26b6ecd5
+- Commit fa1684e: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/fa1684ef593ad7373cdef87619939cddbddc5dbe
+

@@ -2,16 +2,16 @@
   "keys": {
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "575840c3335e6a7276900989b73e1fc49acc06db",
-    "OCA/project@18.0::commits": "ed7cc29ce068511af0765a71db236632409a296f",
-    "OCA/sale-workflow@18.0::commits": "c5fcb64f80379019d1b468dd348b73d2969cd091",
+    "OCA/project@18.0::commits": "8ef8c0a96a2955240bd0fa8519925fbee263a1c3",
+    "OCA/sale-workflow@18.0::commits": "fa1684ef593ad7373cdef87619939cddbddc5dbe",
     "OCA/oca-port@main::commits": "e7cf1e7e38fd0e6f4f4426c5a7bea56d94ab7ce0",
     "OCA/connector@18.0::commits": "d4bcdbcc7a50e46193a9aa9f8699214212883add",
     "OCA/account-financial-tools@18.0::commits": "ba2f4ab4c8183fdb24e298b65b488ddaa5816c8b",
-    "OCA/reporting-engine@18.0::commits": "ad025d3f40461f0078e0b2380ed900d544fe3f4b",
+    "OCA/reporting-engine@18.0::commits": "e67797518838fe3c75c62160e2c6372f058aeb47",
     "OCA/server-tools@18.0::commits": "6df81fedb7274364d303793c96e6132aed895875",
     "OCA/OpenUpgrade@18.0::commits": "30666c100cb4e3c5fad02ca4949a93dd9b12c56b",
-    "OCA/web@18.0::commits": "ff7aa1ee9fd44bbe8b95df4d7a65708953bbdbe7",
-    "OCA/partner-contact@18.0::commits": "01a37cc402073634119b71e28c75bcbb8c1cdd6c",
+    "OCA/web@18.0::commits": "e233e4b4c6b85c4b4f64c47db36f309f631bacde",
+    "OCA/partner-contact@18.0::commits": "4bae8f99dd11dcea57787cd081eb4b0f355ba4e6",
     "OCA/queue@18.0::commits": "7ba8b45758627b8e477621d7712eb3ce24dba767",
     "OCA/management-system@18.0::commits": "824cdd393099f1c695f9aea035c7233cffc4a454",
     "OCA/product-attribute@18.0::commits": "22838a8d11fb5df98c2aaab3bed3a7d773db28be",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "bd64e89f0f81fde66b54ff6c6d86f6d8bfe77460"
   },
-  "updated_at": "2026-01-12T02:42:17.480052+00:00"
+  "updated_at": "2026-01-13T02:36:07.707992+00:00"
 }

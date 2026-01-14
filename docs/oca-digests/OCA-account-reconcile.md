@@ -115,3 +115,9 @@
 - Commit 47f3c7a: Merge PR #942 into 18.0 → https://github.com/OCA/account-reconcile/commit/47f3c7a43692b6f2571b2440814dca2a6f680555
 - Commit 2b38ed6: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/2b38ed6ee0de785ccf0f1fe78953cb861198c43e
 
+## 2026-01-14
+
+- Commit 46f9715: [IMP] account_reconcile_oca: Add @mute_logger("odoo.models.unlink") to tests to reduce logs → https://github.com/OCA/account-reconcile/commit/46f971521618d8b8743eb51b329d7f57c1588b23
+- Commit d8a5972: Merge PR #944 into 18.0 → https://github.com/OCA/account-reconcile/commit/d8a59723572f6e2542cdda885934b68852a67731
+- Commit a8f83e7: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/a8f83e70f797c583130213746d0001e502867962
+

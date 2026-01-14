@@ -131,3 +131,9 @@
 - Commit f0ccb49: Merge PR #2189 into 18.0 → https://github.com/OCA/account-financial-tools/commit/f0ccb49ba4b9230f940bb01bac23967f04e95801
 - Commit ba2f4ab: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/ba2f4ab4c8183fdb24e298b65b488ddaa5816c8b
 
+## 2026-01-14
+
+- Commit 2c9b757: [IMP] account_asset_management: Add @mute_logger("odoo.models.unlink") to tests to reduce logs → https://github.com/OCA/account-financial-tools/commit/2c9b7579f467a2cef98f0649e08c0d882dfae2a0
+- Commit 91523d9: Merge PR #2200 into 18.0 → https://github.com/OCA/account-financial-tools/commit/91523d921a493888a5020b0aa3a9f285d7262659
+- Commit f51b28b: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/f51b28bc4a5d83ebc8ac7d51b7be98cd60a6b8c4
+

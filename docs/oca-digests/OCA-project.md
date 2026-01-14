@@ -132,3 +132,11 @@
 - Commit c913e49: Merge PR #1649 into 18.0 → https://github.com/OCA/project/commit/c913e492347b283c962e6da60ccb3988bd82cdf6
 - Commit 8ef8c0a: [BOT] post-merge updates → https://github.com/OCA/project/commit/8ef8c0a96a2955240bd0fa8519925fbee263a1c3
 
+## 2026-01-14
+
+- Commit 4ed0bd8: [IMP] project_task_description_portal: pre-commit execution → https://github.com/OCA/project/commit/4ed0bd8bc6844ef33208b5b1202802405baf1a76
+- Commit 954a9a0: [MIG] project_task_description_portal: Migration to 18.0 → https://github.com/OCA/project/commit/954a9a08fa98d07d2dde19ac021ec840800a1df3
+- Commit a488dc8: Merge PR #1643 into 18.0 → https://github.com/OCA/project/commit/a488dc82badb02d4169b492a1f21ac60c4408654
+- Commit 58d749b: [UPD] Update project_task_description_portal.pot → https://github.com/OCA/project/commit/58d749b9f01817c11a3c50b9a6b99692f21a5aa6
+- Commit 40e6a45: [BOT] post-merge updates → https://github.com/OCA/project/commit/40e6a456a7f530e396c354759aa7c9c4fb5afbf4
+

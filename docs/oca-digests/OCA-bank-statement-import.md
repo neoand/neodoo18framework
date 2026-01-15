@@ -56,3 +56,7 @@
 
 - Commit 00b5030: Added translation using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/00b50309ae7e1a11a52b7a34a2da0efe9d55e83d
 
+## 2026-01-15
+
+- Commit f29371b: Translated using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/f29371bf9d2ca086128a2419d8752a54d104b0d1
+

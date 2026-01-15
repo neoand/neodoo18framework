@@ -16,12 +16,12 @@
     "OCA/management-system@18.0::commits": "824cdd393099f1c695f9aea035c7233cffc4a454",
     "OCA/product-attribute@18.0::commits": "22838a8d11fb5df98c2aaab3bed3a7d773db28be",
     "OCA/calendar@18.0::commits": "d531dcb8bbc18dd95ca9783ea9db9da70b25e3d2",
-    "OCA/bank-statement-import@18.0::commits": "00b50309ae7e1a11a52b7a34a2da0efe9d55e83d",
+    "OCA/bank-statement-import@18.0::commits": "f29371bf9d2ca086128a2419d8752a54d104b0d1",
     "OCA/multi-company@18.0::commits": "f8542ac919786aceb3459bafcc8c2c0c72dc76a9",
     "OCA/knowledge@18.0::commits": "0881d75a35e7fc2f814110df4878177e805e589b",
     "OCA/account-reconcile@18.0::commits": "a8f83e70f797c583130213746d0001e502867962",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "bd64e89f0f81fde66b54ff6c6d86f6d8bfe77460"
   },
-  "updated_at": "2026-01-14T02:41:15.487720+00:00"
+  "updated_at": "2026-01-15T02:37:18.595753+00:00"
 }

@@ -279,3 +279,10 @@
 - Commit 101b8b8: [UPD] Update sale_stock_expiry_date_on_qty_at_date_widget.pot → https://github.com/OCA/sale-workflow/commit/101b8b861575ee5124ea77c25d37dc3a26b6ecd5
 - Commit fa1684e: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/fa1684ef593ad7373cdef87619939cddbddc5dbe
 
+## 2026-01-16
+
+- Commit 4dc2d6d: [IMP] sale_order_line_client_order_ref: correct typo and add summary in manifest → https://github.com/OCA/sale-workflow/commit/4dc2d6d4ece6300f645e0d11acc33f68f61bc336
+- Commit 74292fb: Merge PR #4106 into 18.0 → https://github.com/OCA/sale-workflow/commit/74292fbcb56e61d21d7a29370f6677efcaebd459
+- Commit a204666: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/a204666a039feb6ed8841f6d3f5e99d166444ac7
+- Commit d1e91a0: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/d1e91a0afe72c50417f8d99829d59d3e9c4deeaf
+

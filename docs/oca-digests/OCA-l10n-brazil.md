@@ -136,3 +136,11 @@
 - Commit d10bab6: Update translation files → https://github.com/OCA/l10n-brazil/commit/d10bab6c12971bdf63d86ba6c6018686bf887116
 - Commit 575840c: Update translation files → https://github.com/OCA/l10n-brazil/commit/575840c3335e6a7276900989b73e1fc49acc06db
 
+## 2026-01-16
+
+- Commit 2be6344: Merge PR #4335 into 18.0 → https://github.com/OCA/l10n-brazil/commit/2be6344974c2f8371da85e0bede54260391aa1e4
+- Commit e067da1: [UPD] Update l10n_br_coa.pot → https://github.com/OCA/l10n-brazil/commit/e067da1ffe903d9a92eb3da10804062c4e1efa02
+- Commit 79ef659: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/79ef659f29a7266864873ab2a501d9e359e756af
+- Commit f255c22: Merge PR #4351 into 18.0 → https://github.com/OCA/l10n-brazil/commit/f255c2220529d953ec6d960dfcf9bf2d2a75987d
+- Commit d3f2f30: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/d3f2f303bd4a0b7d78ffae49a00d7de09c3e8458
+

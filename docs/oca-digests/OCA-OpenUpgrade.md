@@ -176,3 +176,11 @@
 
 - Commit 30666c1: [IMP] apriori: l10n_it_riba -> l10n_it_riba_oca → https://github.com/OCA/OpenUpgrade/commit/30666c100cb4e3c5fad02ca4949a93dd9b12c56b
 
+## 2026-01-16
+
+- Commit 092d2bb: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/092d2bbe4c0a2a1a73c11770d538b2f95572df31
+- Commit a8fbead: [IMP] loyalty: add post-migration → https://github.com/OCA/OpenUpgrade/commit/a8fbeadfe611efdd81573d9646501e2be81e8657
+- Commit b7f97e8: Merge pull request #5484 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/b7f97e877bb0f871c15d6cd1923dfe839079b671
+- Commit bf2f080: [OU-FIX] website_sale_product_attachment: Required fields → https://github.com/OCA/OpenUpgrade/commit/bf2f0808ab373f06af13b3c926f7c980a1813df0
+- Commit e2d6a60: Merge pull request #5486 from Tecnativa/18.0-ou_fix-website_sale_product_attachment-sql → https://github.com/OCA/OpenUpgrade/commit/e2d6a6080e206d693b398d5ee56b5df7820a7f0e
+

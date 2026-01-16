@@ -216,3 +216,9 @@
 - Commit 55ff432: [UPD] Update partner_country_lang.pot → https://github.com/OCA/partner-contact/commit/55ff43209bfc95230db2c3fbeac150176a1c98a1
 - Commit 4bae8f9: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/4bae8f99dd11dcea57787cd081eb4b0f355ba4e6
 
+## 2026-01-16
+
+- Commit ed5d8be: Merge PR #2024 into 18.0 → https://github.com/OCA/partner-contact/commit/ed5d8bef712416f198e0e9a9033a64b30580bffe
+- Commit 9790ab8: [UPD] Update partner_phone_secondary.pot → https://github.com/OCA/partner-contact/commit/9790ab88cb229f8f225cf8a220a08e1133336629
+- Commit 48fc1f6: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/48fc1f6d7321ae5933f7689213b38f34dc13c5d4
+

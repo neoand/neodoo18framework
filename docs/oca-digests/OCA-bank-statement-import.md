@@ -60,3 +60,11 @@
 
 - Commit f29371b: Translated using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/f29371bf9d2ca086128a2419d8752a54d104b0d1
 
+## 2026-01-16
+
+- Commit 23545f9: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/23545f96d549d2330b8b59aaa8a2df60bcd88c08
+- Commit 49f8abe: Translated using Weblate (Turkish) → https://github.com/OCA/bank-statement-import/commit/49f8abe4531060d9daeb9e43b8129a4852b8de47
+- Commit ffb58ff: Translated using Weblate (Turkish) → https://github.com/OCA/bank-statement-import/commit/ffb58ff4537217849843b452e081a3ce0b7cf99a
+- Commit 1435250: Translated using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/1435250391786c9f12941a1d7a9eabb06645651a
+- Commit d08d2d8: Added translation using Weblate (Turkish) → https://github.com/OCA/bank-statement-import/commit/d08d2d859673c3307c94d487a50d998b20e8f02a
+

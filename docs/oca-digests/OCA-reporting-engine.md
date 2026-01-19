@@ -97,3 +97,7 @@
 
 - Commit e677975: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/e67797518838fe3c75c62160e2c6372f058aeb47
 
+## 2026-01-19
+
+- Commit d50b0c5: Translated using Weblate (Slovenian) → https://github.com/OCA/reporting-engine/commit/d50b0c5e23baf983a533034c496e3acf28778019
+

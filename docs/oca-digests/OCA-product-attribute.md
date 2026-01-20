@@ -156,3 +156,7 @@
 - Commit 7f1c871: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/7f1c87110d550f58e783e7a228572ed8f30abbd6
 - Commit 22838a8: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/22838a8d11fb5df98c2aaab3bed3a7d773db28be
 
+## 2026-01-20
+
+- Commit 31ba386: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/31ba3861fe4678c3cb0f0e53e5253e708d2139b8
+

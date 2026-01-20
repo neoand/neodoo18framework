@@ -137,3 +137,10 @@
 - Commit 91523d9: Merge PR #2200 into 18.0 → https://github.com/OCA/account-financial-tools/commit/91523d921a493888a5020b0aa3a9f285d7262659
 - Commit f51b28b: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/f51b28bc4a5d83ebc8ac7d51b7be98cd60a6b8c4
 
+## 2026-01-20
+
+- Commit 1c2cc41: [FIX] account_check_deposit: fix crash in method to get counterpart account → https://github.com/OCA/account-financial-tools/commit/1c2cc417e76f9cadaf5b76c10c2dd7526c0ffe67
+- Commit d3a219e: [IMP] account_check_deposit: use Command.create() instead of (0, 0, {}) → https://github.com/OCA/account-financial-tools/commit/d3a219e57bfc243b45edf175cda050e183734762
+- Commit 614cf07: Merge PR #2202 into 18.0 → https://github.com/OCA/account-financial-tools/commit/614cf074f71a4ed46b5b2313af8a54187e17c4be
+- Commit 758846d: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/758846df89df97d21a2ac3e1e72ca243d48b2bdd
+

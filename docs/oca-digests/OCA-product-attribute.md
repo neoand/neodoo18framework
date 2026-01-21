@@ -160,3 +160,11 @@
 
 - Commit 31ba386: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/31ba3861fe4678c3cb0f0e53e5253e708d2139b8
 
+## 2026-01-21
+
+- Commit b20e5db: Added translation using Weblate (Japanese (ja_JP) (ja_JP)) → https://github.com/OCA/product-attribute/commit/b20e5db395b39cb3b425b3fcaaf2a5cc6afaf8a8
+- Commit d27c113: Translated using Weblate (Japanese) → https://github.com/OCA/product-attribute/commit/d27c113d3105fae5c31807a8432df1baefa76818
+- Commit e42a38a: Merge PR #2173 into 18.0 → https://github.com/OCA/product-attribute/commit/e42a38aab294799a627162c466ab3cf154688c93
+- Commit fb7db9e: [UPD] Update product_profile.pot → https://github.com/OCA/product-attribute/commit/fb7db9e320b9cacd7b4750ce9ceabe8e164dbcfc
+- Commit a26cb4e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/a26cb4ecd3a3d340d7b2029313aac5155acd6322
+

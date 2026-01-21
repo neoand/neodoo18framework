@@ -144,3 +144,9 @@
 - Commit 614cf07: Merge PR #2202 into 18.0 → https://github.com/OCA/account-financial-tools/commit/614cf074f71a4ed46b5b2313af8a54187e17c4be
 - Commit 758846d: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/758846df89df97d21a2ac3e1e72ca243d48b2bdd
 
+## 2026-01-21
+
+- Commit 768ff91: Added translation using Weblate (German) → https://github.com/OCA/account-financial-tools/commit/768ff91c592da6fa2d74d1d1cc8b504aa8de7857
+- Commit 17a4cb8: Translated using Weblate (German) → https://github.com/OCA/account-financial-tools/commit/17a4cb8a0b51d0644240dc9dc98c54d1037348fb
+- Commit 246b326: Translated using Weblate (German) → https://github.com/OCA/account-financial-tools/commit/246b3263a3372ec131eb88cf072eafa391b2ed8e
+

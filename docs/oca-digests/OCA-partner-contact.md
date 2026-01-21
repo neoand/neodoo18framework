@@ -230,3 +230,11 @@
 - Commit 81915f1: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/81915f1de400c1a255847c37834b7b4e7a09624c
 - Commit 4c103fd: Update translation files → https://github.com/OCA/partner-contact/commit/4c103fd3aa12098f400acc64ffa10d48e0ea3068
 
+## 2026-01-21
+
+- Commit 47a72c9: [UPD] Update partner_firstname.pot → https://github.com/OCA/partner-contact/commit/47a72c9a9757a2b07c8bef54284677ceb3c737a3
+- Commit a9db488: [UPD] Update partner_type_base.pot → https://github.com/OCA/partner-contact/commit/a9db4889fc817d2054d96a90f066f8c771bfa750
+- Commit 99ae536: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/99ae53608b19c690e933929dc6f732491532e392
+- Commit 78722b9: Update translation files → https://github.com/OCA/partner-contact/commit/78722b941f42f24b61cfcadd5342331cfb0019c5
+- Commit c1f1a7d: Update translation files → https://github.com/OCA/partner-contact/commit/c1f1a7d7f6a544b629ff848f21a65a4bf940272b
+

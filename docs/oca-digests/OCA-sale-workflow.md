@@ -291,3 +291,11 @@
 - Commit 90d101c: Merge PR #4090 into 18.0 → https://github.com/OCA/sale-workflow/commit/90d101cd153dd25f93c6279d9c3562e3f9094e97
 - Commit 7cb4c4d: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/7cb4c4d900feda62b48956c14ca8d57d1be79607
 
+## 2026-01-21
+
+- Commit 4da97df: [UPD] Update sale_order_split_strategy.pot → https://github.com/OCA/sale-workflow/commit/4da97dfc6e479d708d12a8ca1b17c7c42887d3a3
+- Commit 3667ea0: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/3667ea0447e5c2a69d0000c26c05c861aa947e89
+- Commit 6f4c134: Update translation files → https://github.com/OCA/sale-workflow/commit/6f4c1347842d4cf5c764261130adeb644496562a
+- Commit f5e0546: Merge PR #4016 into 18.0 → https://github.com/OCA/sale-workflow/commit/f5e05468742372701bd395a133e067c9445531dd
+- Commit a30c6f9: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/a30c6f9af9c71470cd4537b55d0ec364e27ddbe2
+

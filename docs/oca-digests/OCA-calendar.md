@@ -26,3 +26,9 @@
 - Commit 2142faf: Merge PR #189 into 18.0 → https://github.com/OCA/calendar/commit/2142faf78fe88b7554d0e00011c6ed7ba4bb83a6
 - Commit d531dcb: [BOT] post-merge updates → https://github.com/OCA/calendar/commit/d531dcb8bbc18dd95ca9783ea9db9da70b25e3d2
 
+## 2026-01-22
+
+- Commit 513ee99: [IMP] resource_booking: handle partner_ids safely  → https://github.com/OCA/calendar/commit/513ee99f1bd2b2dbe4a2eaab9f8ede092d8017d8
+- Commit 7847448: Merge PR #200 into 18.0 → https://github.com/OCA/calendar/commit/7847448ba900b26bdbb5832ab7e6138516875232
+- Commit 4542eff: [BOT] post-merge updates → https://github.com/OCA/calendar/commit/4542eff13eed2db822d68297886aae980ef4818f
+

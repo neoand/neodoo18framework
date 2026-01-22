@@ -147,3 +147,7 @@
 - Commit cc3e669: [UPD] Update project_task_stage_lock.pot → https://github.com/OCA/project/commit/cc3e6697687741f4c716d4b3c155a5c40589d65c
 - Commit 1d77625: [BOT] post-merge updates → https://github.com/OCA/project/commit/1d77625a0c2a8705177c6b36f4702d06c65e9aa8
 
+## 2026-01-22
+
+- Commit 8cd2df0: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/8cd2df05c6218e42ba10444c7c2ced2f3b5a5b9f
+

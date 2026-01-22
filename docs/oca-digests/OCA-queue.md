@@ -27,3 +27,10 @@
 - Commit 5950735: Merge PR #873 into 18.0 → https://github.com/OCA/queue/commit/595073583d82ccb53375c571ad0fe1406ef61159
 - Commit 7ba8b45: [BOT] post-merge updates → https://github.com/OCA/queue/commit/7ba8b45758627b8e477621d7712eb3ce24dba767
 
+## 2026-01-22
+
+- Commit fa6a52c: [FIX] test_queue_job: also add an _unregister_hook function that reverts patches → https://github.com/OCA/queue/commit/fa6a52c7179ea8413d5086a3526c4c5dfcaf8e43
+- Commit ac897ea: Merge PR #875 into 18.0 → https://github.com/OCA/queue/commit/ac897ea6afece41f79c6b464da8e1e1cb08c52ef
+- Commit f209d61: [BOT] post-merge updates → https://github.com/OCA/queue/commit/f209d61fa7f7e3e4ce0b819c285a828d83f8be3c
+- Commit da1494b: Translated using Weblate (Turkish) → https://github.com/OCA/queue/commit/da1494bee3686ecca1de01ffab927087a65b5413
+

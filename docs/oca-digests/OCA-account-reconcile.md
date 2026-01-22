@@ -126,3 +126,11 @@
 - Commit e5c2b1b: Added translation using Weblate (German) → https://github.com/OCA/account-reconcile/commit/e5c2b1b0f6e72dba9e9471e8a015d35a360aefc0
 - Commit cb1ce41: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/cb1ce4170080ae2d8c7c5015356991eb81bd0d08
 
+## 2026-01-22
+
+- Commit e40adbb: [MIG] account_reconcile_oca_add_default_filters: migrate 16 -> 18 → https://github.com/OCA/account-reconcile/commit/e40adbb71ffd591590893971bf7174284e83d2af
+- Commit 88179e0: [IMP] account_reconcile_oca_add_default_filters: add FR translation → https://github.com/OCA/account-reconcile/commit/88179e028cd65bd4c2657a81c2f96bb32001e43a
+- Commit d9823ed: Merge PR #948 into 18.0 → https://github.com/OCA/account-reconcile/commit/d9823edc45fc7f22cafe75f82ed026362db31062
+- Commit 3c3bf65: [UPD] Update account_reconcile_oca_add_default_filters.pot → https://github.com/OCA/account-reconcile/commit/3c3bf6519db5bb9b952e155a79e417ba1f627c03
+- Commit 604d41f: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/604d41fba5de8d282ac6f63b37e6d097d78c3062
+

@@ -184,3 +184,8 @@
 - Commit bf2f080: [OU-FIX] website_sale_product_attachment: Required fields → https://github.com/OCA/OpenUpgrade/commit/bf2f0808ab373f06af13b3c926f7c980a1813df0
 - Commit e2d6a60: Merge pull request #5486 from Tecnativa/18.0-ou_fix-website_sale_product_attachment-sql → https://github.com/OCA/OpenUpgrade/commit/e2d6a6080e206d693b398d5ee56b5df7820a7f0e
 
+## 2026-01-22
+
+- Commit 5754a22: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/5754a222fbf41781833805e22dbd4ea88e229866
+- Commit 5810f9a: Merge pull request #5488 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/5810f9a52b14e21e5be3eae03774aee6ddf9aa3d
+

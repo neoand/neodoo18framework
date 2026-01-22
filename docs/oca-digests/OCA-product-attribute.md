@@ -168,3 +168,7 @@
 - Commit fb7db9e: [UPD] Update product_profile.pot → https://github.com/OCA/product-attribute/commit/fb7db9e320b9cacd7b4750ce9ceabe8e164dbcfc
 - Commit a26cb4e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/a26cb4ecd3a3d340d7b2029313aac5155acd6322
 
+## 2026-01-22
+
+- Commit 636ac5c: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/636ac5c51c08cc921bb616d3454717b72462ea74
+

@@ -89,3 +89,8 @@
 
 - Commit f8542ac: Translated using Weblate (Italian) → https://github.com/OCA/multi-company/commit/f8542ac919786aceb3459bafcc8c2c0c72dc76a9
 
+## 2026-01-22
+
+- Commit 963ca3e: Merge PR #910 into 18.0 → https://github.com/OCA/multi-company/commit/963ca3e08529062ce5f4e927285dad2d5a103abe
+- Commit a843547: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/a843547132aed936139c0a3bf23a8fca3d1582bf
+

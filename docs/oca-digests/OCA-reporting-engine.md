@@ -101,3 +101,8 @@
 
 - Commit d50b0c5: Translated using Weblate (Slovenian) → https://github.com/OCA/reporting-engine/commit/d50b0c5e23baf983a533034c496e3acf28778019
 
+## 2026-01-23
+
+- Commit 94a1a53: Translated using Weblate (Slovenian) → https://github.com/OCA/reporting-engine/commit/94a1a53d2ef2f30f317f31f5b52f697a340c97f7
+- Commit 152f30e: Translated using Weblate (Slovenian) → https://github.com/OCA/reporting-engine/commit/152f30e0c682ba00cbc6a9de4a0c4f3f837c88ed
+

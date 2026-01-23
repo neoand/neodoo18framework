@@ -151,3 +151,7 @@
 
 - Commit 8cd2df0: Added translation using Weblate (Italian) → https://github.com/OCA/project/commit/8cd2df05c6218e42ba10444c7c2ced2f3b5a5b9f
 
+## 2026-01-23
+
+- Commit 1cea9bb: Translated using Weblate (Slovenian) → https://github.com/OCA/project/commit/1cea9bb1e7007f048b54187a9b0194c6f99df473
+

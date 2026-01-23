@@ -172,3 +172,7 @@
 
 - Commit 636ac5c: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/636ac5c51c08cc921bb616d3454717b72462ea74
 
+## 2026-01-23
+
+- Commit 4177ad7: Translated using Weblate (Slovenian) → https://github.com/OCA/product-attribute/commit/4177ad73dc1bfe676640dcdc881b1cf640358501
+

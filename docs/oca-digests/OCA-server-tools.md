@@ -169,3 +169,9 @@
 - Commit f7b6e73: Translated using Weblate (Turkish) → https://github.com/OCA/server-tools/commit/f7b6e73171e6c6b3a7d2c282882f0b8f3c43947a
 - Commit 57e2aed: Translated using Weblate (Turkish) → https://github.com/OCA/server-tools/commit/57e2aed2868ca4e66fdd054916b681c39d7e0d45
 
+## 2026-01-23
+
+- Commit d9c93ff: Translated using Weblate (Turkish) → https://github.com/OCA/server-tools/commit/d9c93fffa1aeb0366e6129727b11fcfd1c3d5d86
+- Commit fe5a61c: Translated using Weblate (Slovenian) → https://github.com/OCA/server-tools/commit/fe5a61cf923dfb5babbe3fc85c21edcd0f12e508
+- Commit 63e753f: Translated using Weblate (Slovenian) → https://github.com/OCA/server-tools/commit/63e753fdeb7c2a5f97f3468bb6435e1a9f7200ef
+

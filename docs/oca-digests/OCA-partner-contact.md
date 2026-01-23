@@ -238,3 +238,9 @@
 - Commit 78722b9: Update translation files → https://github.com/OCA/partner-contact/commit/78722b941f42f24b61cfcadd5342331cfb0019c5
 - Commit c1f1a7d: Update translation files → https://github.com/OCA/partner-contact/commit/c1f1a7d7f6a544b629ff848f21a65a4bf940272b
 
+## 2026-01-23
+
+- Commit a6814ae: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/a6814aeb137c6b4f0fe65cf4d0c930d75eed3c12
+- Commit 695bf7a: Translated using Weblate (Turkish) → https://github.com/OCA/partner-contact/commit/695bf7a6186bf2bfe183c9bce057ec5d7537fa0b
+- Commit f4b29c4: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/f4b29c41e5cb69fb32c16f13b941a830c375e06d
+

@@ -303,3 +303,11 @@
 
 - Commit 33f2e5e: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/33f2e5eb34d84b66804862b7e53db307c38afc2d
 
+## 2026-01-23
+
+- Commit c514fc9: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/c514fc918f40d41ed5ed98039c36cc928b593512
+- Commit 3403d3f: Merge PR #3718 into 18.0 → https://github.com/OCA/sale-workflow/commit/3403d3f92cda118186f87933adf02ff1c32668dd
+- Commit fd63a94: [UPD] Update sale_invoice_plan.pot → https://github.com/OCA/sale-workflow/commit/fd63a94369860e63d6acf290f5f2b186e79bfeec
+- Commit 69da376: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/69da3769e3f0dc75b167abc2dfade52ece48ed4d
+- Commit cff8a21: Translated using Weblate (Slovenian) → https://github.com/OCA/sale-workflow/commit/cff8a21c9ce97dc0f420d5fb029b69804e3db9aa
+

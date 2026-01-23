@@ -70,3 +70,7 @@
 - Commit 6e10508: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/6e10508080edc35016554db2d0683a11370954db
 - Commit 35fdcba: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/35fdcba8d1ca8983e6fd9ff35d4686ddc31d3a30
 
+## 2026-01-23
+
+- Commit c6a676c: Translated using Weblate (Slovenian) → https://github.com/OCA/management-system/commit/c6a676ce7682d7c42126a1f6eb93565500861d5d
+

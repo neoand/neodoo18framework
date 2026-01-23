@@ -134,3 +134,11 @@
 - Commit 3c3bf65: [UPD] Update account_reconcile_oca_add_default_filters.pot → https://github.com/OCA/account-reconcile/commit/3c3bf6519db5bb9b952e155a79e417ba1f627c03
 - Commit 604d41f: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/604d41fba5de8d282ac6f63b37e6d097d78c3062
 
+## 2026-01-23
+
+- Commit 3659db3: account_reconcile_oca: hide deprecated accounts in Manual Operation field → https://github.com/OCA/account-reconcile/commit/3659db3e901668d32a0f1510b7e48c44eaaf00e5
+- Commit 8867dcd: Merge PR #951 into 18.0 → https://github.com/OCA/account-reconcile/commit/8867dcdb6e42c4e9bdee00627de58007b10558d1
+- Commit c85c8bf: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/c85c8bfc455de133bdc6965e1055b91020883106
+- Commit d51bd9f: Translated using Weblate (Turkish) → https://github.com/OCA/account-reconcile/commit/d51bd9f10e51c1bc1695bad781b40de43e9c85d6
+- Commit 9b9695f: Translated using Weblate (Turkish) → https://github.com/OCA/account-reconcile/commit/9b9695f4d3b7464616eba0b3a042242f52313c5c
+

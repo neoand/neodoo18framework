@@ -10,18 +10,18 @@
     "OCA/reporting-engine@18.0::commits": "152f30e0c682ba00cbc6a9de4a0c4f3f837c88ed",
     "OCA/server-tools@18.0::commits": "63e753fdeb7c2a5f97f3468bb6435e1a9f7200ef",
     "OCA/OpenUpgrade@18.0::commits": "8cee7c47eec32516461383edf8c1d00e21fe3f61",
-    "OCA/web@18.0::commits": "2eb00c25aa1cf8f1319cce3a18aad322bb534722",
+    "OCA/web@18.0::commits": "1373636a06f99de688aa1b4c73c5935611408f44",
     "OCA/partner-contact@18.0::commits": "f4b29c41e5cb69fb32c16f13b941a830c375e06d",
     "OCA/queue@18.0::commits": "da1494bee3686ecca1de01ffab927087a65b5413",
     "OCA/management-system@18.0::commits": "c6a676ce7682d7c42126a1f6eb93565500861d5d",
     "OCA/product-attribute@18.0::commits": "4177ad73dc1bfe676640dcdc881b1cf640358501",
     "OCA/calendar@18.0::commits": "4542eff13eed2db822d68297886aae980ef4818f",
-    "OCA/bank-statement-import@18.0::commits": "27a731810c96a6b9691340205652766f1cbe25de",
+    "OCA/bank-statement-import@18.0::commits": "1a25929d0e849e5be126190051f37150e4600611",
     "OCA/multi-company@18.0::commits": "a843547132aed936139c0a3bf23a8fca3d1582bf",
     "OCA/knowledge@18.0::commits": "0881d75a35e7fc2f814110df4878177e805e589b",
     "OCA/account-reconcile@18.0::commits": "9b9695f4d3b7464616eba0b3a042242f52313c5c",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "bd64e89f0f81fde66b54ff6c6d86f6d8bfe77460"
   },
-  "updated_at": "2026-01-23T02:38:20.340286+00:00"
+  "updated_at": "2026-01-24T02:34:57.928484+00:00"
 }

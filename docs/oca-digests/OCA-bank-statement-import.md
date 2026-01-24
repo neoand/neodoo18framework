@@ -76,3 +76,9 @@
 - Commit 9cec152: Translated using Weblate (German) → https://github.com/OCA/bank-statement-import/commit/9cec1527e86c421963ee7ee2cad1be5c7ebe564d
 - Commit 27a7318: Translated using Weblate (German) → https://github.com/OCA/bank-statement-import/commit/27a731810c96a6b9691340205652766f1cbe25de
 
+## 2026-01-24
+
+- Commit e954fed: [IMP] account_statement_import_camt: support datetime (DtTm) as booking date → https://github.com/OCA/bank-statement-import/commit/e954fed0c204b2891cb0df81a5a95d8e42a1abf9
+- Commit c047d3a: Merge PR #895 into 18.0 → https://github.com/OCA/bank-statement-import/commit/c047d3a085aa5f0a9e06e10a7fc0662c44371bc2
+- Commit 1a25929: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/1a25929d0e849e5be126190051f37150e4600611
+

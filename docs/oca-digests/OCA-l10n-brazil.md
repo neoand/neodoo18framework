@@ -159,3 +159,9 @@
 - Commit 16211e4: Merge PR #4363 into 18.0 → https://github.com/OCA/l10n-brazil/commit/16211e45bb6bb9aeae734d82cdd52ef7d0583a89
 - Commit a6e19d0: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/a6e19d08c03d113035001d4be92237c3d419cff0
 
+## 2026-01-26
+
+- Commit 1d89bc9: [REF] l10n_br_nfse: tests don't depend on demo → https://github.com/OCA/l10n-brazil/commit/1d89bc9a8312b2829613f2d2e36ee624d11b4962
+- Commit e0b938d: Merge PR #4326 into 18.0 → https://github.com/OCA/l10n-brazil/commit/e0b938d98aa85cc9924601997f326c4a960f448c
+- Commit c57b65e: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/c57b65ef3f62b32957d6808dd87f8fb7faba3f60
+

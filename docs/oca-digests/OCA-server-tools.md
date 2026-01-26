@@ -175,3 +175,11 @@
 - Commit fe5a61c: Translated using Weblate (Slovenian) → https://github.com/OCA/server-tools/commit/fe5a61cf923dfb5babbe3fc85c21edcd0f12e508
 - Commit 63e753f: Translated using Weblate (Slovenian) → https://github.com/OCA/server-tools/commit/63e753fdeb7c2a5f97f3468bb6435e1a9f7200ef
 
+## 2026-01-26
+
+- Commit 81de1d0: [UPD] Update sequence_python.pot → https://github.com/OCA/server-tools/commit/81de1d097c4daf62383d76fa42bd7e213de95d21
+- Commit ce786c2: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/ce786c2760c67b1520973018c87105a434870b9d
+- Commit bbb4414: Merge PR #3312 into 18.0 → https://github.com/OCA/server-tools/commit/bbb44147912f86376be331cd7081f1d8ebd37249
+- Commit 7f9b9b2: [UPD] Update attachment_delete_restrict.pot → https://github.com/OCA/server-tools/commit/7f9b9b24138d95a0dbf82e0c5f5fe162f5c97736
+- Commit 09180fa: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/09180fad351a0e25880a4909614c8d232d0d4551
+

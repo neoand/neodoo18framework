@@ -244,3 +244,9 @@
 - Commit 695bf7a: Translated using Weblate (Turkish) → https://github.com/OCA/partner-contact/commit/695bf7a6186bf2bfe183c9bce057ec5d7537fa0b
 - Commit f4b29c4: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/f4b29c41e5cb69fb32c16f13b941a830c375e06d
 
+## 2026-01-26
+
+- Commit 0a54b1f: [FIX] partner_firstname: use correct config parameter key → https://github.com/OCA/partner-contact/commit/0a54b1f69a3c44edc6646c63e3b709d105927af6
+- Commit 5f96640: Merge PR #2272 into 18.0 → https://github.com/OCA/partner-contact/commit/5f966406a4788760f1bbb3e59795690a1cc602bf
+- Commit 0afcf55: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/0afcf55e80b1811cc9e920d71ccc3f7cd324fe00
+

@@ -250,3 +250,9 @@
 - Commit 5f96640: Merge PR #2272 into 18.0 → https://github.com/OCA/partner-contact/commit/5f966406a4788760f1bbb3e59795690a1cc602bf
 - Commit 0afcf55: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/0afcf55e80b1811cc9e920d71ccc3f7cd324fe00
 
+## 2026-01-27
+
+- Commit ed045fd: Merge PR #1990 into 18.0 → https://github.com/OCA/partner-contact/commit/ed045fdaf0276a7549d71de650be80ae305b6572
+- Commit 6099995: [UPD] Update partner_identification_eori.pot → https://github.com/OCA/partner-contact/commit/6099995a9a0cd6721fe127ef716b473ae007460b
+- Commit 6f381c1: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/6f381c10f2b888052d6242e47f1a34c57319eb9f
+

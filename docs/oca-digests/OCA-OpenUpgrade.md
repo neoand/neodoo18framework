@@ -194,3 +194,8 @@
 - Commit 4ff0efa: [MIG] payment_worldline → https://github.com/OCA/OpenUpgrade/commit/4ff0efa52636ac4527093a0aa8984befc19da87f
 - Commit 8cee7c4: Merge PR #5490 into 18.0 → https://github.com/OCA/OpenUpgrade/commit/8cee7c47eec32516461383edf8c1d00e21fe3f61
 
+## 2026-01-27
+
+- Commit c51eb13: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/c51eb136c3448f89a9600e84bc6aef9b4be7876c
+- Commit cfb0c5b: Merge pull request #5494 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/cfb0c5b5a46b271841482674577983faa38b83b2
+

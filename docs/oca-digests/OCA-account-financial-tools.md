@@ -155,3 +155,8 @@
 - Commit 58f1512: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/58f1512dc8f199ce348d09e1020eadee55bfcb4e
 - Commit 197da4f: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/197da4f303fdf5a8fdcb2bfd4587b21b5ba747e5
 
+## 2026-01-27
+
+- Commit 68e592a: Added translation using Weblate (Danish) → https://github.com/OCA/account-financial-tools/commit/68e592a04db7393d15c462c47eb444ff5e8f9215
+- Commit ec345c9: Translated using Weblate (Danish) → https://github.com/OCA/account-financial-tools/commit/ec345c930e917d07443689b626cbe5575eb8e29f
+

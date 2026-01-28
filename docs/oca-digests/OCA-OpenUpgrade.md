@@ -199,3 +199,8 @@
 - Commit c51eb13: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/c51eb136c3448f89a9600e84bc6aef9b4be7876c
 - Commit cfb0c5b: Merge pull request #5494 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/cfb0c5b5a46b271841482674577983faa38b83b2
 
+## 2026-01-28
+
+- Commit 12998ac: Merge pull request #5379 from Borruso/18.0-mig-commission_formula-commission_formula_oca → https://github.com/OCA/OpenUpgrade/commit/12998ac684d94e32ff64013119fa7cfcdf55a182
+- Commit be65a20: Merge pull request #5389 from hbrunn/18.0-analysis-v19+improvements → https://github.com/OCA/OpenUpgrade/commit/be65a20ea45b2622b25f91fe4d863b1b8dd5d98f
+

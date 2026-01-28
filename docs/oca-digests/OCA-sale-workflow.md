@@ -316,3 +316,11 @@
 - Commit bc0e0bc: Merge PR #4122 into 18.0 → https://github.com/OCA/sale-workflow/commit/bc0e0bc2d251591266d30118bcfa7fc253863fe8
 - Commit a8cdf23: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/a8cdf2366296de6419f85a6e86537c5d8985f0fb
 
+## 2026-01-28
+
+- Commit 7279f1a: [UPD] Update sale_validity_auto_cancel.pot → https://github.com/OCA/sale-workflow/commit/7279f1ad85b74d8e04693216a0cab5bf7fded7f3
+- Commit 4d54a56: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/4d54a56592410140fdd32a7c57a100954b62a523
+- Commit 31815d8: Added translation using Weblate (Turkish (tr_TR)) → https://github.com/OCA/sale-workflow/commit/31815d8aa26496fb399f70289f2bd6d577e9d0b9
+- Commit 876222f: Added translation using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/876222f3cd8280c882a4e816c23677f4808c329f
+- Commit 648b1d4: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/648b1d43ccc6b294c0f305742384c4efac68734f
+

@@ -155,3 +155,11 @@
 
 - Commit 1cea9bb: Translated using Weblate (Slovenian) → https://github.com/OCA/project/commit/1cea9bb1e7007f048b54187a9b0194c6f99df473
 
+## 2026-01-28
+
+- Commit bcf930c: [IMP] project_task_related: pre-commit auto fixes → https://github.com/OCA/project/commit/bcf930c12b88511b52d3e093ba1195aa62f91df6
+- Commit bfcd29c: [MIG] project_task_related: Migration to 18.0 → https://github.com/OCA/project/commit/bfcd29c67582e694e4b1b0b5d3f677dc9be9741e
+- Commit be220f9: Merge PR #1662 into 18.0 → https://github.com/OCA/project/commit/be220f946edc24e0db7e0155ed7ce2d514d13589
+- Commit 478f494: [UPD] Update project_task_related.pot → https://github.com/OCA/project/commit/478f494b480d23d0d26db50579fcbe1f3ffadd91
+- Commit 488e19e: [BOT] post-merge updates → https://github.com/OCA/project/commit/488e19e784a9d3021f746842570c42cfad8220e8
+

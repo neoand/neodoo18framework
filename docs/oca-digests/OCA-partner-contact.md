@@ -256,3 +256,8 @@
 - Commit 6099995: [UPD] Update partner_identification_eori.pot → https://github.com/OCA/partner-contact/commit/6099995a9a0cd6721fe127ef716b473ae007460b
 - Commit 6f381c1: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/6f381c10f2b888052d6242e47f1a34c57319eb9f
 
+## 2026-01-29
+
+- Commit efc9225: Added translation using Weblate (Turkish) → https://github.com/OCA/partner-contact/commit/efc9225bc98659b0195e522903cab2a43d7b20d4
+- Commit efbe6b1: Translated using Weblate (Turkish) → https://github.com/OCA/partner-contact/commit/efbe6b1a747ff0dc53ab0e2a1f55ef25619ace26
+

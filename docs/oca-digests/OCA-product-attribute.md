@@ -176,3 +176,9 @@
 
 - Commit 4177ad7: Translated using Weblate (Slovenian) → https://github.com/OCA/product-attribute/commit/4177ad73dc1bfe676640dcdc881b1cf640358501
 
+## 2026-01-29
+
+- Commit 9d39e91: [IMP] product_supplierinfo_import: Make tests more resilients → https://github.com/OCA/product-attribute/commit/9d39e91daeb95b19b716ecc90e4ce133013a7765
+- Commit dfce4df: Merge PR #2195 into 18.0 → https://github.com/OCA/product-attribute/commit/dfce4df3d598a23758fd51ebb8b904273a199cfe
+- Commit b59cc26: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/b59cc26b31a38ef94ec229d76dad0e874ff826ff
+

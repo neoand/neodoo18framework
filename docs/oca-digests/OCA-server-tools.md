@@ -183,3 +183,11 @@
 - Commit 7f9b9b2: [UPD] Update attachment_delete_restrict.pot → https://github.com/OCA/server-tools/commit/7f9b9b24138d95a0dbf82e0c5f5fe162f5c97736
 - Commit 09180fa: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/09180fad351a0e25880a4909614c8d232d0d4551
 
+## 2026-01-29
+
+- Commit 107beae: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/107beae02e989bc0ef4f5eac87a632b1c5011ca2
+- Commit 3abe879: Merge PR #3503 into 18.0 → https://github.com/OCA/server-tools/commit/3abe879fde9e0fdba99551bfb872bab25b0a78a1
+- Commit c1ca5e6: [UPD] Update fetchmail_attach_from_folder.pot → https://github.com/OCA/server-tools/commit/c1ca5e601c294d71ca8d00fde8c4b3f85c6cd0a9
+- Commit 7b1952e: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/7b1952e9ced9e0ccaf72426d09dca451853fae76
+- Commit dfcf0b5: Update translation files → https://github.com/OCA/server-tools/commit/dfcf0b562f9e5349b76299761146581984741b6a
+

@@ -324,3 +324,10 @@
 - Commit 876222f: Added translation using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/876222f3cd8280c882a4e816c23677f4808c329f
 - Commit 648b1d4: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/648b1d43ccc6b294c0f305742384c4efac68734f
 
+## 2026-01-29
+
+- Commit c647b65: Merge PR #4011 into 18.0 → https://github.com/OCA/sale-workflow/commit/c647b6502c082222d672c06c6b377e8d362f7399
+- Commit 91be09c: [UPD] Update sale_order_lot_selection.pot → https://github.com/OCA/sale-workflow/commit/91be09cd514eb2cc0dca04d14688bc1571885776
+- Commit b9de4f8: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/b9de4f8427806e81366eb145fb06e9da944741e6
+- Commit f61921b: Update translation files → https://github.com/OCA/sale-workflow/commit/f61921b800be1a8ffb1c5086ca79bf77310bef45
+

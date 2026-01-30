@@ -165,3 +165,9 @@
 - Commit b18edbc: Added translation using Weblate (German) → https://github.com/OCA/account-financial-tools/commit/b18edbc6689f183c5315f83c702cad2bb97d1efe
 - Commit 824283c: Translated using Weblate (German) → https://github.com/OCA/account-financial-tools/commit/824283ce9673fcad8a1788b863178faca4096af9
 
+## 2026-01-30
+
+- Commit 6426071: Merge PR #2159 into 18.0 → https://github.com/OCA/account-financial-tools/commit/6426071b8648bda268a025925583355446ee00d1
+- Commit 3a1b541: [UPD] Update account_fiscal_month.pot → https://github.com/OCA/account-financial-tools/commit/3a1b5411acd054edb027ef3b4013a1d2510c61c0
+- Commit 3dcf88d: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/3dcf88d524afb6f4ce806cf01d5d8766b6aa9661
+

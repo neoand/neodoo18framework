@@ -106,3 +106,8 @@
 - Commit 94a1a53: Translated using Weblate (Slovenian) → https://github.com/OCA/reporting-engine/commit/94a1a53d2ef2f30f317f31f5b52f697a340c97f7
 - Commit 152f30e: Translated using Weblate (Slovenian) → https://github.com/OCA/reporting-engine/commit/152f30e0c682ba00cbc6a9de4a0c4f3f837c88ed
 
+## 2026-01-30
+
+- Commit cef50e6: Merge PR #1074 into 18.0 → https://github.com/OCA/reporting-engine/commit/cef50e607e34eff2e089536999ba148893b97022
+- Commit a20e349: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/a20e349bc2e755c4dbf9db6025c9c3040adbdaed
+

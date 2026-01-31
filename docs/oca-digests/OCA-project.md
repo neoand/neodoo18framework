@@ -163,3 +163,9 @@
 - Commit 478f494: [UPD] Update project_task_related.pot → https://github.com/OCA/project/commit/478f494b480d23d0d26db50579fcbe1f3ffadd91
 - Commit 488e19e: [BOT] post-merge updates → https://github.com/OCA/project/commit/488e19e784a9d3021f746842570c42cfad8220e8
 
+## 2026-01-31
+
+- Commit 0af8afc: Merge PR #1651 into 18.0 → https://github.com/OCA/project/commit/0af8afc6d80ae9029d48fb6d7389b8b4f9f308e7
+- Commit 6a155ff: [UPD] Update project_task_stage_change_restriction.pot → https://github.com/OCA/project/commit/6a155ff26f056c4c0a3362cca8844e8056e27e4d
+- Commit a43d29f: [BOT] post-merge updates → https://github.com/OCA/project/commit/a43d29f53b8172e1c0fb95d878986f057cb2e96a
+

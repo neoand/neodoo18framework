@@ -142,3 +142,9 @@
 - Commit d51bd9f: Translated using Weblate (Turkish) → https://github.com/OCA/account-reconcile/commit/d51bd9f10e51c1bc1695bad781b40de43e9c85d6
 - Commit 9b9695f: Translated using Weblate (Turkish) → https://github.com/OCA/account-reconcile/commit/9b9695f4d3b7464616eba0b3a042242f52313c5c
 
+## 2026-01-31
+
+- Commit 024284a: [18.0][FIX] account_move_base_import: Use dedicated partner to fix test failure → https://github.com/OCA/account-reconcile/commit/024284a1469499008c8715818d73d3c77a0d815f
+- Commit 8827d1d: Merge PR #953 into 18.0 → https://github.com/OCA/account-reconcile/commit/8827d1d85445ff8884dbc4811cd2a82057123109
+- Commit 3342b2c: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/3342b2c0c3adcf469fac4da526d05f7ae27366c4
+

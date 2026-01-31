@@ -94,3 +94,9 @@
 - Commit 963ca3e: Merge PR #910 into 18.0 → https://github.com/OCA/multi-company/commit/963ca3e08529062ce5f4e927285dad2d5a103abe
 - Commit a843547: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/a843547132aed936139c0a3bf23a8fca3d1582bf
 
+## 2026-01-31
+
+- Commit 35e45c0: [FIX] base_multi_company: company_ids UID context dependent → https://github.com/OCA/multi-company/commit/35e45c098390c76240f0acaedbfc829cb4bebc06
+- Commit a8840c0: Merge PR #932 into 18.0 → https://github.com/OCA/multi-company/commit/a8840c047b5906174278856ea70ea03ac767c3ab
+- Commit cf5b4d1: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/cf5b4d1bef7344f5fd9113ee6a851370f7eb9004
+

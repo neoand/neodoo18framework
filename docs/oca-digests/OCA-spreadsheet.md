@@ -71,3 +71,7 @@
 - Commit 279253c: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/279253c914b423548e09fc192502a0f13c7b9394
 - Commit bd64e89: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/bd64e89f0f81fde66b54ff6c6d86f6d8bfe77460
 
+## 2026-02-02
+
+- Commit 5013d52: Translated using Weblate (Slovenian) → https://github.com/OCA/spreadsheet/commit/5013d52ee8a1ab98013ecb705f65bf30326172fc
+

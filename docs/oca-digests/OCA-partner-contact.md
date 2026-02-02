@@ -261,3 +261,11 @@
 - Commit efc9225: Added translation using Weblate (Turkish) → https://github.com/OCA/partner-contact/commit/efc9225bc98659b0195e522903cab2a43d7b20d4
 - Commit efbe6b1: Translated using Weblate (Turkish) → https://github.com/OCA/partner-contact/commit/efbe6b1a747ff0dc53ab0e2a1f55ef25619ace26
 
+## 2026-02-02
+
+- Commit d036c7a: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/d036c7aafce27f25d93bb635746e9a01ecd02e5c
+- Commit dd3867d: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/dd3867d482c0585725f02457878392080e289527
+- Commit 567c676: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/567c67646ab7393441e17a1b568c9be084ad42e8
+- Commit e73be5c: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/e73be5c279d794961fb2177200855f6507f6f8e2
+- Commit 1a7a408: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/1a7a408945ed4d8dd6b9a061dfe5b7f2ad53bc83
+

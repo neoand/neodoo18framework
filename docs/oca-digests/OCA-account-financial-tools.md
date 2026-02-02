@@ -171,3 +171,11 @@
 - Commit 3a1b541: [UPD] Update account_fiscal_month.pot → https://github.com/OCA/account-financial-tools/commit/3a1b5411acd054edb027ef3b4013a1d2510c61c0
 - Commit 3dcf88d: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/3dcf88d524afb6f4ce806cf01d5d8766b6aa9661
 
+## 2026-02-02
+
+- Commit 32f4cd2: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/32f4cd2ea0f679cc877facf4acabeb2b9504ee7f
+- Commit a98e3fe: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/a98e3fe54cdcac15dbb037fc149ce5647515d4df
+- Commit 10b8c12: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/10b8c12a7f9c8353190b3e82256e3e23f6c204ed
+- Commit 18ff08d: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/18ff08d0773880a7dabf3fd7172c9b185ba1e02c
+- Commit d8f612e: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/d8f612e3ee22b147d430eaee1e521882bf659430
+

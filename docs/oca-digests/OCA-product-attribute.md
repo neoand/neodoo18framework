@@ -182,3 +182,9 @@
 - Commit dfce4df: Merge PR #2195 into 18.0 → https://github.com/OCA/product-attribute/commit/dfce4df3d598a23758fd51ebb8b904273a199cfe
 - Commit b59cc26: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/b59cc26b31a38ef94ec229d76dad0e874ff826ff
 
+## 2026-02-02
+
+- Commit b8e656d: Merge PR #2191 into 18.0 → https://github.com/OCA/product-attribute/commit/b8e656d260cbf8fc7dc758396a773e374fd16788
+- Commit bc26ee6: [UPD] Update product_tag_view.pot → https://github.com/OCA/product-attribute/commit/bc26ee63b0f68011b511724b89537009fae0b3c9
+- Commit 0568d0f: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/0568d0f40b61307b0d2ae812094a679919f1ce7c
+

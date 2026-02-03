@@ -111,3 +111,9 @@
 - Commit cef50e6: Merge PR #1074 into 18.0 → https://github.com/OCA/reporting-engine/commit/cef50e607e34eff2e089536999ba148893b97022
 - Commit a20e349: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/a20e349bc2e755c4dbf9db6025c9c3040adbdaed
 
+## 2026-02-03
+
+- Commit 05fcea8: Merge PR #1113 into 18.0 → https://github.com/OCA/reporting-engine/commit/05fcea85ddacba9a4f60ea235931904bee53eaf8
+- Commit 22f4c0e: [UPD] Update report_partner_address.pot → https://github.com/OCA/reporting-engine/commit/22f4c0e60d9b552cd455b8b44f4d7e144e360d6b
+- Commit 7ef32a8: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/7ef32a8d88d3ca5934bd0005f7ca2b3d03cce8ae
+

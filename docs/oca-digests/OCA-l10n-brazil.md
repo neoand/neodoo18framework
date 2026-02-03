@@ -165,3 +165,9 @@
 - Commit e0b938d: Merge PR #4326 into 18.0 → https://github.com/OCA/l10n-brazil/commit/e0b938d98aa85cc9924601997f326c4a960f448c
 - Commit c57b65e: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/c57b65ef3f62b32957d6808dd87f8fb7faba3f60
 
+## 2026-02-03
+
+- Commit 26d2369: Merge PR #4336 into 18.0 → https://github.com/OCA/l10n-brazil/commit/26d23692df3176d150c7db3a6dbac0ae9f4adcdb
+- Commit 53dc5c2: [UPD] Update l10n_br_mis_report.pot → https://github.com/OCA/l10n-brazil/commit/53dc5c20251b5f981efe5d2c559518b02aff9a09
+- Commit e006b6a: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/e006b6a19d1adbb1d37130c76d5c5150c346ba4a
+

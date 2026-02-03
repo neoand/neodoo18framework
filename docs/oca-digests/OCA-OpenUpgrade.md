@@ -204,3 +204,10 @@
 - Commit 12998ac: Merge pull request #5379 from Borruso/18.0-mig-commission_formula-commission_formula_oca → https://github.com/OCA/OpenUpgrade/commit/12998ac684d94e32ff64013119fa7cfcdf55a182
 - Commit be65a20: Merge pull request #5389 from hbrunn/18.0-analysis-v19+improvements → https://github.com/OCA/OpenUpgrade/commit/be65a20ea45b2622b25f91fe4d863b1b8dd5d98f
 
+## 2026-02-03
+
+- Commit 0a2b174: [FIX] generate-{analysis,testdb}: pin version of google-auth → https://github.com/OCA/OpenUpgrade/commit/0a2b17400bc139757429c59731b7b422ec831e3f
+- Commit 57963a0: Merge pull request #5497 from hbrunn/18.0-fix-cronjobs-google-auth → https://github.com/OCA/OpenUpgrade/commit/57963a06c6045a068fe70e709e9ae5e2d10d92aa
+- Commit 95c24fc: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/95c24fc0dc5b90ae32bb49c6e8373307b36ab3b8
+- Commit 979eb39: Merge pull request #5498 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/979eb39b14a3fbcd21793af44bf7732491047edd
+

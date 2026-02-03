@@ -188,3 +188,11 @@
 - Commit bc26ee6: [UPD] Update product_tag_view.pot → https://github.com/OCA/product-attribute/commit/bc26ee63b0f68011b511724b89537009fae0b3c9
 - Commit 0568d0f: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/0568d0f40b61307b0d2ae812094a679919f1ce7c
 
+## 2026-02-03
+
+- Commit 8accf83: Update translation files → https://github.com/OCA/product-attribute/commit/8accf83257e97ef19a877f83fc42f994831e7145
+- Commit c9250d0: Update translation files → https://github.com/OCA/product-attribute/commit/c9250d07e11cb9300fa5fbe8466417e41eaaa539
+- Commit 064b47a: Update translation files → https://github.com/OCA/product-attribute/commit/064b47aec0e58cbe611a0edfb65886f5dbc376bf
+- Commit 0406521: Update translation files → https://github.com/OCA/product-attribute/commit/040652170e146145df290b1908448397d6025ac1
+- Commit fe29114: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/fe29114c28a8c08b63af23f05ef0f7954239a39d
+

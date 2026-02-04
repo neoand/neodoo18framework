@@ -34,3 +34,9 @@
 - Commit f209d61: [BOT] post-merge updates → https://github.com/OCA/queue/commit/f209d61fa7f7e3e4ce0b819c285a828d83f8be3c
 - Commit da1494b: Translated using Weblate (Turkish) → https://github.com/OCA/queue/commit/da1494bee3686ecca1de01ffab927087a65b5413
 
+## 2026-02-04
+
+- Commit cbfd948: [REF] queue_job: documentation cleanup → https://github.com/OCA/queue/commit/cbfd9486557a788ede719285cf76a6a25421bdae
+- Commit 9a24a3e: Merge PR #886 into 18.0 → https://github.com/OCA/queue/commit/9a24a3eb7f76e5e69038c82532fbd656e08b2871
+- Commit b4ec9b2: [BOT] post-merge updates → https://github.com/OCA/queue/commit/b4ec9b2425056a757419ee7f4008cf365ad08f48
+

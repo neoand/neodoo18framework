@@ -117,3 +117,7 @@
 - Commit 22f4c0e: [UPD] Update report_partner_address.pot → https://github.com/OCA/reporting-engine/commit/22f4c0e60d9b552cd455b8b44f4d7e144e360d6b
 - Commit 7ef32a8: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/7ef32a8d88d3ca5934bd0005f7ca2b3d03cce8ae
 
+## 2026-02-04
+
+- Commit 6d3b9f0: Added translation using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/6d3b9f0bcaca525044fcf336f229350a1c0d8eef
+

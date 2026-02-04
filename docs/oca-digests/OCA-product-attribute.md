@@ -196,3 +196,9 @@
 - Commit 0406521: Update translation files → https://github.com/OCA/product-attribute/commit/040652170e146145df290b1908448397d6025ac1
 - Commit fe29114: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/fe29114c28a8c08b63af23f05ef0f7954239a39d
 
+## 2026-02-04
+
+- Commit 5c8c482: Merge PR #2192 into 18.0 → https://github.com/OCA/product-attribute/commit/5c8c482bd3b2a802cb1f1713cb6a1696768adbf5
+- Commit 3144d87: [UPD] Update product_next_reception_date.pot → https://github.com/OCA/product-attribute/commit/3144d875f39efc95bb58309c56892701083ca2aa
+- Commit 44cd31e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/44cd31efbef2d90d73a7e2be5a025665203ea173
+

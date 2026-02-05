@@ -93,3 +93,7 @@
 - Commit ec28aab: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/ec28aab3e670c1917df44793b9850a5cfccf6c2e
 - Commit 749a730: Update translation files → https://github.com/OCA/bank-statement-import/commit/749a73027c97355a6390acf85c6148fed1728f28
 
+## 2026-02-05
+
+- Commit 7919e8f: Translated using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/7919e8f95dd39c23f6e14bc5137b14301d4a241a
+

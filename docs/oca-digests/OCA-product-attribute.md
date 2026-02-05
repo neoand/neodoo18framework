@@ -202,3 +202,11 @@
 - Commit 3144d87: [UPD] Update product_next_reception_date.pot → https://github.com/OCA/product-attribute/commit/3144d875f39efc95bb58309c56892701083ca2aa
 - Commit 44cd31e: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/44cd31efbef2d90d73a7e2be5a025665203ea173
 
+## 2026-02-05
+
+- Commit 7159cb8: [FIX] product_pricelist_supplierinfo: compute pricelist item description → https://github.com/OCA/product-attribute/commit/7159cb8188689a44b782196c2babb99435a0668b
+- Commit e8d2b81: Merge PR #2053 into 18.0 → https://github.com/OCA/product-attribute/commit/e8d2b81bfb85e4b4d10a5d1fbdf39f1d6b205fb9
+- Commit 1991303: [UPD] Update product_pricelist_supplierinfo.pot → https://github.com/OCA/product-attribute/commit/1991303a6627a94944a73006cd59719be59d2faa
+- Commit 73060ec: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/73060ec5bfbb93b94ee312083e0af9e6c6deb96e
+- Commit c01c6d7: Update translation files → https://github.com/OCA/product-attribute/commit/c01c6d7af962644373793c7d5d8d2a0062c4a115
+

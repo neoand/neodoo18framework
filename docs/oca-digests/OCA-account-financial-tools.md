@@ -179,3 +179,11 @@
 - Commit 18ff08d: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/18ff08d0773880a7dabf3fd7172c9b185ba1e02c
 - Commit d8f612e: Translated using Weblate (Slovenian) → https://github.com/OCA/account-financial-tools/commit/d8f612e3ee22b147d430eaee1e521882bf659430
 
+## 2026-02-05
+
+- Commit 6b27b8d: [MIG] account_asset_reporting: Migrated BI report to v16 → https://github.com/OCA/account-financial-tools/commit/6b27b8d7697c89995820eb55aa964e0b3c7853b5
+- Commit ed9add8: Merge PR #2214 into 18.0 → https://github.com/OCA/account-financial-tools/commit/ed9add8297734f8679697bd68f7eef03e7fa2e5f
+- Commit 79fb9a2: [UPD] Update account_asset_management.pot → https://github.com/OCA/account-financial-tools/commit/79fb9a284e97eceb53e18fec89d58076f2f80b1e
+- Commit 4bd13b9: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/4bd13b93c81255e72468edba52f1973baf1b30a0
+- Commit bdca3d4: Update translation files → https://github.com/OCA/account-financial-tools/commit/bdca3d443768bc94a532ed92f856d805ba5f81aa
+

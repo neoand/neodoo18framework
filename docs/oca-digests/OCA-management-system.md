@@ -74,3 +74,7 @@
 
 - Commit c6a676c: Translated using Weblate (Slovenian) → https://github.com/OCA/management-system/commit/c6a676ce7682d7c42126a1f6eb93565500861d5d
 
+## 2026-02-05
+
+- Commit ce9d421: Translated using Weblate (Slovenian) → https://github.com/OCA/management-system/commit/ce9d421e5f5c262a9b0d9aa136fb9fe4968960dc
+

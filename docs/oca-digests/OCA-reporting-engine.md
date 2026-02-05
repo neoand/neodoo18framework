@@ -121,3 +121,7 @@
 
 - Commit 6d3b9f0: Added translation using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/6d3b9f0bcaca525044fcf336f229350a1c0d8eef
 
+## 2026-02-05
+
+- Commit ff52dcc: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/ff52dccce63e9268f98e45081f95c639e19d0614
+

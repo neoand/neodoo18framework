@@ -100,3 +100,9 @@
 - Commit a8840c0: Merge PR #932 into 18.0 → https://github.com/OCA/multi-company/commit/a8840c047b5906174278856ea70ea03ac767c3ab
 - Commit cf5b4d1: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/cf5b4d1bef7344f5fd9113ee6a851370f7eb9004
 
+## 2026-02-05
+
+- Commit 267a577: [FIX] account_invoice_inter_company: Handle invoice validation in bulk from the wizard → https://github.com/OCA/multi-company/commit/267a5772ffb1a3bbea57ca45183da2ca15b35647
+- Commit f8cf41e: Merge PR #936 into 18.0 → https://github.com/OCA/multi-company/commit/f8cf41ed7f2c5c8becd7d73f070cb606d817bbb8
+- Commit 24defc7: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/24defc75a2cb56bd96682ec09767ee77ca07f7ec
+

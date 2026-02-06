@@ -169,3 +169,11 @@
 - Commit 6a155ff: [UPD] Update project_task_stage_change_restriction.pot → https://github.com/OCA/project/commit/6a155ff26f056c4c0a3362cca8844e8056e27e4d
 - Commit a43d29f: [BOT] post-merge updates → https://github.com/OCA/project/commit/a43d29f53b8172e1c0fb95d878986f057cb2e96a
 
+## 2026-02-06
+
+- Commit 27f87b9: Merge PR #1638 into 18.0 → https://github.com/OCA/project/commit/27f87b9287468e8adde64c1fed533b80d3190419
+- Commit 63edf9d: [BOT] post-merge updates → https://github.com/OCA/project/commit/63edf9d8ec2eeeefc739f6be42e6f59757247da2
+- Commit 1e1844c: Merge PR #1552 into 18.0 → https://github.com/OCA/project/commit/1e1844c8cde904e0b0658cd88f69471e86ab08b5
+- Commit 647e6d1: [UPD] Update sale_project_reimbursement_cost.pot → https://github.com/OCA/project/commit/647e6d120e944d7485ffb52ec5d6237916380dbe
+- Commit 28dd4ae: [BOT] post-merge updates → https://github.com/OCA/project/commit/28dd4ae73f2ea3796324a8a13fcfd9da54a71a23
+

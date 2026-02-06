@@ -354,3 +354,11 @@
 - Commit 24fcb91: [UPD] Update sale_order_team_from_product.pot → https://github.com/OCA/sale-workflow/commit/24fcb91e4cd26d49214a9caf3a29dc6ca8abe3c4
 - Commit 1c233a4: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/1c233a44420a2575d1c29d19241c65fd0afef469
 
+## 2026-02-06
+
+- Commit e666694: Added translation using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/e666694f17908c2d0ce97c6152fed19309b7e1c1
+- Commit a71b9c1: [MIG] sale_multi_template_application: Migration to 18.0 → https://github.com/OCA/sale-workflow/commit/a71b9c1001f60802be28ab42f116133d47bea9e9
+- Commit ddef377: Merge PR #4142 into 18.0 → https://github.com/OCA/sale-workflow/commit/ddef3771b79ee3a0b80f65957bc097b44bda1788
+- Commit eec13b8: [UPD] Update sale_multi_template_application.pot → https://github.com/OCA/sale-workflow/commit/eec13b8bb5134734f661306ee77181e6b82d3aba
+- Commit b46d057: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/b46d0571520e29721e25dd8914611bf6476cd826
+

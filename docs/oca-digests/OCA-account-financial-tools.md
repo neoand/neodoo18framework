@@ -187,3 +187,9 @@
 - Commit 4bd13b9: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/4bd13b93c81255e72468edba52f1973baf1b30a0
 - Commit bdca3d4: Update translation files → https://github.com/OCA/account-financial-tools/commit/bdca3d443768bc94a532ed92f856d805ba5f81aa
 
+## 2026-02-07
+
+- Commit fe97233: [FIX] account_chart_update: Define the appropriate translation value if the value is null in the database → https://github.com/OCA/account-financial-tools/commit/fe97233e89e9a58a3d9b02f477c4febfb918382d
+- Commit 7d21fe1: Merge PR #2221 into 18.0 → https://github.com/OCA/account-financial-tools/commit/7d21fe1d54b4c5f84aa57b1964723c06a242da08
+- Commit cf8a5f0: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/cf8a5f0e8874c3feb0b4f9de1652570c30e9f0ad
+

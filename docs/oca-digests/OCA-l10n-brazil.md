@@ -171,3 +171,9 @@
 - Commit 53dc5c2: [UPD] Update l10n_br_mis_report.pot → https://github.com/OCA/l10n-brazil/commit/53dc5c20251b5f981efe5d2c559518b02aff9a09
 - Commit e006b6a: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/e006b6a19d1adbb1d37130c76d5c5150c346ba4a
 
+## 2026-02-07
+
+- Commit e5bbede: [FIX] l10n_br_base: fields_view_get now get_view → https://github.com/OCA/l10n-brazil/commit/e5bbede90826677a90d0d76432d422f9e26e15d4
+- Commit 9b80f43: Merge PR #4379 into 18.0 → https://github.com/OCA/l10n-brazil/commit/9b80f4340c786f37a546f5fb574dceb7a9dd922a
+- Commit 70dc8e1: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/70dc8e1bbae4408560808d3e927bbc91bd3ba0f9
+

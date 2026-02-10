@@ -362,3 +362,9 @@
 - Commit eec13b8: [UPD] Update sale_multi_template_application.pot → https://github.com/OCA/sale-workflow/commit/eec13b8bb5134734f661306ee77181e6b82d3aba
 - Commit b46d057: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/b46d0571520e29721e25dd8914611bf6476cd826
 
+## 2026-02-10
+
+- Commit bd77eea: [FIX] sale_elaboration: report delivery inheritance → https://github.com/OCA/sale-workflow/commit/bd77eea365ddb85960fe588a316324d0019ea4cc
+- Commit f9414cd: Merge PR #4149 into 18.0 → https://github.com/OCA/sale-workflow/commit/f9414cde694dbc58bffacf367d3aa01686e952b7
+- Commit 0098e81: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/0098e8165edbda2576145004e8aa2ace1a943e11
+

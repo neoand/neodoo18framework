@@ -269,3 +269,9 @@
 - Commit e73be5c: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/e73be5c279d794961fb2177200855f6507f6f8e2
 - Commit 1a7a408: Translated using Weblate (Slovenian) → https://github.com/OCA/partner-contact/commit/1a7a408945ed4d8dd6b9a061dfe5b7f2ad53bc83
 
+## 2026-02-10
+
+- Commit 2490ff5: [FIX] partner_firstname: stabilize name inverse to avoid constraint errors → https://github.com/OCA/partner-contact/commit/2490ff5edf932f6c05dcb2c94a70f27bf8360633
+- Commit 9069652: Merge PR #2280 into 18.0 → https://github.com/OCA/partner-contact/commit/9069652327246aa27a6d71917d1138223a9cabde
+- Commit 3fbd153: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/3fbd153c476c6d010835110f7028a16fd23c2c58
+

@@ -211,3 +211,8 @@
 - Commit 95c24fc: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/95c24fc0dc5b90ae32bb49c6e8373307b36ab3b8
 - Commit 979eb39: Merge pull request #5498 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/979eb39b14a3fbcd21793af44bf7732491047edd
 
+## 2026-02-10
+
+- Commit 78b2390: [FIX] pin setuptools to v81.0 → https://github.com/OCA/OpenUpgrade/commit/78b239084b887ed90181ab3d2210c793f9a0678b
+- Commit 072e315: Merge pull request #5508 from hbrunn/18.0-pin-setuptools → https://github.com/OCA/OpenUpgrade/commit/072e3158431d60b0a53e40fd352313b83818366f
+

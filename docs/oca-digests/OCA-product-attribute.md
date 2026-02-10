@@ -210,3 +210,8 @@
 - Commit 73060ec: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/73060ec5bfbb93b94ee312083e0af9e6c6deb96e
 - Commit c01c6d7: Update translation files → https://github.com/OCA/product-attribute/commit/c01c6d7af962644373793c7d5d8d2a0062c4a115
 
+## 2026-02-10
+
+- Commit 11e94b2: Added translation using Weblate (Spanish) → https://github.com/OCA/product-attribute/commit/11e94b2b12c7834b74ebb06009bfe8b064d89a83
+- Commit 1b4a579: Translated using Weblate (Spanish) → https://github.com/OCA/product-attribute/commit/1b4a579c642055aec213e85d616618fe6184d3d7
+

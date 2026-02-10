@@ -195,3 +195,9 @@
 
 - Commit 91d8601: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/91d86016b68a8890243645e95d840024a4396b69
 
+## 2026-02-10
+
+- Commit 36705a2: [18.0][FIX] fetchmail_attach_from_folder: add missing keyword argument → https://github.com/OCA/server-tools/commit/36705a247c23be95d043dc6a655bc472b3e999df
+- Commit 563132e: Merge PR #3460 into 18.0 → https://github.com/OCA/server-tools/commit/563132ee1b82ec9e98a422f4d86f213dec963c54
+- Commit 1f64126: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/1f64126722d4b8c7a61415d11d1fa9859917b026
+

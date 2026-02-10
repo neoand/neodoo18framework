@@ -3,19 +3,19 @@
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "70dc8e1bbae4408560808d3e927bbc91bd3ba0f9",
     "OCA/project@18.0::commits": "28dd4ae73f2ea3796324a8a13fcfd9da54a71a23",
-    "OCA/sale-workflow@18.0::commits": "b46d0571520e29721e25dd8914611bf6476cd826",
+    "OCA/sale-workflow@18.0::commits": "0098e8165edbda2576145004e8aa2ace1a943e11",
     "OCA/oca-port@main::commits": "666965a145517a0295cfd508108ccc730f5364ff",
     "OCA/connector@18.0::commits": "10416a62a86edf72abb8d68b208cfe4620526866",
     "OCA/account-financial-tools@18.0::commits": "cf8a5f0e8874c3feb0b4f9de1652570c30e9f0ad",
     "OCA/reporting-engine@18.0::commits": "ff52dccce63e9268f98e45081f95c639e19d0614",
-    "OCA/server-tools@18.0::commits": "91d86016b68a8890243645e95d840024a4396b69",
-    "OCA/OpenUpgrade@18.0::commits": "979eb39b14a3fbcd21793af44bf7732491047edd",
+    "OCA/server-tools@18.0::commits": "1f64126722d4b8c7a61415d11d1fa9859917b026",
+    "OCA/OpenUpgrade@18.0::commits": "072e3158431d60b0a53e40fd352313b83818366f",
     "OCA/web@18.0::commits": "b2d8e9212b40f53b25093d585e5efade5f616e47",
-    "OCA/partner-contact@18.0::commits": "1a7a408945ed4d8dd6b9a061dfe5b7f2ad53bc83",
+    "OCA/partner-contact@18.0::commits": "3fbd153c476c6d010835110f7028a16fd23c2c58",
     "OCA/queue@18.0::commits": "b4ec9b2425056a757419ee7f4008cf365ad08f48",
     "OCA/management-system@18.0::commits": "ce9d421e5f5c262a9b0d9aa136fb9fe4968960dc",
-    "OCA/product-attribute@18.0::commits": "c01c6d7af962644373793c7d5d8d2a0062c4a115",
-    "OCA/calendar@18.0::commits": "2da90c675938ffc187739e0ecdc4b76550dd5edb",
+    "OCA/product-attribute@18.0::commits": "1b4a579c642055aec213e85d616618fe6184d3d7",
+    "OCA/calendar@18.0::commits": "0fa4170a930fd1c96f45b239e396587d087cce7f",
     "OCA/bank-statement-import@18.0::commits": "7919e8f95dd39c23f6e14bc5137b14301d4a241a",
     "OCA/multi-company@18.0::commits": "24defc75a2cb56bd96682ec09767ee77ca07f7ec",
     "OCA/knowledge@18.0::commits": "0881d75a35e7fc2f814110df4878177e805e589b",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "5013d52ee8a1ab98013ecb705f65bf30326172fc"
   },
-  "updated_at": "2026-02-09T02:58:42.823054+00:00"
+  "updated_at": "2026-02-10T02:59:28.880854+00:00"
 }

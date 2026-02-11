@@ -106,3 +106,9 @@
 - Commit f8cf41e: Merge PR #936 into 18.0 → https://github.com/OCA/multi-company/commit/f8cf41ed7f2c5c8becd7d73f070cb606d817bbb8
 - Commit 24defc7: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/24defc75a2cb56bd96682ec09767ee77ca07f7ec
 
+## 2026-02-11
+
+- Commit 53b8893: [FIX] account_invoice_inter_company: Handle tax-included and tax-excluded prices when creating the invoice in the other company. → https://github.com/OCA/multi-company/commit/53b88931b1d2bec1219237a94ecb14fafa925893
+- Commit 596f14a: Merge PR #939 into 18.0 → https://github.com/OCA/multi-company/commit/596f14ab63620aec348e625c559718a687cdbd17
+- Commit 5da4d35: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/5da4d3572d7a9e1456fc84ccc7ebac352e38cead
+

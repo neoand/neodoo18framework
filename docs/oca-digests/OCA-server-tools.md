@@ -201,3 +201,8 @@
 - Commit 563132e: Merge PR #3460 into 18.0 → https://github.com/OCA/server-tools/commit/563132ee1b82ec9e98a422f4d86f213dec963c54
 - Commit 1f64126: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/1f64126722d4b8c7a61415d11d1fa9859917b026
 
+## 2026-02-11
+
+- Commit c263e8e: Merge PR #3451 into 18.0 → https://github.com/OCA/server-tools/commit/c263e8eaca4fbb68d07c4c7fc581ced6f6ae2c70
+- Commit e571ac1: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/e571ac1b94f7e60bfc1fdec481fc2e1ba302774f
+

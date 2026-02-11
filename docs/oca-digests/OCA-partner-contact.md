@@ -275,3 +275,7 @@
 - Commit 9069652: Merge PR #2280 into 18.0 → https://github.com/OCA/partner-contact/commit/9069652327246aa27a6d71917d1138223a9cabde
 - Commit 3fbd153: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/3fbd153c476c6d010835110f7028a16fd23c2c58
 
+## 2026-02-11
+
+- Commit 48607b9: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/48607b9dd9864aa98cc4d0d0f880eb44c10a29c6
+

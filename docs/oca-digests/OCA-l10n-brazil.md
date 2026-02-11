@@ -177,3 +177,9 @@
 - Commit 9b80f43: Merge PR #4379 into 18.0 → https://github.com/OCA/l10n-brazil/commit/9b80f4340c786f37a546f5fb574dceb7a9dd922a
 - Commit 70dc8e1: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/70dc8e1bbae4408560808d3e927bbc91bd3ba0f9
 
+## 2026-02-11
+
+- Commit 9ee0b80: Merge PR #4380 into 18.0 → https://github.com/OCA/l10n-brazil/commit/9ee0b801fa1f507744adf196027ea5fb1915db59
+- Commit faa9dc6: [UPD] Update l10n_br_account_payment_order.pot → https://github.com/OCA/l10n-brazil/commit/faa9dc6624e067e7584e38255b721d2c0bb19e87
+- Commit c91823c: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/c91823c196028bedc9268949fc46f65ffb5f82c6
+

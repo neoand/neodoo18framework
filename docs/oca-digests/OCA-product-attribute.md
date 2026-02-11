@@ -215,3 +215,9 @@
 - Commit 11e94b2: Added translation using Weblate (Spanish) → https://github.com/OCA/product-attribute/commit/11e94b2b12c7834b74ebb06009bfe8b064d89a83
 - Commit 1b4a579: Translated using Weblate (Spanish) → https://github.com/OCA/product-attribute/commit/1b4a579c642055aec213e85d616618fe6184d3d7
 
+## 2026-02-11
+
+- Commit 8762df3: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/8762df3b6caffc9ac6323796e1158cbda6f091b8
+- Commit 92d8819: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/92d88198efc9791d81c5ef00d070be97e2a4ec0d
+- Commit 978801a: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/978801ac2c041ca82c064c0b4cdc8b5e2d78bff0
+

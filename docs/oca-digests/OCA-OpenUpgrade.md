@@ -216,3 +216,9 @@
 - Commit 78b2390: [FIX] pin setuptools to v81.0 → https://github.com/OCA/OpenUpgrade/commit/78b239084b887ed90181ab3d2210c793f9a0678b
 - Commit 072e315: Merge pull request #5508 from hbrunn/18.0-pin-setuptools → https://github.com/OCA/OpenUpgrade/commit/072e3158431d60b0a53e40fd352313b83818366f
 
+## 2026-02-11
+
+- Commit 63ead82: [OU-ADD] sale_async_emails: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/63ead8261dfaf447527bad71bf5d48842dad600f
+- Commit aa5215b: Merge pull request #5506 from Tecnativa/18.0-ou-imp-mail-TT60781 → https://github.com/OCA/OpenUpgrade/commit/aa5215bd5340fc31be818aca056cf8196fb9fe5c
+- Commit 8b0cd45: Merge pull request #5510 from Tecnativa/18.0-ou-add-sale_async_emails → https://github.com/OCA/OpenUpgrade/commit/8b0cd45da5f2b8be32f48f01360595357652598d
+

@@ -279,3 +279,8 @@
 
 - Commit 48607b9: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/48607b9dd9864aa98cc4d0d0f880eb44c10a29c6
 
+## 2026-02-12
+
+- Commit 0ac3bfa: Merge PR #2276 into 18.0 → https://github.com/OCA/partner-contact/commit/0ac3bfadb34cdb9208d83e7220de18dc9a498e94
+- Commit ac74ded: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/ac74dedf4532945a9476205c693e9243dbeb9bfd
+

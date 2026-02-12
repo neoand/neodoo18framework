@@ -368,3 +368,8 @@
 - Commit f9414cd: Merge PR #4149 into 18.0 → https://github.com/OCA/sale-workflow/commit/f9414cde694dbc58bffacf367d3aa01686e952b7
 - Commit 0098e81: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/0098e8165edbda2576145004e8aa2ace1a943e11
 
+## 2026-02-12
+
+- Commit 9daa733: Added translation using Weblate (German) → https://github.com/OCA/sale-workflow/commit/9daa7335c20d7891d86d558fec72eac98a65191e
+- Commit fdc2528: Translated using Weblate (German) → https://github.com/OCA/sale-workflow/commit/fdc25281916892df2802aca45d7ff5b2c5d505d7
+

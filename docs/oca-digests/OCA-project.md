@@ -177,3 +177,9 @@
 - Commit 647e6d1: [UPD] Update sale_project_reimbursement_cost.pot → https://github.com/OCA/project/commit/647e6d120e944d7485ffb52ec5d6237916380dbe
 - Commit 28dd4ae: [BOT] post-merge updates → https://github.com/OCA/project/commit/28dd4ae73f2ea3796324a8a13fcfd9da54a71a23
 
+## 2026-02-13
+
+- Commit ac71461: [IMP] project_timesheet_time_control: Add search functionality for date_time_end and improve computation for end time based on day unit → https://github.com/OCA/project/commit/ac71461162f64c7651d97278359f008df92279d6
+- Commit c30670c: Merge PR #1609 into 18.0 → https://github.com/OCA/project/commit/c30670cfe0145a0031384e62ec2a1bf47339c692
+- Commit 56fbb1e: [BOT] post-merge updates → https://github.com/OCA/project/commit/56fbb1e3fa9ec39c90c11287a497a17a97a107ed
+

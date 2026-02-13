@@ -222,3 +222,10 @@
 - Commit aa5215b: Merge pull request #5506 from Tecnativa/18.0-ou-imp-mail-TT60781 → https://github.com/OCA/OpenUpgrade/commit/aa5215bd5340fc31be818aca056cf8196fb9fe5c
 - Commit 8b0cd45: Merge pull request #5510 from Tecnativa/18.0-ou-add-sale_async_emails → https://github.com/OCA/OpenUpgrade/commit/8b0cd45da5f2b8be32f48f01360595357652598d
 
+## 2026-02-13
+
+- Commit 7d2b46b: [OU-ADD] product_email_template: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/7d2b46baac5c5165dcddf275fcba9073a157ca32
+- Commit 3153949: Merge pull request #5513 from Tecnativa/18.0-ou-add-product_email_template → https://github.com/OCA/OpenUpgrade/commit/3153949c0c237d63cec710c626a8ed3ecbcd7d87
+- Commit 94772f6: [OU-ADD] pos_discount: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/94772f6a9ad6a09e1eaad4ac82961912f8185796
+- Commit 7b4687f: Merge pull request #5515 from Tecnativa/18.0-ou-add-pos_discount → https://github.com/OCA/OpenUpgrade/commit/7b4687ff2dc6c453dfe4e44aa1b1cc2ef66a5f29
+

@@ -205,3 +205,9 @@
 - Commit 319c60a: [UPD] Update account_chart_update_code_digits.pot → https://github.com/OCA/account-financial-tools/commit/319c60ad3e7e0641b2ec55f85ad8803f8c21d07f
 - Commit fca5986: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/fca5986ffa79d263395bf1023743932456bb85f5
 
+## 2026-02-13
+
+- Commit 3e237d8: Added translation using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/3e237d8cf24b05dd78850709f74ad3bbf7c5b62f
+- Commit b0d00a9: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/b0d00a9af3c74b2191e698e4734d524b1597b886
+- Commit f28c4db: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/f28c4db492bae51964ba173dd12243b83e0d33d3
+

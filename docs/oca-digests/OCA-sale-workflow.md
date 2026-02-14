@@ -373,3 +373,10 @@
 - Commit 9daa733: Added translation using Weblate (German) → https://github.com/OCA/sale-workflow/commit/9daa7335c20d7891d86d558fec72eac98a65191e
 - Commit fdc2528: Translated using Weblate (German) → https://github.com/OCA/sale-workflow/commit/fdc25281916892df2802aca45d7ff5b2c5d505d7
 
+## 2026-02-14
+
+- Commit a1f3f22: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/a1f3f2265fed3c7b3b306de8cffab9763a662ecd
+- Commit 4c32c6c: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/4c32c6ceb88573c80ceae2652ab0983bd48b284b
+- Commit 9b74767: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/9b7476790ee174a6b6892752285c7d4c3ed906f2
+- Commit 1bb9225: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/1bb9225f257cf32b59fc260feb378d5020e7e56b
+

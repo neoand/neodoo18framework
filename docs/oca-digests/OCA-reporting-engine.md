@@ -125,3 +125,8 @@
 
 - Commit ff52dcc: Translated using Weblate (Italian) → https://github.com/OCA/reporting-engine/commit/ff52dccce63e9268f98e45081f95c639e19d0614
 
+## 2026-02-14
+
+- Commit a8a397c: Added translation using Weblate (Russian) → https://github.com/OCA/reporting-engine/commit/a8a397ce6cd7f42ae662d1a578fbb0474b08ab59
+- Commit 35a9cd5: Added translation using Weblate (Russian) → https://github.com/OCA/reporting-engine/commit/35a9cd5f28d245857269952ac39a10cfdd89d98a
+

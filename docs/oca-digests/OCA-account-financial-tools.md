@@ -211,3 +211,11 @@
 - Commit b0d00a9: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/b0d00a9af3c74b2191e698e4734d524b1597b886
 - Commit f28c4db: Translated using Weblate (Italian) → https://github.com/OCA/account-financial-tools/commit/f28c4db492bae51964ba173dd12243b83e0d33d3
 
+## 2026-02-14
+
+- Commit 8e3ed04: Translated using Weblate (Russian) → https://github.com/OCA/account-financial-tools/commit/8e3ed04d3d0513837bac96370970ada62c45d96e
+- Commit c40db38: Translated using Weblate (Russian) → https://github.com/OCA/account-financial-tools/commit/c40db389b31c6de5cff0e241754ed9911734002c
+- Commit b210398: Translated using Weblate (Russian) → https://github.com/OCA/account-financial-tools/commit/b21039835353c29dd4db281333664c6187391347
+- Commit 7892cb3: Translated using Weblate (Russian) → https://github.com/OCA/account-financial-tools/commit/7892cb393fbd7a5834f23f0abe52c6465744c7a0
+- Commit 74932e8: Translated using Weblate (Russian) → https://github.com/OCA/account-financial-tools/commit/74932e8ae7b8916a39eacbe145fb47d4e56b599f
+

@@ -97,3 +97,7 @@
 
 - Commit 7919e8f: Translated using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/7919e8f95dd39c23f6e14bc5137b14301d4a241a
 
+## 2026-02-14
+
+- Commit ea2303e: Translated using Weblate (Turkish) → https://github.com/OCA/bank-statement-import/commit/ea2303ec8c46693b85b7f4895d9634d037847870
+

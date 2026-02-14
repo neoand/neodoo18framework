@@ -229,3 +229,7 @@
 - Commit 94772f6: [OU-ADD] pos_discount: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/94772f6a9ad6a09e1eaad4ac82961912f8185796
 - Commit 7b4687f: Merge pull request #5515 from Tecnativa/18.0-ou-add-pos_discount → https://github.com/OCA/OpenUpgrade/commit/7b4687ff2dc6c453dfe4e44aa1b1cc2ef66a5f29
 
+## 2026-02-14
+
+- Commit 246bfc6: Merge pull request #5516 from guillermo2005200/18.0-fix-account-migration → https://github.com/OCA/OpenUpgrade/commit/246bfc6d187db2084d750e23c01ac333ab05fff9
+

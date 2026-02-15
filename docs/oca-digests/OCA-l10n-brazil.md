@@ -183,3 +183,11 @@
 - Commit faa9dc6: [UPD] Update l10n_br_account_payment_order.pot → https://github.com/OCA/l10n-brazil/commit/faa9dc6624e067e7584e38255b721d2c0bb19e87
 - Commit c91823c: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/c91823c196028bedc9268949fc46f65ffb5f82c6
 
+## 2026-02-15
+
+- Commit 768c3b5: [IMP] l10n_br_crm_cnpj_search: pre-commit auto fixes → https://github.com/OCA/l10n-brazil/commit/768c3b54c3063e9101614873cc71d0350895106d
+- Commit 66aa121: [MIG] l10n_br_crm_cnpj_search: Migration to 18.0 → https://github.com/OCA/l10n-brazil/commit/66aa121f895f95c7b4fe16e1db0f80811256b5e9
+- Commit 89261d1: Merge PR #4389 into 18.0 → https://github.com/OCA/l10n-brazil/commit/89261d1dda5445ced38a3444945de6c5687731a9
+- Commit bbca09e: [UPD] Update l10n_br_crm_cnpj_search.pot → https://github.com/OCA/l10n-brazil/commit/bbca09e082ff34a8c8ca9466e120feac6be3d6fc
+- Commit 22f0387: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/22f03872f8644678eb4ffd394ac994550e97ff51
+

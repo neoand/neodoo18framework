@@ -191,3 +191,9 @@
 - Commit bbca09e: [UPD] Update l10n_br_crm_cnpj_search.pot → https://github.com/OCA/l10n-brazil/commit/bbca09e082ff34a8c8ca9466e120feac6be3d6fc
 - Commit 22f0387: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/22f03872f8644678eb4ffd394ac994550e97ff51
 
+## 2026-02-16
+
+- Commit bdf3cb2: Merge PR #4390 into 18.0 → https://github.com/OCA/l10n-brazil/commit/bdf3cb2e0ac531b11b727caa8712641f7fb31957
+- Commit d3ba56a: [UPD] Update l10n_br_fiscal_notification.pot → https://github.com/OCA/l10n-brazil/commit/d3ba56aaf243f7a6aedcab4b0888e50b444f4e42
+- Commit 1de5e82: [BOT] post-merge updates → https://github.com/OCA/l10n-brazil/commit/1de5e82c3e16de0d5161de00e8e3ae0820774254
+

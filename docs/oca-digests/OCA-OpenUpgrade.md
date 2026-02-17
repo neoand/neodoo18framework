@@ -233,3 +233,10 @@
 
 - Commit 246bfc6: Merge pull request #5516 from guillermo2005200/18.0-fix-account-migration → https://github.com/OCA/OpenUpgrade/commit/246bfc6d187db2084d750e23c01ac333ab05fff9
 
+## 2026-02-17
+
+- Commit b84167d: [OU-FIX] pos_discount: Respect openupgrade_analysis.txt file → https://github.com/OCA/OpenUpgrade/commit/b84167d99def773712802d532da37d35a7b3a892
+- Commit 9a39d40: Merge pull request #5520 from Tecnativa/18.0-ou_fix-pos_discount → https://github.com/OCA/OpenUpgrade/commit/9a39d4011fb894a0fca071f4a62b5179c4c0ce4f
+- Commit c51681a: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/c51681a829ce9b944e3ec79d5e8255f1a6bf75e0
+- Commit fba9d88: Merge pull request #5519 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/fba9d88d976274a6591b019a0a9becfb87fa5b42
+

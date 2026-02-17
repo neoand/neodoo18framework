@@ -380,3 +380,10 @@
 - Commit 9b74767: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/9b7476790ee174a6b6892752285c7d4c3ed906f2
 - Commit 1bb9225: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/1bb9225f257cf32b59fc260feb378d5020e7e56b
 
+## 2026-02-17
+
+- Commit 96a18d2: [ADD] sale_automatic_workflow _force_invoiced → https://github.com/OCA/sale-workflow/commit/96a18d2709c9625407af260e1eb7bc0bebeb48e6
+- Commit e64fa64: Merge PR #4123 into 18.0 → https://github.com/OCA/sale-workflow/commit/e64fa64ee2f66bfa98e59b88a7971577bb80dc09
+- Commit ce6b3bf: [UPD] Update sale_automatic_workflow_force_invoiced.pot → https://github.com/OCA/sale-workflow/commit/ce6b3bf06e57f4f467a04e8bd701af02e19c9537
+- Commit 272f89b: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/272f89b1149844381c944b582a11752503124095
+

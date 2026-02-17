@@ -284,3 +284,9 @@
 - Commit 0ac3bfa: Merge PR #2276 into 18.0 → https://github.com/OCA/partner-contact/commit/0ac3bfadb34cdb9208d83e7220de18dc9a498e94
 - Commit ac74ded: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/ac74dedf4532945a9476205c693e9243dbeb9bfd
 
+## 2026-02-17
+
+- Commit 44282b5: Merge PR #1944 into 18.0 → https://github.com/OCA/partner-contact/commit/44282b57f120041fbb0f8d5fee9e697389939d4a
+- Commit 82e8bbb: [UPD] Update partner_address_split.pot → https://github.com/OCA/partner-contact/commit/82e8bbb25eb97eec225b856bedaba125ae255c38
+- Commit 7bc4c34: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/7bc4c34684c6d67fd4e86d9ff2baa851e4368884
+

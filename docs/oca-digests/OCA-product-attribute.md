@@ -229,3 +229,9 @@
 
 - Commit 188c4d5: Translated using Weblate (Turkish) → https://github.com/OCA/product-attribute/commit/188c4d511b8f789de01e078fc3fffaec474af9dc
 
+## 2026-02-17
+
+- Commit 42e20c1: [FIX] product_secondary_unit: UoM conversion in secondary unit mixin → https://github.com/OCA/product-attribute/commit/42e20c162a475b668ee2d0d90b8ebf3a4bd77c0e
+- Commit a9f785b: Merge PR #2182 into 18.0 → https://github.com/OCA/product-attribute/commit/a9f785bcc4454798606dda106a033d5866d407c8
+- Commit 1282097: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/1282097980360b325f52ef79324e8656890a0874
+

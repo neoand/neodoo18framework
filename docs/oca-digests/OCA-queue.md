@@ -40,3 +40,9 @@
 - Commit 9a24a3e: Merge PR #886 into 18.0 → https://github.com/OCA/queue/commit/9a24a3eb7f76e5e69038c82532fbd656e08b2871
 - Commit b4ec9b2: [BOT] post-merge updates → https://github.com/OCA/queue/commit/b4ec9b2425056a757419ee7f4008cf365ad08f48
 
+## 2026-02-18
+
+- Commit 82f099e: [IMP] queue_job: prevent commit during queue job execution → https://github.com/OCA/queue/commit/82f099e83c6a2d07d63a6e5da62bde371a33ab84
+- Commit 45d6c57: Merge PR #890 into 18.0 → https://github.com/OCA/queue/commit/45d6c5757edabcd04e4e464d28fcca45a9e2a554
+- Commit 283136f: [BOT] post-merge updates → https://github.com/OCA/queue/commit/283136fd643fed4403fe876ade33acd9ce5a5a5c
+

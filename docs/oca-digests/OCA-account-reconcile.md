@@ -148,3 +148,9 @@
 - Commit 8827d1d: Merge PR #953 into 18.0 → https://github.com/OCA/account-reconcile/commit/8827d1d85445ff8884dbc4811cd2a82057123109
 - Commit 3342b2c: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/3342b2c0c3adcf469fac4da526d05f7ae27366c4
 
+## 2026-02-18
+
+- Commit 04f28e1: Merge PR #741 into 18.0 → https://github.com/OCA/account-reconcile/commit/04f28e191b8752d29a98e4e4f63f2d6b716b0621
+- Commit bd8db2a: [UPD] Update account_reconcile_restrict_partner_mismatch.pot → https://github.com/OCA/account-reconcile/commit/bd8db2a0cdb7cf57e74773544400c9d60a52c33d
+- Commit 73c66f1: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/73c66f10db3e98c1cdbb335da13222482723bf0b
+

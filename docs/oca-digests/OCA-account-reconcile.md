@@ -154,3 +154,7 @@
 - Commit bd8db2a: [UPD] Update account_reconcile_restrict_partner_mismatch.pot → https://github.com/OCA/account-reconcile/commit/bd8db2a0cdb7cf57e74773544400c9d60a52c33d
 - Commit 73c66f1: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/73c66f10db3e98c1cdbb335da13222482723bf0b
 
+## 2026-02-19
+
+- Commit 492b080: Added translation using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/492b080427e613bb603bac3efb44282b5c223d6c
+

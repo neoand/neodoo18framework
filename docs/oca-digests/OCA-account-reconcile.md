@@ -158,3 +158,8 @@
 
 - Commit 492b080: Added translation using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/492b080427e613bb603bac3efb44282b5c223d6c
 
+## 2026-02-20
+
+- Commit 9ac972e: Merge PR #958 into 18.0 → https://github.com/OCA/account-reconcile/commit/9ac972e19552e86cd1ea0fe4160995ef0779397f
+- Commit e6754f3: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/e6754f3bfe9b86d5f1ed6499b5502b75a8af0b45
+

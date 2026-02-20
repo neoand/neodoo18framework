@@ -240,3 +240,8 @@
 - Commit c51681a: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/c51681a829ce9b944e3ec79d5e8255f1a6bf75e0
 - Commit fba9d88: Merge pull request #5519 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/fba9d88d976274a6591b019a0a9becfb87fa5b42
 
+## 2026-02-20
+
+- Commit 1c6f938: [OU-IMP] mail: Define the appropriate delay_from value (similar to v17) → https://github.com/OCA/OpenUpgrade/commit/1c6f938bb3e0c5c12f83ee940fb6c164fb01acde
+- Commit 27c819a: Merge pull request #5522 from Tecnativa/18.0-ou-imp-mail-TT61045 → https://github.com/OCA/OpenUpgrade/commit/27c819a2d0750605a6e57c884a97bce07f311e27
+

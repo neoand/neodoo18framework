@@ -387,3 +387,9 @@
 - Commit ce6b3bf: [UPD] Update sale_automatic_workflow_force_invoiced.pot → https://github.com/OCA/sale-workflow/commit/ce6b3bf06e57f4f467a04e8bd701af02e19c9537
 - Commit 272f89b: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/272f89b1149844381c944b582a11752503124095
 
+## 2026-02-20
+
+- Commit aca5598: Added translation using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/aca5598a079c636c4a04ad1895366e348b9a1894
+- Commit 0e5e707: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/0e5e7076ed888abbdcdd68caa951657744e7e6f6
+- Commit c197689: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/c1976890aa29dbeae09551af44c27c8085b5cb16
+

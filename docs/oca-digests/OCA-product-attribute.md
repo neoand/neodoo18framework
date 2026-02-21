@@ -235,3 +235,11 @@
 - Commit a9f785b: Merge PR #2182 into 18.0 → https://github.com/OCA/product-attribute/commit/a9f785bcc4454798606dda106a033d5866d407c8
 - Commit 1282097: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/1282097980360b325f52ef79324e8656890a0874
 
+## 2026-02-21
+
+- Commit e2b896f: [IMP] product_secondary_unit: Change where the mock has to be loaded → https://github.com/OCA/product-attribute/commit/e2b896f565c18fdd677dd9101c09cd8fde765ac9
+- Commit 8a9a67d: Merge PR #2218 into 18.0 → https://github.com/OCA/product-attribute/commit/8a9a67d2dd3589a64fa373e77550c4b4ebf000b1
+- Commit cbb08fc: [UPD] Update product_logistics_uom.pot → https://github.com/OCA/product-attribute/commit/cbb08fc04f8ccbd41375ca80033155af4f1ed012
+- Commit 54bf488: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/54bf4888ef19564c2a1022b298f048f25bf49f9c
+- Commit d3d1e0b: Update translation files → https://github.com/OCA/product-attribute/commit/d3d1e0b5cf3f38480b27518045eb591b5e5575b2
+

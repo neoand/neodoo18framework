@@ -211,3 +211,11 @@
 - Commit 0eb3130: Translated using Weblate (Russian) → https://github.com/OCA/server-tools/commit/0eb31300a09ac16f15c275240b3a378caed35f35
 - Commit 909ef5d: Added translation using Weblate (Russian) → https://github.com/OCA/server-tools/commit/909ef5d67c777354b74feb7470795e122573558c
 
+## 2026-02-21
+
+- Commit a1268bd: [REF] module_auto_update: adapt tests to new Odoo test patch checker → https://github.com/OCA/server-tools/commit/a1268bda6c87d127df861e6c65b3c2f98faca166
+- Commit 9b89f96: [REF] rpc_helper: adapt test to new Odoo test patch checker → https://github.com/OCA/server-tools/commit/9b89f96b046d86f9a1c3cd0ad8bf2d2f3f9397bf
+- Commit cd16a58: [REF] upgrade_analysis: adapt test to new Odoo test patch checker → https://github.com/OCA/server-tools/commit/cd16a58518cfdc493837012f3eb281b87d3b961a
+- Commit 0083183: Merge PR #3526 into 18.0 → https://github.com/OCA/server-tools/commit/00831836f7111aa350e49ff7ee1d7cee873c00a5
+- Commit 7473ce1: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/7473ce11b4cbcc15f9d216e345043e6473431dfb
+

@@ -75,3 +75,9 @@
 
 - Commit 5013d52: Translated using Weblate (Slovenian) → https://github.com/OCA/spreadsheet/commit/5013d52ee8a1ab98013ecb705f65bf30326172fc
 
+## 2026-02-21
+
+- Commit a82f738: [FIX] spreadsheet_oca: fix patch to apply setup correctly → https://github.com/OCA/spreadsheet/commit/a82f7384e83fc0162907661cc0ab88ef9a922119
+- Commit 1b65cf6: Merge PR #91 into 18.0 → https://github.com/OCA/spreadsheet/commit/1b65cf6723b304f00aa754e72a142dcb992a6ae4
+- Commit 3137432: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/3137432503d6941b7b8d4d4b03f0883ef978c754
+

@@ -112,3 +112,9 @@
 - Commit 596f14a: Merge PR #939 into 18.0 → https://github.com/OCA/multi-company/commit/596f14ab63620aec348e625c559718a687cdbd17
 - Commit 5da4d35: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/5da4d3572d7a9e1456fc84ccc7ebac352e38cead
 
+## 2026-02-22
+
+- Commit bb502d6: [IMP] base_multi_company: Change where the mock has to be loaded → https://github.com/OCA/multi-company/commit/bb502d65a1d69724ce8bbba9204d2209d2fdf295
+- Commit 9be8f24: Merge PR #957 into 18.0 → https://github.com/OCA/multi-company/commit/9be8f24a9b753117127572830e2ea9e356becca5
+- Commit 9168a64: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/9168a64f9a3fdda3d175a425d44e6bc99d670791
+

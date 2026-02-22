@@ -243,3 +243,7 @@
 - Commit 54bf488: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/54bf4888ef19564c2a1022b298f048f25bf49f9c
 - Commit d3d1e0b: Update translation files → https://github.com/OCA/product-attribute/commit/d3d1e0b5cf3f38480b27518045eb591b5e5575b2
 
+## 2026-02-22
+
+- Commit 6732aee: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/6732aeeb20bdb9d228c636d1647cd61a809aa25b
+

@@ -247,3 +247,7 @@
 
 - Commit 6732aee: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/6732aeeb20bdb9d228c636d1647cd61a809aa25b
 
+## 2026-02-24
+
+- Commit 1d35cea: Translated using Weblate (Catalan) → https://github.com/OCA/product-attribute/commit/1d35cea8831bd0c93ccafbaabc5ceb0fa0cf48b5
+

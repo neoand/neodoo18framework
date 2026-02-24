@@ -393,3 +393,11 @@
 - Commit 0e5e707: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/0e5e7076ed888abbdcdd68caa951657744e7e6f6
 - Commit c197689: Translated using Weblate (Turkish) → https://github.com/OCA/sale-workflow/commit/c1976890aa29dbeae09551af44c27c8085b5cb16
 
+## 2026-02-24
+
+- Commit 943e57a: [IMP] sale_elaboration: Add elaborations to sale_order_line_view_form_readonly view → https://github.com/OCA/sale-workflow/commit/943e57aa0db1b70275112af931267cbd94d9f92e
+- Commit 6936b5d: Merge PR #4169 into 18.0 → https://github.com/OCA/sale-workflow/commit/6936b5dda48b51995eb1d9cb59da2c5040725301
+- Commit 6dcd621: [UPD] Update sale_elaboration.pot → https://github.com/OCA/sale-workflow/commit/6dcd6219eb8e1ffdd5b22504114ab9cb6f8f04c9
+- Commit 5d548f9: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/5d548f93a33faabee5398bbec8a51c19e5e67de5
+- Commit bcb8bf3: Update translation files → https://github.com/OCA/sale-workflow/commit/bcb8bf33eb27afc8854374465b944e3829a11e0c
+

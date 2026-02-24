@@ -78,3 +78,11 @@
 
 - Commit ce9d421: Translated using Weblate (Slovenian) → https://github.com/OCA/management-system/commit/ce9d421e5f5c262a9b0d9aa136fb9fe4968960dc
 
+## 2026-02-24
+
+- Commit 233ea34: [UPD] Update mgmtsystem_action.pot → https://github.com/OCA/management-system/commit/233ea34f1988bac8c38fd9924d9302341762bbca
+- Commit 808bf55: [UPD] Update mgmtsystem_hazard_risk.pot → https://github.com/OCA/management-system/commit/808bf5546d26fd366bc0069e435097cabcf1643a
+- Commit feaff3f: [BOT] post-merge updates → https://github.com/OCA/management-system/commit/feaff3f2fe10ecbabd9ff4051ecc9eadd613ce16
+- Commit c7aab9b: Update translation files → https://github.com/OCA/management-system/commit/c7aab9b07b70b3cc42fcf8a12ee97ed3a5df73ad
+- Commit 8faac35: Update translation files → https://github.com/OCA/management-system/commit/8faac35da1378984c0692abec8469e43a4a86511
+

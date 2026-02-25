@@ -163,3 +163,9 @@
 - Commit 9ac972e: Merge PR #958 into 18.0 → https://github.com/OCA/account-reconcile/commit/9ac972e19552e86cd1ea0fe4160995ef0779397f
 - Commit e6754f3: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/e6754f3bfe9b86d5f1ed6499b5502b75a8af0b45
 
+## 2026-02-25
+
+- Commit ef33bdc: Translated using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/ef33bdc764eeb650e7bed8ef632927eb654ce695
+- Commit e721eb7: Added translation using Weblate (German) → https://github.com/OCA/account-reconcile/commit/e721eb75556ccfd7603e0603b717ccc4fff42d65
+- Commit 1a080dd: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/1a080dd7e8c0e52eaee06c5feaebc5cda0e1d659
+

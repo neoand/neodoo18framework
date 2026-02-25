@@ -86,3 +86,8 @@
 - Commit c7aab9b: Update translation files → https://github.com/OCA/management-system/commit/c7aab9b07b70b3cc42fcf8a12ee97ed3a5df73ad
 - Commit 8faac35: Update translation files → https://github.com/OCA/management-system/commit/8faac35da1378984c0692abec8469e43a4a86511
 
+## 2026-02-25
+
+- Commit 8ca17f6: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/8ca17f62c1586f75f7293bf985737e91c6ae6550
+- Commit 7f6b3c9: Translated using Weblate (Italian) → https://github.com/OCA/management-system/commit/7f6b3c9f4cfe3149a6d4b33c47119c3a688d477a
+

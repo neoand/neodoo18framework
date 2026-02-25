@@ -250,3 +250,11 @@
 - Commit 3fc6a3e: [IMP] Update analysis files → https://github.com/OCA/OpenUpgrade/commit/3fc6a3e66dd40518b6b4f64b8ada519281c495e0
 - Commit 58b7381: Merge pull request #5525 from OCA/18.0-update-analysis-bot → https://github.com/OCA/OpenUpgrade/commit/58b73818868325dc622c10a40212f5e4ee1bab5b
 
+## 2026-02-25
+
+- Commit 90d4eea: [OU-ADD] l10n_mx: Nothing to do → https://github.com/OCA/OpenUpgrade/commit/90d4eea47834275a988445225a0dc5254c0275ae
+- Commit 0b34691: [OU-ADD] l10n_pe: Migration scripts → https://github.com/OCA/OpenUpgrade/commit/0b34691e0ee78226efa839c1adae643dadb69a99
+- Commit 1ad73e8: Merge pull request #5538 from Tecnativa/18.0-ou-add-l10n_co → https://github.com/OCA/OpenUpgrade/commit/1ad73e80bdfeed3fc3ca2a9d2bd1f69a07f1561f
+- Commit 0d33739: Merge pull request #5536 from Tecnativa/18.0-ou-add-l10n_mx → https://github.com/OCA/OpenUpgrade/commit/0d33739469f5719468ca38d62062c9ac36976d8c
+- Commit f12753e: Merge pull request #5537 from Tecnativa/18.0-ou-add-l10n_pe → https://github.com/OCA/OpenUpgrade/commit/f12753e4390096bfc034188aacba0ab7519cbcc4
+

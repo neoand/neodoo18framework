@@ -401,3 +401,8 @@
 - Commit 5d548f9: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/5d548f93a33faabee5398bbec8a51c19e5e67de5
 - Commit bcb8bf3: Update translation files → https://github.com/OCA/sale-workflow/commit/bcb8bf33eb27afc8854374465b944e3829a11e0c
 
+## 2026-02-25
+
+- Commit 9ff4212: Added translation using Weblate (French) → https://github.com/OCA/sale-workflow/commit/9ff421250b5679506110bc836b3ea1c549b6924d
+- Commit 62c894b: Translated using Weblate (French) → https://github.com/OCA/sale-workflow/commit/62c894b8d1bbeffe197000df1e9ce806d7bc93f9
+

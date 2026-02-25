@@ -51,3 +51,8 @@
 - Commit ad1ea36: [FIX] mock.patch(auto_spec=True) does not exist → https://github.com/OCA/queue/commit/ad1ea36301a736e597008e365339933b7f4a74b0
 - Commit 2601ebb: Merge PR #898 into 18.0 → https://github.com/OCA/queue/commit/2601ebb25ca6ffe84b36a0aa033b4fe5b4b504de
 
+## 2026-02-25
+
+- Commit 7f8efcb: Merge PR #900 into 18.0 → https://github.com/OCA/queue/commit/7f8efcbedf0ebcf88c4396c001b0fdab69f40138
+- Commit 0c95fd2: [BOT] post-merge updates → https://github.com/OCA/queue/commit/0c95fd283cdd180ca3807092bb0d8fd13220abb3
+

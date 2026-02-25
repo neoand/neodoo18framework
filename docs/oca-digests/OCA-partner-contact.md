@@ -290,3 +290,11 @@
 - Commit 82e8bbb: [UPD] Update partner_address_split.pot → https://github.com/OCA/partner-contact/commit/82e8bbb25eb97eec225b856bedaba125ae255c38
 - Commit 7bc4c34: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/7bc4c34684c6d67fd4e86d9ff2baa851e4368884
 
+## 2026-02-25
+
+- Commit 6d7b725: [FIX] partner_contact_age_range: Fix test → https://github.com/OCA/partner-contact/commit/6d7b725fdc879cd3422b35f71e92dc1ff6208620
+- Commit 86fd65f: Merge PR #2291 into 18.0 → https://github.com/OCA/partner-contact/commit/86fd65fae1891ca3e80589ee7443478f12a6ee3b
+- Commit ca22429: [UPD] Update partner_email_check.pot → https://github.com/OCA/partner-contact/commit/ca2242906337d1da7339ce07ca7df395739c4460
+- Commit 1099651: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/1099651598f862979663af0ec7758bbb1d9d649b
+- Commit 7a07781: Update translation files → https://github.com/OCA/partner-contact/commit/7a07781842a9ba1faa9df842c3be312fa98c14da
+

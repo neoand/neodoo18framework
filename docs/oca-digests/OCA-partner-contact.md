@@ -298,3 +298,7 @@
 - Commit 1099651: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/1099651598f862979663af0ec7758bbb1d9d649b
 - Commit 7a07781: Update translation files → https://github.com/OCA/partner-contact/commit/7a07781842a9ba1faa9df842c3be312fa98c14da
 
+## 2026-02-26
+
+- Commit 9adfdc4: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/9adfdc4443d08a96abd117aae15d0cb818eba102
+

@@ -169,3 +169,8 @@
 - Commit e721eb7: Added translation using Weblate (German) → https://github.com/OCA/account-reconcile/commit/e721eb75556ccfd7603e0603b717ccc4fff42d65
 - Commit 1a080dd: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/1a080dd7e8c0e52eaee06c5feaebc5cda0e1d659
 
+## 2026-02-26
+
+- Commit aabdcc9: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/aabdcc96e23bfc8fb295dba075f4b000d9c7aae8
+- Commit 336c738: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/336c7382d687482e0dc417cbda27c3658983f095
+

@@ -89,3 +89,11 @@
 - Commit 6aa3589: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/6aa358984f875636cdbe7c89bc6409e80dab3076
 - Commit 7f449fc: Update translation files → https://github.com/OCA/spreadsheet/commit/7f449fcda160b8e1952bec93edebdec0af787627
 
+## 2026-02-26
+
+- Commit 8aafd51: Merge PR #94 into 18.0 → https://github.com/OCA/spreadsheet/commit/8aafd51794f171a728e7f62595b102893af8077d
+- Commit 617d528: [UPD] Update spreadsheet_oca.pot → https://github.com/OCA/spreadsheet/commit/617d528af3a0b24fd843ebe9607b25b32e87cfd3
+- Commit c4d5754: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/c4d575456eca3947d7e87cdfce4bbd27a093881b
+- Commit 8b4856a: Update translation files → https://github.com/OCA/spreadsheet/commit/8b4856a16a7b1bc15d33fb96c5b941759859dfb9
+- Commit 4b9c12f: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/4b9c12f163627a227e08d138fb6adb3468610f22
+

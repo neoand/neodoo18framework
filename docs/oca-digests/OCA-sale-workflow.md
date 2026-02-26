@@ -406,3 +406,9 @@
 - Commit 9ff4212: Added translation using Weblate (French) → https://github.com/OCA/sale-workflow/commit/9ff421250b5679506110bc836b3ea1c549b6924d
 - Commit 62c894b: Translated using Weblate (French) → https://github.com/OCA/sale-workflow/commit/62c894b8d1bbeffe197000df1e9ce806d7bc93f9
 
+## 2026-02-26
+
+- Commit e01add1: Added translation using Weblate (Japanese) → https://github.com/OCA/sale-workflow/commit/e01add13912be0e8a5ef4f514882cda8b85ad57c
+- Commit d5feebd: Translated using Weblate (Japanese) → https://github.com/OCA/sale-workflow/commit/d5feebdd572fe324f17830c618b120d56c1f9e5c
+- Commit f5710b9: Translated using Weblate (Japanese) → https://github.com/OCA/sale-workflow/commit/f5710b97b3233002eac11793d2c03ed605759199
+

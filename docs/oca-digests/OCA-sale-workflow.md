@@ -412,3 +412,11 @@
 - Commit d5feebd: Translated using Weblate (Japanese) → https://github.com/OCA/sale-workflow/commit/d5feebdd572fe324f17830c618b120d56c1f9e5c
 - Commit f5710b9: Translated using Weblate (Japanese) → https://github.com/OCA/sale-workflow/commit/f5710b97b3233002eac11793d2c03ed605759199
 
+## 2026-02-27
+
+- Commit 06493fc: [UPD] Update sale_order_restrict_copy_archived_product.pot → https://github.com/OCA/sale-workflow/commit/06493fc47de3b44fb8d0f98870f18d65f04ba95e
+- Commit 956b1ad: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/956b1adf06d78209f47cf9d8aeb71942d241f706
+- Commit 409fe6a: Merge PR #4161 into 18.0 → https://github.com/OCA/sale-workflow/commit/409fe6aa8439c1c4cb368e9c544c1d776a96643b
+- Commit c9f2608: [UPD] Update sale_custom_rounding.pot → https://github.com/OCA/sale-workflow/commit/c9f2608167694c13eecf12eeed40f95c546ed3c5
+- Commit 9cc40af: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/9cc40af11717db0f0b4ca2506d88e1c205118a58
+

@@ -258,3 +258,8 @@
 - Commit 0d33739: Merge pull request #5536 from Tecnativa/18.0-ou-add-l10n_mx → https://github.com/OCA/OpenUpgrade/commit/0d33739469f5719468ca38d62062c9ac36976d8c
 - Commit f12753e: Merge pull request #5537 from Tecnativa/18.0-ou-add-l10n_pe → https://github.com/OCA/OpenUpgrade/commit/f12753e4390096bfc034188aacba0ab7519cbcc4
 
+## 2026-02-27
+
+- Commit 6427bc2: [OU-ADD] stock_move_line_auto_fill: Merged into stock → https://github.com/OCA/OpenUpgrade/commit/6427bc2ed7b9a3adcb802872b732e600239aa5ba
+- Commit 7f932bd: Merge pull request #5541 from akretion/18.0-ou_add-stock_move_line_auto_fill → https://github.com/OCA/OpenUpgrade/commit/7f932bd1789c0b52b6dcf35564c731e354f712d8
+

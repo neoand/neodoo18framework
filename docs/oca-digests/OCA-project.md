@@ -183,3 +183,11 @@
 - Commit c30670c: Merge PR #1609 into 18.0 → https://github.com/OCA/project/commit/c30670cfe0145a0031384e62ec2a1bf47339c692
 - Commit 56fbb1e: [BOT] post-merge updates → https://github.com/OCA/project/commit/56fbb1e3fa9ec39c90c11287a497a17a97a107ed
 
+## 2026-02-27
+
+- Commit 37e9ac8: [FIX] sale_project_task_selection: Disable failed test → https://github.com/OCA/project/commit/37e9ac8774ce9934eb897d099cd51476a4fe3a24
+- Commit 2a3de9b: Merge PR #1681 into 18.0 → https://github.com/OCA/project/commit/2a3de9b0dffe032a528f8aaafbd925a68cd4c148
+- Commit 4d768ec: [UPD] Update project_role.pot → https://github.com/OCA/project/commit/4d768ecf408f598603e4eb5051e0861ced26b3da
+- Commit 18145d2: [BOT] post-merge updates → https://github.com/OCA/project/commit/18145d2e715ce82b043e8507928dd130dc363acc
+- Commit de1a38c: Update translation files → https://github.com/OCA/project/commit/de1a38cda814cec61ba2f65322de980cfd5fea8a
+

@@ -420,3 +420,9 @@
 - Commit c9f2608: [UPD] Update sale_custom_rounding.pot → https://github.com/OCA/sale-workflow/commit/c9f2608167694c13eecf12eeed40f95c546ed3c5
 - Commit 9cc40af: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/9cc40af11717db0f0b4ca2506d88e1c205118a58
 
+## 2026-02-28
+
+- Commit ff3acf6: Merge PR #4126 into 18.0 → https://github.com/OCA/sale-workflow/commit/ff3acf610b6bf91f1bba640149780af137e3c545
+- Commit dcbefc1: [UPD] Update sale_order_line_description.pot → https://github.com/OCA/sale-workflow/commit/dcbefc1617b274200ba8924b1c97e2d64f4c4524
+- Commit 23542f2: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/23542f2e6ff8fd869c396187d8ae249cde6278da
+

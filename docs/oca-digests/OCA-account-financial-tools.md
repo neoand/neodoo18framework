@@ -219,3 +219,9 @@
 - Commit 7892cb3: Translated using Weblate (Russian) → https://github.com/OCA/account-financial-tools/commit/7892cb393fbd7a5834f23f0abe52c6465744c7a0
 - Commit 74932e8: Translated using Weblate (Russian) → https://github.com/OCA/account-financial-tools/commit/74932e8ae7b8916a39eacbe145fb47d4e56b599f
 
+## 2026-02-28
+
+- Commit 587b158: [IMP] account_asset_management: Improve readability of long record names → https://github.com/OCA/account-financial-tools/commit/587b1588fe326b3b49dbb197bee5dcddbccf94d9
+- Commit c29e6dc: Merge PR #2237 into 18.0 → https://github.com/OCA/account-financial-tools/commit/c29e6dc165ad2a5716c2bbc19264f95d5973f971
+- Commit 3b66a7f: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/3b66a7fa7a7063d0080b881361a07996d385a2de
+

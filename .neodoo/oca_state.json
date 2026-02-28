@@ -3,10 +3,10 @@
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "1de5e82c3e16de0d5161de00e8e3ae0820774254",
     "OCA/project@18.0::commits": "de1a38cda814cec61ba2f65322de980cfd5fea8a",
-    "OCA/sale-workflow@18.0::commits": "9cc40af11717db0f0b4ca2506d88e1c205118a58",
+    "OCA/sale-workflow@18.0::commits": "23542f2e6ff8fd869c396187d8ae249cde6278da",
     "OCA/oca-port@main::commits": "53136114f5c8d51f0795b5668d6dfd314ad07fb0",
     "OCA/connector@18.0::commits": "10416a62a86edf72abb8d68b208cfe4620526866",
-    "OCA/account-financial-tools@18.0::commits": "74932e8ae7b8916a39eacbe145fb47d4e56b599f",
+    "OCA/account-financial-tools@18.0::commits": "3b66a7fa7a7063d0080b881361a07996d385a2de",
     "OCA/reporting-engine@18.0::commits": "35a9cd5f28d245857269952ac39a10cfdd89d98a",
     "OCA/server-tools@18.0::commits": "7473ce11b4cbcc15f9d216e345043e6473431dfb",
     "OCA/OpenUpgrade@18.0::commits": "7f932bd1789c0b52b6dcf35564c731e354f712d8",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "4b9c12f163627a227e08d138fb6adb3468610f22"
   },
-  "updated_at": "2026-02-27T02:53:51.879603+00:00"
+  "updated_at": "2026-02-28T02:45:04.863178+00:00"
 }

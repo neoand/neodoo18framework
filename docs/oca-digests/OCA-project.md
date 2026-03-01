@@ -191,3 +191,8 @@
 - Commit 18145d2: [BOT] post-merge updates → https://github.com/OCA/project/commit/18145d2e715ce82b043e8507928dd130dc363acc
 - Commit de1a38c: Update translation files → https://github.com/OCA/project/commit/de1a38cda814cec61ba2f65322de980cfd5fea8a
 
+## 2026-03-01
+
+- Commit 94c024f: Added translation using Weblate (Turkish) → https://github.com/OCA/project/commit/94c024ff235140f0c1ed6efdc5eb1590bcdc4290
+- Commit a35be0b: Translated using Weblate (Turkish) → https://github.com/OCA/project/commit/a35be0bd09eb86eece813257818d64bab3316ec3
+

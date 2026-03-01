@@ -426,3 +426,10 @@
 - Commit dcbefc1: [UPD] Update sale_order_line_description.pot → https://github.com/OCA/sale-workflow/commit/dcbefc1617b274200ba8924b1c97e2d64f4c4524
 - Commit 23542f2: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/23542f2e6ff8fd869c396187d8ae249cde6278da
 
+## 2026-03-01
+
+- Commit 9cac682: Translated using Weblate (Dutch (nl_NL)) → https://github.com/OCA/sale-workflow/commit/9cac682e09b7939e74b227fd39aa192f37ed3474
+- Commit 33bf5b4: Added translation using Weblate (Dutch) → https://github.com/OCA/sale-workflow/commit/33bf5b42a727adc65cc2c672e109b2ff4067304c
+- Commit 6837200: Translated using Weblate (Dutch) → https://github.com/OCA/sale-workflow/commit/683720063b9bd026dc9df76ee4a78c759fe77ef3
+- Commit 181b27a: Translated using Weblate (Dutch (nl_NL)) → https://github.com/OCA/sale-workflow/commit/181b27acc95efd777fc9782863f0ff5fa30ccb44
+

@@ -101,3 +101,9 @@
 
 - Commit ea2303e: Translated using Weblate (Turkish) → https://github.com/OCA/bank-statement-import/commit/ea2303ec8c46693b85b7f4895d9634d037847870
 
+## 2026-03-01
+
+- Commit 301edea: Merge PR #856 into 18.0 → https://github.com/OCA/bank-statement-import/commit/301edeaf981d3598153a7b422ebc8ea138875ee5
+- Commit 30da644: [UPD] Update account_statement_import_online_wise.pot → https://github.com/OCA/bank-statement-import/commit/30da644c8f184e83a1e5c10c97b8f0d8cd648b47
+- Commit c3e24b7: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/c3e24b71fd0eb847415a47c4db6c264938248422
+

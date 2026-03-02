@@ -225,3 +225,7 @@
 - Commit c29e6dc: Merge PR #2237 into 18.0 → https://github.com/OCA/account-financial-tools/commit/c29e6dc165ad2a5716c2bbc19264f95d5973f971
 - Commit 3b66a7f: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/3b66a7fa7a7063d0080b881361a07996d385a2de
 
+## 2026-03-02
+
+- Commit 55d852d: Added translation using Weblate (Finnish) → https://github.com/OCA/account-financial-tools/commit/55d852d600084c2fed254bf688c9b4375068cf4e
+

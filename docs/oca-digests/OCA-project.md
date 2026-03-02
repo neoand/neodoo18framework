@@ -196,3 +196,7 @@
 - Commit 94c024f: Added translation using Weblate (Turkish) → https://github.com/OCA/project/commit/94c024ff235140f0c1ed6efdc5eb1590bcdc4290
 - Commit a35be0b: Translated using Weblate (Turkish) → https://github.com/OCA/project/commit/a35be0bd09eb86eece813257818d64bab3316ec3
 
+## 2026-03-02
+
+- Commit 6da6d28: Translated using Weblate (Turkish) → https://github.com/OCA/project/commit/6da6d284eb0a65a6c73e94c7923ba8140c75a836
+

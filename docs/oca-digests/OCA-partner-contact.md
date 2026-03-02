@@ -302,3 +302,8 @@
 
 - Commit 9adfdc4: Translated using Weblate (Italian) → https://github.com/OCA/partner-contact/commit/9adfdc4443d08a96abd117aae15d0cb818eba102
 
+## 2026-03-02
+
+- Commit ce363e1: Added translation using Weblate (German) → https://github.com/OCA/partner-contact/commit/ce363e175412e368687b48fe29321aa95787ac64
+- Commit 5f2b988: Translated using Weblate (German) → https://github.com/OCA/partner-contact/commit/5f2b988f74a46d643fc4379a0921442a55b674ab
+

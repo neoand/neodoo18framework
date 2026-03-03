@@ -107,3 +107,7 @@
 - Commit 30da644: [UPD] Update account_statement_import_online_wise.pot → https://github.com/OCA/bank-statement-import/commit/30da644c8f184e83a1e5c10c97b8f0d8cd648b47
 - Commit c3e24b7: [BOT] post-merge updates → https://github.com/OCA/bank-statement-import/commit/c3e24b71fd0eb847415a47c4db6c264938248422
 
+## 2026-03-03
+
+- Commit db8d948: Translated using Weblate (Italian) → https://github.com/OCA/bank-statement-import/commit/db8d9484769d8572322802249badcb1dab91fa3e
+

@@ -118,3 +118,9 @@
 - Commit 9be8f24: Merge PR #957 into 18.0 → https://github.com/OCA/multi-company/commit/9be8f24a9b753117127572830e2ea9e356becca5
 - Commit 9168a64: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/9168a64f9a3fdda3d175a425d44e6bc99d670791
 
+## 2026-03-03
+
+- Commit cc9c0f8: [18.0][FIX] purchase_sale_stock_inter_company: default warehouse from same partner_id → https://github.com/OCA/multi-company/commit/cc9c0f8cc7a0ef2166829f79ab182c3e0e5769e9
+- Commit 23b55e2: Merge PR #966 into 18.0 → https://github.com/OCA/multi-company/commit/23b55e283207e0688d12b2b589faa8e0298e622a
+- Commit 8a780b6: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/8a780b6ed1dc69808c71c5b0696d38495b8f5ab6
+

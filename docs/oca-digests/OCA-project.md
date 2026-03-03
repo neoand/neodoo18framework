@@ -200,3 +200,7 @@
 
 - Commit 6da6d28: Translated using Weblate (Turkish) → https://github.com/OCA/project/commit/6da6d284eb0a65a6c73e94c7923ba8140c75a836
 
+## 2026-03-03
+
+- Commit 1d5b991: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/1d5b991be96c2bf66f0cf6e312ca8af54494025d
+

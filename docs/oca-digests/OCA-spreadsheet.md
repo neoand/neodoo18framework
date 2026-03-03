@@ -97,3 +97,11 @@
 - Commit 8b4856a: Update translation files → https://github.com/OCA/spreadsheet/commit/8b4856a16a7b1bc15d33fb96c5b941759859dfb9
 - Commit 4b9c12f: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/4b9c12f163627a227e08d138fb6adb3468610f22
 
+## 2026-03-03
+
+- Commit 331004d: [FIX] spreadsheet_oca: Error linking chart to Odoo menu → https://github.com/OCA/spreadsheet/commit/331004d5ca74969a83a18b84aa3cb926a2bd9b2d
+- Commit c6b23a8: Merge PR #95 into 18.0 → https://github.com/OCA/spreadsheet/commit/c6b23a8abf423f108b3b2d8a77d19dfb7144d620
+- Commit f5a6582: [UPD] Update spreadsheet_oca.pot → https://github.com/OCA/spreadsheet/commit/f5a65828710ab95c36c652a90289527df1b87f82
+- Commit b143f87: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/b143f8723993971a3a4f20fffd0a2a244d2b51c6
+- Commit 67ef9eb: Update translation files → https://github.com/OCA/spreadsheet/commit/67ef9eb654c4a87284a3eb943efa95f8c771461e
+

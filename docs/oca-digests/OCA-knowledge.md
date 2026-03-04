@@ -49,3 +49,9 @@
 - Commit dd7b18c: Translated using Weblate (Italian) → https://github.com/OCA/knowledge/commit/dd7b18c61aa33c4d3cef330517ac001187b88584
 - Commit 0881d75: Translated using Weblate (Italian) → https://github.com/OCA/knowledge/commit/0881d75a35e7fc2f814110df4878177e805e589b
 
+## 2026-03-04
+
+- Commit 52b1c22: [FIX] document_page_approval: Avoid errors when creating a page history and send mail → https://github.com/OCA/knowledge/commit/52b1c226f9bc05c95b5f7f2d68e5672e33ccd587
+- Commit 39c68eb: Merge PR #584 into 18.0 → https://github.com/OCA/knowledge/commit/39c68eb7208ccd27638fb14de0e8a34e3429b2b1
+- Commit f747aa3: [BOT] post-merge updates → https://github.com/OCA/knowledge/commit/f747aa3f6e8426e9e5244fc14143f511c140ebbc
+

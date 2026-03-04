@@ -105,3 +105,9 @@
 - Commit b143f87: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/b143f8723993971a3a4f20fffd0a2a244d2b51c6
 - Commit 67ef9eb: Update translation files → https://github.com/OCA/spreadsheet/commit/67ef9eb654c4a87284a3eb943efa95f8c771461e
 
+## 2026-03-04
+
+- Commit 8a5adf3: Translated using Weblate (Italian) → https://github.com/OCA/spreadsheet/commit/8a5adf3659e46e7a6ad9577221c4464136e44008
+- Commit 605a62d: Merge PR #97 into 18.0 → https://github.com/OCA/spreadsheet/commit/605a62d210daad6b6a260baea3d86964bbc29629
+- Commit 6b75258: [BOT] post-merge updates → https://github.com/OCA/spreadsheet/commit/6b75258695651a1bbcea0ffbfcac8e7ec1220e54
+

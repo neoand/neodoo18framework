@@ -433,3 +433,7 @@
 - Commit 6837200: Translated using Weblate (Dutch) → https://github.com/OCA/sale-workflow/commit/683720063b9bd026dc9df76ee4a78c759fe77ef3
 - Commit 181b27a: Translated using Weblate (Dutch (nl_NL)) → https://github.com/OCA/sale-workflow/commit/181b27acc95efd777fc9782863f0ff5fa30ccb44
 
+## 2026-03-04
+
+- Commit 077b315: Translated using Weblate (Spanish) → https://github.com/OCA/sale-workflow/commit/077b31596902892ccd98cd54651e23e9f7ecb19b
+

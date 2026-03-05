@@ -174,3 +174,10 @@
 - Commit aabdcc9: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/aabdcc96e23bfc8fb295dba075f4b000d9c7aae8
 - Commit 336c738: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/336c7382d687482e0dc417cbda27c3658983f095
 
+## 2026-03-05
+
+- Commit da9ad25: [FIX] account_reconcile_oca: Account move smartbutton missing context → https://github.com/OCA/account-reconcile/commit/da9ad2553e33789e40e43c7306aef498156e3090
+- Commit 7bf9689: Merge PR #962 into 18.0 → https://github.com/OCA/account-reconcile/commit/7bf9689785cf14433ed6e2454965092da5322df3
+- Commit 3d67434: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/3d674341bd0844211692dd5f4cb4a420cc9081a7
+- Commit 2b410ff: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/2b410ff55f4fae263603ed6366723d5d1628f6dc
+

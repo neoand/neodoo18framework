@@ -437,3 +437,9 @@
 
 - Commit 077b315: Translated using Weblate (Spanish) → https://github.com/OCA/sale-workflow/commit/077b31596902892ccd98cd54651e23e9f7ecb19b
 
+## 2026-03-05
+
+- Commit bad1a6a: Merge PR #4070 into 18.0 → https://github.com/OCA/sale-workflow/commit/bad1a6a8699bf0ade5123d13f061f5216d0b53cd
+- Commit 0f601dc: [UPD] Update sale_order_line_no_print.pot → https://github.com/OCA/sale-workflow/commit/0f601dc8ba2b599fab4e493af7bb5bec1f81bc52
+- Commit a939f62: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/a939f6207fb1a9cb38c8241408a08fed815d4a70
+

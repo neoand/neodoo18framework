@@ -204,3 +204,8 @@
 
 - Commit 1d5b991: Translated using Weblate (Italian) → https://github.com/OCA/project/commit/1d5b991be96c2bf66f0cf6e312ca8af54494025d
 
+## 2026-03-05
+
+- Commit eaffe53: Merge PR #1683 into 18.0 → https://github.com/OCA/project/commit/eaffe5350c6cd35c4964ecc36982e8efc5a49174
+- Commit 4cb63a7: [BOT] post-merge updates → https://github.com/OCA/project/commit/4cb63a74400a0c400ad48e8cb5b20fae4cedde28
+

@@ -2,8 +2,8 @@
   "keys": {
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "1de5e82c3e16de0d5161de00e8e3ae0820774254",
-    "OCA/project@18.0::commits": "1d5b991be96c2bf66f0cf6e312ca8af54494025d",
-    "OCA/sale-workflow@18.0::commits": "077b31596902892ccd98cd54651e23e9f7ecb19b",
+    "OCA/project@18.0::commits": "4cb63a74400a0c400ad48e8cb5b20fae4cedde28",
+    "OCA/sale-workflow@18.0::commits": "a939f6207fb1a9cb38c8241408a08fed815d4a70",
     "OCA/oca-port@main::commits": "53136114f5c8d51f0795b5668d6dfd314ad07fb0",
     "OCA/connector@18.0::commits": "10416a62a86edf72abb8d68b208cfe4620526866",
     "OCA/account-financial-tools@18.0::commits": "55d852d600084c2fed254bf688c9b4375068cf4e",
@@ -12,16 +12,16 @@
     "OCA/OpenUpgrade@18.0::commits": "3eceec4442a6d236994f9a9202254947360de5b8",
     "OCA/web@18.0::commits": "f1543e10310d92d48c2c073ee1af8054315770d7",
     "OCA/partner-contact@18.0::commits": "5f2b988f74a46d643fc4379a0921442a55b674ab",
-    "OCA/queue@18.0::commits": "0c95fd283cdd180ca3807092bb0d8fd13220abb3",
+    "OCA/queue@18.0::commits": "1ea2c454c8452b59ac27a24a0699bf7279a223f1",
     "OCA/management-system@18.0::commits": "7f6b3c9f4cfe3149a6d4b33c47119c3a688d477a",
     "OCA/product-attribute@18.0::commits": "1d35cea8831bd0c93ccafbaabc5ceb0fa0cf48b5",
     "OCA/calendar@18.0::commits": "0fa4170a930fd1c96f45b239e396587d087cce7f",
     "OCA/bank-statement-import@18.0::commits": "db8d9484769d8572322802249badcb1dab91fa3e",
     "OCA/multi-company@18.0::commits": "8a780b6ed1dc69808c71c5b0696d38495b8f5ab6",
     "OCA/knowledge@18.0::commits": "f747aa3f6e8426e9e5244fc14143f511c140ebbc",
-    "OCA/account-reconcile@18.0::commits": "336c7382d687482e0dc417cbda27c3658983f095",
+    "OCA/account-reconcile@18.0::commits": "2b410ff55f4fae263603ed6366723d5d1628f6dc",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "6b75258695651a1bbcea0ffbfcac8e7ec1220e54"
   },
-  "updated_at": "2026-03-04T02:52:14.456030+00:00"
+  "updated_at": "2026-03-05T02:53:55.161112+00:00"
 }

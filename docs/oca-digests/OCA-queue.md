@@ -56,3 +56,9 @@
 - Commit 7f8efcb: Merge PR #900 into 18.0 → https://github.com/OCA/queue/commit/7f8efcbedf0ebcf88c4396c001b0fdab69f40138
 - Commit 0c95fd2: [BOT] post-merge updates → https://github.com/OCA/queue/commit/0c95fd283cdd180ca3807092bb0d8fd13220abb3
 
+## 2026-03-05
+
+- Commit 27af421: [FIX] queue_job: Fix TestJson → https://github.com/OCA/queue/commit/27af42105f36015449f78cd473bb9cee13abc286
+- Commit b0e0934: Merge PR #909 into 18.0 → https://github.com/OCA/queue/commit/b0e0934ddf5b6a03137713816c139a44b23c5812
+- Commit 1ea2c45: [BOT] post-merge updates → https://github.com/OCA/queue/commit/1ea2c454c8452b59ac27a24a0699bf7279a223f1
+

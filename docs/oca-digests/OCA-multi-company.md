@@ -124,3 +124,9 @@
 - Commit 23b55e2: Merge PR #966 into 18.0 → https://github.com/OCA/multi-company/commit/23b55e283207e0688d12b2b589faa8e0298e622a
 - Commit 8a780b6: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/8a780b6ed1dc69808c71c5b0696d38495b8f5ab6
 
+## 2026-03-06
+
+- Commit 800ba6a: [IMP] account_invoice_inter_company: Propagate section, note and description in intercompany invoice → https://github.com/OCA/multi-company/commit/800ba6a56ad5999429c00bcac6cf5d3acfde3db9
+- Commit 18e2407: Merge PR #968 into 18.0 → https://github.com/OCA/multi-company/commit/18e2407a6169d77a9b3237a1f329800a405537b3
+- Commit 9add304: [BOT] post-merge updates → https://github.com/OCA/multi-company/commit/9add3040944866b3c1c5b3c9d6d16a42bd9bc7de
+

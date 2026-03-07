@@ -448,3 +448,11 @@
 - Commit 87eae30: Merge PR #4190 into 18.0 → https://github.com/OCA/sale-workflow/commit/87eae3032be11fcbaa34dcb2690859ee8a4b70e5
 - Commit da6575e: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/da6575e5e781e532b84f63d5fe51f58c6620a679
 
+## 2026-03-07
+
+- Commit 4738bc0: Update translation files → https://github.com/OCA/sale-workflow/commit/4738bc0535c7588dd551820ea740e0c399a4c3da
+- Commit e3d6c88: [ADD] sale_invoice_plan_report: add new module → https://github.com/OCA/sale-workflow/commit/e3d6c88da987fd0eb5e7b27d4e64715980a3ba96
+- Commit 655d331: Merge PR #4178 into 18.0 → https://github.com/OCA/sale-workflow/commit/655d3318ac229f6dd80ab65be44ccf693ae21035
+- Commit 0a00bea: [UPD] Update sale_invoice_plan_report.pot → https://github.com/OCA/sale-workflow/commit/0a00bea108c459314dc6f4b6b864f8f2d31306d6
+- Commit b2e8527: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/b2e85278db4cf7712b3ab28c4fdcd31a65cc50d7
+

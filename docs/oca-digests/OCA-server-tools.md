@@ -219,3 +219,11 @@
 - Commit 0083183: Merge PR #3526 into 18.0 → https://github.com/OCA/server-tools/commit/00831836f7111aa350e49ff7ee1d7cee873c00a5
 - Commit 7473ce1: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/7473ce11b4cbcc15f9d216e345043e6473431dfb
 
+## 2026-03-07
+
+- Commit 6458910: [UPD] Update base_multi_image.pot → https://github.com/OCA/server-tools/commit/64589104b561af79d349c85350c0524ed25ad9e4
+- Commit 5584c46: [UPD] Update base_name_search_improved.pot → https://github.com/OCA/server-tools/commit/5584c46cfc82469864d9897cd0d03b6f856f3e97
+- Commit bad4c91: [BOT] post-merge updates → https://github.com/OCA/server-tools/commit/bad4c917c0e7b2f651e6d28ab75fa2cc520bef60
+- Commit 711e7be: Update translation files → https://github.com/OCA/server-tools/commit/711e7be792439b993c9b863ca6785a108e760744
+- Commit 31d7fe7: Update translation files → https://github.com/OCA/server-tools/commit/31d7fe7e15bf865331ed66e031eb32ba062cb9f5
+

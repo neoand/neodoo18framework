@@ -209,3 +209,11 @@
 - Commit eaffe53: Merge PR #1683 into 18.0 → https://github.com/OCA/project/commit/eaffe5350c6cd35c4964ecc36982e8efc5a49174
 - Commit 4cb63a7: [BOT] post-merge updates → https://github.com/OCA/project/commit/4cb63a74400a0c400ad48e8cb5b20fae4cedde28
 
+## 2026-03-07
+
+- Commit 6fd83bc: [IMP] project_reviewer: pre-commit auto fixes → https://github.com/OCA/project/commit/6fd83bc3793f5b51a6cd051883eb2ed362407ed6
+- Commit ed54933: [MIG] migrate project_reviewer to 18 → https://github.com/OCA/project/commit/ed54933897f237e1fa2121709fe5204dca70e4b1
+- Commit 4ec1d1f: Merge PR #1687 into 18.0 → https://github.com/OCA/project/commit/4ec1d1f71f54264d841474fb232c2877d0968725
+- Commit 58df579: [UPD] Update project_reviewer.pot → https://github.com/OCA/project/commit/58df579e369b2320ece755db6faebbc13e3639c1
+- Commit 0eda75e: [BOT] post-merge updates → https://github.com/OCA/project/commit/0eda75ef99c685eb2da51934225613ac5088f750
+

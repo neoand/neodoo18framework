@@ -2,19 +2,19 @@
   "keys": {
     "OCA/odoorpc@main::releases": "14180460",
     "OCA/l10n-brazil@18.0::commits": "1de5e82c3e16de0d5161de00e8e3ae0820774254",
-    "OCA/project@18.0::commits": "4cb63a74400a0c400ad48e8cb5b20fae4cedde28",
-    "OCA/sale-workflow@18.0::commits": "da6575e5e781e532b84f63d5fe51f58c6620a679",
+    "OCA/project@18.0::commits": "0eda75ef99c685eb2da51934225613ac5088f750",
+    "OCA/sale-workflow@18.0::commits": "b2e85278db4cf7712b3ab28c4fdcd31a65cc50d7",
     "OCA/oca-port@main::commits": "53136114f5c8d51f0795b5668d6dfd314ad07fb0",
     "OCA/connector@18.0::commits": "10416a62a86edf72abb8d68b208cfe4620526866",
     "OCA/account-financial-tools@18.0::commits": "55d852d600084c2fed254bf688c9b4375068cf4e",
     "OCA/reporting-engine@18.0::commits": "35a9cd5f28d245857269952ac39a10cfdd89d98a",
-    "OCA/server-tools@18.0::commits": "7473ce11b4cbcc15f9d216e345043e6473431dfb",
+    "OCA/server-tools@18.0::commits": "31d7fe7e15bf865331ed66e031eb32ba062cb9f5",
     "OCA/OpenUpgrade@18.0::commits": "3eceec4442a6d236994f9a9202254947360de5b8",
     "OCA/web@18.0::commits": "f1543e10310d92d48c2c073ee1af8054315770d7",
     "OCA/partner-contact@18.0::commits": "5f2b988f74a46d643fc4379a0921442a55b674ab",
     "OCA/queue@18.0::commits": "1ea2c454c8452b59ac27a24a0699bf7279a223f1",
     "OCA/management-system@18.0::commits": "7f6b3c9f4cfe3149a6d4b33c47119c3a688d477a",
-    "OCA/product-attribute@18.0::commits": "1d35cea8831bd0c93ccafbaabc5ceb0fa0cf48b5",
+    "OCA/product-attribute@18.0::commits": "718c85896aff0647eba52758297706a83649bf53",
     "OCA/calendar@18.0::commits": "0fa4170a930fd1c96f45b239e396587d087cce7f",
     "OCA/bank-statement-import@18.0::commits": "db8d9484769d8572322802249badcb1dab91fa3e",
     "OCA/multi-company@18.0::commits": "9add3040944866b3c1c5b3c9d6d16a42bd9bc7de",
@@ -23,5 +23,5 @@
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "6b75258695651a1bbcea0ffbfcac8e7ec1220e54"
   },
-  "updated_at": "2026-03-06T02:53:42.739943+00:00"
+  "updated_at": "2026-03-07T02:47:27.590032+00:00"
 }

@@ -251,3 +251,9 @@
 
 - Commit 1d35cea: Translated using Weblate (Catalan) → https://github.com/OCA/product-attribute/commit/1d35cea8831bd0c93ccafbaabc5ceb0fa0cf48b5
 
+## 2026-03-07
+
+- Commit bca5bb1: [FIX] product_pricelist_assortment: ensure test uses different items for manual modification and removal → https://github.com/OCA/product-attribute/commit/bca5bb131c845eca26cbd4deb02d0220e2375651
+- Commit 41f5874: Merge PR #2229 into 18.0 → https://github.com/OCA/product-attribute/commit/41f587411367402e200c636dd23e7c6f70b5a770
+- Commit 718c858: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/718c85896aff0647eba52758297706a83649bf53
+

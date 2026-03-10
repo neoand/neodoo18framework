@@ -307,3 +307,11 @@
 - Commit ce363e1: Added translation using Weblate (German) → https://github.com/OCA/partner-contact/commit/ce363e175412e368687b48fe29321aa95787ac64
 - Commit 5f2b988: Translated using Weblate (German) → https://github.com/OCA/partner-contact/commit/5f2b988f74a46d643fc4379a0921442a55b674ab
 
+## 2026-03-10
+
+- Commit a482a85: [IMP] partner_subject_to_vat: pre-commit auto fixes → https://github.com/OCA/partner-contact/commit/a482a85b15c5fcc312ba3b4972e7ed5ed36d82a9
+- Commit 4fdce35: [MIG] partner_subject_to_vat: Migration to 18.0 → https://github.com/OCA/partner-contact/commit/4fdce35311515c2d77e78a6e954591cf67c39964
+- Commit 3464d6a: Merge PR #2008 into 18.0 → https://github.com/OCA/partner-contact/commit/3464d6a4bae16867b39c40580ed733d9e221cbfc
+- Commit 47d0d74: [UPD] Update partner_subject_to_vat.pot → https://github.com/OCA/partner-contact/commit/47d0d74b08700812cf12d8ac87c3e2b056ae6039
+- Commit ce1de9b: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/ce1de9b1fd812f4304cd555a82d74fd337cf9925
+

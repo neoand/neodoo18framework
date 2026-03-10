@@ -229,3 +229,9 @@
 
 - Commit 55d852d: Added translation using Weblate (Finnish) → https://github.com/OCA/account-financial-tools/commit/55d852d600084c2fed254bf688c9b4375068cf4e
 
+## 2026-03-10
+
+- Commit b642ced: [IMP] account_chart_update: Visible unchecked fields by default → https://github.com/OCA/account-financial-tools/commit/b642ced2a7300748cc82c89cbf9fd93b45226bc6
+- Commit 5857c99: Merge PR #2196 into 18.0 → https://github.com/OCA/account-financial-tools/commit/5857c9914b7918dce9b347d6d5a19bff8496d1ea
+- Commit 89d97ba: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/89d97ba6a3be659ba303de8942dbaada60e95fea
+

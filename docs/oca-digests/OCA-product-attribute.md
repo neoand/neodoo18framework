@@ -257,3 +257,11 @@
 - Commit 41f5874: Merge PR #2229 into 18.0 → https://github.com/OCA/product-attribute/commit/41f587411367402e200c636dd23e7c6f70b5a770
 - Commit 718c858: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/718c85896aff0647eba52758297706a83649bf53
 
+## 2026-03-10
+
+- Commit 7337c74: [UPD] Update product_cost_security_stock_account.pot → https://github.com/OCA/product-attribute/commit/7337c748bb817b5873e3e90241b34b8690d25bbb
+- Commit 091efbe: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/091efbeee70cb04e00fc29df1be47b3f0c195d6b
+- Commit 2a891e6: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/2a891e6d63adb2d414eba6214760cc08c37d0d7a
+- Commit 43bbfc6: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/43bbfc6211b13e0dac99e8406022a2bc9b83d269
+- Commit e57fb5f: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/e57fb5f3220de2e9ce551a2b38bf2549f0e17dd8
+

@@ -456,3 +456,7 @@
 - Commit 0a00bea: [UPD] Update sale_invoice_plan_report.pot → https://github.com/OCA/sale-workflow/commit/0a00bea108c459314dc6f4b6b864f8f2d31306d6
 - Commit b2e8527: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/b2e85278db4cf7712b3ab28c4fdcd31a65cc50d7
 
+## 2026-03-10
+
+- Commit 378d0cf: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/378d0cfd3a7527db4b6a1574a6ec23f6df8247b0
+

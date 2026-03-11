@@ -460,3 +460,7 @@
 
 - Commit 378d0cf: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/378d0cfd3a7527db4b6a1574a6ec23f6df8247b0
 
+## 2026-03-11
+
+- Commit d76e45b: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/d76e45b083d9dcd6e98c10c1b79c550a312bc9d6
+

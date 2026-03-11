@@ -227,3 +227,7 @@
 - Commit 711e7be: Update translation files → https://github.com/OCA/server-tools/commit/711e7be792439b993c9b863ca6785a108e760744
 - Commit 31d7fe7: Update translation files → https://github.com/OCA/server-tools/commit/31d7fe7e15bf865331ed66e031eb32ba062cb9f5
 
+## 2026-03-11
+
+- Commit 4a8b67a: Translated using Weblate (Italian) → https://github.com/OCA/server-tools/commit/4a8b67a3b8c0ed30b2f0898fe13bd192868328e7
+

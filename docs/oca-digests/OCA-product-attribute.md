@@ -265,3 +265,11 @@
 - Commit 43bbfc6: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/43bbfc6211b13e0dac99e8406022a2bc9b83d269
 - Commit e57fb5f: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/e57fb5f3220de2e9ce551a2b38bf2549f0e17dd8
 
+## 2026-03-11
+
+- Commit 0529bdf: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/0529bdfa1fc488442aba500133cdf4fed8c2b39d
+- Commit ac6b3e4: Translated using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/ac6b3e46b50de270383a3fca8608441dcceea4d9
+- Commit ecd81fb: Update translation files → https://github.com/OCA/product-attribute/commit/ecd81fb807e9421334259796fe1ffefa7bc5815e
+- Commit 1a18d20: Merge PR #2119 into 18.0 → https://github.com/OCA/product-attribute/commit/1a18d200b4dcbb5ab2575e225cb212d8ae23fe7d
+- Commit 489a58c: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/489a58c5629261a745ee60933f5ec0aa22ece215
+

@@ -181,3 +181,10 @@
 - Commit 3d67434: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/3d674341bd0844211692dd5f4cb4a420cc9081a7
 - Commit 2b410ff: Translated using Weblate (German) → https://github.com/OCA/account-reconcile/commit/2b410ff55f4fae263603ed6366723d5d1628f6dc
 
+## 2026-03-12
+
+- Commit 278bf0c: [ADD] account_statement_reconcile_status: reconciliation tracking for bank statements → https://github.com/OCA/account-reconcile/commit/278bf0cecd27f4bb2450baaa03f1c2a9972d7994
+- Commit 7e67cf1: Merge PR #967 into 18.0 → https://github.com/OCA/account-reconcile/commit/7e67cf1ff3f34810909dd9ed82b930cceb053a76
+- Commit 12a4486: [UPD] Update account_statement_reconcile_status.pot → https://github.com/OCA/account-reconcile/commit/12a4486cd92c27f997ba8a280488d2a500b2ea95
+- Commit c840130: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/c840130eef5388c56f8eb2b37564ca3d1dd4296b
+

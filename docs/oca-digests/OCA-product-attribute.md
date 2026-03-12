@@ -273,3 +273,9 @@
 - Commit 1a18d20: Merge PR #2119 into 18.0 → https://github.com/OCA/product-attribute/commit/1a18d200b4dcbb5ab2575e225cb212d8ae23fe7d
 - Commit 489a58c: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/489a58c5629261a745ee60933f5ec0aa22ece215
 
+## 2026-03-12
+
+- Commit f94e5d8: Merge PR #2230 into 18.0 → https://github.com/OCA/product-attribute/commit/f94e5d8e26ebca56f605d4c1b03a445e4155cd49
+- Commit 372d43a: [BOT] post-merge updates → https://github.com/OCA/product-attribute/commit/372d43a1ff6a8d07948cf05b50a70d73ef01208e
+- Commit 73c544e: Added translation using Weblate (Italian) → https://github.com/OCA/product-attribute/commit/73c544ed515e6c73e82b8d3940b31846b8ef124d
+

@@ -217,3 +217,7 @@
 - Commit 58df579: [UPD] Update project_reviewer.pot → https://github.com/OCA/project/commit/58df579e369b2320ece755db6faebbc13e3639c1
 - Commit 0eda75e: [BOT] post-merge updates → https://github.com/OCA/project/commit/0eda75ef99c685eb2da51934225613ac5088f750
 
+## 2026-03-13
+
+- Commit 8c01515: Added translation using Weblate (Czech) → https://github.com/OCA/project/commit/8c01515d1342dad215e030d397d2f3d4e0732e0c
+

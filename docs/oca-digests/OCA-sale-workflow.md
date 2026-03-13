@@ -464,3 +464,8 @@
 
 - Commit d76e45b: Translated using Weblate (Italian) → https://github.com/OCA/sale-workflow/commit/d76e45b083d9dcd6e98c10c1b79c550a312bc9d6
 
+## 2026-03-13
+
+- Commit ef5a113: Merge PR #4177 into 18.0 → https://github.com/OCA/sale-workflow/commit/ef5a113e71f17513594c536fa033d0c51ba3ea11
+- Commit 959c718: [BOT] post-merge updates → https://github.com/OCA/sale-workflow/commit/959c7180a72fe4f0353a27899b173361e9d0506d
+

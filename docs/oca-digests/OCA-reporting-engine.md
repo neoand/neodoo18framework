@@ -130,3 +130,9 @@
 - Commit a8a397c: Added translation using Weblate (Russian) → https://github.com/OCA/reporting-engine/commit/a8a397ce6cd7f42ae662d1a578fbb0474b08ab59
 - Commit 35a9cd5: Added translation using Weblate (Russian) → https://github.com/OCA/reporting-engine/commit/35a9cd5f28d245857269952ac39a10cfdd89d98a
 
+## 2026-03-14
+
+- Commit a9daa84: [FIX] base_comment_template: fix tests → https://github.com/OCA/reporting-engine/commit/a9daa84087c2295144e1ba70c123af880edea867
+- Commit 1012448: Merge PR #1142 into 18.0 → https://github.com/OCA/reporting-engine/commit/1012448b770a6edb5780653835eeafc0b57035a3
+- Commit 8233426: [BOT] post-merge updates → https://github.com/OCA/reporting-engine/commit/8233426d896d26e4eb07225b3048c828c07c9c1e
+

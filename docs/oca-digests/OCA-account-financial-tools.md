@@ -235,3 +235,10 @@
 - Commit 5857c99: Merge PR #2196 into 18.0 → https://github.com/OCA/account-financial-tools/commit/5857c9914b7918dce9b347d6d5a19bff8496d1ea
 - Commit 89d97ba: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/89d97ba6a3be659ba303de8942dbaada60e95fea
 
+## 2026-03-14
+
+- Commit eb8417e: [IMP] add translations for menu Accounting → https://github.com/OCA/account-financial-tools/commit/eb8417e3d509e81668285aa4bbba989ac953af6d
+- Commit 3728e6c: Merge PR #2243 into 18.0 → https://github.com/OCA/account-financial-tools/commit/3728e6c7daeca82d449340680c72f0951b8d0fae
+- Commit 19d1ea5: [UPD] Update account_usability.pot → https://github.com/OCA/account-financial-tools/commit/19d1ea58849ee9aab32c56a4e076db1090045b1a
+- Commit 16c1f06: [BOT] post-merge updates → https://github.com/OCA/account-financial-tools/commit/16c1f0620ebad3474efb5709af9ca617ce3586d3
+

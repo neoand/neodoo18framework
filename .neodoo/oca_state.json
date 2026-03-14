@@ -6,12 +6,12 @@
     "OCA/sale-workflow@18.0::commits": "959c7180a72fe4f0353a27899b173361e9d0506d",
     "OCA/oca-port@main::commits": "53136114f5c8d51f0795b5668d6dfd314ad07fb0",
     "OCA/connector@18.0::commits": "10416a62a86edf72abb8d68b208cfe4620526866",
-    "OCA/account-financial-tools@18.0::commits": "89d97ba6a3be659ba303de8942dbaada60e95fea",
-    "OCA/reporting-engine@18.0::commits": "35a9cd5f28d245857269952ac39a10cfdd89d98a",
+    "OCA/account-financial-tools@18.0::commits": "16c1f0620ebad3474efb5709af9ca617ce3586d3",
+    "OCA/reporting-engine@18.0::commits": "8233426d896d26e4eb07225b3048c828c07c9c1e",
     "OCA/server-tools@18.0::commits": "4a8b67a3b8c0ed30b2f0898fe13bd192868328e7",
     "OCA/OpenUpgrade@18.0::commits": "0ac1bc2c4a3f04bf5137823958e002900d574fb5",
-    "OCA/web@18.0::commits": "f1543e10310d92d48c2c073ee1af8054315770d7",
-    "OCA/partner-contact@18.0::commits": "ce1de9b1fd812f4304cd555a82d74fd337cf9925",
+    "OCA/web@18.0::commits": "ec1f41f703879ae7876ae8dfc0dbcded16a86ff6",
+    "OCA/partner-contact@18.0::commits": "29bf2c06f894e3e211c45b35d95008d924fd9beb",
     "OCA/queue@18.0::commits": "1ea2c454c8452b59ac27a24a0699bf7279a223f1",
     "OCA/management-system@18.0::commits": "7f6b3c9f4cfe3149a6d4b33c47119c3a688d477a",
     "OCA/product-attribute@18.0::commits": "73c544ed515e6c73e82b8d3940b31846b8ef124d",
@@ -19,9 +19,9 @@
     "OCA/bank-statement-import@18.0::commits": "db8d9484769d8572322802249badcb1dab91fa3e",
     "OCA/multi-company@18.0::commits": "9add3040944866b3c1c5b3c9d6d16a42bd9bc7de",
     "OCA/knowledge@18.0::commits": "f747aa3f6e8426e9e5244fc14143f511c140ebbc",
-    "OCA/account-reconcile@18.0::commits": "c840130eef5388c56f8eb2b37564ca3d1dd4296b",
+    "OCA/account-reconcile@18.0::commits": "584924cd9b0bc451ec50381ec6a3974190b9ab4a",
     "OCA/connector-telephony@18.0::commits": "7a0e9952e1959f17977d63ea9c9241ba9afd6ec1",
     "OCA/spreadsheet@18.0::commits": "6b75258695651a1bbcea0ffbfcac8e7ec1220e54"
   },
-  "updated_at": "2026-03-13T02:53:34.983095+00:00"
+  "updated_at": "2026-03-14T02:52:33.011373+00:00"
 }

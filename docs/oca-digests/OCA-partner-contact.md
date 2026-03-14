@@ -315,3 +315,9 @@
 - Commit 47d0d74: [UPD] Update partner_subject_to_vat.pot → https://github.com/OCA/partner-contact/commit/47d0d74b08700812cf12d8ac87c3e2b056ae6039
 - Commit ce1de9b: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/ce1de9b1fd812f4304cd555a82d74fd337cf9925
 
+## 2026-03-14
+
+- Commit 89b7270: [FIX] partner_property: company context not respected when searching by computed field → https://github.com/OCA/partner-contact/commit/89b72702d3135ebc157d52983b6e61706cfd1ceb
+- Commit 530d6db: Merge PR #2290 into 18.0 → https://github.com/OCA/partner-contact/commit/530d6db360b6b2a1d540d4250a5921eb5d1aadaa
+- Commit 29bf2c0: [BOT] post-merge updates → https://github.com/OCA/partner-contact/commit/29bf2c06f894e3e211c45b35d95008d924fd9beb
+

@@ -188,3 +188,7 @@
 - Commit 12a4486: [UPD] Update account_statement_reconcile_status.pot → https://github.com/OCA/account-reconcile/commit/12a4486cd92c27f997ba8a280488d2a500b2ea95
 - Commit c840130: [BOT] post-merge updates → https://github.com/OCA/account-reconcile/commit/c840130eef5388c56f8eb2b37564ca3d1dd4296b
 
+## 2026-03-14
+
+- Commit 584924c: Added translation using Weblate (Italian) → https://github.com/OCA/account-reconcile/commit/584924cd9b0bc451ec50381ec6a3974190b9ab4a
+
